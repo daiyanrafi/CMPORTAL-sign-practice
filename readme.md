@@ -1,0 +1,1 @@
+this code is the complete component-1. this is the form with table at first. 
