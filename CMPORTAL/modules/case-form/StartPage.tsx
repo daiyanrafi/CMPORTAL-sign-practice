@@ -18,9 +18,10 @@ import { FormData } from './types';
 type StartPageProps = {
   onNext: () => void;
   userDataList: FormData[];
+  onEdit: (index: number) => void;
 };
 
-const StartPage: React.FC<StartPageProps> = ({ onNext, userDataList }) => {
+const StartPage: React.FC<StartPageProps> = ({ onNext, userDataList, onEdit }) => {
   const handleNext = () => {
     onNext();
   };
@@ -45,11 +46,11 @@ const StartPage: React.FC<StartPageProps> = ({ onNext, userDataList }) => {
         </Box>
         <Table>
           <TableHead>
-            <TableRow style={{ backgroundColor: '#daf0a8' }}>
-              <TableCell style={{ fontSize: '18px', fontFamily: 'Merriweather, serif', fontWeight: 'bold', color: '#555', borderBottom: '2px solid #333' }}>User Title</TableCell>
-              <TableCell style={{ fontSize: '18px', fontFamily: 'Merriweather, serif', fontWeight: 'bold', color: '#555', borderBottom: '2px solid #333' }}>User First Name</TableCell>
-              <TableCell style={{ fontSize: '18px', fontFamily: 'Merriweather, serif', fontWeight: 'bold', color: '#555', borderBottom: '2px solid #333' }}>User Last Name</TableCell>
-              <TableCell style={{ fontSize: '18px', fontFamily: 'Merriweather, serif', fontWeight: 'bold', color: '#555', borderBottom: '2px solid #333' }}>User Country</TableCell>
+            <TableRow style={{ backgroundColor: '#56c8f5' }}>
+              <TableCell style={{ fontSize: '18px', fontFamily: 'Merriweather, serif', fontWeight: 'bold', color: '#fafeff', borderBottom: '2px solid #333' }}>User Title</TableCell>
+              <TableCell style={{ fontSize: '18px', fontFamily: 'Merriweather, serif', fontWeight: 'bold', color: '#fafeff', borderBottom: '2px solid #333' }}>User First Name</TableCell>
+              <TableCell style={{ fontSize: '18px', fontFamily: 'Merriweather, serif', fontWeight: 'bold', color: '#fafeff', borderBottom: '2px solid #333' }}>User Last Name</TableCell>
+              <TableCell style={{ fontSize: '18px', fontFamily: 'Merriweather, serif', fontWeight: 'bold', color: '#fafeff', borderBottom: '2px solid #333' }}>User Country</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -59,6 +60,15 @@ const StartPage: React.FC<StartPageProps> = ({ onNext, userDataList }) => {
                 <TableCell style={{ fontSize: '15px', color: '#333' }}>{userData.user_firstName}</TableCell>
                 <TableCell style={{ fontSize: '15px', color: '#333' }}>{userData.user_lastName}</TableCell>
                 <TableCell style={{ fontSize: '15px', color: '#333' }}>{userData.user_country}</TableCell>
+                <TableCell>
+                  <Button
+                    variant="outlined"
+                    color="primary"
+                    onClick={() => onEdit(index)}
+                  >
+                    Edit
+                  </Button>
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>

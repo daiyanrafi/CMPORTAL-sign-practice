@@ -12,9 +12,11 @@ import { FormData } from './types';
 
 type SelectionPageProps = {
   onNext: () => void;
+  userDataList: FormData[];
+  onEdit: (index: number) => void;
 };
 
-const SelectionPage: React.FC<SelectionPageProps> = ({ onNext }) => {
+const SelectionPage: React.FC<SelectionPageProps> = ({ onNext,  userDataList, onEdit }) => {
   const [selectedOption1, setSelectedOption1] = useState<string | undefined>('');
   const [selectedOption2, setSelectedOption2] = useState<string | undefined>('');
   const [showWarning, setShowWarning] = useState(false);

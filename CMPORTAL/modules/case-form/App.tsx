@@ -71,6 +71,7 @@ function App() {
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
   const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
   const [userList, setUserList] = useState<FormData[]>([]);
+  const [editIndex, setEditIndex] = useState<number | null>(null);
 
   function updateFields(fields: Partial<FormData>) {
     setData((prev) => ({ ...prev, ...fields }));
@@ -90,12 +91,57 @@ function App() {
     setShowStartPage(false);
   }
 
+  function handleEdit(index: number) {
+    setShowStartPage(false);
+    setCurrentStepIndex(1); // Navigate to the first step of the form
+    setEditIndex(index); // Save the index for later retrieval
+
+    const editedUser = userList[index];
+    setData(editedUser);
+  }
+
   function handleSelectionPageNext() {
     next();
   }
+  
+  // function onSubmit(e: FormEvent) {
+  //   e.preventDefault();
+  //   if (!isLastStep) return next();
+  //   setUserList((prevList) => [...prevList, data]); //n
+  //   console.log(data);
+  //   alert('Successful Account Creation');
+  //   setData(INITIAL_DATA);
+  //   setShowStartPage(true);
+  //   setCurrentStepIndex(0);
+  //   setRecaptchaValue(null);
+  // }
+
+  function onSubmit(e: FormEvent) {
+    e.preventDefault();
+
+    if (!isLastStep) return next();
+
+    // Update the user data in the list
+    if (editIndex !== null) {
+      const updatedUserList = [...userList];
+      updatedUserList[editIndex] = data;
+      setUserList(updatedUserList);
+      console.log('edit-data',data);
+    } else {
+      setUserList((prevList) => [...prevList, data]);
+      console.log('new-data',data);
+    }
+
+    alert('Successful Account Creation');
+    setData(INITIAL_DATA);
+    setShowStartPage(true);
+    setCurrentStepIndex(0);
+    setRecaptchaValue(null);
+    setEditIndex(null); // Reset edit index after submission
+  }
 
   const steps = [
-    <SelectionPage onNext={handleSelectionPageNext} />,
+    <SelectionPage onNext={handleSelectionPageNext} userDataList={userList} onEdit={handleEdit}/>,
     <UserForm {...data} updateFields={updateFields} />,
     <RepresentativeForm {...data} updateFields={updateFields} />,
     <IncidentAddressForm {...data} updateFields={updateFields} />,
@@ -113,17 +159,6 @@ function App() {
   //   steps[currentStepIndex]
   // );
 
-  function onSubmit(e: FormEvent) {
-    e.preventDefault();
-    if (!isLastStep) return next();
-    setUserList((prevList) => [...prevList, data]); //n
-    console.log(data);
-    alert('Successful Account Creation');
-    setData(INITIAL_DATA);
-    setShowStartPage(true);
-    setCurrentStepIndex(0);
-    setRecaptchaValue(null);
-  }
 
   return (
     <Container
@@ -139,7 +174,7 @@ function App() {
       }}
     >
       {showStartPage ? (
-        <StartPage onNext={startForm} userDataList={userList} />
+        <StartPage onNext={startForm} userDataList={userList} onEdit={handleEdit}/>
       ) : (
         <Paper
           style={{
