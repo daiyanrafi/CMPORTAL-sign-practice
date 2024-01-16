@@ -50,7 +50,7 @@ export function UserForm({
   user_mobile,
   user_email,
   updateFields,
-  viewMode,
+  viewMode,//
 }: UserFormProps) {
 
   const inputProps = {
@@ -105,7 +105,6 @@ export function UserForm({
           />
         </Grid>
 
-
         <Grid item xs={12}>
           <TextField
             fullWidth
@@ -114,9 +113,7 @@ export function UserForm({
             type="text"
             value={user_postalAddress}
             onChange={(e) => updateFields({ user_postalAddress: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps} // Added this line
           />
         </Grid>
         <Grid item xs={12}>
@@ -127,9 +124,7 @@ export function UserForm({
             type="text"
             value={user_address}
             onChange={(e) => updateFields({ user_address: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps} // Added this line
           />
         </Grid>
         <Grid item xs={6}>
@@ -140,9 +135,7 @@ export function UserForm({
             type="text"
             value={user_suburb}
             onChange={(e) => updateFields({ user_suburb: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps} // Added this line
           />
         </Grid>
         <Grid item xs={6}>
@@ -153,9 +146,7 @@ export function UserForm({
             type="text"
             value={user_postcode}
             onChange={(e) => updateFields({ user_postcode: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps} // Added this line
           />
         </Grid>
         <Grid item xs={12}>
@@ -166,9 +157,7 @@ export function UserForm({
             type="text"
             value={user_state}
             onChange={(e) => updateFields({ user_state: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps} // Added this line
           />
         </Grid>
         <Grid item xs={12}>
@@ -179,9 +168,7 @@ export function UserForm({
             type="text"
             value={user_country}
             onChange={(e) => updateFields({ user_country: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps} // Added this line
           />
         </Grid>
         <Grid item xs={12}>
@@ -205,9 +192,7 @@ export function UserForm({
               type="text"
               value={user_landline}
               onChange={(e) => updateFields({ user_landline: e.target.value })}
-              InputProps={{
-                style: { fontSize: 'large' },
-              }}
+              InputProps={inputProps} // Added this line
             />
           </Grid>
         )}
@@ -220,9 +205,7 @@ export function UserForm({
               type="text"
               value={user_mobile}
               onChange={(e) => updateFields({ user_mobile: e.target.value })}
-              InputProps={{
-                style: { fontSize: 'large' },
-              }}
+              InputProps={inputProps} // Added this line
             />
           </Grid>
         )}
@@ -234,9 +217,7 @@ export function UserForm({
             type="email"
             value={user_email}
             onChange={(e) => updateFields({ user_email: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps} // Added this line
           />
         </Grid>
         <Grid item xs={12}>
