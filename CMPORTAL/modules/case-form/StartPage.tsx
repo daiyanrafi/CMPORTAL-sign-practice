@@ -89,7 +89,7 @@ const StartPage: React.FC<StartPageProps> = ({ onNext, userDataList, onEdit }) =
         marginTop: '40px',
       }}
     >
-      <Paper elevation={3} style={{ padding: '2rem', width: '80%' }}>
+      <Paper elevation={3} style={{ padding: '2rem', width: '100%', overflow: 'auto' }}>
         <Box mb={3} display="flex" justifyContent="space-between" alignItems="center">
           <Typography variant="h5" style={{ fontSize: '25px', fontWeight: '600', color: '#333', fontFamily: 'Georgia, serif', textDecoration: 'underline' }}>MY CASES</Typography>
           <Button variant="contained" color="primary" onClick={handleNext} style={{ fontSize: '13px', fontFamily: 'Arial', color: '#fff', backgroundColor: '#007bff' }}>
