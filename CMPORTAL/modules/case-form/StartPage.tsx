@@ -99,13 +99,13 @@ const StartPage: React.FC<StartPageProps> = ({ onNext, userDataList, onEdit }) =
         <Table>
           <TableHead>
             <TableRow style={{ backgroundColor: '#56c8f5' }}>
-              <TableCell style={{ fontSize: '18px', fontFamily: 'Merriweather, serif', fontWeight: 'bold', color: '#fafeff', borderBottom: '2px solid #333' }}>Case ID</TableCell>
-              <TableCell style={{ fontSize: '18px', fontFamily: 'Merriweather, serif', fontWeight: 'bold', color: '#fafeff', borderBottom: '2px solid #333' }}>User Title</TableCell>
+              <TableCell style={{ width: '15%', fontSize: '18px', fontFamily: 'Merriweather, serif', fontWeight: 'bold', color: '#fafeff', borderBottom: '2px solid #333' }}>Case ID</TableCell>
+              <TableCell style={{ width: '40%', fontSize: '18px', fontFamily: 'Merriweather, serif', fontWeight: 'bold', color: '#fafeff', borderBottom: '2px solid #333' }}>User Title</TableCell>
 
-              <TableCell style={{ fontSize: '18px', fontFamily: 'Merriweather, serif', fontWeight: 'bold', color: '#fafeff', borderBottom: '2px solid #333' }}>Status</TableCell>
-              <TableCell style={{ fontSize: '18px', fontFamily: 'Merriweather, serif', fontWeight: 'bold', color: '#fafeff', borderBottom: '2px solid #333' }}>Created Date</TableCell>
+              <TableCell style={{ width: '10%', fontSize: '18px', fontFamily: 'Merriweather, serif', fontWeight: 'bold', color: '#fafeff', borderBottom: '2px solid #333' }}>Status</TableCell>
+              <TableCell style={{ width: '15%', fontSize: '18px', fontFamily: 'Merriweather, serif', fontWeight: 'bold', color: '#fafeff', borderBottom: '2px solid #333' }}>Created Date</TableCell>
 
-              <TableCell style={{ fontSize: '18px', fontFamily: 'Merriweather, serif', fontWeight: 'bold', color: '#fafeff', borderBottom: '2px solid #333' }}>ACTION</TableCell>
+              <TableCell style={{ width: '15%', fontSize: '18px', fontFamily: 'Merriweather, serif', fontWeight: 'bold', color: '#fafeff', borderBottom: '2px solid #333' }}>ACTION</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
