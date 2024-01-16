@@ -12,6 +12,7 @@ import {
   TableCell,
   Button,
   Box,
+  TablePagination
 } from '@mui/material';
 import { FormData } from './types';
 
@@ -21,10 +22,26 @@ type StartPageProps = {
   onEdit: (index: number) => void;
 };
 
+// Customize the available rows per page options
+const rowsPerPageOptions = [5, 10, 25];
+
 const StartPage: React.FC<StartPageProps> = ({ onNext, userDataList, onEdit }) => {
-  const handleNext = () => {
-    onNext();
-  };
+  const [page, setPage] = React.useState(0); //for pagination
+  const [rowsPerPage, setRowsPerPage] = React.useState(rowsPerPageOptions[0]); //for pagination
+
+    //++pagination started++
+    const handleChangePage = (event: unknown, newPage: number) => {
+      setPage(newPage);
+    };
+    const handleChangeRowsPerPage = (event: React.ChangeEvent<HTMLInputElement>) => {
+      setRowsPerPage(parseInt(event.target.value, 10));
+      setPage(0);
+    };
+    //++pagination ended++
+  
+    const handleNext = () => {
+      onNext();
+    };
 
   //--for status color started--
   const getStatusByIndex = (index: number): string => {
@@ -53,6 +70,12 @@ const StartPage: React.FC<StartPageProps> = ({ onNext, userDataList, onEdit }) =
   };
   //**created date ended**
 
+  //slice started
+  const startIndex = page * rowsPerPage;
+  const endIndex = startIndex + rowsPerPage;
+  const slicedData = userDataList.slice(startIndex, endIndex);
+  //slice ended
+  
   return (
     <Container
       style={{
@@ -84,7 +107,7 @@ const StartPage: React.FC<StartPageProps> = ({ onNext, userDataList, onEdit }) =
             </TableRow>
           </TableHead>
           <TableBody>
-            {userDataList.map((userData, index) => (
+            {slicedData.map((userData, index) => (
               <TableRow key={index} style={{ backgroundColor: index % 2 === 0 ? '#ffffff' : '#f9f9f9' }}>
                 <TableCell style={{ fontSize: '15px', color: '#333' }}>{202401160001 + index}</TableCell>
                 <TableCell style={{ fontSize: '15px', color: '#333' }}>{userData.complaint_resolutionDescription}</TableCell>
@@ -103,6 +126,15 @@ const StartPage: React.FC<StartPageProps> = ({ onNext, userDataList, onEdit }) =
             ))}
           </TableBody>
         </Table>
+        <TablePagination
+          component="div"
+          count={userDataList.length}
+          page={page}
+          onPageChange={handleChangePage}
+          rowsPerPage={rowsPerPage}
+          onRowsPerPageChange={handleChangeRowsPerPage}
+          rowsPerPageOptions={rowsPerPageOptions}
+        />
       </Paper>
     </Container>
   );
