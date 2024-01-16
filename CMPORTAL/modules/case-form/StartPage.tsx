@@ -47,7 +47,8 @@ const StartPage: React.FC<StartPageProps> = ({ onNext, userDataList, onEdit }) =
 
   //**for created date started**
   const getFormattedDate = (date: Date): string => {
-    const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+    const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit',
+    minute: '2-digit' };
     return date.toLocaleDateString(undefined, options);
   };
   //**created date ended**
