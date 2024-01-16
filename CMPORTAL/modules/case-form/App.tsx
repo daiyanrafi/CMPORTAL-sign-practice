@@ -72,6 +72,7 @@ function App() {
   const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
   const [userList, setUserList] = useState<FormData[]>([]);
   const [editIndex, setEditIndex] = useState<number | null>(null);
+  const [viewMode, setViewMode] = useState(false);
 
   function updateFields(fields: Partial<FormData>) {
     setData((prev) => ({ ...prev, ...fields }));
@@ -89,6 +90,11 @@ function App() {
     setData(INITIAL_DATA);
     setCurrentStepIndex(0);
     setShowStartPage(false);
+    setViewMode(false);
+  }
+
+  function handleSelectionPageNext() {
+    next();
   }
 
   function handleEdit(index: number) {
@@ -98,11 +104,19 @@ function App() {
 
     const editedUser = userList[index];
     setData(editedUser);
+    setViewMode(false);
   }
 
-  function handleSelectionPageNext() {
-    next();
-  }
+  function handleView(index: number) {
+    setShowStartPage(false);
+    setCurrentStepIndex(1); // Navigate to the first step of the form
+    setEditIndex(index); // Save the index for later retrieval
+
+    // Populate the form with existing user data
+    const viewedUser = userList[index];
+    setData(viewedUser);
+    setViewMode(true); // Set the form in "View" mode
+}
   
   // function onSubmit(e: FormEvent) {
   //   e.preventDefault();
@@ -116,33 +130,9 @@ function App() {
   //   setRecaptchaValue(null);
   // }
 
-  function onSubmit(e: FormEvent) {
-    e.preventDefault();
-
-    if (!isLastStep) return next();
-
-    // Update the user data in the list
-    if (editIndex !== null) {
-      const updatedUserList = [...userList];
-      updatedUserList[editIndex] = data;
-      setUserList(updatedUserList);
-      console.log('edit-data',data);
-    } else {
-      setUserList((prevList) => [...prevList, data]);
-      console.log('new-data',data);
-    }
-
-    alert('Successful Account Creation');
-    setData(INITIAL_DATA);
-    setShowStartPage(true);
-    setCurrentStepIndex(0);
-    setRecaptchaValue(null);
-    setEditIndex(null); // Reset edit index after submission
-  }
-
   const steps = [
     <SelectionPage onNext={handleSelectionPageNext} userDataList={userList} onEdit={handleEdit}/>,
-    <UserForm {...data} updateFields={updateFields} />,
+    <UserForm {...data} updateFields={updateFields}  viewMode={viewMode}/>,
     <RepresentativeForm {...data} updateFields={updateFields} />,
     <IncidentAddressForm {...data} updateFields={updateFields} />,
     <ComplaintForm {...data} updateFields={updateFields} />,
@@ -159,6 +149,58 @@ function App() {
   //   steps[currentStepIndex]
   // );
 
+  // function onSubmit(e: FormEvent) {
+  //   e.preventDefault();
+
+  //   if (!isLastStep) return next();
+
+  //   // Update the user data in the list
+  //   if (editIndex !== null) {
+  //     const updatedUserList = [...userList];
+  //     updatedUserList[editIndex] = data;
+  //     setUserList(updatedUserList);
+  //     console.log('edit-data',data);
+  //   } else {
+  //     setUserList((prevList) => [...prevList, data]);
+  //     console.log('new-data',data);
+  //   }
+
+  //   alert('Successful Account Creation');
+  //   setData(INITIAL_DATA);
+  //   setShowStartPage(true);
+  //   setCurrentStepIndex(0);
+  //   setRecaptchaValue(null);
+  //   setEditIndex(null); // Reset edit index after submission
+  // }
+
+  function onSubmit(e: FormEvent) {
+    e.preventDefault();
+    if (!isLastStep) return next();
+    
+    const newData = { ...data }; // Clone the current form data
+  
+    // If it's an edit operation, update the existing entry
+    if (editIndex !== null) {
+      setUserList((prevList) => {
+        const updatedList = [...prevList];
+        updatedList[editIndex] = newData;
+        return updatedList;
+      });
+    } else {
+      // If it's a new entry, add it to the list
+      setUserList((prevList) => [...prevList, newData]);
+    }
+  
+    console.log(newData);
+    alert('Successful Account Creation');
+    setData(INITIAL_DATA);
+    setShowStartPage(true);
+    setCurrentStepIndex(0);
+    setRecaptchaValue(null);
+    setEditIndex(null); // Reset edit index
+  }
+  
+
 
   return (
     <Container
@@ -174,7 +216,7 @@ function App() {
       }}
     >
       {showStartPage ? (
-        <StartPage onNext={startForm} userDataList={userList} onEdit={handleEdit}/>
+        <StartPage onNext={startForm} userDataList={userList} onEdit={handleEdit} onView={handleView}/>
       ) : (
         <Paper
           style={{

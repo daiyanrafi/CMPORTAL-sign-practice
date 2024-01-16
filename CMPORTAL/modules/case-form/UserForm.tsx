@@ -32,6 +32,7 @@ type UserFormProps = {
     user_mobile: string;
     user_email: string;
   }>) => void;
+  viewMode: boolean;
 };
 
 export function UserForm({
@@ -49,7 +50,14 @@ export function UserForm({
   user_mobile,
   user_email,
   updateFields,
+  viewMode,
 }: UserFormProps) {
+
+  const inputProps = {
+    style: { fontSize: 'large' },
+    disabled: viewMode, // Disable input fields in view mode
+  };
+
   return (
     <div style={{ marginBottom: '10px' }}>
       <Typography variant="h6" gutterBottom style={{ fontSize: '25px' }}>
@@ -67,9 +75,7 @@ export function UserForm({
             label={<span style={{ fontSize: 'large' }}>Title</span>}
             value={user_title}
             onChange={(e) => updateFields({ user_title: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps} // Added this line
           >
             <MenuItem value="Mr" style={{ fontSize: '15px' }}>Mr</MenuItem>
             <MenuItem value="Mrs" style={{ fontSize: '15px' }}>Mrs</MenuItem>
@@ -83,9 +89,7 @@ export function UserForm({
             type="text"
             value={user_firstName}
             onChange={(e) => updateFields({ user_firstName: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps} // Added this line
           />
         </Grid>
 
@@ -97,9 +101,7 @@ export function UserForm({
             type="text"
             value={user_lastName}
             onChange={(e) => updateFields({ user_lastName: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps} // Added this line
           />
         </Grid>
 

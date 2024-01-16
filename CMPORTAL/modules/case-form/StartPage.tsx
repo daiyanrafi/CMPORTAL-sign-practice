@@ -17,11 +17,12 @@ import { FormData } from './types';
 
 type StartPageProps = {
   onNext: () => void;
-  userDataList: FormData[];
   onEdit: (index: number) => void;
+  onView: (index: number) => void;
+  userDataList: FormData[];
 };
 
-const StartPage: React.FC<StartPageProps> = ({ onNext, userDataList, onEdit }) => {
+const StartPage: React.FC<StartPageProps> = ({ onNext, onEdit, onView, userDataList }) => {
   const handleNext = () => {
     onNext();
   };
@@ -51,7 +52,7 @@ const StartPage: React.FC<StartPageProps> = ({ onNext, userDataList, onEdit }) =
               <TableCell style={{ fontSize: '18px', fontFamily: 'Merriweather, serif', fontWeight: 'bold', color: '#fafeff', borderBottom: '2px solid #333' }}>User First Name</TableCell>
               <TableCell style={{ fontSize: '18px', fontFamily: 'Merriweather, serif', fontWeight: 'bold', color: '#fafeff', borderBottom: '2px solid #333' }}>User Last Name</TableCell>
               <TableCell style={{ fontSize: '18px', fontFamily: 'Merriweather, serif', fontWeight: 'bold', color: '#fafeff', borderBottom: '2px solid #333' }}>User Country</TableCell>
-              <TableCell style={{ fontSize: '18px', fontFamily: 'Merriweather, serif', fontWeight: 'bold', color: '#fafeff', borderBottom: '2px solid #333' }}>ACTION</TableCell>
+              <TableCell style={{ fontSize: '18px', fontFamily: 'Merriweather, serif', fontWeight: 'bold', color: '#fafeff', borderBottom: '2px solid #333' }}>Actions</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -62,12 +63,11 @@ const StartPage: React.FC<StartPageProps> = ({ onNext, userDataList, onEdit }) =
                 <TableCell style={{ fontSize: '15px', color: '#333' }}>{userData.user_lastName}</TableCell>
                 <TableCell style={{ fontSize: '15px', color: '#333' }}>{userData.user_country}</TableCell>
                 <TableCell>
-                  <Button
-                    variant="outlined"
-                    color="primary"
-                    onClick={() => onEdit(index)}
-                  >
+                  <Button variant="contained" color="primary" onClick={() => onEdit(index)} style={{ fontSize: '13px', fontFamily: 'Arial', color: '#fff', backgroundColor: '#007bff', marginRight: '8px' }}>
                     Edit
+                  </Button>
+                  <Button variant="contained" color="success" onClick={() => onView(index)} style={{ fontSize: '13px', fontFamily: 'Arial', color: '#fff', backgroundColor: '#28a745' }}>
+                    View
                   </Button>
                 </TableCell>
               </TableRow>
