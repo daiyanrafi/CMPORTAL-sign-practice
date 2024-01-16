@@ -28,7 +28,7 @@ const StartPage: React.FC<StartPageProps> = ({ onNext, userDataList, onEdit }) =
 
   //--for status color started--
   const getStatusByIndex = (index: number): string => {
-    const statuses = ['active', 'inactive', 'pending'];
+    const statuses = ['Active', 'Inactive', 'Pending'];
     return statuses[index % statuses.length];
   };
   const getStatusColor = (status: string) => {
@@ -88,8 +88,8 @@ const StartPage: React.FC<StartPageProps> = ({ onNext, userDataList, onEdit }) =
               <TableRow key={index} style={{ backgroundColor: index % 2 === 0 ? '#ffffff' : '#f9f9f9' }}>
                 <TableCell style={{ fontSize: '15px', color: '#333' }}>{202401160001 + index}</TableCell>
                 <TableCell style={{ fontSize: '15px', color: '#333' }}>{userData.complaint_resolutionDescription}</TableCell>
-                <TableCell style={{ fontSize: '15px', color: '#333' }}>{getFormattedDate(new Date())}</TableCell>
                 <TableCell style={{ fontSize: '15px', color: getStatusColor(getStatusByIndex(index)) }}>{getStatusByIndex(index)}</TableCell>
+                <TableCell style={{ fontSize: '15px', color: '#333' }}>{getFormattedDate(new Date())}</TableCell>
                 <TableCell>
                   <Button
                     variant="outlined"
