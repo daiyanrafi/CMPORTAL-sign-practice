@@ -29,19 +29,19 @@ const StartPage: React.FC<StartPageProps> = ({ onNext, userDataList, onEdit }) =
   const [page, setPage] = React.useState(0); //for pagination
   const [rowsPerPage, setRowsPerPage] = React.useState(rowsPerPageOptions[0]); //for pagination
 
-    //++pagination started++
-    const handleChangePage = (event: unknown, newPage: number) => {
-      setPage(newPage);
-    };
-    const handleChangeRowsPerPage = (event: React.ChangeEvent<HTMLInputElement>) => {
-      setRowsPerPage(parseInt(event.target.value, 10));
-      setPage(0);
-    };
-    //++pagination ended++
-  
-    const handleNext = () => {
-      onNext();
-    };
+  //++pagination started++
+  const handleChangePage = (event: unknown, newPage: number) => {
+    setPage(newPage);
+  };
+  const handleChangeRowsPerPage = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setRowsPerPage(parseInt(event.target.value, 10));
+    setPage(0);
+  };
+  //++pagination ended++
+
+  const handleNext = () => {
+    onNext();
+  };
 
   //--for status color started--
   const getStatusByIndex = (index: number): string => {
@@ -64,8 +64,10 @@ const StartPage: React.FC<StartPageProps> = ({ onNext, userDataList, onEdit }) =
 
   //**for created date started**
   const getFormattedDate = (date: Date): string => {
-    const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit',
-    minute: '2-digit' };
+    const options: Intl.DateTimeFormatOptions = {
+      year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit',
+      minute: '2-digit'
+    };
     return date.toLocaleDateString(undefined, options);
   };
   //**created date ended**
@@ -75,7 +77,7 @@ const StartPage: React.FC<StartPageProps> = ({ onNext, userDataList, onEdit }) =
   const endIndex = startIndex + rowsPerPage;
   const slicedData = userDataList.slice(startIndex, endIndex);
   //slice ended
-  
+
   return (
     <Container
       style={{
@@ -107,23 +109,26 @@ const StartPage: React.FC<StartPageProps> = ({ onNext, userDataList, onEdit }) =
             </TableRow>
           </TableHead>
           <TableBody>
-            {slicedData.map((userData, index) => (
-              <TableRow key={index} style={{ backgroundColor: index % 2 === 0 ? '#ffffff' : '#f9f9f9' }}>
-                <TableCell style={{ fontSize: '15px', color: '#333' }}>{202401160001 + index}</TableCell>
-                <TableCell style={{ fontSize: '15px', color: '#333' }}>{userData.complaint_resolutionDescription}</TableCell>
-                <TableCell style={{ fontSize: '15px', color: getStatusColor(getStatusByIndex(index)) }}>{getStatusByIndex(index)}</TableCell>
-                <TableCell style={{ fontSize: '15px', color: '#333' }}>{getFormattedDate(new Date())}</TableCell>
-                <TableCell>
-                  <Button
-                    variant="outlined"
-                    color="primary"
-                    onClick={() => onEdit(index)}
-                  >
-                    Edit
-                  </Button>
-                </TableCell>
-              </TableRow>
-            ))}
+            {slicedData.map((userData, index) => {
+              const absoluteIndex = startIndex + index; // Calculate absolute index
+              return (
+                <TableRow key={absoluteIndex} style={{ backgroundColor: absoluteIndex % 2 === 0 ? '#ffffff' : '#f9f9f9' }}>
+                  <TableCell style={{ fontSize: '15px', color: '#333' }}>{202401160001 + absoluteIndex}</TableCell>
+                  <TableCell style={{ fontSize: '15px', color: '#333' }}>{userData.complaint_resolutionDescription}</TableCell>
+                  <TableCell style={{ fontSize: '15px', color: getStatusColor(getStatusByIndex(absoluteIndex)) }}>{getStatusByIndex(absoluteIndex)}</TableCell>
+                  <TableCell style={{ fontSize: '15px', color: '#333' }}>{getFormattedDate(new Date())}</TableCell>
+                  <TableCell>
+                    <Button
+                      variant="outlined"
+                      color="primary"
+                      onClick={() => onEdit(absoluteIndex)}
+                    >
+                      Edit
+                    </Button>
+                  </TableCell>
+                </TableRow>
+              );
+            })}
           </TableBody>
         </Table>
         <TablePagination
