@@ -33,11 +33,11 @@ const StartPage: React.FC<StartPageProps> = ({ onNext, userDataList, onEdit }) =
   };
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'active':
+      case 'Active':
         return '#28a745';
-      case 'inactive':
+      case 'Inactive':
         return '#dc3545';
-      case 'pending':
+      case 'Pending':
         return '#ffc107';
       default:
         return '#333';
