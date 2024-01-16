@@ -49,4 +49,7 @@ export type FormData = {
     final_sub_howDidYouHear: string;
     final_sub_attachFile: File | null;
     final_sub_isRobot: boolean;
+    // You can use Date or string as per your preference
+    // creationDate: string;
+    // creationTime: string;
   };
