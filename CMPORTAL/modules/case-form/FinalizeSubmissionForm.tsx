@@ -28,6 +28,7 @@ export function FinalizeSubmissionForm({
 
   const inputProps = {
     style: { fontSize: 'large' },
+    fontFamily: 'Calibri',
     disabled: viewMode, // Disable input fields in view mode
   };
 
@@ -38,25 +39,25 @@ export function FinalizeSubmissionForm({
 
   return (
     <div style={{ marginBottom: '10px' }}>
-      <Typography variant="h6" gutterBottom style={{ fontSize: '25px' }}>
+      <Typography variant="h6" gutterBottom style={{ fontSize: '25px', fontFamily: 'Calibri' }}>
         Finalize your submission
       </Typography>
       <Grid container spacing={2}>
         <Grid item xs={12}>
-          <Typography variant="body1" gutterBottom style={{ color: 'Blue', fontFamily: 'Arial, sans-serif', fontSize: '14px', marginBottom: '10px', marginTop: '10px' }}>
+          <Typography variant="body1" gutterBottom style={{ color: 'Blue', fontFamily: 'Calibri', fontSize: '14px', marginBottom: '10px', marginTop: '10px' }}>
             What would be the best time and day to call you, between 8:30am and 5pm Monday to friday?
           </Typography>
           <TextField
             fullWidth
             required
-            label={<span style={{ fontSize: 'large' }}>Best Time</span>}
+            label={<span style={{ fontSize: 'large', fontFamily: 'Calibri' }}>Best Time</span>}
             select
             value={final_sub_bestTime}
             onChange={(e) => updateFields({ final_sub_bestTime: e.target.value })}
             InputProps={inputProps}
           >
-            <MenuItem value="morning" style={{ fontSize: '15px' }}>Morning</MenuItem>
-            <MenuItem value="evening" style={{ fontSize: '15px' }}>Evening</MenuItem>
+            <MenuItem value="morning" style={{ fontSize: '15px', fontFamily: 'Calibri' }}>Morning</MenuItem>
+            <MenuItem value="evening" style={{ fontSize: '15px', fontFamily: 'Calibri' }}>Evening</MenuItem>
           </TextField>
         </Grid>
         <Grid item xs={12}>
@@ -66,14 +67,14 @@ export function FinalizeSubmissionForm({
           <TextField
             fullWidth
             required
-            label={<span style={{ fontSize: 'large' }}>How did you hear about us?</span>}
+            label={<span style={{ fontSize: 'large', fontFamily: 'Calibri' }}>How did you hear about us?</span>}
             select
             value={final_sub_howDidYouHear}
             onChange={(e) => updateFields({ final_sub_howDidYouHear: e.target.value })}
             InputProps={inputProps}
           >
-            <MenuItem value="tv" style={{ fontSize: '15px' }}>TV</MenuItem>
-            <MenuItem value="radio" style={{ fontSize: '15px' }}>Radio</MenuItem>
+            <MenuItem value="tv" style={{ fontSize: '15px', fontFamily: 'Calibri' }}>TV</MenuItem>
+            <MenuItem value="radio" style={{ fontSize: '15px', fontFamily: 'Calibri' }}>Radio</MenuItem>
           </TextField>
         </Grid>
         <Grid item xs={12}>
@@ -84,15 +85,15 @@ export function FinalizeSubmissionForm({
           />
         </Grid>
         <Grid item xs={12}>
-          <Typography variant="body1" gutterBottom style={{ fontFamily: 'Arial, sans-serif', fontSize: '14px', fontStyle: 'italic', marginTop: '10px', marginBottom: '1px' }}>
-            <p style={{ fontFamily: 'Arial, sans-serif', fontSize: '12px', fontStyle: 'italic' }}>By submitting this form, I authorise the Energy & Water Ombudsman SA to consider the complaint against the energy or water supplier specified in this form.</p>
-            <p style={{ fontFamily: 'Arial, sans-serif', fontSize: '12px', fontStyle: 'italic' }}>I also authorise the Energy & Water Ombudsman SA to:</p>
+          <Typography variant="body1" gutterBottom style={{ fontFamily: 'Calibri', fontSize: '14px', fontStyle: 'italic', marginTop: '10px', marginBottom: '1px' }}>
+            <p style={{ fontFamily: 'Calibri', fontSize: '12px', fontStyle: 'italic' }}>By submitting this form, I authorise the Energy & Water Ombudsman SA to consider the complaint against the energy or water supplier specified in this form.</p>
+            <p style={{ fontFamily: 'Calibri', fontSize: '12px', fontStyle: 'italic' }}>I also authorise the Energy & Water Ombudsman SA to:</p>
 
-            <p style={{ fontFamily: 'Arial, sans-serif', fontSize: '12px', fontStyle: 'italic' }}>- exchange my information, including relevant sensitive information, to other parties, consultants or external organisations where reasonably necessary for the purpose of dealing with the complaint, and as required or permitted by law;</p>
-            <p style={{ fontFamily: 'Arial, sans-serif', fontSize: '12px', fontStyle: 'italic' }}>- refer the complaint to another body or dispute resolution service where the Energy & Water Ombudsman SA decides it is appropriate.</p>
+            <p style={{ fontFamily: 'Calibri', fontSize: '12px', fontStyle: 'italic' }}>- exchange my information, including relevant sensitive information, to other parties, consultants or external organisations where reasonably necessary for the purpose of dealing with the complaint, and as required or permitted by law;</p>
+            <p style={{ fontFamily: 'Calibri', fontSize: '12px', fontStyle: 'italic' }}>- refer the complaint to another body or dispute resolution service where the Energy & Water Ombudsman SA decides it is appropriate.</p>
 
-            <p style={{ fontFamily: 'Arial, sans-serif', fontSize: '12px', fontStyle: 'italic' }}>For general information on the Energy & Water Ombudsman SA deals with information provided to us and the complainant's privacy rights, see our <a href="www.google.com">privacy policy</a>.</p>
-            <p style={{ fontFamily: 'Arial, sans-serif', fontSize: '12px', fontStyle: 'italic' }}>Details of our complaint handling process can be found <a href="www.google.com">here</a>.</p>
+            <p style={{ fontFamily: 'Calibri', fontSize: '12px', fontStyle: 'italic' }}>For general information on the Energy & Water Ombudsman SA deals with information provided to us and the complainant's privacy rights, see our <a href="www.google.com">privacy policy</a>.</p>
+            <p style={{ fontFamily: 'Calibri', fontSize: '12px', fontStyle: 'italic' }}>Details of our complaint handling process can be found <a href="www.google.com">here</a>.</p>
 
           </Typography>
         </Grid>

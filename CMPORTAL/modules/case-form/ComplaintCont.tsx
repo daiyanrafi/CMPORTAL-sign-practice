@@ -31,6 +31,7 @@ export function ComplaintCont({
 
   const inputProps = {
     style: { fontSize: 'large' },
+    fontFamily: 'Calibri',
     disabled: viewMode, // Disable input fields in view mode
   };
 
@@ -41,26 +42,26 @@ export function ComplaintCont({
       </Typography>
       <Grid container spacing={2}>
         <Grid item xs={15}>
-          <Typography variant="body1" gutterBottom style={{ color: 'Blue', marginTop: '10px', fontFamily: 'Arial, sans-serif', fontSize: '14px', marginBottom: '16px' }}>
+          <Typography variant="body1" gutterBottom style={{ color: 'Blue', marginTop: '10px', fontFamily: 'Calibri', fontSize: '14px', marginBottom: '16px' }}>
             Do you currently have a concession card? If so, which one?
           </Typography>
           <TextField
             fullWidth
             required
             select
-            label={<span style={{ fontSize: 'large' }}>Please Select</span>}
+            label={<span style={{ fontSize: 'large', fontFamily: 'Calibri' }}>Please Select</span>}
             value={complaint_cont_concession}
             onChange={(e) => updateFields({ complaint_cont_concession: e.target.value })}
             InputProps={inputProps}
           >
-            <MenuItem value="Yes" style={{ fontSize: '15px' }}>Yes</MenuItem>
-            <MenuItem value="No" style={{ fontSize: '15px' }}>No</MenuItem>
+            <MenuItem value="Yes" style={{ fontSize: '15px', fontFamily: 'Calibri' }}>Yes</MenuItem>
+            <MenuItem value="No" style={{ fontSize: '15px', fontFamily: 'Calibri' }}>No</MenuItem>
           </TextField>
         </Grid>
 
         <Grid container spacing={1} style={{ marginLeft: '10px' }}>
           <Grid item xs={15}>
-            <Typography variant="body1" gutterBottom style={{ color: 'Blue', marginTop: '16px', fontFamily: 'Arial, sans-serif', fontSize: '14px', marginBottom: '12px' }}>
+            <Typography variant="body1" gutterBottom style={{ color: 'Blue', marginTop: '16px', fontFamily: 'Calibri', fontSize: '14px', marginBottom: '12px' }}>
               Concession Type:
             </Typography>
           </Grid>
@@ -83,6 +84,7 @@ export function ComplaintCont({
                 style={{
                   fontStyle: 'italic',
                   fontSize: '13px',
+                  fontFamily: 'Calibri'
                 }}
               >
                 Austudy or Abstudy
@@ -107,6 +109,7 @@ export function ComplaintCont({
                   style={{
                     fontStyle: 'italic',
                     fontSize: '13px',
+                    fontFamily: 'Calibri'
                   }}
                 >
                   Centrelink Health Care Card
@@ -132,6 +135,7 @@ export function ComplaintCont({
                   style={{
                     fontStyle: 'italic',
                     fontSize: '13px',
+                    fontFamily: 'Calibri'
                   }}
                 >
                   Commonwealth Seniors Health Card
@@ -157,6 +161,7 @@ export function ComplaintCont({
                   style={{
                     fontStyle: 'italic',
                     fontSize: '13px',
+                    fontFamily: 'Calibri'
                   }}
                 >
                   Full-Time Student Card
@@ -182,6 +187,7 @@ export function ComplaintCont({
                   style={{
                     fontStyle: 'italic',
                     fontSize: '13px',
+                    fontFamily: 'Calibri'
                   }}
                 >
                   Low-Income Earner
@@ -208,6 +214,7 @@ export function ComplaintCont({
                     style={{
                       fontStyle: 'italic',
                       fontSize: '13px',
+                      fontFamily: 'Calibri'
                     }}
                   >
                     Others
@@ -236,6 +243,7 @@ export function ComplaintCont({
                   style={{
                     fontStyle: 'italic',
                     fontSize: '13px',
+                    fontFamily: 'Calibri'
                   }}
                 >
                   Residential Parks Resident
@@ -262,6 +270,7 @@ export function ComplaintCont({
                     style={{
                       fontStyle: 'italic',
                       fontSize: '13px',
+                      fontFamily: 'Calibri'
                     }}
                   >
                     Seniors Card
@@ -288,6 +297,7 @@ export function ComplaintCont({
                   style={{
                     fontStyle: 'italic',
                     fontSize: '13px',
+                    fontFamily: 'Calibri'
                   }}
                 >
                   Pensioner Concession Card
@@ -313,6 +323,7 @@ export function ComplaintCont({
                   style={{
                     fontStyle: 'italic',
                     fontSize: '13px',
+                    fontFamily: 'Calibri'
                   }}
                 >
                   Transport Concession Card
@@ -338,6 +349,7 @@ export function ComplaintCont({
                   style={{
                     fontStyle: 'italic',
                     fontSize: '13px',
+                    fontFamily: 'Calibri'
                   }}
                 >
                   Department of Veterans Affairs Card (DVA Card)
@@ -347,12 +359,12 @@ export function ComplaintCont({
           </Grid>
         </Grid>
         <Grid item xs={15}>
-          <Typography variant="body1" gutterBottom style={{ color: 'Blue', fontFamily: 'Arial, sans-serif', fontSize: '14px', marginBottom: '16px' }}>
+          <Typography variant="body1" gutterBottom style={{ color: 'Blue', fontFamily: 'Calibri', fontSize: '14px', marginBottom: '16px' }}>
             Is there anything about you or your personal circumstances that we need to consider, that will help us with your complaint?
           </Typography>
           <TextField
             fullWidth
-            label={<span style={{ fontSize: 'large' }}>Please write here.</span>}
+            label={<span style={{ fontSize: 'large', fontFamily: 'Calibri' }}>Please write here.</span>}
             required
             multiline
             value={complaint_cont_complaintDescription}
@@ -361,7 +373,7 @@ export function ComplaintCont({
           />
         </Grid>
 
-        <Grid item xs={15} style={{ marginTop: '10px', fontFamily: 'Arial, sans-serif' }}>
+        <Grid item xs={15} style={{ marginTop: '10px', fontFamily: 'Calibri' }}>
           <FormControlLabel
             control={
               <Checkbox
@@ -370,7 +382,7 @@ export function ComplaintCont({
               />
             }
             label={
-              <Typography variant="body1" style={{ fontSize: '12px' }}>
+              <Typography variant="body1" style={{ fontSize: '12px', fontFamily: 'Calibri' }}>
                 I agree for this information to be shared with relevant parties to assist with this complaint.
               </Typography>
             }
@@ -378,7 +390,7 @@ export function ComplaintCont({
         </Grid>
 
         <Grid item xs={15}>
-          <Typography variant="body1" gutterBottom style={{ color: 'Blue', fontFamily: 'Arial, sans-serif', fontSize: '14px', marginBottom: '16px' }}>
+          <Typography variant="body1" gutterBottom style={{ color: 'Blue', fontFamily: 'Calibri', fontSize: '14px', marginBottom: '16px' }}>
             Do you identify as an Aboriginal ot Torres Straait Islander person?
           </Typography>
           <TextField
@@ -390,8 +402,8 @@ export function ComplaintCont({
             onChange={(e) => updateFields({ complaint_cont_treeIdentification: e.target.value })}
             InputProps={inputProps}
           >
-            <MenuItem value="Yes" style={{ fontSize: '15px' }}>Yes</MenuItem>
-            <MenuItem value="No" style={{ fontSize: '15px' }}>No</MenuItem>
+            <MenuItem value="Yes" style={{ fontSize: '15px', fontFamily: 'Calibri' }}>Yes</MenuItem>
+            <MenuItem value="No" style={{ fontSize: '15px', fontFamily: 'Calibri' }}>No</MenuItem>
           </TextField>
         </Grid>
       </Grid>

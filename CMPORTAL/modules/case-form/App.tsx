@@ -116,8 +116,8 @@ function App() {
     const viewedUser = userList[index];
     setData(viewedUser);
     setViewMode(true); // Set the form in "View" mode
-}
-  
+  }
+
   // function onSubmit(e: FormEvent) {
   //   e.preventDefault();
   //   if (!isLastStep) return next();
@@ -131,12 +131,12 @@ function App() {
   // }
 
   const steps = [
-    <SelectionPage onNext={handleSelectionPageNext} userDataList={userList} onEdit={handleEdit}/>,
-    <UserForm {...data} updateFields={updateFields} viewMode={viewMode}/>,
-    <RepresentativeForm {...data} updateFields={updateFields} viewMode={viewMode}/>,
-    <IncidentAddressForm {...data} updateFields={updateFields} viewMode={viewMode}/>,
-    <ComplaintForm {...data} updateFields={updateFields} viewMode={viewMode}/>,
-    <ComplaintCont {...data} updateFields={updateFields} viewMode={viewMode}/>,
+    <SelectionPage onNext={handleSelectionPageNext} userDataList={userList} onEdit={handleEdit} />,
+    <UserForm {...data} updateFields={updateFields} viewMode={viewMode} />,
+    <RepresentativeForm {...data} updateFields={updateFields} viewMode={viewMode} />,
+    <IncidentAddressForm {...data} updateFields={updateFields} viewMode={viewMode} />,
+    <ComplaintForm {...data} updateFields={updateFields} viewMode={viewMode} />,
+    <ComplaintCont {...data} updateFields={updateFields} viewMode={viewMode} />,
     <FinalizeSubmissionForm {...data} updateFields={updateFields} viewMode={viewMode} />
   ];
 
@@ -176,9 +176,9 @@ function App() {
   function onSubmit(e: FormEvent) {
     e.preventDefault();
     if (!isLastStep) return next();
-    
+
     const newData = { ...data }; // Clone the current form data
-  
+
     // If it's an edit operation, update the existing entry
     if (editIndex !== null) {
       setUserList((prevList) => {
@@ -190,17 +190,15 @@ function App() {
       // If it's a new entry, add it to the list
       setUserList((prevList) => [...prevList, newData]);
     }
-  
+
     console.log(newData);
-    alert('Successful Account Creation');
+    alert('Thank You');
     setData(INITIAL_DATA);
     setShowStartPage(true);
     setCurrentStepIndex(0);
     setRecaptchaValue(null);
     setEditIndex(null); // Reset edit index
   }
-  
-
 
   return (
     <Container
@@ -216,7 +214,7 @@ function App() {
       }}
     >
       {showStartPage ? (
-        <StartPage onNext={startForm} userDataList={userList} onEdit={handleEdit} onView={handleView}/>
+        <StartPage onNext={startForm} userDataList={userList} onEdit={handleEdit} onView={handleView} />
       ) : (
         <Paper
           style={{
@@ -232,11 +230,11 @@ function App() {
             </div>
             {steps[currentStepIndex]}
             {isLastStep && (
-            <ReCAPTCHA
-              sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-              onChange={(value) => setRecaptchaValue(value)}
-            />
-          )}
+              <ReCAPTCHA
+                sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                onChange={(value) => setRecaptchaValue(value)}
+              />
+            )}
             <div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'flex-end' }}>
               {!isFirstStep && currentStepIndex !== 0 && currentStepIndex !== 1 && (
                 <Button
@@ -250,7 +248,7 @@ function App() {
               {!isLastStep && currentStepIndex !== 0 && (
                 <Button
                   type="submit"
-                  style={{ marginRight: '8px', backgroundColor: '#00A4EF', color: 'white', borderRadius: '0', fontSize: '15px' }}
+                  style={{ marginRight: '8px', backgroundColor: '#00A4EF', color: 'white', borderRadius: '0', fontSize: '15px', fontFamily: 'Calibri' }}
                 >
                   Next
                 </Button>
@@ -259,11 +257,14 @@ function App() {
                 <Button
                   type="submit"
                   disabled={!recaptchaValue}
-                  style={{ backgroundColor: recaptchaValue ? '#00A4EF' : 'gray',
-                  color: 'white',
-                  fontSize: '15px',
-                  borderRadius: '0',
-                  cursor: recaptchaValue ? 'pointer' : 'not-allowed', }}
+                  style={{
+                    backgroundColor: recaptchaValue ? '#00A4EF' : 'gray',
+                    color: 'white',
+                    fontSize: '15px',
+                    fontFamily: 'Calibri',
+                    borderRadius: '0',
+                    cursor: recaptchaValue ? 'pointer' : 'not-allowed',
+                  }}
                 >
                   Finish
                 </Button>

@@ -55,16 +55,17 @@ export function UserForm({
 
   const inputProps = {
     style: { fontSize: 'large' },
+    fontFamily: 'Calibri',
     disabled: viewMode, // Disable input fields in view mode
   };
 
   return (
     <div style={{ marginBottom: '10px' }}>
-      <Typography variant="h6" gutterBottom style={{ fontSize: '25px' }}>
+      <Typography variant="h6" gutterBottom style={{ fontSize: '25px', fontFamily: 'Calibri' }}>
         Your Details
       </Typography>
 
-      <Typography style={{ marginTop: '10px', fontFamily: 'Arial, sans-serif', fontSize: '14px', marginBottom: '18px' }}>The information you provide will be forwarded to the energy or water supplier that you are complaining about any other relevant party that may assist us with your complaint.</Typography>
+      <Typography style={{ marginTop: '10px', fontFamily: 'Calibri', fontSize: '14px', marginBottom: '18px' }}>The information you provide will be forwarded to the energy or water supplier that you are complaining about any other relevant party that may assist us with your complaint.</Typography>
 
       <Grid container spacing={2}>
         <Grid item xs={2}>
@@ -72,19 +73,19 @@ export function UserForm({
             fullWidth
             select
             required
-            label={<span style={{ fontSize: 'large' }}>Title</span>}
+            label={<span style={{ fontSize: 'large', fontFamily: 'Calibri' }}>Title</span>}
             value={user_title}
             onChange={(e) => updateFields({ user_title: e.target.value })}
             InputProps={inputProps} // Added this line
           >
-            <MenuItem value="Mr" style={{ fontSize: '15px' }}>Mr</MenuItem>
-            <MenuItem value="Mrs" style={{ fontSize: '15px' }}>Mrs</MenuItem>
+            <MenuItem value="Mr" style={{ fontSize: '15px', fontFamily: 'Calibri' }}>Mr</MenuItem>
+            <MenuItem value="Mrs" style={{ fontSize: '15px', fontFamily: 'Calibri' }}>Mrs</MenuItem>
           </TextField>
         </Grid>
         <Grid item xs={5}>
           <TextField
             fullWidth
-            label={<span style={{ fontSize: 'large' }}>First Name</span>}
+            label={<span style={{ fontSize: 'large', fontFamily: 'Calibri' }}>First Name</span>}
             required
             type="text"
             value={user_firstName}
@@ -96,7 +97,7 @@ export function UserForm({
         <Grid item xs={5}>
           <TextField
             fullWidth
-            label={<span style={{ fontSize: 'large' }}>Last Name</span>}
+            label={<span style={{ fontSize: 'large', fontFamily: 'Calibri' }}>Last Name</span>}
             required
             type="text"
             value={user_lastName}
@@ -108,7 +109,7 @@ export function UserForm({
         <Grid item xs={12}>
           <TextField
             fullWidth
-            label={<span style={{ fontSize: 'large' }}>Postal Address</span>}
+            label={<span style={{ fontSize: 'large', fontFamily: 'Calibri' }}>Postal Address</span>}
             required
             type="text"
             value={user_postalAddress}
@@ -119,7 +120,7 @@ export function UserForm({
         <Grid item xs={12}>
           <TextField
             fullWidth
-            label={<span style={{ fontSize: 'large' }}>Address</span>}
+            label={<span style={{ fontSize: 'large', fontFamily: 'Calibri' }}>Address</span>}
             required
             type="text"
             value={user_address}
@@ -130,7 +131,7 @@ export function UserForm({
         <Grid item xs={6}>
           <TextField
             fullWidth
-            label={<span style={{ fontSize: 'large' }}>Suburb</span>}
+            label={<span style={{ fontSize: 'large', fontFamily: 'Calibri' }}>Suburb</span>}
             required
             type="text"
             value={user_suburb}
@@ -141,7 +142,7 @@ export function UserForm({
         <Grid item xs={6}>
           <TextField
             fullWidth
-            label={<span style={{ fontSize: 'large' }}>Postcode</span>}
+            label={<span style={{ fontSize: 'large', fontFamily: 'Calibri' }}>Postcode</span>}
             required
             type="text"
             value={user_postcode}
@@ -152,7 +153,7 @@ export function UserForm({
         <Grid item xs={12}>
           <TextField
             fullWidth
-            label={<span style={{ fontSize: 'large' }}>State</span>}
+            label={<span style={{ fontSize: 'large', fontFamily: 'Calibri' }}>State</span>}
             required
             type="text"
             value={user_state}
@@ -163,7 +164,7 @@ export function UserForm({
         <Grid item xs={12}>
           <TextField
             fullWidth
-            label={<span style={{ fontSize: 'large' }}>Country</span>}
+            label={<span style={{ fontSize: 'large', fontFamily: 'Calibri' }}>Country</span>}
             required
             type="text"
             value={user_country}
@@ -179,15 +180,15 @@ export function UserForm({
             value={user_preferredContact}
             onChange={(e) => updateFields({ user_preferredContact: e.target.value })}
           >
-            <FormControlLabel value="Landline" control={<Radio disabled={viewMode} />} label={<span style={{ fontSize: '15px' }}>Landline</span>} />
-            <FormControlLabel value="Mobile" control={<Radio disabled={viewMode} />} label={<span style={{ fontSize: '15px' }}>Mobile</span>} />
+            <FormControlLabel value="Landline" control={<Radio disabled={viewMode} />} label={<span style={{ fontSize: '15px', fontFamily: 'Calibri' }}>Landline</span>} />
+            <FormControlLabel value="Mobile" control={<Radio disabled={viewMode} />} label={<span style={{ fontSize: '15px', fontFamily: 'Calibri' }}>Mobile</span>} />
           </RadioGroup>
         </Grid>
         {user_preferredContact === 'Landline' && (
           <Grid item xs={12}>
             <TextField
               fullWidth
-              label={<span style={{ fontSize: 'large' }}>Landline</span>}
+              label={<span style={{ fontSize: 'large', fontFamily: 'Calibri' }}>Landline</span>}
               required
               type="text"
               value={user_landline}
@@ -200,7 +201,7 @@ export function UserForm({
           <Grid item xs={12}>
             <TextField
               fullWidth
-              label={<span style={{ fontSize: 'large' }}>Mobile Phone</span>}
+              label={<span style={{ fontSize: 'large', fontFamily: 'Calibri' }}>Mobile Phone</span>}
               required
               type="text"
               value={user_mobile}
@@ -212,7 +213,7 @@ export function UserForm({
         <Grid item xs={12}>
           <TextField
             fullWidth
-            label={<span style={{ fontSize: 'large' }}>Email</span>}
+            label={<span style={{ fontSize: 'large', fontFamily: 'Calibri' }}>Email</span>}
             required
             type="email"
             value={user_email}
@@ -221,7 +222,7 @@ export function UserForm({
           />
         </Grid>
         <Grid item xs={12}>
-          <Typography style={{ marginTop: '10px', fontFamily: 'Arial, sans-serif', fontSize: '14px', marginBottom: '18px' }}>We may need to call you if we need further information about your complaint. Please provide a daytime contact number so we can talk to you about this complaint.</Typography>
+          <Typography style={{ marginTop: '10px', fontFamily: 'Calibri', fontSize: '14px', marginBottom: '18px' }}>We may need to call you if we need further information about your complaint. Please provide a daytime contact number so we can talk to you about this complaint.</Typography>
         </Grid>
       </Grid>
     </div>
