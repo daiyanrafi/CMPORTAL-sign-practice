@@ -54,8 +54,7 @@ export function UserForm({
 }: UserFormProps) {
 
   const inputProps = {
-    style: { fontSize: 'large' },
-    fontFamily: 'Calibri',
+    style: { fontSize: 'large', fontFamily: 'Calibri' },
     disabled: viewMode, // Disable input fields in view mode
   };
 
