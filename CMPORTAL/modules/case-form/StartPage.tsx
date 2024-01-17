@@ -119,7 +119,7 @@ const StartPage: React.FC<StartPageProps> = ({ onNext, onEdit, onView, userDataL
                   <TableCell style={{ fontSize: '15px', fontFamily: 'Calibri', color: getStatusColor(getStatusByIndex(absoluteIndex)) }}>{getStatusByIndex(absoluteIndex)}</TableCell>
                   <TableCell style={{ fontSize: '15px', color: '#333', fontFamily: 'Calibri' }}>{getFormattedDate(new Date())}</TableCell>
                   <TableCell>
-                    <Button variant="contained" color="primary" onClick={() => onEdit(index)} style={{ fontSize: '13px', fontFamily: 'Calibri', backgroundColor: '#F25022', color: 'white', borderRadius: '0', marginRight: '8px' }}>
+                    <Button variant="contained" color="primary" onClick={() => onEdit(index)} style={{ fontSize: '13px', fontFamily: 'Calibri', backgroundColor: '#F25022', color: 'white', borderRadius: '0', marginRight: '8px', marginBottom: '5px' }}>
                       Edit
                     </Button>
                     <Button variant="contained" color="success" onClick={() => onView(index)} style={{ fontSize: '13px', fontFamily: 'Calibri', backgroundColor: '#7FBA00', color: 'white', borderRadius: '0' }}>

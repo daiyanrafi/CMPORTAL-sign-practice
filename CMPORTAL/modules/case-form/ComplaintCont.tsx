@@ -30,8 +30,7 @@ export function ComplaintCont({
 }: ComplaintContProps) {
 
   const inputProps = {
-    style: { fontSize: 'large' },
-    fontFamily: 'Calibri',
+    style: { fontSize: 'large', fontFamily: 'Calibri' },
     disabled: viewMode, // Disable input fields in view mode
   };
 
@@ -397,7 +396,7 @@ export function ComplaintCont({
             fullWidth
             select
             required
-            label={<span style={{ fontSize: 'large' }}>Please Select</span>}
+            label={<span style={{ fontSize: 'large', fontFamily: 'Calibri' }}>Please Select</span>}
             value={complaint_cont_treeIdentification}
             onChange={(e) => updateFields({ complaint_cont_treeIdentification: e.target.value })}
             InputProps={inputProps}
