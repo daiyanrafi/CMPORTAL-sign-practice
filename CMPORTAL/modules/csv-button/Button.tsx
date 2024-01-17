@@ -46,7 +46,7 @@ const MyComponent: React.FC = () => {
     const csv = Papa.unparse(jsonData);
     const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
     const link = document.createElement('a');
-  
+
     if ((navigator as any).msSaveBlob) {
       (navigator as any).msSaveBlob(blob, 'data.csv');
     } else {
@@ -55,10 +55,19 @@ const MyComponent: React.FC = () => {
       link.download = 'data.csv';
       link.click();
     }
-  };  
+  };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '30vh' }}>
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      height: '30vh',
+      border: '5px solid #fcba03', // Add this line for a thin border
+      padding: '20px', // Optional: Add padding for spacing
+      borderRadius: '8px' // Optional: Add border radius for rounded corners
+    }}>
       <table>
         <thead>
           <tr>
