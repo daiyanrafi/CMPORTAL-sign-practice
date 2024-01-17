@@ -2,6 +2,7 @@ import React = require("react");
 import { IInputs } from "./generated/ManifestTypes";
 import App from "./modules/case-form/App";
 import axios from "axios";
+import Button from "./modules/csv-button/Button";
 
 export default class HelloWorld extends React.Component<
   ComponentFramework.Context<IInputs>,
@@ -67,6 +68,7 @@ export default class HelloWorld extends React.Component<
     return (
       <div>
         {/* <h1>Hello world-</h1> */}
+        <Button/>
         <App/>
       </div>
     );

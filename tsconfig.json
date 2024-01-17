@@ -6,3 +6,11 @@
         "esModuleInterop": true
     }
 }
+
+
+// {
+//     "compilerOptions": {
+//       "types": ["papaparse"]
+//     }
+//   }
+  
