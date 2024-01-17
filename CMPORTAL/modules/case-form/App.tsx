@@ -72,6 +72,7 @@ function App() {
   const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
   const [userList, setUserList] = useState<FormData[]>([]);
   const [editIndex, setEditIndex] = useState<number | null>(null);
+  const [viewMode, setViewMode] = useState(false);
 
   function updateFields(fields: Partial<FormData>) {
     setData((prev) => ({ ...prev, ...fields }));
@@ -89,6 +90,11 @@ function App() {
     setData(INITIAL_DATA);
     setCurrentStepIndex(0);
     setShowStartPage(false);
+    setViewMode(false);
+  }
+
+  function handleSelectionPageNext() {
+    next();
   }
 
   function handleEdit(index: number) {
@@ -98,12 +104,20 @@ function App() {
 
     const editedUser = userList[index];
     setData(editedUser);
+    setViewMode(false);
   }
 
-  function handleSelectionPageNext() {
-    next();
+  function handleView(index: number) {
+    setShowStartPage(false);
+    setCurrentStepIndex(1); // Navigate to the first step of the form
+    setEditIndex(index); // Save the index for later retrieval
+
+    // Populate the form with existing user data
+    const viewedUser = userList[index];
+    setData(viewedUser);
+    setViewMode(true); // Set the form in "View" mode
   }
-  
+
   // function onSubmit(e: FormEvent) {
   //   e.preventDefault();
   //   if (!isLastStep) return next();
@@ -116,38 +130,14 @@ function App() {
   //   setRecaptchaValue(null);
   // }
 
-  function onSubmit(e: FormEvent) {
-    e.preventDefault();
-
-    if (!isLastStep) return next();
-
-    // Update the user data in the list
-    if (editIndex !== null) {
-      const updatedUserList = [...userList];
-      updatedUserList[editIndex] = data;
-      setUserList(updatedUserList);
-      console.log('edit-data',data);
-    } else {
-      setUserList((prevList) => [...prevList, data]);
-      console.log('new-data',data);
-    }
-
-    alert('Successful Account Creation');
-    setData(INITIAL_DATA);
-    setShowStartPage(true);
-    setCurrentStepIndex(0);
-    setRecaptchaValue(null);
-    setEditIndex(null); // Reset edit index after submission
-  }
-
   const steps = [
-    <SelectionPage onNext={handleSelectionPageNext} userDataList={userList} onEdit={handleEdit}/>,
-    <UserForm {...data} updateFields={updateFields} />,
-    <RepresentativeForm {...data} updateFields={updateFields} />,
-    <IncidentAddressForm {...data} updateFields={updateFields} />,
-    <ComplaintForm {...data} updateFields={updateFields} />,
-    <ComplaintCont {...data} updateFields={updateFields} />,
-    <FinalizeSubmissionForm {...data} updateFields={updateFields} />
+    <SelectionPage onNext={handleSelectionPageNext} userDataList={userList} onEdit={handleEdit} />,
+    <UserForm {...data} updateFields={updateFields} viewMode={viewMode} />,
+    <RepresentativeForm {...data} updateFields={updateFields} viewMode={viewMode} />,
+    <IncidentAddressForm {...data} updateFields={updateFields} viewMode={viewMode} />,
+    <ComplaintForm {...data} updateFields={updateFields} viewMode={viewMode} />,
+    <ComplaintCont {...data} updateFields={updateFields} viewMode={viewMode} />,
+    <FinalizeSubmissionForm {...data} updateFields={updateFields} viewMode={viewMode} />
   ];
 
   const isFirstStep = currentStepIndex === 0;
@@ -159,6 +149,56 @@ function App() {
   //   steps[currentStepIndex]
   // );
 
+  // function onSubmit(e: FormEvent) {
+  //   e.preventDefault();
+
+  //   if (!isLastStep) return next();
+
+  //   // Update the user data in the list
+  //   if (editIndex !== null) {
+  //     const updatedUserList = [...userList];
+  //     updatedUserList[editIndex] = data;
+  //     setUserList(updatedUserList);
+  //     console.log('edit-data',data);
+  //   } else {
+  //     setUserList((prevList) => [...prevList, data]);
+  //     console.log('new-data',data);
+  //   }
+
+  //   alert('Successful Account Creation');
+  //   setData(INITIAL_DATA);
+  //   setShowStartPage(true);
+  //   setCurrentStepIndex(0);
+  //   setRecaptchaValue(null);
+  //   setEditIndex(null); // Reset edit index after submission
+  // }
+
+  function onSubmit(e: FormEvent) {
+    e.preventDefault();
+    if (!isLastStep) return next();
+
+    const newData = { ...data }; // Clone the current form data
+
+    // If it's an edit operation, update the existing entry
+    if (editIndex !== null) {
+      setUserList((prevList) => {
+        const updatedList = [...prevList];
+        updatedList[editIndex] = newData;
+        return updatedList;
+      });
+    } else {
+      // If it's a new entry, add it to the list
+      setUserList((prevList) => [...prevList, newData]);
+    }
+
+    console.log(newData);
+    alert('Thank You');
+    setData(INITIAL_DATA);
+    setShowStartPage(true);
+    setCurrentStepIndex(0);
+    setRecaptchaValue(null);
+    setEditIndex(null); // Reset edit index
+  }
 
   return (
     <Container
@@ -174,7 +214,7 @@ function App() {
       }}
     >
       {showStartPage ? (
-        <StartPage onNext={startForm} userDataList={userList} onEdit={handleEdit}/>
+        <StartPage onNext={startForm} userDataList={userList} onEdit={handleEdit} onView={handleView} />
       ) : (
         <Paper
           style={{
@@ -190,17 +230,17 @@ function App() {
             </div>
             {steps[currentStepIndex]}
             {isLastStep && (
-            <ReCAPTCHA
-              sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-              onChange={(value) => setRecaptchaValue(value)}
-            />
-          )}
+              <ReCAPTCHA
+                sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                onChange={(value) => setRecaptchaValue(value)}
+              />
+            )}
             <div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'flex-end' }}>
               {!isFirstStep && currentStepIndex !== 0 && currentStepIndex !== 1 && (
                 <Button
                   type="button"
                   onClick={back}
-                  style={{ marginRight: '8px', backgroundColor: 'DodgerBlue', color: 'white', fontSize: '15px' }}
+                  style={{ marginRight: '8px', backgroundColor: '#00A4EF', color: 'white', borderRadius: '0', fontSize: '15px' }}
                 >
                   Back
                 </Button>
@@ -208,7 +248,7 @@ function App() {
               {!isLastStep && currentStepIndex !== 0 && (
                 <Button
                   type="submit"
-                  style={{ marginRight: '8px', backgroundColor: 'DodgerBlue', color: 'white', fontSize: '15px' }}
+                  style={{ marginRight: '8px', backgroundColor: '#00A4EF', color: 'white', borderRadius: '0', fontSize: '15px', fontFamily: 'Calibri' }}
                 >
                   Next
                 </Button>
@@ -217,10 +257,14 @@ function App() {
                 <Button
                   type="submit"
                   disabled={!recaptchaValue}
-                  style={{ backgroundColor: recaptchaValue ? 'DodgerBlue' : 'gray',
-                  color: 'white',
-                  fontSize: '15px',
-                  cursor: recaptchaValue ? 'pointer' : 'not-allowed', }}
+                  style={{
+                    backgroundColor: recaptchaValue ? '#00A4EF' : 'gray',
+                    color: 'white',
+                    fontSize: '15px',
+                    fontFamily: 'Calibri',
+                    borderRadius: '0',
+                    cursor: recaptchaValue ? 'pointer' : 'not-allowed',
+                  }}
                 >
                   Finish
                 </Button>

@@ -30,6 +30,7 @@ type RepresentativeFormProps = {
     representativeMobile: string;
     representativeEmail: string;
   }>) => void;
+  viewMode: boolean;
 };
 
 export function RepresentativeForm({
@@ -46,10 +47,18 @@ export function RepresentativeForm({
   representativeMobile,
   representativeEmail,
   updateFields,
+  viewMode,
 }: RepresentativeFormProps) {
+
+  const inputProps = {
+    style: { fontSize: 'large' },
+    fontFamily: 'Calibri',
+    disabled: viewMode, // Disable input fields in view mode
+  };
+
   return (
     <div style={{ marginBottom: '10px' }}>
-      <Typography variant="h6" gutterBottom style={{ fontSize: '25px' }}>
+      <Typography variant="h6" gutterBottom style={{ fontSize: '25px', fontFamily: 'Calibri' }}>
         Representative Details
       </Typography>
       <Typography style={{ marginTop: '10px', fontFamily: 'Arial, sans-serif', fontSize: '14px', marginBottom: '18px' }}>If you are submitting this complaint on behalf of another person/supplier/organisation, please complete the Authority to Act form and have it ready to attach</Typography>
@@ -59,99 +68,83 @@ export function RepresentativeForm({
           <TextField
             fullWidth
             select
-            label={<span style={{ fontSize: 'large' }}>Title</span>}
+            label={<span style={{ fontSize: 'large', fontFamily: 'Calibri' }}>Title</span>}
             value={representativeTitle}
             onChange={(e) => updateFields({ representativeTitle: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps}
           >
-            <MenuItem value="Mr" style={{ fontSize: '15px' }}>Mr</MenuItem>
-            <MenuItem value="Mrs" style={{ fontSize: '15px' }}>Mrs</MenuItem>
+            <MenuItem value="Mr" style={{ fontSize: '15px', fontFamily: 'Calibri' }}>Mr</MenuItem>
+            <MenuItem value="Mrs" style={{ fontSize: '15px', fontFamily: 'Calibri' }}>Mrs</MenuItem>
           </TextField>
         </Grid>
         <Grid item xs={5}>
           <TextField
             fullWidth
-            label={<span style={{ fontSize: 'large' }}>First Name</span>}
+            label={<span style={{ fontSize: 'large', fontFamily: 'Calibri' }}>First Name</span>}
             type="text"
             value={representativeFirstName}
             onChange={(e) => updateFields({ representativeFirstName: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps}
           />
         </Grid>
         <Grid item xs={5}>
           <TextField
             fullWidth
-            label={<span style={{ fontSize: 'large' }}>Last Name</span>}
+            label={<span style={{ fontSize: 'large', fontFamily: 'Calibri' }}>Last Name</span>}
             type="text"
             value={representativeLastName}
             onChange={(e) => updateFields({ representativeLastName: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps}
           />
         </Grid>
         <Grid item xs={12}>
           <TextField
             fullWidth
-            label={<span style={{ fontSize: 'large' }}>Postal Address</span>}
+            label={<span style={{ fontSize: 'large', fontFamily: 'Calibri' }}>Postal Address</span>}
             type="text"
             value={representativePostalAddress}
             onChange={(e) => updateFields({ representativePostalAddress: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps}
           />
         </Grid>
         <Grid item xs={6}>
           <TextField
             fullWidth
-            label={<span style={{ fontSize: 'large' }}>Suburb</span>}
+            label={<span style={{ fontSize: 'large', fontFamily: 'Calibri' }}>Suburb</span>}
             type="text"
             value={representativeSuburb}
             onChange={(e) => updateFields({ representativeSuburb: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps}
           />
         </Grid>
         <Grid item xs={6}>
           <TextField
             fullWidth
-            label={<span style={{ fontSize: 'large' }}>Postcode</span>}
+            label={<span style={{ fontSize: 'large', fontFamily: 'Calibri' }}>Postcode</span>}
             type="text"
             value={representativePostcode}
             onChange={(e) => updateFields({ representativePostcode: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps}
           />
         </Grid>
         <Grid item xs={12}>
           <TextField
             fullWidth
-            label={<span style={{ fontSize: 'large' }}>State</span>}
+            label={<span style={{ fontSize: 'large', fontFamily: 'Calibri' }}>State</span>}
             type="text"
             value={representativeState}
             onChange={(e) => updateFields({ representativeState: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps}
           />
         </Grid>
         <Grid item xs={12}>
           <TextField
             fullWidth
-            label={<span style={{ fontSize: 'large' }}>Country</span>}
+            label={<span style={{ fontSize: 'large', fontFamily: 'Calibri' }}>Country</span>}
             type="text"
             value={representativeCountry}
             onChange={(e) => updateFields({ representativeCountry: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps}
           />
         </Grid>
         <Grid item xs={12}>
@@ -162,21 +155,19 @@ export function RepresentativeForm({
             value={representativePreferredContact}
             onChange={(e) => updateFields({ representativePreferredContact: e.target.value })}
           >
-            <FormControlLabel value="Landline" control={<Radio />} label={<span style={{ fontSize: '15px' }}>Landline</span>} />
-            <FormControlLabel value="Mobile" control={<Radio />} label={<span style={{ fontSize: '15px' }}>Mobile</span>} />
+            <FormControlLabel value="Landline" control={<Radio disabled={viewMode} />} label={<span style={{ fontSize: '15px', fontFamily: 'Calibri' }}>Landline</span>} />
+            <FormControlLabel value="Mobile" control={<Radio disabled={viewMode} />} label={<span style={{ fontSize: '15px', fontFamily: 'Calibri' }}>Mobile</span>} />
           </RadioGroup>
         </Grid>
         {representativePreferredContact === 'Landline' && (
           <Grid item xs={12}>
             <TextField
               fullWidth
-              label={<span style={{ fontSize: 'large' }}>Landline</span>}
+              label={<span style={{ fontSize: 'large', fontFamily: 'Calibri' }}>Landline</span>}
               type="text"
               value={representativeLandline}
               onChange={(e) => updateFields({ representativeLandline: e.target.value })}
-              InputProps={{
-                style: { fontSize: 'large' },
-              }}
+              InputProps={inputProps}
             />
           </Grid>
         )}
@@ -184,39 +175,35 @@ export function RepresentativeForm({
           <Grid item xs={12}>
             <TextField
               fullWidth
-              label={<span style={{ fontSize: 'large' }}>Mobile Phone</span>}
+              label={<span style={{ fontSize: 'large', fontFamily: 'Calibri' }}>Mobile Phone</span>}
               type="text"
               value={representativeMobile}
               onChange={(e) => updateFields({ representativeMobile: e.target.value })}
-              InputProps={{
-                style: { fontSize: 'large' },
-              }}
+              InputProps={inputProps}
             />
           </Grid>
         )}
         <Grid item xs={12}>
           <TextField
             fullWidth
-            label={<span style={{ fontSize: 'large' }}>Email</span>}
+            label={<span style={{ fontSize: 'large', fontFamily: 'Calibri' }}>Email</span>}
             type="email"
             value={representativeEmail}
             onChange={(e) => updateFields({ representativeEmail: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps}
           />
         </Grid>
         <Grid item xs={12}>
-          <Typography variant="body1" gutterBottom style={{ marginTop: '10px', fontFamily: 'Arial, sans-serif', fontSize: '12px', fontStyle: 'italic', marginBottom: '16px' }}>
+          <Typography variant="body1" gutterBottom style={{ marginTop: '10px', fontFamily: 'Calibri', fontSize: '12px', fontStyle: 'italic', marginBottom: '16px' }}>
             If you are acting on behalf of another person, you are required to provide a singed Authority to Act form. Alternatively, you can also post the Authority to Act form to us on GPO Box 2947, Adelaide SA 5001.
 
-            <p style={{ marginBottom: '12px', textDecoration: 'underline' }}>
-              <a href="www.google.com" style={{ color: 'inherit', textDecoration: 'none' }}>
+            <p style={{ marginBottom: '12px', textDecoration: 'underline', fontFamily: 'Calibri' }}>
+              <a href="www.google.com" style={{ color: 'inherit', textDecoration: 'none', fontFamily: 'Calibri' }}>
                 Download Authority Form
               </a>
             </p>
 
-            <p style={{ color: 'red', fontSize: '10px' }}>You can skip this page, if you want. Press the 'NEXT' button.</p>
+            <p style={{ color: 'red', fontSize: '10px', fontFamily: 'Calibri' }}>You can skip this page, if you want. Press the 'NEXT' button.</p>
           </Typography>
         </Grid>
       </Grid>
