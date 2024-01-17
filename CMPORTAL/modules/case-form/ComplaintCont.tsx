@@ -16,6 +16,7 @@ type ComplaintContProps = {
     complaint_cont_agree: boolean;
     complaint_cont_treeIdentification: string;
   }>) => void;
+  viewMode: boolean;
 };
 
 export function ComplaintCont({
@@ -25,7 +26,14 @@ export function ComplaintCont({
   complaint_cont_agree,
   complaint_cont_treeIdentification,
   updateFields,
+  viewMode,//
 }: ComplaintContProps) {
+
+  const inputProps = {
+    style: { fontSize: 'large' },
+    disabled: viewMode, // Disable input fields in view mode
+  };
+
   return (
     <div style={{ marginBottom: '10px' }}>
       <Typography variant="h6" gutterBottom style={{ fontSize: '25px' }}>
@@ -43,9 +51,7 @@ export function ComplaintCont({
             label={<span style={{ fontSize: 'large' }}>Please Select</span>}
             value={complaint_cont_concession}
             onChange={(e) => updateFields({ complaint_cont_concession: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps}
           >
             <MenuItem value="Yes" style={{ fontSize: '15px' }}>Yes</MenuItem>
             <MenuItem value="No" style={{ fontSize: '15px' }}>No</MenuItem>
@@ -69,6 +75,7 @@ export function ComplaintCont({
                       : [...complaint_cont_concessionTypes, 'a'];
                     updateFields({ complaint_cont_concessionTypes: updatedTypes });
                   }}
+                  disabled={viewMode}  //add this line to desable
                 />
               }
               label={<Typography
@@ -91,6 +98,7 @@ export function ComplaintCont({
                       : [...complaint_cont_concessionTypes, 'b'];
                     updateFields({ complaint_cont_concessionTypes: updatedTypes });
                   }}
+                  disabled={viewMode}  //add this line to desable
                 />
               }
               label={
@@ -115,6 +123,7 @@ export function ComplaintCont({
                       : [...complaint_cont_concessionTypes, 'c'];
                     updateFields({ complaint_cont_concessionTypes: updatedTypes });
                   }}
+                  disabled={viewMode}  //add this line to desable
                 />
               }
               label={
@@ -139,6 +148,7 @@ export function ComplaintCont({
                       : [...complaint_cont_concessionTypes, 'd'];
                     updateFields({ complaint_cont_concessionTypes: updatedTypes });
                   }}
+                  disabled={viewMode}  //add this line to desable
                 />
               }
               label={
@@ -163,6 +173,7 @@ export function ComplaintCont({
                       : [...complaint_cont_concessionTypes, 'e'];
                     updateFields({ complaint_cont_concessionTypes: updatedTypes });
                   }}
+                  disabled={viewMode}  //add this line to desable
                 />
               }
               label={
@@ -188,6 +199,7 @@ export function ComplaintCont({
                         : [...complaint_cont_concessionTypes, 'k'];
                       updateFields({ complaint_cont_concessionTypes: updatedTypes });
                     }}
+                    disabled={viewMode}  //add this line to desable
                   />
                 }
                 label={
@@ -215,6 +227,7 @@ export function ComplaintCont({
                       : [...complaint_cont_concessionTypes, 'g'];
                     updateFields({ complaint_cont_concessionTypes: updatedTypes });
                   }}
+                  disabled={viewMode}  //add this line to desable
                 />
               }
               label={
@@ -240,6 +253,7 @@ export function ComplaintCont({
                         : [...complaint_cont_concessionTypes, 'h'];
                       updateFields({ complaint_cont_concessionTypes: updatedTypes });
                     }}
+                    disabled={viewMode}  //add this line to desable
                   />
                 }
                 label={
@@ -265,6 +279,7 @@ export function ComplaintCont({
                       : [...complaint_cont_concessionTypes, 'f'];
                     updateFields({ complaint_cont_concessionTypes: updatedTypes });
                   }}
+                  disabled={viewMode}  //add this line to desable
                 />
               }
               label={
@@ -289,6 +304,7 @@ export function ComplaintCont({
                       : [...complaint_cont_concessionTypes, 'i'];
                     updateFields({ complaint_cont_concessionTypes: updatedTypes });
                   }}
+                  disabled={viewMode}  //add this line to desable
                 />
               }
               label={
@@ -313,6 +329,7 @@ export function ComplaintCont({
                       : [...complaint_cont_concessionTypes, 'j'];
                     updateFields({ complaint_cont_concessionTypes: updatedTypes });
                   }}
+                  disabled={viewMode}  //add this line to desable
                 />
               }
               label={
@@ -340,9 +357,7 @@ export function ComplaintCont({
             multiline
             value={complaint_cont_complaintDescription}
             onChange={(e) => updateFields({ complaint_cont_complaintDescription: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps}
           />
         </Grid>
 
@@ -373,9 +388,7 @@ export function ComplaintCont({
             label={<span style={{ fontSize: 'large' }}>Please Select</span>}
             value={complaint_cont_treeIdentification}
             onChange={(e) => updateFields({ complaint_cont_treeIdentification: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps}
           >
             <MenuItem value="Yes" style={{ fontSize: '15px' }}>Yes</MenuItem>
             <MenuItem value="No" style={{ fontSize: '15px' }}>No</MenuItem>

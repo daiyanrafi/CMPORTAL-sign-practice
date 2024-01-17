@@ -30,6 +30,7 @@ type RepresentativeFormProps = {
     representativeMobile: string;
     representativeEmail: string;
   }>) => void;
+  viewMode: boolean;
 };
 
 export function RepresentativeForm({
@@ -46,7 +47,14 @@ export function RepresentativeForm({
   representativeMobile,
   representativeEmail,
   updateFields,
+  viewMode,
 }: RepresentativeFormProps) {
+
+  const inputProps = {
+    style: { fontSize: 'large' },
+    disabled: viewMode, // Disable input fields in view mode
+  };
+
   return (
     <div style={{ marginBottom: '10px' }}>
       <Typography variant="h6" gutterBottom style={{ fontSize: '25px' }}>
@@ -62,9 +70,7 @@ export function RepresentativeForm({
             label={<span style={{ fontSize: 'large' }}>Title</span>}
             value={representativeTitle}
             onChange={(e) => updateFields({ representativeTitle: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps}
           >
             <MenuItem value="Mr" style={{ fontSize: '15px' }}>Mr</MenuItem>
             <MenuItem value="Mrs" style={{ fontSize: '15px' }}>Mrs</MenuItem>
@@ -77,9 +83,7 @@ export function RepresentativeForm({
             type="text"
             value={representativeFirstName}
             onChange={(e) => updateFields({ representativeFirstName: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps}
           />
         </Grid>
         <Grid item xs={5}>
@@ -89,9 +93,7 @@ export function RepresentativeForm({
             type="text"
             value={representativeLastName}
             onChange={(e) => updateFields({ representativeLastName: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps}
           />
         </Grid>
         <Grid item xs={12}>
@@ -101,9 +103,7 @@ export function RepresentativeForm({
             type="text"
             value={representativePostalAddress}
             onChange={(e) => updateFields({ representativePostalAddress: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps}
           />
         </Grid>
         <Grid item xs={6}>
@@ -113,9 +113,7 @@ export function RepresentativeForm({
             type="text"
             value={representativeSuburb}
             onChange={(e) => updateFields({ representativeSuburb: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps}
           />
         </Grid>
         <Grid item xs={6}>
@@ -125,9 +123,7 @@ export function RepresentativeForm({
             type="text"
             value={representativePostcode}
             onChange={(e) => updateFields({ representativePostcode: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps}
           />
         </Grid>
         <Grid item xs={12}>
@@ -137,9 +133,7 @@ export function RepresentativeForm({
             type="text"
             value={representativeState}
             onChange={(e) => updateFields({ representativeState: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps}
           />
         </Grid>
         <Grid item xs={12}>
@@ -149,9 +143,7 @@ export function RepresentativeForm({
             type="text"
             value={representativeCountry}
             onChange={(e) => updateFields({ representativeCountry: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps}
           />
         </Grid>
         <Grid item xs={12}>
@@ -162,8 +154,8 @@ export function RepresentativeForm({
             value={representativePreferredContact}
             onChange={(e) => updateFields({ representativePreferredContact: e.target.value })}
           >
-            <FormControlLabel value="Landline" control={<Radio />} label={<span style={{ fontSize: '15px' }}>Landline</span>} />
-            <FormControlLabel value="Mobile" control={<Radio />} label={<span style={{ fontSize: '15px' }}>Mobile</span>} />
+            <FormControlLabel value="Landline" control={<Radio disabled={viewMode} />} label={<span style={{ fontSize: '15px' }}>Landline</span>} />
+            <FormControlLabel value="Mobile" control={<Radio disabled={viewMode} />} label={<span style={{ fontSize: '15px' }}>Mobile</span>} />
           </RadioGroup>
         </Grid>
         {representativePreferredContact === 'Landline' && (
@@ -174,9 +166,7 @@ export function RepresentativeForm({
               type="text"
               value={representativeLandline}
               onChange={(e) => updateFields({ representativeLandline: e.target.value })}
-              InputProps={{
-                style: { fontSize: 'large' },
-              }}
+              InputProps={inputProps}
             />
           </Grid>
         )}
@@ -188,9 +178,7 @@ export function RepresentativeForm({
               type="text"
               value={representativeMobile}
               onChange={(e) => updateFields({ representativeMobile: e.target.value })}
-              InputProps={{
-                style: { fontSize: 'large' },
-              }}
+              InputProps={inputProps}
             />
           </Grid>
         )}
@@ -201,9 +189,7 @@ export function RepresentativeForm({
             type="email"
             value={representativeEmail}
             onChange={(e) => updateFields({ representativeEmail: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps}
           />
         </Grid>
         <Grid item xs={12}>

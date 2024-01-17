@@ -179,8 +179,8 @@ export function UserForm({
             value={user_preferredContact}
             onChange={(e) => updateFields({ user_preferredContact: e.target.value })}
           >
-            <FormControlLabel value="Landline" control={<Radio />} label={<span style={{ fontSize: '15px' }}>Landline</span>} />
-            <FormControlLabel value="Mobile" control={<Radio />} label={<span style={{ fontSize: '15px' }}>Mobile</span>} />
+            <FormControlLabel value="Landline" control={<Radio disabled={viewMode} />} label={<span style={{ fontSize: '15px' }}>Landline</span>} />
+            <FormControlLabel value="Mobile" control={<Radio disabled={viewMode} />} label={<span style={{ fontSize: '15px' }}>Mobile</span>} />
           </RadioGroup>
         </Grid>
         {user_preferredContact === 'Landline' && (

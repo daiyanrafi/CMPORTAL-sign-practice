@@ -92,21 +92,21 @@ const StartPage: React.FC<StartPageProps> = ({ onNext, onEdit, onView, userDataL
     >
       <Paper elevation={3} style={{ padding: '2rem', width: '100%', overflow: 'auto'}}>
       <Box mb={3} display="flex" justifyContent="space-between" alignItems="center">
-          <Typography variant="h5" style={{ fontSize: '25px', fontWeight: '600', color: '#333', fontFamily: 'Georgia, serif', textDecoration: 'underline' }}>MY CASES</Typography>
-          <Button variant="contained" color="primary" onClick={handleNext} style={{ fontSize: '13px', fontFamily: 'Arial', color: '#fff', backgroundColor: '#007bff' }}>
+          <Typography variant="h5" style={{ fontSize: '20px', fontWeight: '600', color: '#333', fontFamily: 'Calibri' }}>MY CASES</Typography>
+          <Button variant="contained" color="primary" onClick={handleNext} style={{ fontSize: '13px', fontFamily: 'Calibri, Arial', color: '#fff', borderRadius: '0', backgroundColor: '#00A4EF' }}>
             Add New Cases
           </Button>
         </Box>
         <Table>
         <TableHead>
-            <TableRow style={{ backgroundColor: '#56c8f5' }}>
-              <TableCell style={{ width: '15%', fontSize: '18px', fontFamily: 'Merriweather, serif', fontWeight: 'bold', color: '#fafeff', borderBottom: '2px solid #333' }}>Case ID</TableCell>
-              <TableCell style={{ width: '40%', fontSize: '18px', fontFamily: 'Merriweather, serif', fontWeight: 'bold', color: '#fafeff', borderBottom: '2px solid #333' }}>User Title</TableCell>
+            <TableRow style={{ backgroundColor: '#02acfa' }}>
+              <TableCell style={{ width: '15%', fontSize: '18px', fontFamily: 'Calibri', color: '#fafeff', borderBottom: '2px solid #333' }}>Case ID</TableCell>
+              <TableCell style={{ width: '40%', fontSize: '18px', fontFamily: 'Calibri', color: '#fafeff', borderBottom: '2px solid #333' }}>User Title</TableCell>
 
-              <TableCell style={{ width: '10%', fontSize: '18px', fontFamily: 'Merriweather, serif', fontWeight: 'bold', color: '#fafeff', borderBottom: '2px solid #333' }}>Status</TableCell>
-              <TableCell style={{ width: '15%', fontSize: '18px', fontFamily: 'Merriweather, serif', fontWeight: 'bold', color: '#fafeff', borderBottom: '2px solid #333' }}>Created Date</TableCell>
+              <TableCell style={{ width: '10%', fontSize: '18px', fontFamily: 'Calibri', color: '#fafeff', borderBottom: '2px solid #333' }}>Status</TableCell>
+              <TableCell style={{ width: '15%', fontSize: '18px', fontFamily: 'Calibri', color: '#fafeff', borderBottom: '2px solid #333' }}>Created Date</TableCell>
 
-              <TableCell style={{ width: '15%', fontSize: '18px', fontFamily: 'Merriweather, serif', fontWeight: 'bold', color: '#fafeff', borderBottom: '2px solid #333' }}>ACTION</TableCell>
+              <TableCell style={{ width: '15%', fontSize: '18px', fontFamily: 'Calibri', color: '#fafeff', borderBottom: '2px solid #333' }}>ACTION</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -119,10 +119,10 @@ const StartPage: React.FC<StartPageProps> = ({ onNext, onEdit, onView, userDataL
                   <TableCell style={{ fontSize: '15px', color: getStatusColor(getStatusByIndex(absoluteIndex)) }}>{getStatusByIndex(absoluteIndex)}</TableCell>
                   <TableCell style={{ fontSize: '15px', color: '#333' }}>{getFormattedDate(new Date())}</TableCell>
                   <TableCell>
-                  <Button variant="contained" color="primary" onClick={() => onEdit(index)} style={{ fontSize: '13px', fontFamily: 'Arial', color: '#fff', backgroundColor: '#007bff', marginRight: '8px' }}>
+                  <Button variant="contained" color="primary" onClick={() => onEdit(index)} style={{ fontSize: '13px', fontFamily: 'Calibri', backgroundColor: '#F25022', color: 'white', borderRadius: '0', marginRight: '8px' }}>
                     Edit
                   </Button>
-                  <Button variant="contained" color="success" onClick={() => onView(index)} style={{ fontSize: '13px', fontFamily: 'Arial', color: '#fff', backgroundColor: '#28a745' }}>
+                  <Button variant="contained" color="success" onClick={() => onView(index)} style={{ fontSize: '13px', fontFamily: 'Calibri', backgroundColor: '#7FBA00', color: 'white', borderRadius: '0' }}>
                     View
                   </Button>
                 </TableCell>

@@ -14,6 +14,7 @@ type FinalizeSubmissionFormProps = {
     final_sub_attachFile: File | null;
     final_sub_isRobot: boolean;
   }>) => void;
+  viewMode: boolean;
 };
 
 export function FinalizeSubmissionForm({
@@ -22,7 +23,14 @@ export function FinalizeSubmissionForm({
   final_sub_attachFile,
   final_sub_isRobot,
   updateFields,
+  viewMode,//
 }: FinalizeSubmissionFormProps) {
+
+  const inputProps = {
+    style: { fontSize: 'large' },
+    disabled: viewMode, // Disable input fields in view mode
+  };
+
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files && e.target.files[0];
     updateFields({ final_sub_attachFile: file || null });
@@ -45,9 +53,7 @@ export function FinalizeSubmissionForm({
             select
             value={final_sub_bestTime}
             onChange={(e) => updateFields({ final_sub_bestTime: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps}
           >
             <MenuItem value="morning" style={{ fontSize: '15px' }}>Morning</MenuItem>
             <MenuItem value="evening" style={{ fontSize: '15px' }}>Evening</MenuItem>
@@ -64,9 +70,7 @@ export function FinalizeSubmissionForm({
             select
             value={final_sub_howDidYouHear}
             onChange={(e) => updateFields({ final_sub_howDidYouHear: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps}
           >
             <MenuItem value="tv" style={{ fontSize: '15px' }}>TV</MenuItem>
             <MenuItem value="radio" style={{ fontSize: '15px' }}>Radio</MenuItem>

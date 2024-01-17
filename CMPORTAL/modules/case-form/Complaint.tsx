@@ -16,6 +16,7 @@ type ComplaintFormProps = {
     complaint_complaintDescription: string;
     complaint_resolutionDescription: string;
   }>) => void;
+  viewMode: boolean;
 };
 
 export function ComplaintForm({
@@ -25,7 +26,14 @@ export function ComplaintForm({
   complaint_complaintDescription,
   complaint_resolutionDescription,
   updateFields,
+  viewMode,//
 }: ComplaintFormProps) {
+
+  const inputProps = {
+    style: { fontSize: 'large' },
+    disabled: viewMode, // Disable input fields in view mode
+  };
+  
   return (
     <div style={{ marginBottom: '10px' }}>
       <Typography variant="h6" gutterBottom style={{ fontSize: '25px' }}>
@@ -45,9 +53,7 @@ export function ComplaintForm({
             select
             value={complaint_supplier}
             onChange={(e) => updateFields({ complaint_supplier: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps}
           >
             <MenuItem value="a" style={{ fontSize: '15px' }}>Option A</MenuItem>
             <MenuItem value="b" style={{ fontSize: '15px' }}>Option B</MenuItem>
@@ -65,9 +71,7 @@ export function ComplaintForm({
             select
             value={complaint_service}
             onChange={(e) => updateFields({ complaint_service: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps}
           >
             <MenuItem value="x" style={{ fontSize: '15px' }}>Option X</MenuItem>
             <MenuItem value="y" style={{ fontSize: '15px' }}>Option Y</MenuItem>
@@ -83,9 +87,7 @@ export function ComplaintForm({
             label={<span style={{ fontSize: 'large' }}>Account Number</span>}
             value={complaint_accountNumber}
             onChange={(e) => updateFields({ complaint_accountNumber: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps}
           />
         </Grid>
         <Grid item xs={12}>
@@ -100,9 +102,7 @@ export function ComplaintForm({
             rows={4}
             value={complaint_complaintDescription}
             onChange={(e) => updateFields({ complaint_complaintDescription: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps}
           />
         </Grid>
         <Grid item xs={12}>
@@ -117,9 +117,7 @@ export function ComplaintForm({
             rows={4}
             value={complaint_resolutionDescription}
             onChange={(e) => updateFields({ complaint_resolutionDescription: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps}
           />
         </Grid>
       </Grid>

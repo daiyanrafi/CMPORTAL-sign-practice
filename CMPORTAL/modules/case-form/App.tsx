@@ -132,12 +132,12 @@ function App() {
 
   const steps = [
     <SelectionPage onNext={handleSelectionPageNext} userDataList={userList} onEdit={handleEdit}/>,
-    <UserForm {...data} updateFields={updateFields}  viewMode={viewMode}/>,
-    <RepresentativeForm {...data} updateFields={updateFields} />,
-    <IncidentAddressForm {...data} updateFields={updateFields} />,
-    <ComplaintForm {...data} updateFields={updateFields} />,
-    <ComplaintCont {...data} updateFields={updateFields} />,
-    <FinalizeSubmissionForm {...data} updateFields={updateFields} />
+    <UserForm {...data} updateFields={updateFields} viewMode={viewMode}/>,
+    <RepresentativeForm {...data} updateFields={updateFields} viewMode={viewMode}/>,
+    <IncidentAddressForm {...data} updateFields={updateFields} viewMode={viewMode}/>,
+    <ComplaintForm {...data} updateFields={updateFields} viewMode={viewMode}/>,
+    <ComplaintCont {...data} updateFields={updateFields} viewMode={viewMode}/>,
+    <FinalizeSubmissionForm {...data} updateFields={updateFields} viewMode={viewMode} />
   ];
 
   const isFirstStep = currentStepIndex === 0;
@@ -242,7 +242,7 @@ function App() {
                 <Button
                   type="button"
                   onClick={back}
-                  style={{ marginRight: '8px', backgroundColor: 'DodgerBlue', color: 'white', fontSize: '15px' }}
+                  style={{ marginRight: '8px', backgroundColor: '#00A4EF', color: 'white', borderRadius: '0', fontSize: '15px' }}
                 >
                   Back
                 </Button>
@@ -250,7 +250,7 @@ function App() {
               {!isLastStep && currentStepIndex !== 0 && (
                 <Button
                   type="submit"
-                  style={{ marginRight: '8px', backgroundColor: 'DodgerBlue', color: 'white', fontSize: '15px' }}
+                  style={{ marginRight: '8px', backgroundColor: '#00A4EF', color: 'white', borderRadius: '0', fontSize: '15px' }}
                 >
                   Next
                 </Button>
@@ -259,9 +259,10 @@ function App() {
                 <Button
                   type="submit"
                   disabled={!recaptchaValue}
-                  style={{ backgroundColor: recaptchaValue ? 'DodgerBlue' : 'gray',
+                  style={{ backgroundColor: recaptchaValue ? '#00A4EF' : 'gray',
                   color: 'white',
                   fontSize: '15px',
+                  borderRadius: '0',
                   cursor: recaptchaValue ? 'pointer' : 'not-allowed', }}
                 >
                   Finish

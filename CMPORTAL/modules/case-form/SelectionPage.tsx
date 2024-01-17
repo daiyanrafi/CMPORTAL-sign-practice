@@ -84,7 +84,7 @@ const SelectionPage: React.FC<SelectionPageProps> = ({ onNext,  userDataList, on
         </div>
       )}
       {selectedOption2 === 'yes2' && (
-        <Button variant="contained" color="primary" onClick={handleNext} style={{ marginTop: '2rem', display: 'block', marginLeft: '16rem', marginRight: '10rem', fontSize: '15px', borderRadius: '5px', padding: '8px 30px', backgroundColor: 'DodgerBlue' }}>
+        <Button variant="contained" color="primary" onClick={handleNext} style={{ marginTop: '2rem', display: 'block', marginLeft: '16rem', marginRight: '10rem', fontSize: '15px', borderRadius: '0', padding: '8px 30px', backgroundColor: '#00A4EF' }}>
           Next
         </Button>
       )}

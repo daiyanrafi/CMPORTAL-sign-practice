@@ -16,6 +16,7 @@ type IncidentAddressFormProps = {
     incident_postcode: string;
     incident_state: string;
   }>) => void;
+  viewMode: boolean;
 };
 
 export function IncidentAddressForm({
@@ -25,7 +26,14 @@ export function IncidentAddressForm({
   incident_postcode,
   incident_state,
   updateFields,
+  viewMode,//
 }: IncidentAddressFormProps) {
+
+  const inputProps = {
+    style: { fontSize: 'large' },
+    disabled: viewMode, // Disable input fields in view mode
+  };
+
   return (
     <div style={{ marginBottom: '10px' }}>
       <Typography variant="h6" gutterBottom style={{ fontSize: '25px' }}>
@@ -43,9 +51,7 @@ export function IncidentAddressForm({
             required
             value={incident_address}
             onChange={(e) => updateFields({ incident_address: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps}
           />
         </Grid>
         <Grid item xs={12}>
@@ -54,9 +60,7 @@ export function IncidentAddressForm({
             label={<span style={{ fontSize: 'large' }}>Address 1</span>}
             value={incident_address1}
             onChange={(e) => updateFields({ incident_address1: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps}
           />
         </Grid>
         <Grid item xs={12}>
@@ -66,9 +70,7 @@ export function IncidentAddressForm({
             required
             value={incident_city}
             onChange={(e) => updateFields({ incident_city: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps}
           />
         </Grid>
         <Grid item xs={12}>
@@ -78,9 +80,7 @@ export function IncidentAddressForm({
             required
             value={incident_postcode}
             onChange={(e) => updateFields({ incident_postcode: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps}
           />
         </Grid>
         <Grid item xs={12}>
@@ -90,9 +90,7 @@ export function IncidentAddressForm({
             required
             value={incident_state}
             onChange={(e) => updateFields({ incident_state: e.target.value })}
-            InputProps={{
-              style: { fontSize: 'large' },
-            }}
+            InputProps={inputProps}
           />
         </Grid>
       </Grid>
