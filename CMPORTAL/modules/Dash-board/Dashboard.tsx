@@ -35,10 +35,10 @@ const Dashboard: React.FC = () => {
   };
 
   return (
-    <Container 
-    component="main"
-    maxWidth={false}
-    style={{ minHeight: '90vh', backgroundColor: '#d7e3f5', padding: '40px' }}>
+    <Container
+      component="main"
+      maxWidth={false}
+      style={{ minHeight: '90vh', backgroundColor: '#d7e3f5', padding: '40px' }}>
       <Grid container spacing={3}>
         <Grid item xs={12} md={6} lg={6} style={{ marginTop: '20px' }}>
           <Paper>
