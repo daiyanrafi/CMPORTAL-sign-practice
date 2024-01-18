@@ -7,9 +7,10 @@ import NoteSection from './NoteSection';
 
 const Dashboard: React.FC = () => {
   const [uploadedFiles, setUploadedFiles] = useState<any[]>([]); // Replace 'any' with a proper type for your file structure
+  const [uploadedFilesForNotes, setUploadedFilesForNotes] = useState<any[]>([]);
   const [notes, setNotes] = useState<string[]>([]);
 
-  const handleFileUpload = (file: any) => {
+  const handleFileUploadForFilesSection = (file: any) => {
     const newFile = {
       id: uploadedFiles.length + 1,
       name: file.name,
@@ -19,31 +20,44 @@ const Dashboard: React.FC = () => {
     setUploadedFiles([...uploadedFiles, newFile]);
   };
 
+  const handleFileUploadForNoteSection = (file: any) => {
+    const newFile = {
+      id: uploadedFilesForNotes.length + 1,
+      name: file.name,
+      uploadDate: new Date(),
+    };
+
+    setUploadedFilesForNotes([...uploadedFilesForNotes, newFile]);
+  };
+
   const handleAddNote = (note: string) => {
     setNotes([...notes, note]);
   };
 
   return (
-    <Container style={{ height: '100vh' }}>
+    <Container 
+    component="main"
+    maxWidth={false}
+    style={{ minHeight: '90vh', backgroundColor: '#d7e3f5', padding: '40px' }}>
       <Grid container spacing={3}>
-        <Grid item xs={6}>
+        <Grid item xs={12} md={6} lg={6} style={{ marginTop: '20px' }}>
           <Paper>
             <CaseDetails />
           </Paper>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12} md={6} lg={6} style={{ marginTop: '20px' }}>
           <Paper>
             <FilesSection
-              onFileUpload={handleFileUpload}
+              onFileUpload={handleFileUploadForFilesSection}
               uploadedFiles={uploadedFiles}
             />
           </Paper>
-          <Paper>
+          <Paper style={{ marginTop: '20px' }}>
             <NoteSection
               onAddNote={handleAddNote}
               notes={notes}
-              onFileUpload={handleFileUpload}
-              uploadedFiles={uploadedFiles}
+              onFileUpload={handleFileUploadForNoteSection}
+              uploadedFiles={uploadedFilesForNotes}
             />
           </Paper>
         </Grid>
