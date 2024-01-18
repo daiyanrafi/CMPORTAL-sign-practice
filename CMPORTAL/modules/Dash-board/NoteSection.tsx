@@ -78,8 +78,8 @@ const NoteSection: React.FC<NoteSectionProps> = ({ onFileUpload, uploadedFiles }
             {/* Mapping through uploadedFiles to display each file */}
             {uploadedFiles.map((file) => (
               <TableRow key={file.id}>
-                <TableCell>{file.name}</TableCell>
-                <TableCell>{file.uploadDate.toString()}</TableCell>
+                <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{file.name}</TableCell>
+                <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{file.uploadDate.toString()}</TableCell>
               </TableRow>
             ))}
           </TableBody>

@@ -12,27 +12,59 @@ const Dashboard: React.FC = () => {
   // const [notes, setNotes] = useState<string[]>([]);
 
   // Function to handle file upload for FilesSection
+  
+  // const handleFileUploadForFilesSection = (file: any) => {
+  //   const newFile = {
+  //     id: uploadedFiles.length + 1,
+  //     name: file.name,
+  //     uploadDate: new Date(),
+  //   };
+
+  //   setUploadedFiles([...uploadedFiles, newFile]);
+  //   console.log('Uploaded Files:', uploadedFiles);
+  // };
+
   const handleFileUploadForFilesSection = (file: any) => {
     const newFile = {
       id: uploadedFiles.length + 1,
       name: file.name,
       uploadDate: new Date(),
     };
-
-    setUploadedFiles([...uploadedFiles, newFile]);
-    console.log('Uploaded Files:', uploadedFiles);
+  
+    setUploadedFiles(prevFiles => [...prevFiles, newFile]);
+    // Use the callback function to log the updated state
+    setUploadedFiles(prevFiles => {
+      console.log('Uploaded Files:', prevFiles);
+      return prevFiles;
+    });
   };
 
   // Function to handle file upload for NoteSection
+
+  // const handleFileUploadForNoteSection = (file: any) => {
+  //   const newFile = {
+  //     id: uploadedFilesForNotes.length + 1,
+  //     name: file.name,
+  //     uploadDate: new Date(),
+  //   };
+
+  //   setUploadedFilesForNotes([...uploadedFilesForNotes, newFile]);
+  //   console.log('Uploaded Files for Notes:', uploadedFilesForNotes);
+  // };
+
   const handleFileUploadForNoteSection = (file: any) => {
     const newFile = {
       id: uploadedFilesForNotes.length + 1,
       name: file.name,
       uploadDate: new Date(),
     };
-
-    setUploadedFilesForNotes([...uploadedFilesForNotes, newFile]);
-    console.log('Uploaded Files for Notes:', uploadedFilesForNotes);
+  
+    setUploadedFilesForNotes(prevFiles => [...prevFiles, newFile]);
+    // Use the callback function to log the updated state
+    setUploadedFilesForNotes(prevFiles => {
+      console.log('Uploaded Files for Notes:', prevFiles);
+      return prevFiles;
+    });
   };
 
   // Function to handle adding a new note
@@ -44,7 +76,7 @@ const Dashboard: React.FC = () => {
     <Container
       component="main"
       maxWidth={false}
-      style={{ minHeight: '90vh', backgroundColor: '#d7e3f5', padding: '40px', border: '2px solid #eb3446' }}>
+      style={{ minHeight: '90vh', padding: '40px', border: '2px solid #eb3446' }}>
       <Grid container spacing={3}>
         {/* CaseDetails component */}
         <Grid item xs={12} md={6} lg={6} style={{ marginTop: '20px' }}>
@@ -61,7 +93,7 @@ const Dashboard: React.FC = () => {
               uploadedFiles={uploadedFiles}
             />
           </Paper>
-          <Paper style={{ marginTop: '20px' }}>
+          <Paper style={{ marginTop: '40px' }}>
             {/* NoteSection component */}
             <NoteSection
               // onAddNote={handleAddNote}
