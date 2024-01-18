@@ -19,7 +19,7 @@ const FilesSection: React.FC<FilesSectionProps> = ({ onFileUpload, uploadedFiles
   return (
     <Box p={2} >
       <Typography variant="h4" style={{ fontFamily: 'Calibri', borderBottom: '2px solid #2196F3', paddingBottom: '8px', backgroundColor: '#00A4EF', color: '#fff', marginBottom: '16px', textAlign: 'left', paddingLeft: '20px', marginLeft: '-2px' }}>
-        Files
+      Files
       </Typography>
       {/* <label htmlFor="fileInput" style={{ display: 'block', marginBottom: '8px', color: '#fff' }}>
         <Button variant="contained" component="label" style={{ fontFamily: 'Calibri', backgroundColor: '#F25022', color: 'white', borderRadius: '0', marginBottom: '16px' }}>
@@ -29,44 +29,42 @@ const FilesSection: React.FC<FilesSectionProps> = ({ onFileUpload, uploadedFiles
       </label> */}
 
       <div style={{ textAlign: 'right' }}>
-        <label htmlFor="fileInput" style={{ display: 'block', marginBottom: '8px', color: '#fff' }}>
-          <Button
-            variant="contained"
-            component="label"
-            style={{
-              fontFamily: 'Calibri',
-              backgroundColor: '#F25022',
-              color: 'white',
-              borderRadius: '0',
-              marginBottom: '16px',
-              marginRight: '10px'
-            }}
-          >
-            UPLOAD FILE
-            <input type="file" id="fileInput" style={{ display: 'none' }} onChange={handleFileChange} />
-          </Button>
-        </label>
-      </div>
+  <label htmlFor="fileInput" style={{ display: 'block', marginBottom: '8px', color: '#fff' }}>
+    <Button
+      variant="contained"
+      component="label"
+      style={{
+        fontFamily: 'Calibri',
+        backgroundColor: '#F25022',
+        color: 'white',
+        borderRadius: '0',
+        marginBottom: '16px',
+        marginRight: '10px'
+      }}
+    >
+      UPLOAD FILE
+      <input type="file" id="fileInput" style={{ display: 'none' }} onChange={handleFileChange} />
+    </Button>
+  </label>
+</div>
 
 
-      <TableContainer component={Paper} style={{ backgroundColor: '#fff', maxHeight: '300px' }}>
+      <TableContainer component={Paper} style={{ backgroundColor: '#fff', maxHeight: '300px', overflowY: 'auto' }}>
         <Table>
-          <TableHead style={{ backgroundColor: '#f2f2f2' }}>
+          <TableHead style={{ backgroundColor: '#f2f2f2', position: 'sticky', top: 0 }}>
             <TableRow>
               <TableCell style={{ fontFamily: 'Calibri', fontWeight: 'bold' }}>File Name</TableCell>
               <TableCell style={{ fontFamily: 'Calibri', fontWeight: 'bold' }}>Date Submitted</TableCell>
             </TableRow>
           </TableHead>
-          <div style={{ maxHeight: '240px', overflowY: 'auto' }}>
-            <TableBody>
-              {uploadedFiles.map((file) => (
-                <TableRow key={file.id}>
-                  <TableCell>{file.name}</TableCell>
-                  <TableCell>{file.uploadDate.toString()}</TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </div>
+          <TableBody>
+            {uploadedFiles.map((file) => (
+              <TableRow key={file.id}>
+                <TableCell>{file.name}</TableCell>
+                <TableCell>{file.uploadDate.toString()}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
         </Table>
       </TableContainer>
     </Box>
