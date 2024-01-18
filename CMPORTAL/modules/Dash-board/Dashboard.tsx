@@ -44,7 +44,7 @@ const Dashboard: React.FC = () => {
     <Container
       component="main"
       maxWidth={false}
-      style={{ minHeight: '90vh', backgroundColor: '#d7e3f5', padding: '40px' }}>
+      style={{ minHeight: '90vh', backgroundColor: '#d7e3f5', padding: '40px', border: '2px solid #eb3446' }}>
       <Grid container spacing={3}>
         {/* CaseDetails component */}
         <Grid item xs={12} md={6} lg={6} style={{ marginTop: '20px' }}>
