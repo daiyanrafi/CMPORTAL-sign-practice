@@ -20,6 +20,7 @@ const Dashboard: React.FC = () => {
     };
 
     setUploadedFiles([...uploadedFiles, newFile]);
+    console.log('Uploaded Files:', uploadedFiles);
   };
 
   // Function to handle file upload for NoteSection
@@ -31,6 +32,7 @@ const Dashboard: React.FC = () => {
     };
 
     setUploadedFilesForNotes([...uploadedFilesForNotes, newFile]);
+    console.log('Uploaded Files for Notes:', uploadedFilesForNotes);
   };
 
   // Function to handle adding a new note
