@@ -38,6 +38,7 @@ const FilesSection: React.FC<FilesSectionProps> = ({ onFileUpload, uploadedFiles
             variant="contained"
             component="label"
             style={{
+              fontSize: 'large', 
               fontFamily: 'Calibri',
               backgroundColor: '#F25022',
               color: 'white',
@@ -56,8 +57,8 @@ const FilesSection: React.FC<FilesSectionProps> = ({ onFileUpload, uploadedFiles
         <Table>
           <TableHead style={{ backgroundColor: '#f2f2f2', position: 'sticky', top: 0 }}>
             <TableRow>
-              <TableCell style={{ fontFamily: 'Calibri', fontWeight: 'bold' }}>File Name</TableCell>
-              <TableCell style={{ fontFamily: 'Calibri', fontWeight: 'bold' }}>Date Submitted</TableCell>
+              <TableCell style={{ fontSize: 'large', fontFamily: 'Calibri', fontWeight: 'bold' }}>File Name</TableCell>
+              <TableCell style={{ fontSize: 'large', fontFamily: 'Calibri', fontWeight: 'bold' }}>Date Submitted</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>

@@ -16,13 +16,13 @@ const CaseDetails: React.FC = () => {
         Case Details
       </Typography>
       <Box mt={2}>
-        <Typography variant="body1" style={{ fontFamily: 'Calibri', marginBottom: '8px', textAlign: 'left' }}>
+        <Typography variant="body1" style={{ fontSize: 'large', fontFamily: 'Calibri', marginBottom: '8px', textAlign: 'left' }}>
           <strong>Case ID:</strong> {caseDetails.caseId}
         </Typography>
-        <Typography variant="body1" style={{ fontFamily: 'Calibri', marginBottom: '8px', textAlign: 'left' }}>
+        <Typography variant="body1" style={{ fontSize: 'large', fontFamily: 'Calibri', marginBottom: '8px', textAlign: 'left' }}>
           <strong>Case Title:</strong> {caseDetails.caseTitle}
         </Typography>
-        <Typography variant="body1" style={{ fontFamily: 'Calibri', textAlign: 'left' }}>
+        <Typography variant="body1" style={{ fontSize: 'large', fontFamily: 'Calibri', textAlign: 'left' }}>
           <strong>Date:</strong> {caseDetails.createDate.toString()}
         </Typography>
         {/* Add more fields or customize as needed */}

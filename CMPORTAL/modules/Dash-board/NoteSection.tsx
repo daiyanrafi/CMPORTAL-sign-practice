@@ -51,6 +51,7 @@ const NoteSection: React.FC<NoteSectionProps> = ({ onFileUpload, uploadedFiles }
             variant="contained"
             component="label"
             style={{
+              fontSize: 'large', 
               fontFamily: 'Calibri',
               backgroundColor: '#F25022',
               color: 'white',
@@ -69,8 +70,8 @@ const NoteSection: React.FC<NoteSectionProps> = ({ onFileUpload, uploadedFiles }
         <Table>
           <TableHead style={{ backgroundColor: '#f2f2f2', position: 'sticky', top: 0 }}>
             <TableRow>
-              <TableCell style={{ fontFamily: 'Calibri', fontWeight: 'bold' }}>NOTE Description</TableCell>
-              <TableCell style={{ fontFamily: 'Calibri', fontWeight: 'bold' }}>Date Created</TableCell>
+              <TableCell style={{ fontSize: 'large', fontFamily: 'Calibri', fontWeight: 'bold' }}>NOTE Description</TableCell>
+              <TableCell style={{ fontSize: 'large', fontFamily: 'Calibri', fontWeight: 'bold' }}>Date Created</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
