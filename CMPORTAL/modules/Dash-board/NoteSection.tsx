@@ -42,10 +42,10 @@ const FileSection: React.FC<FileSectionProps> = ({ onAddNote, uploadedNotes }) =
           variant="contained"
           onClick={openModal}
           style={{
-            fontSize: 'large',
             fontFamily: 'Calibri',
             backgroundColor: '#F25022',
             color: 'white',
+            fontSize: 'large',
             borderRadius: '0',
             marginBottom: '16px',
             marginRight: '10px',
@@ -70,7 +70,7 @@ const FileSection: React.FC<FileSectionProps> = ({ onAddNote, uploadedNotes }) =
             p: 4,
           }}
         >
-          <Typography variant="h6" id="modal-title" component="div">
+          <Typography variant="h6" id="modal-title" component="div" style={{ fontFamily: 'Calibri', fontSize: 'large' }}>
             Add a Note
           </Typography>
           <TextField
@@ -81,8 +81,8 @@ const FileSection: React.FC<FileSectionProps> = ({ onAddNote, uploadedNotes }) =
             value={newNote}
             onChange={(e) => setNewNote(e.target.value)}
           />
-          <Button onClick={handleAddNote} variant="contained" style={{ marginTop: '10px' }}>
-            Add Note
+          <Button onClick={handleAddNote} variant="contained" style={{ marginTop: '10px', fontFamily: 'Calibri',  fontSize: 'large', borderRadius: '0', }}>
+            SAVE
           </Button>
         </Box>
       </Modal>
