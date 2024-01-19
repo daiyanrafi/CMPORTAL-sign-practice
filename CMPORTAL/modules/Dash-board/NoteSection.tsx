@@ -1,108 +1,115 @@
-// NoteSection.tsx
-import React, { useState } from 'react';
-import { Button, Typography, Box, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
+// FileSection.tsx
 
-interface NoteSectionProps {
-  // onAddNote: (note: string) => void;
-  // notes: string[];
-  onFileUpload: (file: File) => void;
-  uploadedFiles: any[]; // Replace 'any' with a proper type for your file structure
+import React, { useState } from 'react';
+import { Button, Typography, Box, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Modal, TextField } from '@mui/material';
+
+interface FileSectionProps {
+  onAddNote: (note: string) => void; // Prop to handle adding a note
+  uploadedNotes: string[]; // Prop to receive uploaded notes
 }
 
-// const NoteSection: React.FC<NoteSectionProps> = ({ onAddNote, notes, onFileUpload, uploadedFiles })
-const NoteSection: React.FC<NoteSectionProps> = ({ onFileUpload, uploadedFiles }) => {
+const FileSection: React.FC<FileSectionProps> = ({ onAddNote, uploadedNotes }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [newNote, setNewNote] = useState<string>('');
 
-  // // Function to handle adding a new note
-  // const handleAddNote = () => {
-  //   if (newNote.trim() !== '') {
-  //  // Call the onAddNote prop to handle adding a new note
-  //     onAddNote(newNote);
-  //     setNewNote('');
-  //   }
-  // };
+    // Handle adding a new note
+    const handleAddNote = () => {
+      if (newNote.trim() !== '') {
+        onAddNote(newNote);
+        setNewNote('');
+        closeModal();
+      }
+    };
 
-  // Function to handle file change
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files && e.target.files[0];
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
 
-    if (file) {
-      // Call the onFileUpload prop to handle file upload
-      onFileUpload(file);
-    }
+  const closeModal = () => {
+    setIsModalOpen(false);
   };
 
   return (
     <Box p={2}>
-      {/* Section title */}
+      {/* File section title */}
       <Typography variant="h4" style={{ fontFamily: 'Calibri', borderBottom: '2px solid #2196F3', paddingBottom: '8px', backgroundColor: '#00A4EF', color: '#fff', marginBottom: '16px', textAlign: 'left', paddingLeft: '20px', marginLeft: '-2px' }}>
-        Notes
+        Files
       </Typography>
-      {/* <label htmlFor="fileInput" style={{ display: 'block', marginBottom: '8px', color: '#fff' }}>
-        <Button variant="contained" component="label" style={{ fontFamily: 'Calibri', backgroundColor: '#F25022', color: 'white', borderRadius: '0', marginBottom: '16px' }}>
-          ADD
-          <input type="file" id="fileInput" style={{ display: 'none' }} onChange={handleFileChange} />
-        </Button>
-      </label> */}
-      {/* "Add" button and file upload button */}
+
+      {/* Add Note button */}
       <div style={{ textAlign: 'right' }}>
-        <label htmlFor="fileInput" style={{ display: 'block', marginBottom: '8px', color: '#fff' }}>
-          <Button
-            variant="contained"
-            component="label"
-            style={{
-              fontSize: 'large', 
-              fontFamily: 'Calibri',
-              backgroundColor: '#F25022',
-              color: 'white',
-              borderRadius: '0',
-              marginBottom: '16px',
-              marginRight: '10px'
-            }}
-          >
-            ADD
-            <input type="file" id="fileInput" style={{ display: 'none' }} onChange={handleFileChange} />
-          </Button>
-        </label>
+        <Button
+          variant="contained"
+          onClick={openModal}
+          style={{
+            fontSize: 'large',
+            fontFamily: 'Calibri',
+            backgroundColor: '#F25022',
+            color: 'white',
+            borderRadius: '0',
+            marginBottom: '16px',
+            marginRight: '10px',
+          }}
+        >
+          ADD NOTE
+        </Button>
       </div>
-      {/* Table to display uploaded files */}
+
+      {/* Modal */}
+      <Modal open={isModalOpen} onClose={closeModal} aria-labelledby="modal-title" aria-describedby="modal-description">
+        <Box
+          sx={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            width: 400,
+            bgcolor: 'background.paper',
+            border: '2px solid #000',
+            boxShadow: 24,
+            p: 4,
+          }}
+        >
+          <Typography variant="h6" id="modal-title" component="div">
+            Add a Note
+          </Typography>
+          <TextField
+            multiline
+            fullWidth
+            rows={4}
+            variant="outlined"
+            value={newNote}
+            onChange={(e) => setNewNote(e.target.value)}
+          />
+          <Button onClick={handleAddNote} variant="contained" style={{ marginTop: '10px' }}>
+            Add Note
+          </Button>
+        </Box>
+      </Modal>
+
+      {/* Table to display uploaded notes */}
       <TableContainer component={Paper} style={{ backgroundColor: '#fff', maxHeight: '300px', overflowY: 'auto' }}>
         <Table>
           <TableHead style={{ backgroundColor: '#f2f2f2', position: 'sticky', top: 0 }}>
             <TableRow>
-              <TableCell style={{ fontSize: 'large', fontFamily: 'Calibri', fontWeight: 'bold' }}>NOTE Description</TableCell>
+              <TableCell style={{ fontSize: 'large', fontFamily: 'Calibri', fontWeight: 'bold' }}>Note Description</TableCell>
               <TableCell style={{ fontSize: 'large', fontFamily: 'Calibri', fontWeight: 'bold' }}>Date Created</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-            {/* Mapping through uploadedFiles to display each file */}
-            {uploadedFiles.map((file) => (
-              <TableRow key={file.id}>
-                <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{file.name}</TableCell>
-                <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{file.uploadDate.toString()}</TableCell>
+            {uploadedNotes.map((note, index) => (
+              <TableRow key={index}>
+                {/* Display each uploaded note */}
+                <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{note}</TableCell>
+                <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{new Date().toLocaleString()}</TableCell>
               </TableRow>
             ))}
           </TableBody>
         </Table>
       </TableContainer>
-      {/* <textarea
-        rows={4}
-        cols={50}
-        value={newNote}
-        onChange={(e) => setNewNote(e.target.value)}
-        placeholder="Add a new note"
-        style={{ marginTop: '16px', marginBottom: '8px' }}
-      />
-      <Button variant="contained" onClick={handleAddNote} style={{ fontFamily: 'Calibri', backgroundColor: '#F25022', color: 'white', borderRadius: '0', marginBottom: '16px' }}>
-        Add Note
-      </Button>
-      <ul>
-        {notes.map((note, index) => (
-          <li key={index}>{note}</li>
-        ))}
-      </ul> */}
     </Box>
   );
 };
 
-export default NoteSection;
+export default FileSection;
+
