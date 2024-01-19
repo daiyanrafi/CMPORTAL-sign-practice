@@ -41,7 +41,7 @@ const FileSection: React.FC<FileSectionProps> = ({ onAddNote, uploadedNotes }) =
     <Box p={2}>
       {/* File section title */}
       <Typography variant="h4" style={{ fontFamily: 'Calibri', borderBottom: '2px solid #2196F3', paddingBottom: '8px', backgroundColor: '#00A4EF', color: '#fff', marginBottom: '16px', textAlign: 'left', paddingLeft: '20px', marginLeft: '-2px' }}>
-        Files
+        Notes
       </Typography>
 
       {/* Add Note button */}
@@ -102,7 +102,7 @@ const FileSection: React.FC<FileSectionProps> = ({ onAddNote, uploadedNotes }) =
         <Table>
           <TableHead style={{ backgroundColor: '#f2f2f2', position: 'sticky', top: 0 }}>
             <TableRow>
-              <TableCell style={{ fontSize: 'large', fontFamily: 'Calibri', fontWeight: 'bold' }}>Note Description</TableCell>
+              <TableCell style={{ fontSize: 'large', fontFamily: 'Calibri', fontWeight: 'bold' }}>Description</TableCell>
               <TableCell style={{ fontSize: 'large', fontFamily: 'Calibri', fontWeight: 'bold' }}>Date Created</TableCell>
             </TableRow>
           </TableHead>

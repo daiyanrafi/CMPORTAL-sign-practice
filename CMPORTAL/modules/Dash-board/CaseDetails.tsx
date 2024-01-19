@@ -1,13 +1,18 @@
 // CaseDetails.tsx
 import React from 'react';
-import { Typography, Box } from '@mui/material';
+import { Typography, Box, Button } from '@mui/material';
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+
 
 const CaseDetails: React.FC = () => {
   // Replace these with your actual case details
   const caseDetails = {
-    caseId: '123',
-    caseTitle: 'Sample Case',
+    caseNumber: 2023010005,
     createDate: new Date(),
+    dateLastModified: '27 /01 / 2023',
+    caseTitle: 'SharePoint Drag and Drop is not working in Document Libraries.',
+    description: 'We trying to Drag and Drop document in SharePoint Library. It works fine for some user and not for others. We have noticed this issue recently. We are not sure if was working earlier.',
+    status: 'In Progress'
   };
 
   return (
@@ -17,15 +22,45 @@ const CaseDetails: React.FC = () => {
       </Typography>
       <Box mt={2}>
         <Typography variant="body1" style={{ fontSize: 'large', fontFamily: 'Calibri', marginBottom: '8px', textAlign: 'left' }}>
-          <strong>Case ID:</strong> {caseDetails.caseId}
-        </Typography>
-        <Typography variant="body1" style={{ fontSize: 'large', fontFamily: 'Calibri', marginBottom: '8px', textAlign: 'left' }}>
-          <strong>Case Title:</strong> {caseDetails.caseTitle}
+          <strong>Case Number:</strong> {caseDetails.caseNumber}
         </Typography>
         <Typography variant="body1" style={{ fontSize: 'large', fontFamily: 'Calibri', textAlign: 'left' }}>
-          <strong>Date:</strong> {caseDetails.createDate.toString()}
+          <strong>Create Date:</strong> {caseDetails.createDate.toString()}
         </Typography>
-        {/* Add more fields or customize as needed */}
+        <Typography variant="body1" style={{ fontSize: 'large', fontFamily: 'Calibri', marginBottom: '8px', textAlign: 'left' }}>
+          <strong>Date Last Modified:</strong> {caseDetails.dateLastModified}
+        </Typography>
+        <Typography variant="body1" style={{ fontSize: 'large', fontFamily: 'Calibri', marginBottom: '8px', textAlign: 'left' }}>
+          <strong>Description:</strong>
+          <br />
+          {caseDetails.description}
+        </Typography>
+        <Typography variant="body1" style={{ fontSize: 'large', fontFamily: 'Calibri', marginBottom: '8px', textAlign: 'left' }}>
+          <strong>Status:</strong>
+          <span style={{ backgroundColor: caseDetails.status === 'In Progress' ? '#4CAF50' : 'transparent', color: caseDetails.status === 'In Progress' ? '#fff' : 'inherit', padding: '4px', borderRadius: '4px' }}>
+            {caseDetails.status}
+          </span>
+        </Typography>
+
+        <div style={{ textAlign: 'left' }}>
+          <Button
+            variant="outlined"
+            startIcon={<AddCircleOutlineIcon />}
+            onClick={() => { /* Handle View Details click */ }}
+            style={{
+              fontFamily: 'Calibri',
+              backgroundColor: '#F25022',
+              color: 'white',
+              fontSize: 'large',
+              borderRadius: '0',
+              marginBottom: '16px',
+              marginRight: '10px',
+              marginTop: '30px'
+            }}
+          >
+            View Details
+          </Button>
+        </div>
       </Box>
     </Box>
   );
