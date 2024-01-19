@@ -1,6 +1,7 @@
 // FilesSection.tsx
 import React, { useState } from 'react';
 import { Button, Typography, Box, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
+import PublishIcon from '@mui/icons-material/Publish';
 
 interface FilesSectionProps {
   onFileUpload: (file: File) => void;
@@ -38,7 +39,7 @@ const FilesSection: React.FC<FilesSectionProps> = ({ onFileUpload, uploadedFiles
             variant="contained"
             component="label"
             style={{
-              fontSize: 'large', 
+              fontSize: 'large',
               fontFamily: 'Calibri',
               backgroundColor: '#F25022',
               color: 'white',
@@ -47,6 +48,7 @@ const FilesSection: React.FC<FilesSectionProps> = ({ onFileUpload, uploadedFiles
               marginRight: '10px'
             }}
           >
+            <PublishIcon style={{ marginRight: '8px' }} />
             UPLOAD FILE
             <input type="file" id="fileInput" style={{ display: 'none' }} onChange={handleFileChange} />
           </Button>

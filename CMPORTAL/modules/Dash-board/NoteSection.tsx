@@ -1,25 +1,33 @@
 // FileSection.tsx
 
 import React, { useState } from 'react';
-import { Button, Typography, Box, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Modal, TextField } from '@mui/material';
+import { Button, Typography, Box, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Modal, TextField, IconButton } from '@mui/material';
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+
+// Update the type for a single note
+interface Note {
+  id: number;
+  note: string;
+  uploadDate: string;
+}
 
 interface FileSectionProps {
   onAddNote: (note: string) => void; // Prop to handle adding a note
-  uploadedNotes: string[]; // Prop to receive uploaded notes
+  uploadedNotes: Note[]; // Prop to receive uploaded notes
 }
 
 const FileSection: React.FC<FileSectionProps> = ({ onAddNote, uploadedNotes }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [newNote, setNewNote] = useState<string>('');
 
-    // Handle adding a new note
-    const handleAddNote = () => {
-      if (newNote.trim() !== '') {
-        onAddNote(newNote);
-        setNewNote('');
-        closeModal();
-      }
-    };
+  // Handle adding a new note
+  const handleAddNote = () => {
+    if (newNote.trim() !== '') {
+      onAddNote(newNote);
+      setNewNote('');
+      closeModal();
+    }
+  };
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -51,9 +59,11 @@ const FileSection: React.FC<FileSectionProps> = ({ onAddNote, uploadedNotes }) =
             marginRight: '10px',
           }}
         >
+          <AddCircleOutlineIcon style={{ marginRight: '5px' }} />
           ADD NOTE
         </Button>
       </div>
+
 
       {/* Modal */}
       <Modal open={isModalOpen} onClose={closeModal} aria-labelledby="modal-title" aria-describedby="modal-description">
@@ -70,7 +80,7 @@ const FileSection: React.FC<FileSectionProps> = ({ onAddNote, uploadedNotes }) =
             p: 4,
           }}
         >
-          <Typography variant="h6" id="modal-title" component="div" style={{ fontFamily: 'Calibri', fontSize: 'large' }}>
+          <Typography variant="h6" id="modal-title" component="div" style={{ fontFamily: 'Calibri', fontSize: '20px', marginBottom: '10px' }}>
             Add a Note
           </Typography>
           <TextField
@@ -81,7 +91,7 @@ const FileSection: React.FC<FileSectionProps> = ({ onAddNote, uploadedNotes }) =
             value={newNote}
             onChange={(e) => setNewNote(e.target.value)}
           />
-          <Button onClick={handleAddNote} variant="contained" style={{ marginTop: '10px', fontFamily: 'Calibri',  fontSize: 'large', borderRadius: '0', }}>
+          <Button onClick={handleAddNote} variant="contained" style={{ marginTop: '10px', fontFamily: 'Calibri', fontSize: 'large', borderRadius: '0', }}>
             SAVE
           </Button>
         </Box>
@@ -96,12 +106,13 @@ const FileSection: React.FC<FileSectionProps> = ({ onAddNote, uploadedNotes }) =
               <TableCell style={{ fontSize: 'large', fontFamily: 'Calibri', fontWeight: 'bold' }}>Date Created</TableCell>
             </TableRow>
           </TableHead>
+
+
           <TableBody>
-            {uploadedNotes.map((note, index) => (
-              <TableRow key={index}>
-                {/* Display each uploaded note */}
-                <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{note}</TableCell>
-                <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{new Date().toLocaleString()}</TableCell>
+            {uploadedNotes.map((note) => (
+              <TableRow key={note.id}>
+                <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{note.note}</TableCell>
+                <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{note.uploadDate.toString()}</TableCell>
               </TableRow>
             ))}
           </TableBody>
@@ -112,4 +123,3 @@ const FileSection: React.FC<FileSectionProps> = ({ onAddNote, uploadedNotes }) =
 };
 
 export default FileSection;
-

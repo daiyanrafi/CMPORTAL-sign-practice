@@ -12,7 +12,6 @@
 //   // const [notes, setNotes] = useState<string[]>([]);
 
 //   // Function to handle file upload for FilesSection
-  
 //   // const handleFileUploadForFilesSection = (file: any) => {
 //   //   const newFile = {
 //   //     id: uploadedFiles.length + 1,
@@ -30,7 +29,6 @@
 //       name: file.name,
 //       uploadDate: new Date(),
 //     };
-  
 //     setUploadedFiles(prevFiles => [...prevFiles, newFile]);
 //     // Use the callback function to log the updated state
 //     setUploadedFiles(prevFiles => {
@@ -58,7 +56,6 @@
 //       name: file.name,
 //       uploadDate: new Date(),
 //     };
-  
 //     setUploadedFilesForNotes(prevFiles => [...prevFiles, newFile]);
 //     // Use the callback function to log the updated state
 //     setUploadedFilesForNotes(prevFiles => {
@@ -120,10 +117,17 @@ import CaseDetails from './CaseDetails';
 import FilesSection from './FilesSection';
 import NoteSection from './NoteSection';
 
+// Define a custom type for notes
+interface Note {
+  id: number;
+  note: string;
+  uploadDate: string;
+}
+
 const Dashboard: React.FC = () => {
   // State to track uploaded files and notes
   const [uploadedFiles, setUploadedFiles] = useState<any[]>([]);
-  const [uploadedNotes, setUploadedNotes] = useState<string[]>([]);
+  const [uploadedNotes, setUploadedNotes] = useState<Note[]>([]);
 
 
   //for file section function
@@ -144,7 +148,13 @@ const Dashboard: React.FC = () => {
 
   //for note sectionfucntion
   const handleAddNoteForNoteSection = (note: string) => {
-    setUploadedNotes(prevNotes => [...prevNotes, note]);
+    const newNote = {
+      id: uploadedNotes.length + 1,
+      note: note,
+      uploadDate: new Date().toLocaleString(),
+    };
+
+    setUploadedNotes((prevNotes) => [...prevNotes, newNote]);
   };
 
   // useEffect(() => {
@@ -152,7 +162,7 @@ const Dashboard: React.FC = () => {
   // }, [uploadedFiles]);
 
   useEffect(() => {
-    console.log('Uploaded Notes:', uploadedNotes);
+    console.log('Uploaded Notes-gg:', uploadedNotes);
   }, [uploadedNotes]);
 
   return (
@@ -186,4 +196,3 @@ const Dashboard: React.FC = () => {
 };
 
 export default Dashboard;
-
