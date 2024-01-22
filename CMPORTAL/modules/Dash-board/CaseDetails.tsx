@@ -8,7 +8,7 @@ const CaseDetails: React.FC = () => {
   // Replace these with your actual case details
   const caseDetails = {
     caseNumber: 2023010005,
-    createDate: new Date(),
+    createDate: new Date().toLocaleString(),
     dateLastModified: '27 /01 / 2023',
     caseTitle: 'SharePoint Drag and Drop is not working in Document Libraries.',
     description: 'We trying to Drag and Drop document in SharePoint Library. It works fine for some user and not for others. We have noticed this issue recently. We are not sure if was working earlier.',
@@ -49,13 +49,14 @@ const CaseDetails: React.FC = () => {
             onClick={() => { /* Handle View Details click */ }}
             style={{
               fontFamily: 'Calibri',
-              backgroundColor: '#F25022',
+              backgroundColor: '#00A4EF',
               color: 'white',
               fontSize: 'large',
               borderRadius: '0',
               marginBottom: '16px',
               marginRight: '10px',
-              marginTop: '30px'
+              marginTop: '30px',
+              padding: '2px 8px',
             }}
           >
             View Details

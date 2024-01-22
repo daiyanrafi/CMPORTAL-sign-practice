@@ -51,12 +51,13 @@ const FileSection: React.FC<FileSectionProps> = ({ onAddNote, uploadedNotes }) =
           onClick={openModal}
           style={{
             fontFamily: 'Calibri',
-            backgroundColor: '#F25022',
+            backgroundColor: '#00A4EF',
             color: 'white',
             fontSize: 'large',
             borderRadius: '0',
             marginBottom: '16px',
             marginRight: '10px',
+            padding: '2px 8px',
           }}
         >
           <AddCircleOutlineIcon style={{ marginRight: '5px' }} />

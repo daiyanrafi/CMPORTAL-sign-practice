@@ -41,11 +41,12 @@ const FilesSection: React.FC<FilesSectionProps> = ({ onFileUpload, uploadedFiles
             style={{
               fontSize: 'large',
               fontFamily: 'Calibri',
-              backgroundColor: '#F25022',
+              backgroundColor: '#00A4EF',
               color: 'white',
               borderRadius: '0',
               marginBottom: '16px',
-              marginRight: '10px'
+              marginRight: '10px',
+              padding: '2px 8px',
             }}
           >
             <PublishIcon style={{ marginRight: '8px' }} />

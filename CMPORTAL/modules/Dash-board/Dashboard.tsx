@@ -135,7 +135,7 @@ const Dashboard: React.FC = () => {
     const newFile = {
       id: uploadedFiles.length + 1,
       name: file.name,
-      uploadDate: new Date(),
+      uploadDate: new Date().toLocaleString(),
     };
 
     setUploadedFiles(prevFiles => [...prevFiles, newFile]);
