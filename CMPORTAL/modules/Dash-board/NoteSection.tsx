@@ -91,6 +91,9 @@ const FileSection: React.FC<FileSectionProps> = ({ onAddNote, uploadedNotes }) =
             variant="outlined"
             value={newNote}
             onChange={(e) => setNewNote(e.target.value)}
+            InputProps={{
+              style: { fontSize: 'large' },
+            }}
           />
           <Button onClick={handleAddNote} variant="contained" style={{ marginTop: '10px', fontFamily: 'Calibri', fontSize: 'large', borderRadius: '0', }}>
             SAVE

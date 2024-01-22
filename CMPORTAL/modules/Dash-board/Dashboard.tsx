@@ -172,23 +172,25 @@ const Dashboard: React.FC = () => {
       style={{ minHeight: '90vh', padding: '40px', border: '2px solid #eb3446' }}>
       <Grid container spacing={3}>
         <Grid item xs={12} md={6} lg={6} style={{ marginTop: '20px' }}>
-          <Paper>
+          {/* <Paper> */}
             <CaseDetails />
-          </Paper>
+          {/* </Paper> */}
         </Grid>
         <Grid item xs={12} md={6} lg={6} style={{ marginTop: '20px' }}>
-          <Paper>
+          {/* <Paper> */}
             <FilesSection
               onFileUpload={handleFileUploadForFilesSection}
               uploadedFiles={uploadedFiles}
             />
-          </Paper>
-          <Paper style={{ marginTop: '40px' }}>
+          {/* </Paper> */}
+          {/* <Paper style={{ marginTop: '40px' }}> */}
+            <div style={{ marginTop: '40px' }}> {/* Added a wrapper div for margin */}
             <NoteSection
               onAddNote={handleAddNoteForNoteSection}
               uploadedNotes={uploadedNotes}
             />
-          </Paper>
+          </div>
+          {/* </Paper> */}
         </Grid>
       </Grid>
     </Container>
