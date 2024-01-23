@@ -46,10 +46,10 @@ const FilesSection: React.FC<FilesSectionProps> = ({ onFileUpload, uploadedFiles
               borderRadius: '0',
               marginBottom: '16px',
               // marginRight: '10px',
-              padding: '2px 8px',
+              padding: '2px 4px',
             }}
           >
-            <PublishIcon style={{ marginRight: '8px' }} />
+            <PublishIcon style={{ marginRight: '4px' }} />
             UPLOAD FILE
             <input type="file" id="fileInput" style={{ display: 'none' }} onChange={handleFileChange} />
           </Button>

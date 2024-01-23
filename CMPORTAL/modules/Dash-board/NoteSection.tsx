@@ -57,10 +57,10 @@ const FileSection: React.FC<FileSectionProps> = ({ onAddNote, uploadedNotes }) =
             borderRadius: '0',
             marginBottom: '16px',
             // marginRight: '10px',
-            padding: '2px 8px',
+            padding: '2px 4px',
           }}
         >
-          <AddCircleOutlineIcon style={{ marginRight: '5px' }} />
+          <AddCircleOutlineIcon style={{ marginRight: '4px' }} />
           ADD NOTE
         </Button>
       </div>

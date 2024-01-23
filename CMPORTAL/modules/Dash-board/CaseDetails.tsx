@@ -53,10 +53,10 @@ const CaseDetails: React.FC = () => {
               color: 'white',
               fontSize: 'medium',
               borderRadius: '0',
-              marginBottom: '16px',
+              // marginBottom: '16px',
               marginRight: '10px',
               marginTop: '30px',
-              padding: '2px 8px',
+              padding: '2px 4px',
             }}
           >
             View Details
