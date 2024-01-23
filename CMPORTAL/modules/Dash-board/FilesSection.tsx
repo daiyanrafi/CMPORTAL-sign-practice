@@ -39,13 +39,13 @@ const FilesSection: React.FC<FilesSectionProps> = ({ onFileUpload, uploadedFiles
             variant="contained"
             component="label"
             style={{
-              fontSize: 'large',
+              fontSize: 'medium',
               fontFamily: 'Calibri',
               backgroundColor: '#00A4EF',
               color: 'white',
               borderRadius: '0',
               marginBottom: '16px',
-              marginRight: '10px',
+              // marginRight: '10px',
               padding: '2px 8px',
             }}
           >
@@ -61,7 +61,7 @@ const FilesSection: React.FC<FilesSectionProps> = ({ onFileUpload, uploadedFiles
           <TableHead style={{ backgroundColor: '#f2f2f2', position: 'sticky', top: 0 }}>
             <TableRow>
               <TableCell style={{ fontSize: 'large', fontFamily: 'Calibri', fontWeight: 'bold' }}>File Name</TableCell>
-              <TableCell style={{ fontSize: 'large', fontFamily: 'Calibri', fontWeight: 'bold' }}>Date Submitted</TableCell>
+              <TableCell style={{ fontSize: 'large', fontFamily: 'Calibri', fontWeight: 'bold', textAlign: 'right' }}>Date and Time</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -69,7 +69,7 @@ const FilesSection: React.FC<FilesSectionProps> = ({ onFileUpload, uploadedFiles
             {uploadedFiles.map((file) => (
               <TableRow key={file.id}>
                 <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{file.name}</TableCell>
-                <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{file.uploadDate.toString()}</TableCell>
+                <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri', textAlign: 'right' }}>{file.uploadDate.toString()}</TableCell>
               </TableRow>
             ))}
           </TableBody>

@@ -9,7 +9,7 @@ const CaseDetails: React.FC = () => {
   const caseDetails = {
     caseNumber: 2023010005,
     createDate: new Date().toLocaleString(),
-    dateLastModified: '27 /01 / 2023',
+    dateLastModified: new Date().toLocaleString(),
     caseTitle: 'SharePoint Drag and Drop is not working in Document Libraries.',
     description: 'We trying to Drag and Drop document in SharePoint Library. It works fine for some user and not for others. We have noticed this issue recently. We are not sure if was working earlier.',
     status: 'In Progress'
@@ -51,7 +51,7 @@ const CaseDetails: React.FC = () => {
               fontFamily: 'Calibri',
               backgroundColor: '#00A4EF',
               color: 'white',
-              fontSize: 'large',
+              fontSize: 'medium',
               borderRadius: '0',
               marginBottom: '16px',
               marginRight: '10px',

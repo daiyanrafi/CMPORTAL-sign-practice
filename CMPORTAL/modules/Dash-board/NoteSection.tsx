@@ -53,10 +53,10 @@ const FileSection: React.FC<FileSectionProps> = ({ onAddNote, uploadedNotes }) =
             fontFamily: 'Calibri',
             backgroundColor: '#00A4EF',
             color: 'white',
-            fontSize: 'large',
+            fontSize: 'medium',
             borderRadius: '0',
             marginBottom: '16px',
-            marginRight: '10px',
+            // marginRight: '10px',
             padding: '2px 8px',
           }}
         >
@@ -107,7 +107,7 @@ const FileSection: React.FC<FileSectionProps> = ({ onAddNote, uploadedNotes }) =
           <TableHead style={{ backgroundColor: '#f2f2f2', position: 'sticky', top: 0 }}>
             <TableRow>
               <TableCell style={{ fontSize: 'large', fontFamily: 'Calibri', fontWeight: 'bold' }}>Description</TableCell>
-              <TableCell style={{ fontSize: 'large', fontFamily: 'Calibri', fontWeight: 'bold' }}>Date Created</TableCell>
+              <TableCell style={{ fontSize: 'large', fontFamily: 'Calibri', fontWeight: 'bold', textAlign: 'right' }}>Date and Time</TableCell>
             </TableRow>
           </TableHead>
 
@@ -116,7 +116,7 @@ const FileSection: React.FC<FileSectionProps> = ({ onAddNote, uploadedNotes }) =
             {uploadedNotes.map((note) => (
               <TableRow key={note.id}>
                 <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{note.note}</TableCell>
-                <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{note.uploadDate.toString()}</TableCell>
+                <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri', textAlign: 'right' }}>{note.uploadDate.toString()}</TableCell>
               </TableRow>
             ))}
           </TableBody>
