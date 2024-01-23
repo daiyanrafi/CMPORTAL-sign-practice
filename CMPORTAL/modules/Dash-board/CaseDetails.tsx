@@ -17,7 +17,7 @@ const CaseDetails: React.FC = () => {
 
   return (
     <Box p={2}>
-      <Typography variant="h4" style={{ fontFamily: 'Calibri', borderBottom: '2px solid #2196F3', paddingBottom: '8px', backgroundColor: '#00A4EF', color: '#fff', marginBottom: '16px', textAlign: 'left', paddingLeft: '20px', marginLeft: '-2px' }}>
+      <Typography variant="h4" style={{ fontFamily: 'Calibri', borderBottom: '2px solid #2196F3', paddingBottom: '8px', backgroundColor: '#00A4EF', color: '#fff', marginBottom: '16px', textAlign: 'center' }}>
         Case Details
       </Typography>
       <Box mt={2}>
@@ -37,7 +37,7 @@ const CaseDetails: React.FC = () => {
         </Typography>
         <Typography variant="body1" style={{ fontSize: 'large', fontFamily: 'Calibri', marginBottom: '8px', textAlign: 'left' }}>
           <strong>Status:</strong>
-          <span style={{ backgroundColor: caseDetails.status === 'In Progress' ? '#4CAF50' : 'transparent', color: caseDetails.status === 'In Progress' ? '#fff' : 'inherit', padding: '4px', borderRadius: '4px' }}>
+          <span style={{ backgroundColor: caseDetails.status === 'In Progress' ? '#4CAF50' : 'transparent', color: caseDetails.status === 'In Progress' ? '#fff' : 'inherit', padding: '4px', borderRadius: '4px', wordSpacing: '10px' }}>
             {caseDetails.status}
           </span>
         </Typography>
@@ -48,15 +48,16 @@ const CaseDetails: React.FC = () => {
             startIcon={<AddCircleOutlineIcon />}
             onClick={() => { /* Handle View Details click */ }}
             style={{
-              fontFamily: 'Calibri',
-              backgroundColor: '#00A4EF',
-              color: 'white',
               fontSize: 'medium',
-              borderRadius: '0',
+              fontFamily: 'Calibri',
+              backgroundColor: 'white',
+              color: '#00A4EF',
+              // borderRadius: '0',
               // marginBottom: '16px',
               marginRight: '10px',
               marginTop: '30px',
               padding: '2px 4px',
+              border: 'none'
             }}
           >
             View Details

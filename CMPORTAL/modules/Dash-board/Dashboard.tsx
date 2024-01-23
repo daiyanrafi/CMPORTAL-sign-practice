@@ -169,7 +169,7 @@ const Dashboard: React.FC = () => {
     <Container
       component="main"
       maxWidth={false}
-      style={{ minHeight: '90vh', padding: '40px', border: '2px solid #eb3446' }}>
+      style={{ minHeight: '90vh', padding: '40px' }}>
       <Grid container spacing={3}>
         <Grid item xs={12} md={6} lg={6} style={{ marginTop: '20px' }}>
           {/* <Paper> */}

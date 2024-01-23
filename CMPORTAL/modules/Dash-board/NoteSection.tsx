@@ -40,7 +40,7 @@ const FileSection: React.FC<FileSectionProps> = ({ onAddNote, uploadedNotes }) =
   return (
     <Box p={2}>
       {/* File section title */}
-      <Typography variant="h4" style={{ fontFamily: 'Calibri', borderBottom: '2px solid #2196F3', paddingBottom: '8px', backgroundColor: '#00A4EF', color: '#fff', marginBottom: '16px', textAlign: 'left', paddingLeft: '20px', marginLeft: '-2px' }}>
+      <Typography variant="h4" style={{ fontFamily: 'Calibri', borderBottom: '2px solid #2196F3', paddingBottom: '8px', backgroundColor: '#00A4EF', color: '#fff', marginBottom: '16px', textAlign: 'center' }}>
         Notes
       </Typography>
 
@@ -51,13 +51,14 @@ const FileSection: React.FC<FileSectionProps> = ({ onAddNote, uploadedNotes }) =
           onClick={openModal}
           style={{
             fontFamily: 'Calibri',
-            backgroundColor: '#00A4EF',
-            color: 'white',
+            backgroundColor: 'white',
+            color: '#00A4EF',
             fontSize: 'medium',
             borderRadius: '0',
             marginBottom: '16px',
             // marginRight: '10px',
             padding: '2px 4px',
+            boxShadow: 'none'
           }}
         >
           <AddCircleOutlineIcon style={{ marginRight: '4px' }} />

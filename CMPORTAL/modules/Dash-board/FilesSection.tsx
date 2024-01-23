@@ -22,7 +22,7 @@ const FilesSection: React.FC<FilesSectionProps> = ({ onFileUpload, uploadedFiles
   return (
     <Box p={2} >
       {/* Section title */}
-      <Typography variant="h4" style={{ fontFamily: 'Calibri', borderBottom: '2px solid #2196F3', paddingBottom: '8px', backgroundColor: '#00A4EF', color: '#fff', marginBottom: '16px', textAlign: 'left', paddingLeft: '20px', marginLeft: '-2px' }}>
+      <Typography variant="h4" style={{ fontFamily: 'Calibri', borderBottom: '2px solid #2196F3', paddingBottom: '8px', backgroundColor: '#00A4EF', color: '#fff', marginBottom: '16px', textAlign: 'center' }}>
         Files
       </Typography>
       {/* <label htmlFor="fileInput" style={{ display: 'block', marginBottom: '8px', color: '#fff' }}>
@@ -41,12 +41,13 @@ const FilesSection: React.FC<FilesSectionProps> = ({ onFileUpload, uploadedFiles
             style={{
               fontSize: 'medium',
               fontFamily: 'Calibri',
-              backgroundColor: '#00A4EF',
-              color: 'white',
+              backgroundColor: 'white',
+              color: '#00A4EF',
               borderRadius: '0',
               marginBottom: '16px',
               // marginRight: '10px',
               padding: '2px 4px',
+              boxShadow: 'none'
             }}
           >
             <PublishIcon style={{ marginRight: '4px' }} />
