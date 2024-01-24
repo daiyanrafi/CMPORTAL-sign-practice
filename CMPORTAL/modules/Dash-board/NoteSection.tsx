@@ -40,8 +40,34 @@ const FileSection: React.FC<FileSectionProps> = ({ onAddNote, uploadedNotes }) =
   return (
     <Box p={2}>
       {/* File section title */}
-      <Typography variant="h4" style={{ fontFamily: 'Calibri', borderBottom: '2px solid #2196F3', paddingBottom: '8px', backgroundColor: '#00A4EF', color: '#fff', marginBottom: '16px', textAlign: 'center' }}>
+      {/* <Typography variant="h4" style={{ fontFamily: 'Calibri', borderBottom: '2px solid #2196F3', paddingBottom: '8px', backgroundColor: '#00A4EF', color: '#fff', marginBottom: '16px', textAlign: 'center' }}>
         Notes
+      </Typography> */}
+
+      <Typography
+        variant="h4"
+        style={{
+          // ... other styles
+          fontFamily: 'Calibri',
+          borderBottom: '2px solid #2196F3',
+          paddingBottom: '8px',
+          backgroundColor: '#00A4EF',
+          color: '#fff',
+          marginBottom: '16px',
+          textAlign: 'left',
+          position: 'relative',
+          padding: '25px',  // Adjust as needed
+        }}
+      >
+        <span
+          style={{
+            position: 'absolute',
+            top: '50%',
+            transform: 'translateY(-50%)',  // Adjust as needed
+          }}
+        >
+          Notes
+        </span>
       </Typography>
 
       {/* Add Note button */}

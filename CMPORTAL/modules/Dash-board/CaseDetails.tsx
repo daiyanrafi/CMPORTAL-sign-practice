@@ -17,9 +17,36 @@ const CaseDetails: React.FC = () => {
 
   return (
     <Box p={2}>
-      <Typography variant="h4" style={{ fontFamily: 'Calibri', borderBottom: '2px solid #2196F3', paddingBottom: '8px', backgroundColor: '#00A4EF', color: '#fff', marginBottom: '16px', textAlign: 'center' }}>
+      {/* <Typography variant="h4" style={{ fontFamily: 'Calibri', borderBottom: '2px solid #2196F3', paddingBottom: '8px', backgroundColor: '#00A4EF', color: '#fff', marginBottom: '16px', textAlign: 'center' }}>
         Case Details
+      </Typography> */}
+
+      <Typography
+        variant="h4"
+        style={{
+          // ... other styles
+          fontFamily: 'Calibri',
+          borderBottom: '2px solid #2196F3',
+          paddingBottom: '8px',
+          backgroundColor: '#00A4EF',
+          color: '#fff',
+          marginBottom: '16px',
+          textAlign: 'left',
+          position: 'relative',
+          padding: '25px',  // Adjust as needed
+        }}
+      >
+        <span
+          style={{
+            position: 'absolute',
+            top: '50%',
+            transform: 'translateY(-50%)',  // Adjust as needed
+          }}
+        >
+          Case Details
+        </span>
       </Typography>
+
       <Box mt={2}>
         <Typography variant="body1" style={{ fontSize: 'large', fontFamily: 'Calibri', marginBottom: '8px', textAlign: 'left' }}>
           <strong>Case Number:</strong> {caseDetails.caseNumber}
