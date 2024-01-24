@@ -82,7 +82,7 @@ const StartPage: React.FC<StartPageProps> = ({ onNext, onEdit, onView, userDataL
       year: 'numeric',
       hour: 'numeric',
       minute: 'numeric',
-      second: 'numeric',
+      // second: 'numeric',
       hour12: true,
     };
     return date.toLocaleString(undefined, options);

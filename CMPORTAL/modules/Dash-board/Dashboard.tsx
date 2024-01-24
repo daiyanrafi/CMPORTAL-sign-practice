@@ -135,7 +135,13 @@ const Dashboard: React.FC = () => {
     const newFile = {
       id: uploadedFiles.length + 1,
       name: file.name,
-      uploadDate: new Date().toLocaleString(),
+      uploadDate: new Date().toLocaleString(undefined, {
+        month: 'numeric',
+        day: 'numeric',
+        year: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+      }),
     };
 
     setUploadedFiles(prevFiles => [...prevFiles, newFile]);
@@ -151,7 +157,13 @@ const Dashboard: React.FC = () => {
     const newNote = {
       id: uploadedNotes.length + 1,
       note: note,
-      uploadDate: new Date().toLocaleString(),
+      uploadDate: new Date().toLocaleString(undefined, {
+        month: 'numeric',
+        day: 'numeric',
+        year: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+      }),
     };
 
     setUploadedNotes((prevNotes) => [...prevNotes, newNote]);
