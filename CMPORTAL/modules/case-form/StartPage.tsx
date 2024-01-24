@@ -58,7 +58,7 @@ const StartPage: React.FC<StartPageProps> = ({ onNext, onEdit, onView, userDataL
       case 'In Progress':
         return '#00FFFF';
       case 'Overdue':
-        return '#f20a20';
+        return '#f21f34';
       case 'Completed':
         return '#1dcc45';
       default:
@@ -151,9 +151,9 @@ const StartPage: React.FC<StartPageProps> = ({ onNext, onEdit, onView, userDataL
           <TableHead>
             <TableRow style={{ backgroundColor: '#02acfa' }}>
               <TableCell style={{ width: '15%', fontSize: '18px', fontFamily: 'Calibri', color: '#fafeff', borderBottom: '2px solid #333' }}>CASE ID</TableCell>
-              <TableCell style={{ width: '40%', fontSize: '18px', fontFamily: 'Calibri', color: '#fafeff', borderBottom: '2px solid #333' }}>USER TITLE</TableCell>
+              <TableCell style={{ width: '35%', fontSize: '18px', fontFamily: 'Calibri', color: '#fafeff', borderBottom: '2px solid #333' }}>USER TITLE</TableCell>
 
-              <TableCell style={{ width: '10%', fontSize: '18px', fontFamily: 'Calibri', color: '#fafeff', borderBottom: '2px solid #333' }}>STATUS</TableCell>
+              <TableCell style={{ width: '15%', fontSize: '18px', fontFamily: 'Calibri', color: '#fafeff', borderBottom: '2px solid #333' }}>STATUS</TableCell>
               <TableCell style={{ width: '15%', fontSize: '18px', fontFamily: 'Calibri', color: '#fafeff', borderBottom: '2px solid #333' }}>CREATED DATE</TableCell>
 
               <TableCell style={{ width: '15%', fontSize: '18px', fontFamily: 'Calibri', color: '#fafeff', borderBottom: '2px solid #333' }}>ACTION</TableCell>
