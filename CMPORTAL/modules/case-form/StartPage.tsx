@@ -68,12 +68,24 @@ const StartPage: React.FC<StartPageProps> = ({ onNext, onEdit, onView, userDataL
   //--for status color ended--
 
   //**for created date started**
+  // const getFormattedDate = (date: Date): string => {
+  //   const options: Intl.DateTimeFormatOptions = {
+  //     year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit',
+  //     minute: '2-digit'
+  //   };
+  //   return date.toLocaleDateString(undefined, options);
+  // };
   const getFormattedDate = (date: Date): string => {
     const options: Intl.DateTimeFormatOptions = {
-      year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit',
-      minute: '2-digit'
+      month: 'numeric',
+      day: 'numeric',
+      year: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric',
+      hour12: true,
     };
-    return date.toLocaleDateString(undefined, options);
+    return date.toLocaleString(undefined, options);
   };
   //**created date ended**
 
