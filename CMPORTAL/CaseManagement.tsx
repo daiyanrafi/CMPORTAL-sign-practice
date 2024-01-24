@@ -71,7 +71,7 @@ export default class HelloWorld extends React.Component<
         {/* <h1>Hello world-</h1> */}
         <Dashboard/>
         {/* <Button/> */}
-        {/* <App/> */}
+        <App/>
       </div>
     );
   }

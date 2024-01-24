@@ -12,9 +12,13 @@ import {
   TableCell,
   Button,
   Box,
-  TablePagination
+  TablePagination,
+  IconButton
 } from '@mui/material';
 import { FormData } from './types';
+// import VisibilityIcon from '@mui/icons-material/AddCircleOutline';
+import PageviewIcon from '@mui/icons-material/Pageview';
+import AddCircleIcon from '@mui/icons-material/AddCircle';
 
 type StartPageProps = {
   onNext: () => void;
@@ -46,7 +50,7 @@ const StartPage: React.FC<StartPageProps> = ({ onNext, onEdit, onView, userDataL
 
   //--for status color started--
   const getStatusByIndex = (index: number): string => {
-    const statuses = ['Active', 'Inactive', 'Pending'];
+    const statuses = ['In Progress', 'Overdue', 'Completed'];
     return statuses[index % statuses.length];
   };
   const getStatusColor = (status: string) => {
@@ -93,18 +97,52 @@ const StartPage: React.FC<StartPageProps> = ({ onNext, onEdit, onView, userDataL
       <Paper elevation={3} style={{ padding: '2rem', width: '100%', overflow: 'auto' }}>
         <Box mb={3} display="flex" justifyContent="space-between" alignItems="center">
           <Typography variant="h5" style={{ fontSize: '20px', fontWeight: '600', color: '#333', fontFamily: 'Calibri' }}>MY CASES</Typography>
-          <Button variant="contained" color="primary" onClick={handleNext} style={{ fontSize: '13px', fontFamily: 'Calibri, Arial', color: '#fff', borderRadius: '0', backgroundColor: '#00A4EF' }}>
+          {/* <Button variant="contained" color="primary" onClick={handleNext} style={{ fontSize: '13px', fontFamily: 'Calibri, Arial', color: '#fff', borderRadius: '0', backgroundColor: '#00A4EF' }}>
             Add New Cases
-          </Button>
+          </Button> */}
+
+          {/* <Button
+            variant="contained"
+            color="primary"
+            onClick={handleNext}
+            style={{
+              fontSize: 'large',
+              fontFamily: 'Calibri',
+              backgroundColor: 'transparent', // Set background to none
+              borderRadius: '0',
+              display: 'flex',
+              alignItems: 'center'
+            }}
+          >
+            <PageviewIcon style={{ marginRight: '5px' }} />
+            Add New Cases
+          </Button> */}
+
+          <IconButton
+            // color="primary"
+            onClick={handleNext}
+            style={{
+              fontSize: 'large',
+              fontFamily: 'Calibri',
+              color: '#00A4EF',
+              backgroundColor: 'transparent', // Set background to none
+              borderRadius: '0',
+              display: 'flex',
+              alignItems: 'center'
+            }}
+          >
+            <AddCircleIcon style={{ marginRight: '5px' }} />
+            Add New Cases
+          </IconButton>
         </Box>
         <Table>
           <TableHead>
             <TableRow style={{ backgroundColor: '#02acfa' }}>
-              <TableCell style={{ width: '15%', fontSize: '18px', fontFamily: 'Calibri', color: '#fafeff', borderBottom: '2px solid #333' }}>Case ID</TableCell>
-              <TableCell style={{ width: '40%', fontSize: '18px', fontFamily: 'Calibri', color: '#fafeff', borderBottom: '2px solid #333' }}>User Title</TableCell>
+              <TableCell style={{ width: '15%', fontSize: '18px', fontFamily: 'Calibri', color: '#fafeff', borderBottom: '2px solid #333' }}>CASE ID</TableCell>
+              <TableCell style={{ width: '40%', fontSize: '18px', fontFamily: 'Calibri', color: '#fafeff', borderBottom: '2px solid #333' }}>USER TITLE</TableCell>
 
-              <TableCell style={{ width: '10%', fontSize: '18px', fontFamily: 'Calibri', color: '#fafeff', borderBottom: '2px solid #333' }}>Status</TableCell>
-              <TableCell style={{ width: '15%', fontSize: '18px', fontFamily: 'Calibri', color: '#fafeff', borderBottom: '2px solid #333' }}>Created Date</TableCell>
+              <TableCell style={{ width: '10%', fontSize: '18px', fontFamily: 'Calibri', color: '#fafeff', borderBottom: '2px solid #333' }}>STATUS</TableCell>
+              <TableCell style={{ width: '15%', fontSize: '18px', fontFamily: 'Calibri', color: '#fafeff', borderBottom: '2px solid #333' }}>CREATED DATE</TableCell>
 
               <TableCell style={{ width: '15%', fontSize: '18px', fontFamily: 'Calibri', color: '#fafeff', borderBottom: '2px solid #333' }}>ACTION</TableCell>
             </TableRow>
@@ -116,15 +154,38 @@ const StartPage: React.FC<StartPageProps> = ({ onNext, onEdit, onView, userDataL
                 <TableRow key={absoluteIndex} style={{ backgroundColor: absoluteIndex % 2 === 0 ? '#ffffff' : '#f9f9f9' }}>
                   <TableCell style={{ fontSize: '15px', color: '#333', fontFamily: 'Calibri' }}>{202401160001 + absoluteIndex}</TableCell>
                   <TableCell style={{ fontSize: '15px', color: '#333', fontFamily: 'Calibri' }}>{userData.complaint_resolutionDescription}</TableCell>
-                  <TableCell style={{ fontSize: '15px', fontFamily: 'Calibri', color: getStatusColor(getStatusByIndex(absoluteIndex)) }}>{getStatusByIndex(absoluteIndex)}</TableCell>
+                  {/* <TableCell style={{ fontSize: '15px', fontFamily: 'Calibri', color: getStatusColor(getStatusByIndex(absoluteIndex)) }}>{getStatusByIndex(absoluteIndex)}</TableCell> */}
+
+                  <TableCell style={{ fontSize: '15px', fontFamily: 'Calibri' }}>
+                    <span style={{ backgroundColor: getStatusColor(getStatusByIndex(absoluteIndex)), color: '#000', padding: '5px', borderRadius: '3px' }}>
+                      {getStatusByIndex(absoluteIndex)}
+                    </span>
+                  </TableCell>
                   <TableCell style={{ fontSize: '15px', color: '#333', fontFamily: 'Calibri' }}>{getFormattedDate(new Date())}</TableCell>
                   <TableCell>
-                    <Button variant="contained" color="primary" onClick={() => onEdit(index)} style={{ fontSize: '13px', fontFamily: 'Calibri', backgroundColor: '#F25022', color: 'white', borderRadius: '0', marginRight: '8px', marginBottom: '5px' }}>
+                    {/* <Button variant="contained" color="primary" onClick={() => onEdit(index)} style={{ fontSize: '13px', fontFamily: 'Calibri', backgroundColor: '#F25022', color: 'white', borderRadius: '0', marginRight: '8px', marginBottom: '5px' }}>
                       Edit
-                    </Button>
-                    <Button variant="contained" color="success" onClick={() => onView(index)} style={{ fontSize: '13px', fontFamily: 'Calibri', backgroundColor: '#7FBA00', color: 'white', borderRadius: '0' }}>
+                    </Button> */}
+                    {/* <Button variant="contained" color="success" onClick={() => onView(index)} style={{ fontSize: '13px', fontFamily: 'Calibri', backgroundColor: '#7FBA00', color: 'white', borderRadius: '0' }}>
                       View
-                    </Button>
+                    </Button> */}
+
+                    <IconButton
+                      color="primary"
+                      onClick={() => onView(index)}
+                      style={{
+                        fontSize: 'large',
+                        fontFamily: 'Calibri',
+                        backgroundColor: 'transparent', // Set background to none
+                        color: '#00A4EF',
+                        borderRadius: '0',
+                        display: 'flex',
+                        alignItems: 'center'
+                      }}
+                    >
+                      <PageviewIcon style={{ marginRight: '5px' }} />
+                      View
+                    </IconButton>
                   </TableCell>
                 </TableRow>
               );
