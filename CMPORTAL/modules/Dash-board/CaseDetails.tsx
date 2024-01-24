@@ -64,7 +64,7 @@ const CaseDetails: React.FC = () => {
         </Typography>
         <Typography variant="body1" style={{ fontSize: 'large', fontFamily: 'Calibri', marginBottom: '8px', textAlign: 'left' }}>
           <strong>Status:</strong>
-          <span style={{ backgroundColor: caseDetails.status === 'In Progress' ? '#4CAF50' : 'transparent', color: caseDetails.status === 'In Progress' ? '#fff' : 'inherit', padding: '4px', borderRadius: '4px', wordSpacing: '10px' }}>
+          <span style={{ backgroundColor: caseDetails.status === 'In Progress' ? '#00FFFF' : 'transparent', color: caseDetails.status === 'In Progress' ? '#000000' : 'inherit', padding: '4px', borderRadius: '4px', marginLeft: '4px'}}>
             {caseDetails.status}
           </span>
         </Typography>
