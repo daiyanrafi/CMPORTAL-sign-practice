@@ -50,7 +50,10 @@ const Dropdown: React.FC<DropdownProps> = ({ data, title }) => {
             )
           }
         >
-          <Typography style={{ color: isAccordionOpen ? 'white' : 'black' }}>{title}</Typography>
+          <Typography style={{
+            color: isAccordionOpen ? 'white' : 'black', fontSize: 'large',
+            fontFamily: 'Calibri'
+          }}>{title}</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Container>
@@ -66,13 +69,19 @@ const Dropdown: React.FC<DropdownProps> = ({ data, title }) => {
                   backgroundColor: row.id % 2 === 0 ? '#f5f5f5' : '#ffffff',
                 }}>
                 <div>
-                  <Typography>{row.content}</Typography>
+                  <Typography style={{ fontSize: 'large', fontFamily: 'Calibri' }}>{row.content}</Typography>
                 </div>
                 <div>
                   {getTimestampForId(row.id) ? (
                     <Typography>{getTimestampForId(row.id)}</Typography>
                   ) : (
-                    <Button variant="contained" color="primary" onClick={() => handleAcceptClick(row.id)}>
+                    <Button variant="contained"
+                      color="primary"
+                      style={{
+                        fontSize: 'medium',
+                        fontFamily: 'Calibri',
+                      }}
+                      onClick={() => handleAcceptClick(row.id)}>
                       Accept
                     </Button>
                   )}
@@ -84,7 +93,7 @@ const Dropdown: React.FC<DropdownProps> = ({ data, title }) => {
       </Accordion>
     </Container>
   );
-  
+
 };
 
 export default Dropdown;
