@@ -4,6 +4,11 @@ import App from "./modules/case-form/App";
 import axios from "axios";
 import Button from "./modules/csv-button/Button";
 import Dashboard from "./modules/Dash-board/Dashboard";
+import Dropdown from "./modules/Drop-down/Dropdown";
+import policies from "./modules/Drop-down/Policies";
+import guidelines from "./modules/Drop-down/Guidelines";
+import directives from "./modules/Drop-down/Directives";
+import procedures from "./modules/Drop-down/Procedures";
 
 export default class HelloWorld extends React.Component<
   ComponentFramework.Context<IInputs>,
@@ -26,7 +31,7 @@ export default class HelloWorld extends React.Component<
   // public fetchData() {
   //   alert('GET-1');
   //   var getUrl = '/_api/sabs_tests';
-  
+
   //   axios.get(getUrl)
   //     .then(result => {
   //       alert('GET successful');
@@ -61,17 +66,21 @@ export default class HelloWorld extends React.Component<
   //         console.error('AxiosError:', error);
   //       }
   //     });
-      
+
   // }
-  
+
 
   public render() {
     return (
       <div>
         {/* <h1>Hello world-</h1> */}
-        <Dashboard/>
+        {/* <Dashboard/> */}
         {/* <Button/> */}
-        <App/>
+        {/* <App/> */}
+        <Dropdown data={policies} title="Policies" />
+        <Dropdown data={guidelines} title="Guidelines" />
+        <Dropdown data={directives} title="Directives" />
+        <Dropdown data={procedures} title="Procedures" />
       </div>
     );
   }
