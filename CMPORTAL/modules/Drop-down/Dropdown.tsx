@@ -73,7 +73,7 @@ const Dropdown: React.FC<DropdownProps> = ({ data, title }) => {
                 </div>
                 <div>
                   {getTimestampForId(row.id) ? (
-                    <Typography>{getTimestampForId(row.id)}</Typography>
+                    <Typography style={{ fontSize: 'large', fontFamily: 'Calibri' }}>{getTimestampForId(row.id)}</Typography>
                   ) : (
                     <Button variant="contained"
                       color="primary"
