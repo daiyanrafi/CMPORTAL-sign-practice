@@ -83,7 +83,7 @@ const Dropdown: React.FC<DropdownProps> = ({ data, title }) => {
                   alignItems: "center", // Center items vertically
                   marginBottom: "10px",
                   // borderBottom: '2px solid #ccc',
-                  backgroundColor: row.id % 2 === 0 ? "#f5f5f5" : "#ffffff",
+                  backgroundColor: row.id % 1 === 0 ? "#f5f5f5" : "#ffffff",
                 }}
               >
                 <div>
