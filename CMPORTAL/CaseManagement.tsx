@@ -5,10 +5,10 @@ import axios from "axios";
 import Button from "./modules/csv-button/Button";
 import Dashboard from "./modules/Dash-board/Dashboard";
 import Dropdown from "./modules/Drop-down/Dropdown";
-import policies from "./modules/Drop-down/Policies";
-import guidelines from "./modules/Drop-down/Guidelines";
-import directives from "./modules/Drop-down/Directives";
-import procedures from "./modules/Drop-down/Procedures";
+// import policies from "./modules/Drop-down/Policies";
+// import guidelines from "./modules/Drop-down/Guidelines";
+// import directives from "./modules/Drop-down/Directives";
+// import procedures from "./modules/Drop-down/Procedures";
 import mappedDirectiveData from "./modules/Drop-down/Directives";
 import mappedProceduresData from "./modules/Drop-down/Procedures";
 import mappedGuidelinesData from "./modules/Drop-down/Guidelines";
@@ -72,7 +72,6 @@ export default class HelloWorld extends React.Component<
   //     });
 
   // }
-
 
   public render() {
     return (
