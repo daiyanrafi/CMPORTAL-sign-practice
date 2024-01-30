@@ -9,6 +9,10 @@ import policies from "./modules/Drop-down/Policies";
 import guidelines from "./modules/Drop-down/Guidelines";
 import directives from "./modules/Drop-down/Directives";
 import procedures from "./modules/Drop-down/Procedures";
+import mappedDirectiveData from "./modules/Drop-down/Directives";
+import mappedProceduresData from "./modules/Drop-down/Procedures";
+import mappedGuidelinesData from "./modules/Drop-down/Guidelines";
+import mappedPoliciesData from "./modules/Drop-down/Policies";
 
 export default class HelloWorld extends React.Component<
   ComponentFramework.Context<IInputs>,
@@ -77,10 +81,10 @@ export default class HelloWorld extends React.Component<
         {/* <Dashboard/> */}
         {/* <Button/> */}
         {/* <App/> */}
-        <Dropdown data={policies} title="Policies" />
-        <Dropdown data={guidelines} title="Guidelines" />
-        <Dropdown data={directives} title="Directives" />
-        <Dropdown data={procedures} title="Procedures" />
+        <Dropdown data={mappedPoliciesData} title="Policies" />
+        <Dropdown data={mappedGuidelinesData} title="Guidelines" />
+        <Dropdown data={mappedDirectiveData} title="Directives" />
+        <Dropdown data={mappedProceduresData} title="Procedures" />
       </div>
     );
   }
