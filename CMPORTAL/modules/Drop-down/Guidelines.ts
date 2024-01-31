@@ -10,18 +10,18 @@
 
 // export default guidelines;
 
-// guideline.ts
-import { Row } from "./Row";
-import documents from "./data/cdocuments.json";
+// guideline.ts****************************************
+// import { Row } from "./Row";
+// import documents from "./data/cdocuments.json";
 
-const guidelineData = documents.filter(
-  (item: any) => item.DocumentType === "Directive"
-);
+// const guidelineData = documents.filter(
+//   (item: any) => item.DocumentType === "Guideline"
+// );
 
-const mappedGuidelinesData: Row[] = guidelineData.map((item: any) => ({
-  id: item.ID,
-  label: item.Title,
-  content: item.Title,
-}));
+// const mappedGuidelinesData: Row[] = guidelineData.map((item: any) => ({
+//   id: item.ID,
+//   label: item.Title,
+//   content: item.Title,
+// }));
 
-export default mappedGuidelinesData;
+// export default mappedGuidelinesData;

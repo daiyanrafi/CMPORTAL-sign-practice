@@ -9,18 +9,18 @@
 
 // export default procedures;
 
-// procedure.ts
-import { Row } from "./Row";
-import documents from "./data/cdocuments.json";
+// procedure.ts****************************************
+// import { Row } from "./Row";
+// import documents from "./data/cdocuments.json";
 
-const procedureData = documents.filter(
-  (item: any) => item.DocumentType === "Directive"
-);
+// const procedureData = documents.filter(
+//   (item: any) => item.DocumentType === "Procedure"
+// );
 
-const mappedProceduresData: Row[] = procedureData.map((item: any) => ({
-  id: item.ID,
-  label: item.Title,
-  content: item.Title,
-}));
+// const mappedProceduresData: Row[] = procedureData.map((item: any) => ({
+//   id: item.ID,
+//   label: item.Title,
+//   content: item.Title,
+// }));
 
-export default mappedProceduresData;
+// export default mappedProceduresData;

@@ -20,6 +20,30 @@ interface AcceptedRow {
   timestamp: string;
 }
 
+const singularizeTitle = (title: string): string => {
+  // Add logic to transform title to singular form if needed
+  // This is a basic example, you might need a more sophisticated solution for pluralization
+  return title.endsWith("ies") ? title.slice(0, -3) + "y" : title.slice(0, -1);
+};
+
+const ColumnTitle: React.FC<{ title: string }> = ({ title }) => (
+  <Typography
+    style={{
+      backgroundColor: "#008542",
+      padding: "10px",
+      fontSize: "large",
+      fontFamily: "Calibri",
+      borderBottom: "2px solid #ccc",
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+    }}
+  >
+    <span style={{ color: "white" }}>{singularizeTitle(title)}</span>
+    <span style={{ color: "white" }}>Acknowledge/Accept</span>
+  </Typography>
+);
+
 const Dropdown: React.FC<DropdownProps> = ({ data, title }) => {
   const [isAccordionOpen, setIsAccordionOpen] = useState<boolean>(false);
   const [acceptedRows, setAcceptedRows] = useState<AcceptedRow[]>([]);
@@ -73,16 +97,16 @@ const Dropdown: React.FC<DropdownProps> = ({ data, title }) => {
         </AccordionSummary>
         <AccordionDetails>
           <Container>
+            <ColumnTitle title={title} />
             {data.map((row) => (
               <div
                 key={row.id}
                 style={{
                   padding: "10px",
                   display: "flex",
-                  justifyContent: "space-between", // Align items horizontally to space-between
-                  alignItems: "center", // Center items vertically
+                  justifyContent: "space-between",
+                  alignItems: "center",
                   marginBottom: "10px",
-                  // borderBottom: '2px solid #ccc',
                   backgroundColor: row.id % 1 === 0 ? "#f5f5f5" : "#ffffff",
                 }}
               >
@@ -102,16 +126,24 @@ const Dropdown: React.FC<DropdownProps> = ({ data, title }) => {
                     </Typography>
                   ) : (
                     <Button
-                      variant="contained"
-                      color="primary"
-                      style={{
-                        fontSize: "medium",
-                        fontFamily: "Calibri",
-                      }}
-                      onClick={() => handleAcceptClick(row.id)}
-                    >
-                      Accept
-                    </Button>
+  variant="contained"
+  style={{
+    fontSize: "medium",
+    fontFamily: "Calibri",
+    backgroundColor: "transparent",
+    border: "2px solid #003591", // Set border color to blue and increase thickness
+    color: "#003591",
+    // padding: "0px 12px",
+    borderRadius: "0", // Set border corners to be sharp
+    fontWeight: "bold", // Set font weight to bold
+    width: "100px", // Set the width to make it wider
+    height: "30px", // Set the height to make it shorter
+  }}
+  onClick={() => handleAcceptClick(row.id)}
+>
+  Accept
+</Button>
+
                   )}
                 </div>
               </div>

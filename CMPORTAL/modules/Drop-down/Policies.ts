@@ -28,18 +28,18 @@
 
 // export default policies;
 
-// policy.ts
-import { Row } from "./Row";
-import documents from "./data/cdocuments.json";
+// policy.ts****************************************
+// import { Row } from "./Row";
+// import documents from "./data/cdocuments.json";
 
-const policyData = documents.filter(
-  (item: any) => item.DocumentType === "Directive"
-);
+// const policyData = documents.filter(
+//   (item: any) => item.DocumentType === "Policy"
+// );
 
-const mappedPoliciesData: Row[] = policyData.map((item: any) => ({
-  id: item.ID,
-  label: item.Title,
-  content: item.Title,
-}));
+// const mappedPoliciesData: Row[] = policyData.map((item: any) => ({
+//   id: item.ID,
+//   label: item.Title,
+//   content: item.Title,
+// }));
 
-export default mappedPoliciesData;
+// export default mappedPoliciesData;

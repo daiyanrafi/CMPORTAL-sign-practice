@@ -9,18 +9,18 @@
 
 // export default directives;
 
-// directives.ts
-import { Row } from "./Row";
-import documents from "./data/cdocuments.json";
+// directives.ts****************************************
+// import { Row } from "./Row";
+// import documents from "./data/cdocuments.json";
 
-const directiveData = documents.filter(
-  (item: any) => item.DocumentType === "Directive"
-);
+// const directiveData = documents.filter(
+//   (item: any) => item.DocumentType === "Directive"
+// );
 
-const mappedDirectiveData: Row[] = directiveData.map((item: any) => ({
-  id: item.ID,
-  label: item.Title,
-  content: item.Title,
-}));
+// const mappedDirectiveData: Row[] = directiveData.map((item: any) => ({
+//   id: item.ID,
+//   label: item.Title,
+//   content: item.Title,
+// }));
 
-export default mappedDirectiveData;
+// export default mappedDirectiveData;
