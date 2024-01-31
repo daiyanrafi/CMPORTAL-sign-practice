@@ -52,10 +52,25 @@ const Dropdown: React.FC<DropdownProps> = ({ data, title }) => {
     setIsAccordionOpen((prev) => !prev);
   };
 
+  // const handleAcceptClick = (id: number) => {
+  //   setAcceptedRows((prevRows) => [
+  //     ...prevRows,
+  //     { id, timestamp: new Date().toLocaleString() },
+  //   ]);
+  // };
   const handleAcceptClick = (id: number) => {
     setAcceptedRows((prevRows) => [
       ...prevRows,
-      { id, timestamp: new Date().toLocaleString() },
+      {
+        id,
+        timestamp: new Date().toLocaleString(undefined, {
+          year: "numeric",
+          month: "numeric",
+          day: "numeric",
+          hour: "numeric",
+          minute: "numeric",
+        }),
+      },
     ]);
   };
 
@@ -90,14 +105,15 @@ const Dropdown: React.FC<DropdownProps> = ({ data, title }) => {
               color: isAccordionOpen ? "white" : "black",
               fontSize: "large",
               fontFamily: "Calibri",
+              marginLeft: '-1%',
             }}
           >
             {title}
           </Typography>
         </AccordionSummary>
-        <AccordionDetails>
-          <Container>
-            <ColumnTitle title={title} />
+        {/* <AccordionDetails> */}
+          {/* <Container> */}
+            <ColumnTitle title={title}/>
             {data.map((row) => (
               <div
                 key={row.id}
@@ -112,7 +128,7 @@ const Dropdown: React.FC<DropdownProps> = ({ data, title }) => {
               >
                 <div>
                   <Typography
-                    style={{ fontSize: "large", fontFamily: "Calibri" }}
+                    style={{ fontSize: "large", fontFamily: "Calibri", color: '#003591' }}
                   >
                     {row.content}
                   </Typography>
@@ -126,30 +142,29 @@ const Dropdown: React.FC<DropdownProps> = ({ data, title }) => {
                     </Typography>
                   ) : (
                     <Button
-  variant="contained"
-  style={{
-    fontSize: "medium",
-    fontFamily: "Calibri",
-    backgroundColor: "transparent",
-    border: "2px solid #003591", // Set border color to blue and increase thickness
-    color: "#003591",
-    // padding: "0px 12px",
-    borderRadius: "0", // Set border corners to be sharp
-    fontWeight: "bold", // Set font weight to bold
-    width: "100px", // Set the width to make it wider
-    height: "30px", // Set the height to make it shorter
-  }}
-  onClick={() => handleAcceptClick(row.id)}
->
-  Accept
-</Button>
-
+                      variant="contained"
+                      style={{
+                        fontSize: "medium",
+                        fontFamily: "Calibri",
+                        backgroundColor: "transparent",
+                        border: "2px solid #003591", // Set border color to blue and increase thickness
+                        color: "#003591",
+                        // padding: "0px 12px",
+                        borderRadius: "0", // Set border corners to be sharp
+                        fontWeight: "bold", // Set font weight to bold
+                        width: "100px", // Set the width to make it wider
+                        height: "30px", // Set the height to make it shorter
+                      }}
+                      onClick={() => handleAcceptClick(row.id)}
+                    >
+                      Accept
+                    </Button>
                   )}
                 </div>
               </div>
             ))}
-          </Container>
-        </AccordionDetails>
+          {/* </Container> */}
+        {/* </AccordionDetails> */}
       </Accordion>
     </Container>
   );
