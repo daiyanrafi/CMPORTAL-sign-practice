@@ -41,31 +41,41 @@ const JsonTable: React.FC = () => {
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell>ID</TableCell>
-                <TableCell>Resource</TableCell>
-                <TableCell>Start Time</TableCell>
-                <TableCell>Edit Time</TableCell>
-                <TableCell>Duration</TableCell>
-                <TableCell>Booking Time</TableCell>
-                <TableCell>Booking Status</TableCell>
-                <TableCell>Created On</TableCell>
-                <TableCell>Action</TableCell>
+                <TableCell style={{ backgroundColor: '#f0f0f0', fontSize: 'medium', fontFamily: 'Calibri' }}>ID</TableCell>
+                <TableCell style={{ backgroundColor: '#f0f0f0', fontSize: 'medium', fontFamily: 'Calibri' }}>Resource</TableCell>
+                <TableCell style={{ backgroundColor: '#f0f0f0', fontSize: 'medium', fontFamily: 'Calibri' }}>Start Time</TableCell>
+                <TableCell style={{ backgroundColor: '#f0f0f0', fontSize: 'medium', fontFamily: 'Calibri' }}>Edit Time</TableCell>
+                <TableCell style={{ backgroundColor: '#f0f0f0', fontSize: 'medium', fontFamily: 'Calibri' }}>Duration</TableCell>
+                <TableCell style={{ backgroundColor: '#f0f0f0', fontSize: 'medium', fontFamily: 'Calibri' }}>Booking Time</TableCell>
+                <TableCell style={{ backgroundColor: '#f0f0f0', fontSize: 'medium', fontFamily: 'Calibri' }}>Booking Status</TableCell>
+                <TableCell style={{ backgroundColor: '#f0f0f0', fontSize: 'medium', fontFamily: 'Calibri' }}>Created On</TableCell>
+                <TableCell style={{ backgroundColor: '#f0f0f0', fontSize: 'medium', fontFamily: 'Calibri', paddingLeft: '40px' }}>Action</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
               {data.map((row) => (
                 <TableRow key={row.id}>
-                  <TableCell>{row.id}</TableCell>
-                  <TableCell>{row.resource}</TableCell>
-                  <TableCell>{row.startTime}</TableCell>
-                  <TableCell>{row.endTime}</TableCell>
-                  <TableCell>{row.duration}</TableCell>
-                  {/* <TableCell>{calculateDuration(row)}</TableCell> */}
-                  <TableCell>{row.bookingTime}</TableCell>
-                  <TableCell>{row.bookingStatus}</TableCell>
-                  <TableCell>{row.createdOn}</TableCell>
-                  <TableCell>
-                    <Button onClick={() => handleEditClick(row.id)}>Edit</Button>
+                  <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{row.id}</TableCell>
+                  <TableCell style={{ color: '#003591', fontSize: 'medium', fontFamily: 'Calibri' }}>{row.resource}</TableCell>
+                  <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{row.startTime}</TableCell>
+                  <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{row.endTime}</TableCell>
+                  <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{row.duration}</TableCell>
+                  {/* <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{calculateDuration(row)}</TableCell> */}
+                  <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{row.bookingTime}</TableCell>
+                  <TableCell style={{ color: '#003591', fontSize: 'medium', fontFamily: 'Calibri' }}>{row.bookingStatus}</TableCell>
+                  <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{row.createdOn}</TableCell>
+                  <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>
+                  <Button onClick={() => handleEditClick(row.id)}
+                      style={{
+                        fontSize: "medium",
+                        fontFamily: "Calibri",
+                        backgroundColor: "transparent",
+                        border: "1px solid #003591",
+                        color: "#003591",
+                        borderRadius: "0",
+                        width: "100px",
+                        height: "30px", 
+                      }}>Edit</Button>
                   </TableCell>
                 </TableRow>
               ))}
@@ -77,6 +87,8 @@ const JsonTable: React.FC = () => {
       )}
     </>
   );
+  
+  
 };
 
 export default JsonTable;

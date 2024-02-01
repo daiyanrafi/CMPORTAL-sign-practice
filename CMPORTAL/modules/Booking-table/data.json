@@ -13,8 +13,8 @@
     "bookingStatus": "Pending",
     "bookingTime": "Fixed",
     "createdOn": "02/02/2024 1:20 PM",
-    "duration": "45 minutes",
-    "endTime": "03/02/2024 11:45 AM",
+    "duration": "1.5 hours",
+    "endTime": "03/02/2024 12:30 AM",
     "id": 3,
     "resource": "John Miller",
     "startTime": "03/02/2024 11:00 AM"
@@ -23,8 +23,8 @@
     "bookingStatus": "Confirmed",
     "bookingTime": "Solid",
     "createdOn": "03/02/2024 6:30 AM",
-    "duration": "20 minutes",
-    "endTime": "04/02/2024 8:40 AM",
+    "duration": "2 hours",
+    "endTime": "04/02/2024 10:20 AM",
     "id": 4,
     "resource": "Sophia Anderson",
     "startTime": "04/02/2024 8:20 AM"
