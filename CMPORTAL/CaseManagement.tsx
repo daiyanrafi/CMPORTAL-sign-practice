@@ -16,6 +16,7 @@ import Dropdown from "./modules/Drop-down/Dropdown";
 import { Row } from "./modules/Drop-down/Row";
 import documents from "./modules/Drop-down/data/cdocuments.json";
 import Userdoc from "./modules/User-doc/Userdoc";
+import JsonTable from "./modules/Booking-table/JsonTable";
 export default class HelloWorld extends React.Component<
   ComponentFramework.Context<IInputs>,
   IState
@@ -150,18 +151,19 @@ export default class HelloWorld extends React.Component<
         {/* <Dashboard/> */}
         {/* <Button/> */}
         {/* <App/> */}
+        <JsonTable/>
         {/* <Dropdown data={policies} title="Policies" />
         <Dropdown data={guidelines} title="Guidelines" />
         <Dropdown data={directives} title="Directives" />
         <Dropdown data={procedures} title="Procedures" /> */}
 
-        <h1>Test component</h1>
+        {/* <h1>Test component</h1> */}
 
-        {people.map((person: string) => (
+        {/* {people.map((person: string) => (
           <div key={person}>
             <Userdoc data={documents} title={person} />
           </div>
-        ))}
+        ))} */}
       </div>
     );
   }
