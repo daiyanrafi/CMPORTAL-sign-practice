@@ -1,3 +1,4 @@
+//EditPage.tsx
 import React, { useState } from 'react';
 import { Button, TextField, Dialog, DialogTitle, DialogContent, DialogActions } from '@mui/material';
 
@@ -34,9 +35,9 @@ interface EditPageProps {
               onChange={(e) => handleChange('startTime', e.target.value)}
             />
             <TextField
-              label="Edit Time"
-              value={editedData.editTime}
-              onChange={(e) => handleChange('editTime', e.target.value)}
+              label="End Time"
+              value={editedData.endTime}
+              onChange={(e) => handleChange('endTime', e.target.value)}
             />
             <TextField
               label="Duration"
@@ -50,8 +51,8 @@ interface EditPageProps {
             />
             <TextField
               label="Booking Start"
-              value={editedData.bookingStart}
-              onChange={(e) => handleChange('bookingStart', e.target.value)}
+              value={editedData.bookingStatus}
+              onChange={(e) => handleChange('bookingStatus', e.target.value)}
             />
             <TextField
               label="Created On"

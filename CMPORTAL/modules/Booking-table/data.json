@@ -1,52 +1,52 @@
 [
-    {
-        "bookingStart": "2024-02-01",
-        "bookingTime": "9:45 AM",
-        "createdOn": "2024-01-31T18:30:00Z",
-        "duration": "1 hour",
-        "editTime": "10:15 AM",
-        "id": 1,
-        "resource": "Room 101",
-        "startTime": "10:00 AM"
-    },
-    {
-        "bookingStart": "2024-02-02",
-        "bookingTime": "10:30 AM",
-        "createdOn": "2024-02-01T04:41:32.981224",
-        "duration": "30 minutes",
-        "editTime": null,
-        "id": 2,
-        "resource": "Room 202",
-        "startTime": "11:00 AM"
-    },
-    {
-        "bookingStart": "2024-02-03",
-        "bookingTime": "12:00 PM",
-        "createdOn": "2024-02-01T04:41:32.981320",
-        "duration": "2 hours",
-        "editTime": null,
-        "id": 3,
-        "resource": "Room 303",
-        "startTime": "1:00 PM"
-    },
-    {
-        "bookingStart": "2024-02-01",
-        "bookingTime": "31/1/24 6:15AM",
-        "createdOn": "2024-02-01T04:41:32.981324",
-        "duration": "45 minutes",
-        "editTime": null,
-        "id": 4,
-        "resource": "Meeting Room",
-        "startTime": "31/1/24 6:90AM"
-    },
-    {
-        "bookingStart": "2024-02-01",
-        "bookingTime": "01/2/24 9:45AM",
-        "createdOn": "2024-02-01T04:41:32.981327",
-        "duration": "2 hours",
-        "editTime": null,
-        "id": 5,
-        "resource": "Lab",
-        "startTime": "01/2/24 10:15AM"
-    }
+  {
+    "bookingStatus": "Confirmed",
+    "bookingTime": "Flexible",
+    "createdOn": "01/02/2024 3:45 PM",
+    "duration": "30 minutes",
+    "endTime": "02/02/2024 9:30 AM",
+    "id": 2,
+    "resource": "Emily Johnson",
+    "startTime": "02/02/2024 9:00 AM"
+  },
+  {
+    "bookingStatus": "Pending",
+    "bookingTime": "Fixed",
+    "createdOn": "02/02/2024 1:20 PM",
+    "duration": "45 minutes",
+    "endTime": "03/02/2024 11:45 AM",
+    "id": 3,
+    "resource": "John Miller",
+    "startTime": "03/02/2024 11:00 AM"
+  },
+  {
+    "bookingStatus": "Confirmed",
+    "bookingTime": "Solid",
+    "createdOn": "03/02/2024 6:30 AM",
+    "duration": "20 minutes",
+    "endTime": "04/02/2024 8:40 AM",
+    "id": 4,
+    "resource": "Sophia Anderson",
+    "startTime": "04/02/2024 8:20 AM"
+  },
+  {
+    "bookingStatus": "Pending",
+    "bookingTime": "Flexible",
+    "createdOn": "04/02/2024 9:15 AM",
+    "duration": "60 minutes",
+    "endTime": "05/02/2024 2:15 PM",
+    "id": 5,
+    "resource": "Michael Turner",
+    "startTime": "05/02/2024 1:15 PM"
+  },
+  {
+    "bookingStatus": "Confirmed",
+    "bookingTime": "Fixed",
+    "createdOn": "05/02/2024 4:50 PM",
+    "duration": "45 minutes",
+    "endTime": "06/02/2024 10:15 AM",
+    "id": 6,
+    "resource": "Emma Davis",
+    "startTime": "06/02/2024 9:30 AM"
+  }
 ]
