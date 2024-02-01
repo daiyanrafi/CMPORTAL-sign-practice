@@ -16,16 +16,6 @@ import Dropdown from "./modules/Drop-down/Dropdown";
 import { Row } from "./modules/Drop-down/Row";
 import documents from "./modules/Drop-down/data/cdocuments.json";
 import Userdoc from "./modules/User-doc/Userdoc";
-
-interface IState {
-  documents: Row[];
-  people: string[];
-  // policies: any;
-  // guidelines: any;
-  // directives: any;
-  // procedures: any;
-}
-
 export default class HelloWorld extends React.Component<
   ComponentFramework.Context<IInputs>,
   IState
@@ -175,4 +165,13 @@ export default class HelloWorld extends React.Component<
       </div>
     );
   }
+}
+
+interface IState {
+  documents: Row[];
+  people: string[];
+  // policies: any;
+  // guidelines: any;
+  // directives: any;
+  // procedures: any;
 }
