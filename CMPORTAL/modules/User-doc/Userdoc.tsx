@@ -71,7 +71,7 @@ const Userdoc: React.FC<UserdocProps> = ({ data, title }) => {
               color: isAccordionOpen ? "white" : "black",
               fontSize: "large",
               fontFamily: "Calibri",
-              marginLeft: '-1%',
+              marginLeft: '-0.5%',
             }}
           >
              {title}
