@@ -249,3 +249,208 @@
 //     </Container>
 //   );
 
+
+// //classpage.tsx
+// import React = require("react");
+// import { IInputs } from "./generated/ManifestTypes";
+// import { Row } from "./modules/Drop-down/Row";
+// import documents from "./modules/Drop-down/data/cdocuments.json"
+// import Userdoc from "./modules/User-doc/Userdoc";
+
+// export default class HelloWorld extends React.Component<
+//   ComponentFramework.Context<IInputs>,
+//   IState
+// > {
+//   private _props: ComponentFramework.Context<IInputs>;
+//   constructor(props: ComponentFramework.Context<IInputs>) {
+//     super(props);
+
+//     this._props = props;
+//     this.state = {
+
+//       policies: [],
+//       people: []
+//     }
+//   }
+
+//   componentDidMount(): void {
+//     const sortedDocuments = documents.sort((a: any, b: any) =>
+//       a.DocumentType.localeCompare(b.DocumentType)
+//     );
+  
+//     const mappedPoliciesData: Row[] = sortedDocuments.map((item: any) => ({
+//       id: item.ID,
+//       label: item.Title,
+//       content: item.Title,
+//     }));
+  
+//     const people = ["Daiyan Rafi", "Tanbir Hossain", "Mahfuzur Rahman"];
+  
+//     this.setState({ policies: mappedPoliciesData, people });
+//   }
+  
+
+//   public render() {
+//     let {policies, people} = this.state;
+//     return (
+//       <div>
+
+//         <h1>Test component</h1>
+
+//         {
+//           people.map((person: string) => {
+//             return <Userdoc data={policies} title={person} />
+//           })
+//         }
+
+//       </div>
+//     );
+//   }
+// }
+
+// interface IState {
+//   policies: any,
+//   people: any;
+// }
+
+
+
+// import React = require("react");
+// import { IInputs } from "./generated/ManifestTypes";
+// import App from "./modules/case-form/App";
+// import axios from "axios";
+// import Button from "./modules/csv-button/Button";
+// import Dashboard from "./modules/Dash-board/Dashboard";
+// import Dropdown from "./modules/Drop-down/Dropdown";
+// import { Row } from "./modules/Drop-down/Row";
+// import documents from "./modules/Drop-down/data/cdocuments.json"
+// import Userdoc from "./modules/User-doc/Userdoc";
+
+// export default class HelloWorld extends React.Component<
+//   ComponentFramework.Context<IInputs>,
+//   IState
+// > {
+//   private _props: ComponentFramework.Context<IInputs>;
+//   constructor(props: ComponentFramework.Context<IInputs>) {
+//     super(props);
+
+//     this._props = props;
+//     this.state = {
+
+//       policies: [],
+//       guidelines: [],
+//       directives: [],
+//       procedures: [],
+//       people: []
+//     }
+//   }
+
+//   componentDidMount(): void {
+//     const documentTypes = ["Policy", "Guideline", "Directive", "Procedure"];
+//     const documents: { [key: string]: Row[] } = {};
+  
+//     documentTypes.forEach((documentType) => {
+//       const filteredDocuments = documents.filter(
+//         (item: any) => item.DocumentType === documentType
+//       );
+  
+//       const mappedData: Row[] = filteredDocuments.map((item: any) => ({
+//         id: item.ID,
+//         label: item.Title,
+//         content: item.Title,
+//       }));
+  
+//       documents[documentType] = mappedData;
+//     });
+  
+//     const people = ["Daiyan Rafi", "Tanbir Hossain", "Mahfuzur Rahman"];
+  
+//     this.setState({ documents, people });
+//   }
+  
+
+//   public render() {
+//     let {policies, guidelines, directives, procedures, people} = this.state;
+//     return (
+//       <div>
+
+//         <h1>Test component</h1>
+
+//         {
+//           people.map((person: string) => {
+//             return <Userdoc data={policies} title={person} />
+//           })
+//         }
+
+//       </div>
+//     );
+//   }
+// }
+
+// // interface IState {
+// //   policies: any,
+// //   guidelines: any,
+// //   directives: any,
+// //   procedures: any,
+// //   people: any;
+// // }
+
+// interface IState {
+//   documents: {
+//     [key: string]: Row[]; // Assuming documents is an object with keys as document types
+//   };
+//   people: string[];
+// }
+
+// interface IState {
+//   documents: Row[];
+//   people: string[];
+// }
+
+// export default class HelloWorld extends React.Component<
+//   ComponentFramework.Context<IInputs>,
+//   IState
+// > {
+//   private _props: ComponentFramework.Context<IInputs>;
+
+//   constructor(props: ComponentFramework.Context<IInputs>) {
+//     super(props);
+
+//     this._props = props;
+//     this.state = {
+//       documents: [],
+//       people: [],
+//     };
+//   }
+
+//   componentDidMount(): void {
+//     const people = ["Daiyan Rafi", "Tanbir Hossain", "Mahfuzur Rahman", "gg"];
+//     const allDocuments: Row[] = documents
+//       .filter((item: any) => item.DocumentType) // Filter out items with null or undefined DocumentType
+//       .map((item: any) => ({
+//         id: item.ID,
+//         label: item.DocumentType,
+//         content: item.Title,
+//       }));
+  
+//     this.setState({ documents: allDocuments, people });
+//   }
+  
+
+//   public render() {
+//     let { documents, people } = this.state;
+
+//     return (
+//       <div>
+//         <h1>Test component</h1>
+
+//         {people.map((person: string) => (
+//           <div key={person}>
+
+//             <Userdoc data={documents} title={person} />
+//           </div>
+//         ))}
+//       </div>
+//     );
+//   }
+// }

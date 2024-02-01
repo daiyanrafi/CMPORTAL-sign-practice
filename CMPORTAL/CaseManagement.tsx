@@ -14,7 +14,17 @@ import Dropdown from "./modules/Drop-down/Dropdown";
 // import mappedDirectiveData from "./modules/Drop-down/Directives";
 // import mappedProceduresData from "./modules/Drop-down/Procedures";
 import { Row } from "./modules/Drop-down/Row";
-import documents from "./modules/Drop-down/data/cdocuments.json"
+import documents from "./modules/Drop-down/data/cdocuments.json";
+import Userdoc from "./modules/User-doc/Userdoc";
+
+interface IState {
+  documents: Row[];
+  people: string[];
+  // policies: any;
+  // guidelines: any;
+  // directives: any;
+  // procedures: any;
+}
 
 export default class HelloWorld extends React.Component<
   ComponentFramework.Context<IInputs>,
@@ -26,12 +36,14 @@ export default class HelloWorld extends React.Component<
 
     this._props = props;
     this.state = {
+      // policies: [],
+      // guidelines: [],
+      // directives: [],
+      // procedures: []
 
-      policies: [],
-      guidelines: [],
-      directives: [],
-      procedures: []
-    }
+      documents: [],
+      people: [],
+    };
     // this.fetchData();
     // this.postData();
   }
@@ -82,70 +94,85 @@ export default class HelloWorld extends React.Component<
 
   // }
 
+  // componentDidMount(): void {
+  //   const policies = documents.filter(
+  //     (item: any) => item.DocumentType === "Policy"
+  //   );
+
+  //   const mappedPoliciesData: Row[] = policies.map((item: any) => ({
+  //     id: item.ID,
+  //     label: item.Title,
+  //     content: item.Title,
+  //   }));
+
+  //   const guidelines = documents.filter(
+  //     (item: any) => item.DocumentType === "Guideline"
+  //   );
+
+  //   const mappedGuidelinesData: Row[] = guidelines.map((item: any) => ({
+  //     id: item.ID,
+  //     label: item.Title,
+  //     content: item.Title,
+  //   }));
+
+  //   const directives = documents.filter(
+  //     (item: any) => item.DocumentType === "Directive"
+  //   );
+
+  //   const mappedDirectiveData: Row[] = directives.map((item: any) => ({
+  //     id: item.ID,
+  //     label: item.Title,
+  //     content: item.Title,
+  //   }));
+
+  //   const procedures = documents.filter(
+  //     (item: any) => item.DocumentType === "Procedure"
+  //   );
+
+  //   const mappedProceduresData: Row[] = procedures.map((item: any) => ({
+  //     id: item.ID,
+  //     label: item.Title,
+  //     content: item.Title,
+  //   }));
+
+  //   this.setState({policies: mappedPoliciesData, guidelines: mappedGuidelinesData, directives: mappedDirectiveData, procedures: mappedProceduresData})
+  // }
+
   componentDidMount(): void {
-    const policies = documents.filter(
-      (item: any) => item.DocumentType === "Policy"
-    );
+    const people = ["Daiyan Rafi", "Tanbir Hossain", "Mahfuzur Rahman", "gg"];
+    const allDocuments: Row[] = documents
+      .filter((item: any) => item.DocumentType) // Filter out items with null or undefined DocumentType
+      .map((item: any) => ({
+        id: item.ID,
+        label: item.DocumentType,
+        content: item.Title,
+      }));
 
-    const mappedPoliciesData: Row[] = policies.map((item: any) => ({
-      id: item.ID,
-      label: item.Title,
-      content: item.Title,
-    }));
-
-    const guidelines = documents.filter(
-      (item: any) => item.DocumentType === "Guideline"
-    );
-
-    const mappedGuidelinesData: Row[] = guidelines.map((item: any) => ({
-      id: item.ID,
-      label: item.Title,
-      content: item.Title,
-    }));
-
-    const directives = documents.filter(
-      (item: any) => item.DocumentType === "Directive"
-    );
-
-    const mappedDirectiveData: Row[] = directives.map((item: any) => ({
-      id: item.ID,
-      label: item.Title,
-      content: item.Title,
-    }));
-
-    const procedures = documents.filter(
-      (item: any) => item.DocumentType === "Procedure"
-    );
-
-    const mappedProceduresData: Row[] = procedures.map((item: any) => ({
-      id: item.ID,
-      label: item.Title,
-      content: item.Title,
-    }));
-
-    this.setState({policies: mappedPoliciesData, guidelines: mappedGuidelinesData, directives: mappedDirectiveData, procedures: mappedProceduresData})
+    this.setState({ documents: allDocuments, people });
   }
 
   public render() {
-    let {policies, guidelines, directives, procedures} = this.state;
+    // let {policies, guidelines, directives, procedures} = this.state;
+    let { documents, people } = this.state;
     return (
       <div>
         {/* <h1>Hello world-</h1> */}
         {/* <Dashboard/> */}
         {/* <Button/> */}
         {/* <App/> */}
-        <Dropdown data={policies} title="Policies" />
+        {/* <Dropdown data={policies} title="Policies" />
         <Dropdown data={guidelines} title="Guidelines" />
         <Dropdown data={directives} title="Directives" />
-        <Dropdown data={procedures} title="Procedures" />
+        <Dropdown data={procedures} title="Procedures" /> */}
+
+        <h1>Test component</h1>
+
+        {people.map((person: string) => (
+          <div key={person}>
+            <Userdoc data={documents} title={person} />
+          </div>
+        ))}
       </div>
     );
   }
-}
-
-interface IState {
-  policies: any,
-  guidelines: any,
-  directives: any,
-  procedures: any
 }
