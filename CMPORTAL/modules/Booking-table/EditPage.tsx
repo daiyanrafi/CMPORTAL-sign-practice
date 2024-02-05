@@ -24,12 +24,18 @@ const EditPage: React.FC<EditPageProps> = ({ data, onSave, onClose }) => {
   const inputStyle = {
     marginBottom: "12px",
     width: "100%",
+    fontSize: "medium",
+    fontFamily: "Calibri",
   };
 
   const containerStyle = {
     display: "flex",
     justifyContent: "space-between",
-    padding: "20px",
+    padding: "30px",
+  };
+
+  const inputProps = {
+    style: { fontSize: 'large', fontFamily: 'Calibri', width: "100%" },
   };
 
   return (
@@ -42,21 +48,31 @@ const EditPage: React.FC<EditPageProps> = ({ data, onSave, onClose }) => {
         <h2 style={{ marginBottom: "16px" }}>Edit Page</h2>
         <div>
           <TextField
-            label="Resource"
+            label={
+              <span style={{ fontSize: "large", fontFamily: "Calibri" }}>
+                Resource
+              </span>
+            }
             value={editedData.resource}
             onChange={(e) => handleChange("resource", e.target.value)}
             style={inputStyle}
+            InputProps={inputProps}
           />
           <div style={{ display: "flex", gap: "20px" }}>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               {/* Add Datepicker for Start Time */}
               <TextField
-                label="Start Time"
+                label={
+                  <span style={{ fontSize: "large", fontFamily: "Calibri" }}>
+                    Start Time
+                  </span>
+                }
                 type="datetime-local"
                 value={editedData.startTime}
                 onChange={(e) => handleChange("startTime", e.target.value)}
                 // style={inputStyle}
                 style={{ ...inputStyle, flex: 1 }}
+                InputProps={inputProps}
                 InputLabelProps={{
                   shrink: true,
                 }}
@@ -65,12 +81,17 @@ const EditPage: React.FC<EditPageProps> = ({ data, onSave, onClose }) => {
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               {/* Add Datepicker for End Time */}
               <TextField
-                label="End Time"
+                label={
+                  <span style={{ fontSize: "large", fontFamily: "Calibri" }}>
+                    End Time
+                  </span>
+                }
                 type="datetime-local"
                 value={editedData.endTime}
                 onChange={(e) => handleChange("endTime", e.target.value)}
                 // style={inputStyle}
                 style={{ ...inputStyle, flex: 1 }}
+                InputProps={inputProps}
                 InputLabelProps={{
                   shrink: true,
                 }}
@@ -78,37 +99,71 @@ const EditPage: React.FC<EditPageProps> = ({ data, onSave, onClose }) => {
             </LocalizationProvider>
           </div>
           <TextField
-            label="Duration"
+            label={
+              <span style={{ fontSize: "large", fontFamily: "Calibri" }}>
+                Duration
+              </span>
+            }
             value={editedData.duration}
             onChange={(e) => handleChange("duration", e.target.value)}
             style={inputStyle}
+            InputProps={inputProps}
           />
           <div style={{ display: "flex", gap: "20px" }}>
             <TextField
-              label="Booking Time"
+              label={
+                <span style={{ fontSize: "large", fontFamily: "Calibri" }}>
+                  Booking Time
+                </span>
+              }
               value={editedData.bookingTime}
               onChange={(e) => handleChange("bookingTime", e.target.value)}
               style={{ ...inputStyle, flex: 1 }}
+              InputProps={inputProps}
             />
             {/* Add Dropdown for Booking Status */}
             <Select
-              label="Booking Status"
+              label={
+                <span style={{ fontSize: "large", fontFamily: "Calibri" }}>
+                  Booking Status
+                </span>
+              }
               value={editedData.bookingStatus}
               onChange={(e) =>
                 handleChange("bookingStatus", e.target.value as string)
               }
               style={{ ...inputStyle, flex: 1 }}
             >
-              <MenuItem value="Confirmed">Confirmed</MenuItem>
-              <MenuItem value="Pending">Pending</MenuItem>
-              <MenuItem value="Canceled">Canceled</MenuItem>
+              <MenuItem
+                value="Confirmed"
+                style={{ fontSize: "15px", fontFamily: "Calibri" }}
+              >
+                Confirmed
+              </MenuItem>
+              <MenuItem
+                value="Pending"
+                style={{ fontSize: "15px", fontFamily: "Calibri" }}
+              >
+                Pending
+              </MenuItem>
+              <MenuItem
+                value="Canceled"
+                style={{ fontSize: "15px", fontFamily: "Calibri" }}
+              >
+                Canceled
+              </MenuItem>
             </Select>
           </div>
           <TextField
-            label="Created On"
+            label={
+              <span style={{ fontSize: "large", fontFamily: "Calibri" }}>
+                Created On
+              </span>
+            }
             value={editedData.createdOn}
             onChange={(e) => handleChange("createdOn", e.target.value)}
             style={inputStyle}
+            InputProps={inputProps}
           />
         </div>
         <Button onClick={handleSave} style={{ marginTop: "16px" }}>
