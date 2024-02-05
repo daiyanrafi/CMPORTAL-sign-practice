@@ -45,7 +45,7 @@ const EditPage: React.FC<EditPageProps> = ({ data, onSave, onClose }) => {
 
       {/* Form Container */}
       <div style={{ flex: 1, marginLeft: "20px" }}>
-        <h2 style={{ marginBottom: "16px" }}>Edit Page</h2>
+      <h2 style={{ marginBottom: "20px", fontSize: "large" }}>Edit Page</h2>
         <div>
           <TextField
             label={
@@ -132,26 +132,16 @@ const EditPage: React.FC<EditPageProps> = ({ data, onSave, onClose }) => {
               onChange={(e) =>
                 handleChange("bookingStatus", e.target.value as string)
               }
-              style={{ ...inputStyle, flex: 1 }}
+              style={{
+                ...inputStyle,
+                flex: 1,
+                fontFamily: "Calibri",
+                fontSize: "large",
+              }}
             >
-              <MenuItem
-                value="Confirmed"
-                style={{ fontSize: "15px", fontFamily: "Calibri" }}
-              >
-                Confirmed
-              </MenuItem>
-              <MenuItem
-                value="Pending"
-                style={{ fontSize: "15px", fontFamily: "Calibri" }}
-              >
-                Pending
-              </MenuItem>
-              <MenuItem
-                value="Canceled"
-                style={{ fontSize: "15px", fontFamily: "Calibri" }}
-              >
-                Canceled
-              </MenuItem>
+              <MenuItem value="Confirmed" style={{ fontSize: "15px", fontFamily: "Calibri" }}>Confirmed</MenuItem>
+              <MenuItem value="Pending" style={{ fontSize: "15px", fontFamily: "Calibri" }}>Pending</MenuItem>
+              <MenuItem value="Canceled" style={{ fontSize: "15px", fontFamily: "Calibri" }}>Canceled</MenuItem>
             </Select>
           </div>
           <TextField
