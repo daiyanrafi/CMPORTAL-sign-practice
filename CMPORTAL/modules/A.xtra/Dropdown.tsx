@@ -1,23 +1,23 @@
-// import React, { useState } from 'react';
-// import { Button, TextField, Select, MenuItem, InputLabel, Box } from '@mui/material';
-// import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-// import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-// import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+// import React, { useState } from "react";
+// import { Button, TextField, Select, MenuItem } from "@mui/material";
+// import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+// import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+// import { format } from "date-fns";
 
-// // ... (rest of the imports)
+// interface EditPageProps {
+//   data: any;
+//   onSave: (updatedData: Record<string, any>) => void;
+//   onClose: () => void;
+// }
 
 // const EditPage: React.FC<EditPageProps> = ({ data, onSave, onClose }) => {
-//   // ... (rest of the code)
 //   const [editedData, setEditedData] = useState<Record<string, any>>(data);
 
-//   const [startTimeValue, setStartTimeValue] = useState<Dayjs | null>(data.startTime ? dayjs(data.startTime) : null);
-//   const [endTimeValue, setEndTimeValue] = useState<Dayjs | null>(data.endTime ? dayjs(data.endTime) : null);
-//   const [bookingStatus, setBookingStatus] = useState(data.bookingStatus || '');
-
-//   // ... (rest of the code)
-
 //   const handleChange = (field: string, value: string) => {
-//     setEditedData((prevData) => ({ ...prevData, [field]: value }));
+//     // If it's a date field, store the raw date string
+//     const formattedValue = field.includes("Time") ? formatDate(value) : value;
+
+//     setEditedData((prevData) => ({ ...prevData, [field]: formattedValue }));
 //   };
 
 //   const handleSave = () => {
@@ -26,97 +26,99 @@
 //   };
 
 //   const inputStyle = {
-//     marginBottom: '12px',
-//     width: '100%',
+//     marginBottom: "12px",
+//     width: "100%",
 //   };
 
 //   const containerStyle = {
-//     display: 'flex',
-//     justifyContent: 'space-between',
-//     padding: '20px',
+//     display: "flex",
+//     justifyContent: "space-between",
+//     padding: "20px",
 //   };
 
-//   const handleStartTimeChange = (newValue: Dayjs | null) => {
-//     setStartTimeValue(newValue);
-//     if (newValue) {
-//       handleChange('startTime', newValue.format('MM/DD/YYYY HH:mm A'));
-//     } else {
-//       handleChange('startTime', '');
-//     }
-//   };
-
-//   const handleEndTimeChange = (newValue: Dayjs | null) => {
-//     setEndTimeValue(newValue);
-//     if (newValue) {
-//       handleChange('endTime', newValue.format('MM/DD/YYYY HH:mm A'));
-//     } else {
-//       handleChange('endTime', '');
-//     }
-//   };
-
-//   const handleBookingStatusChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-//     setBookingStatus(event.target.value);
-//     handleChange('bookingStatus', event.target.value);
+//   const formatDate = (dateString: string) => {
+//     const date = new Date(dateString);
+//     return format(date, "yyyy-MM-dd'T'HH:mm");
 //   };
 
 //   return (
-//     // ... (rest of the JSX)
+//     <div style={containerStyle}>
+//       {/* Blank Container */}
+//       <div></div>
 
-//       <div>
-//         <h2 style={{ marginBottom: '16px' }}>Edit Page</h2>
+//       {/* Form Container */}
+//       <div style={{ flex: 1, marginLeft: "20px" }}>
+//         <h2 style={{ marginBottom: "16px" }}>Edit Page</h2>
 //         <div>
 //           <TextField
 //             label="Resource"
 //             value={editedData.resource}
-//             onChange={(e) => handleChange('resource', e.target.value)}
+//             onChange={(e) => handleChange("resource", e.target.value)}
 //             style={inputStyle}
 //           />
-//           <Box sx={{ display: 'flex', gap: '20px' }}>
+//           <div style={{ display: "flex", gap: "20px" }}>
 //             <LocalizationProvider dateAdapter={AdapterDayjs}>
-//               <DatePicker
+//               {/* Add Datepicker for Start Time */}
+//               <TextField
 //                 label="Start Time"
-//                 value={startTimeValue}
-//                 onChange={handleStartTimeChange}
-//                 renderInput={(params) => <TextField {...params} style={inputStyle} />}
+//                 type="datetime-local"
+//                 value={editedData.startTime}
+//                 onChange={(e) => handleChange("startTime", e.target.value)}
+//                 style={{ ...inputStyle, flex: 1 }}
+//                 InputLabelProps={{
+//                   shrink: true,
+//                 }}
 //               />
 //             </LocalizationProvider>
 //             <LocalizationProvider dateAdapter={AdapterDayjs}>
-//               <DatePicker
+//               {/* Add Datepicker for End Time */}
+//               <TextField
 //                 label="End Time"
-//                 value={endTimeValue}
-//                 onChange={handleEndTimeChange}
-//                 renderInput={(params) => <TextField {...params} style={inputStyle} />}
+//                 type="datetime-local"
+//                 value={editedData.endTime}
+//                 onChange={(e) => handleChange("endTime", e.target.value)}
+//                 style={{ ...inputStyle, flex: 1 }}
+//                 InputLabelProps={{
+//                   shrink: true,
+//                 }}
 //               />
 //             </LocalizationProvider>
-//           </Box>
+//           </div>
 //           <TextField
 //             label="Duration"
 //             value={editedData.duration}
-//             onChange={(e) => handleChange('duration', e.target.value)}
+//             onChange={(e) => handleChange("duration", e.target.value)}
 //             style={inputStyle}
 //           />
-//           <Box sx={{ display: 'flex', gap: '20px' }}>
+//           <div style={{ display: "flex", gap: "20px" }}>
 //             <TextField
 //               label="Booking Time"
 //               value={editedData.bookingTime}
-//               onChange={(e) => handleChange('bookingTime', e.target.value)}
+//               onChange={(e) => handleChange("bookingTime", e.target.value)}
 //               style={{ ...inputStyle, flex: 1 }}
 //             />
-//             <TextField
+//             {/* Add Dropdown for Booking Status */}
+//             <Select
 //               label="Booking Status"
 //               value={editedData.bookingStatus}
-//               onChange={(e) => handleChange('bookingStatus', e.target.value)}
+//               onChange={(e) =>
+//                 handleChange("bookingStatus", e.target.value as string)
+//               }
 //               style={{ ...inputStyle, flex: 1 }}
-//             />
+//             >
+//               <MenuItem value="Confirmed">Confirmed</MenuItem>
+//               <MenuItem value="Pending">Pending</MenuItem>
+//               <MenuItem value="Canceled">Canceled</MenuItem>
+//             </Select>
 //           </div>
 //           <TextField
 //             label="Created On"
 //             value={editedData.createdOn}
-//             onChange={(e) => handleChange('createdOn', e.target.value)}
+//             onChange={(e) => handleChange("createdOn", e.target.value)}
 //             style={inputStyle}
 //           />
 //         </div>
-//         <Button onClick={handleSave} style={{ marginTop: '16px' }}>
+//         <Button onClick={handleSave} style={{ marginTop: "16px" }}>
 //           Save
 //         </Button>
 //       </div>
