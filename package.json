@@ -13,16 +13,22 @@
     "refreshTypes": "pcf-scripts refreshTypes"
   },
   "dependencies": {
+    "@date-io/dayjs": "^3.0.0",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.15.6",
-    "@mui/material": "^5.15.6",
+    "@mui/lab": "^5.0.0-alpha.163",
+    "@mui/material": "^5.15.7",
+    "@mui/styled-engine-sc": "^6.0.0-alpha.14",
+    "@mui/x-date-pickers": "^6.19.3",
     "@types/react-dom": "^18.2.18",
+    "date-fns": "^3.3.1",
     "papaparse": "^5.4.1",
     "react-csv": "^2.2.2",
     "react-dom": "^18.2.0",
     "react-google-recaptcha": "^2.1.1-alpha.1",
-    "react-select": "^5.8.0"
+    "react-select": "^5.8.0",
+    "styled-components": "^6.1.8"
   },
   "devDependencies": {
     "@microsoft/eslint-plugin-power-apps": "^0.2.6",

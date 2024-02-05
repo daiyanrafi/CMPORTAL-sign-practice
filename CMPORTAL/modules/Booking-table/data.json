@@ -40,7 +40,7 @@
     "startTime": "05/02/2024 1:15 PM"
   },
   {
-    "bookingStatus": "Confirmed",
+    "bookingStatus": "Canceled",
     "bookingTime": "Fixed",
     "createdOn": "05/02/2024 4:50 PM",
     "duration": "45 minutes",
@@ -50,3 +50,4 @@
     "startTime": "06/02/2024 9:30 AM"
   }
 ]
+

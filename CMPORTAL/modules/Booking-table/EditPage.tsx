@@ -3,7 +3,7 @@ import { Button, TextField } from '@mui/material';
 
 interface EditPageProps {
   data: any;
-  onSave: (updatedData: any) => void;
+  onSave: (updatedData: Record<string, any>) => void;
   onClose: () => void;
 }
 
@@ -45,36 +45,40 @@ const EditPage: React.FC<EditPageProps> = ({ data, onSave, onClose }) => {
             onChange={(e) => handleChange('resource', e.target.value)}
             style={inputStyle}
           />
-          <TextField
-            label="Start Time"
-            value={editedData.startTime}
-            onChange={(e) => handleChange('startTime', e.target.value)}
-            style={inputStyle}
-          />
-          <TextField
-            label="End Time"
-            value={editedData.endTime}
-            onChange={(e) => handleChange('endTime', e.target.value)}
-            style={inputStyle}
-          />
+          <div style={{ display: 'flex', gap: '20px' }}>
+            <TextField
+              label="Start Time"
+              value={editedData.startTime}
+              onChange={(e) => handleChange('startTime', e.target.value)}
+              style={{ ...inputStyle, flex: 1 }}
+            />
+            <TextField
+              label="End Time"
+              value={editedData.endTime}
+              onChange={(e) => handleChange('endTime', e.target.value)}
+              style={{ ...inputStyle, flex: 1 }}
+            />
+          </div>
           <TextField
             label="Duration"
             value={editedData.duration}
             onChange={(e) => handleChange('duration', e.target.value)}
             style={inputStyle}
           />
-          <TextField
-            label="Booking Time"
-            value={editedData.bookingTime}
-            onChange={(e) => handleChange('bookingTime', e.target.value)}
-            style={inputStyle}
-          />
-          <TextField
-            label="Booking Start"
-            value={editedData.bookingStatus}
-            onChange={(e) => handleChange('bookingStatus', e.target.value)}
-            style={inputStyle}
-          />
+          <div style={{ display: 'flex', gap: '20px' }}>
+            <TextField
+              label="Booking Time"
+              value={editedData.bookingTime}
+              onChange={(e) => handleChange('bookingTime', e.target.value)}
+              style={{ ...inputStyle, flex: 1 }}
+            />
+            <TextField
+              label="Booking Status"
+              value={editedData.bookingStatus}
+              onChange={(e) => handleChange('bookingStatus', e.target.value)}
+              style={{ ...inputStyle, flex: 1 }}
+            />
+          </div>
           <TextField
             label="Created On"
             value={editedData.createdOn}

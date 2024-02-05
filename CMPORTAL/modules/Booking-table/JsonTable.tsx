@@ -4,6 +4,25 @@ import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper
 import EditPage from './EditPage';
 import jsonData from './data.json';
 
+
+
+const getStatusColor = (status: string): string => {
+  const lowercaseStatus = status.toLowerCase();
+
+  switch (lowercaseStatus) {
+    case 'confirmed':
+      return 'green';
+    case 'pending':
+      return 'blue';
+    case 'canceled':
+      return 'red';
+    default:
+      return 'black'; // Default color if status is not recognized
+  }
+};
+
+
+
 const JsonTable: React.FC = () => {
   const [data, setData] = useState(jsonData);
   const [editingRow, setEditingRow] = useState<number | null>(null);
@@ -41,7 +60,7 @@ const JsonTable: React.FC = () => {
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell style={{ backgroundColor: '#f0f0f0', fontSize: 'medium', fontFamily: 'Calibri' }}>ID</TableCell>
+                {/* <TableCell style={{ backgroundColor: '#f0f0f0', fontSize: 'medium', fontFamily: 'Calibri' }}>ID</TableCell> */}
                 <TableCell style={{ backgroundColor: '#f0f0f0', fontSize: 'medium', fontFamily: 'Calibri' }}>Resource</TableCell>
                 <TableCell style={{ backgroundColor: '#f0f0f0', fontSize: 'medium', fontFamily: 'Calibri' }}>Start Time</TableCell>
                 <TableCell style={{ backgroundColor: '#f0f0f0', fontSize: 'medium', fontFamily: 'Calibri' }}>Edit Time</TableCell>
@@ -55,14 +74,23 @@ const JsonTable: React.FC = () => {
             <TableBody>
               {data.map((row) => (
                 <TableRow key={row.id}>
-                  <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{row.id}</TableCell>
+                  {/* <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{row.id}</TableCell> */}
                   <TableCell style={{ color: '#003591', fontSize: 'medium', fontFamily: 'Calibri' }}>{row.resource}</TableCell>
                   <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{row.startTime}</TableCell>
                   <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{row.endTime}</TableCell>
                   <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{row.duration}</TableCell>
                   {/* <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{calculateDuration(row)}</TableCell> */}
                   <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{row.bookingTime}</TableCell>
-                  <TableCell style={{ color: '#003591', fontSize: 'medium', fontFamily: 'Calibri' }}>{row.bookingStatus}</TableCell>
+                  {/* <TableCell style={{ color: '#003591', fontSize: 'medium', fontFamily: 'Calibri' }}>{row.bookingStatus}</TableCell> */}
+                  <TableCell
+              style={{
+                color: getStatusColor(row.bookingStatus),
+                fontSize: 'medium',
+                fontFamily: 'Calibri',
+              }}
+            >
+              {row.bookingStatus}
+            </TableCell>
                   <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{row.createdOn}</TableCell>
                   <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>
                   <Button onClick={() => handleEditClick(row.id)}
