@@ -35,7 +35,7 @@ const EditPage: React.FC<EditPageProps> = ({ data, onSave, onClose }) => {
   };
 
   const inputProps = {
-    style: { fontSize: 'large', fontFamily: 'Calibri', width: "100%" },
+    style: { fontSize: "large", fontFamily: "Calibri", width: "100%" },
   };
 
   return (
@@ -166,7 +166,20 @@ const EditPage: React.FC<EditPageProps> = ({ data, onSave, onClose }) => {
             InputProps={inputProps}
           />
         </div>
-        <Button onClick={handleSave} style={{ marginTop: "16px" }}>
+        <Button
+          onClick={handleSave}
+          style={{
+            marginTop: "16px",
+            fontSize: "medium",
+            fontFamily: "Calibri",
+            backgroundColor: "transparent",
+            border: "1px solid #003591",
+            color: "#003591",
+            borderRadius: "0",
+            width: "100px",
+            height: "30px",
+          }}
+        >
           Save
         </Button>
       </div>
