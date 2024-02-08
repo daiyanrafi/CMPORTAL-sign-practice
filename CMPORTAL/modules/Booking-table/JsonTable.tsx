@@ -5,19 +5,13 @@ import {
   SelectionMode,
   Stack,
   PrimaryButton,
+  Checkbox,
 } from '@fluentui/react';
 import EditPage from './EditPage';
 import livedata from './livedata.json';
 
-interface BookingData {
-  bookableresourcebookingid: string;
-  resource: string;
-  starttime: string;
-  endtime: string;
-  duration: number;
-  bookingtypetext: string;
-  bookingstatus: string;
-  createdon: string;
+interface JsonTableProps {
+  // Add any props you may need
 }
 
 const getStatusColor = (status: string): string => {
@@ -35,9 +29,9 @@ const getStatusColor = (status: string): string => {
   }
 };
 
-const JsonTable: React.FC = () => {
-  const [data, setData] = useState<BookingData[]>(livedata);
-  const [editingRow, setEditingRow] = useState<string | null>(null);
+const JsonTable: React.FC<JsonTableProps> = () => {
+  const [data, setData] = useState(jsonData);
+  const [editingRow, setEditingRow] = useState<number | null>(null);
 
   const handleEditClick = (rowId: string) => {
     setEditingRow(rowId);
@@ -52,26 +46,44 @@ const JsonTable: React.FC = () => {
     setEditingRow(null);
   };
 
-  const renderActionColumn = (item: BookingData): React.ReactElement => (
-    <PrimaryButton onClick={() => handleEditClick(item.bookableresourcebookingid)}>Edit</PrimaryButton>
-  );
+  const renderActionColumn: (item: any) => React.ReactElement | null = (item) => {
+    return (
+      <PrimaryButton onClick={() => handleEditClick(item.id)}>
+        Edit
+      </PrimaryButton>
+    );
+  };
 
   const columns = [
     { key: 'resource', name: 'Resource', fieldName: 'resource', minWidth: 100 },
-    { key: 'starttime', name: 'Start Time', fieldName: 'starttime', minWidth: 100 },
-    { key: 'endtime', name: 'End Time', fieldName: 'endtime', minWidth: 100 },
+    { key: 'startTime', name: 'Start Time', fieldName: 'startTime', minWidth: 100 },
+    { key: 'endTime', name: 'End Time', fieldName: 'endTime', minWidth: 100 },
     { key: 'duration', name: 'Duration', fieldName: 'duration', minWidth: 100 },
-    { key: 'bookingtypetext', name: 'Booking Time', fieldName: 'bookingtypetext', minWidth: 100 },
+    { key: 'bookingTime', name: 'Booking Time', fieldName: 'bookingTime', minWidth: 100 },
+    // {
+    //   key: 'bookingStatus',
+    //   name: 'Booking Status',
+    //   fieldName: 'bookingStatus',
+    //   minWidth: 100,
+    //   onRender: (item: any) => (
+    //     <div style={{ color: getStatusColor(item.bookingStatus) }}>{item.bookingStatus}</div>
+    //   ),
+    // },
+
+    //2nd apptemp
     {
-      key: 'bookingstatus',
+      key: 'bookingStatus',
       name: 'Booking Status',
-      fieldName: 'bookingstatus',
+      fieldName: 'bookingStatus',
       minWidth: 100,
-      onRender: (item: BookingData) => (
-        <div style={{ color: getStatusColor(item.bookingstatus) }}>{item.bookingstatus}</div>
+      onRender: (item: any) => (
+        <div style={{ color: getStatusColor(item.bookingStatus), backgroundColor: 'lightblue', padding: '5px' }}>
+          {item.bookingStatus}
+        </div>
       ),
     },
-    { key: 'createdon', name: 'Created On', fieldName: 'createdon', minWidth: 100 },
+    { key: 'createdOn', name: 'Created On', fieldName: 'createdOn', minWidth: 100 },
+    // Add other columns based on your data structure
     { key: 'action', name: 'Action', fieldName: 'action', minWidth: 100, onRender: renderActionColumn },
   ];
 
@@ -85,13 +97,8 @@ const JsonTable: React.FC = () => {
           selectionMode={SelectionMode.none}
         />
       ) : (
-        <EditPage
-        data={data.find(row => row.bookableresourcebookingid === editingRow) || {} as BookingData}
-        onSave={handleSave}
-        onClose={() => setEditingRow(null)}
-      />
-      
-     )}
+        <EditPage data={data.find((row) => row.id === editingRow)} onSave={handleSave} onClose={() => setEditingRow(null)} />
+      )}
     </Stack>
   );
 };
