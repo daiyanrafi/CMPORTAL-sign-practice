@@ -68,7 +68,7 @@ const JsonTable: React.FC = () => {
       fieldName: 'bookingstatus',
       minWidth: 100,
       onRender: (item: BookingData) => (
-        <div style={{ color: getStatusColor(item.bookingstatus) }}>{item.bookingstatus}</div>
+        <span style={{ color: getStatusColor(item.bookingstatus) }}>{item.bookingstatus}</span>
       ),
     },
     { key: 'createdon', name: 'Created On', fieldName: 'createdon', minWidth: 100 },
@@ -80,18 +80,26 @@ const JsonTable: React.FC = () => {
       {editingRow === null ? (
         <DetailsList
           items={data}
-          columns={columns}
+          columns={columns.map(column => ({
+            ...column,
+            onRender: (item: BookingData) => {
+              if (column.key === 'action') {
+                return renderActionColumn(item);
+              }
+              const color = getStatusColor(item.bookingstatus);
+              return <span style={{ color }}>{(item as any)[column.fieldName]}</span>;
+            },
+          }))}
           layoutMode={DetailsListLayoutMode.justified}
           selectionMode={SelectionMode.none}
         />
       ) : (
         <EditPage
-        data={data.find(row => row.bookableresourcebookingid === editingRow) || {} as BookingData}
-        onSave={handleSave}
-        onClose={() => setEditingRow(null)}
-      />
-      
-     )}
+          data={data.find(row => row.bookableresourcebookingid === editingRow) || {} as BookingData}
+          onSave={handleSave}
+          onClose={() => setEditingRow(null)}
+        />
+      )}
     </Stack>
   );
 };
