@@ -1,18 +1,50 @@
+// EditPage.tsx
+
 import React, { useState } from "react";
-import { Button, TextField, Select, MenuItem } from "@mui/material";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import {
+  TextField,
+  PrimaryButton,
+  Stack,
+  ComboBox,
+  DatePicker,
+} from "@fluentui/react";
+
+interface BookingData {
+  bookableresourcebookingid: string;
+  resource: string;
+  starttime: string;
+  endtime: string;
+  duration: number;
+  bookingtypetext: string;
+  bookingstatus: string;
+  createdon: string;
+}
+
+const formatDate = (date?: Date): string => {
+  if (!date) return "";
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+  const year = date.getFullYear();
+
+  return `${day}.${month}.${year}`;
+};
 
 interface EditPageProps {
-  data: any;
-  onSave: (updatedData: Record<string, any>) => void;
+  data: BookingData;
+  onSave: (updatedData: BookingData) => void;
   onClose: () => void;
 }
 
-const EditPage: React.FC<EditPageProps> = ({ data, onSave, onClose }) => {
-  const [editedData, setEditedData] = useState<Record<string, any>>(data);
+const bookingStatusOptions = [
+  { key: "completed", text: "Completed" },
+  { key: "scheduled", text: "Scheduled" },
+  { key: "canceled", text: "Canceled" },
+];
 
-  const handleChange = (field: string, value: string) => {
+const EditPage: React.FC<EditPageProps> = ({ data, onSave, onClose }) => {
+  const [editedData, setEditedData] = useState<BookingData>(data); // Adjusted to use BookingData
+
+  const handleChange = (field: keyof BookingData, value: string | Date) => { // Adjusted to use keyof BookingData
     setEditedData((prevData) => ({ ...prevData, [field]: value }));
   };
 
@@ -21,158 +53,86 @@ const EditPage: React.FC<EditPageProps> = ({ data, onSave, onClose }) => {
     onClose();
   };
 
-  const inputStyle = {
-    marginBottom: "12px",
-    width: "100%",
-    fontSize: "medium",
-    fontFamily: "Calibri",
-  };
-
-  const containerStyle = {
-    display: "flex",
-    justifyContent: "space-between",
-    padding: "30px",
-  };
-
-  const inputProps = {
-    style: { fontSize: "large", fontFamily: "Calibri", width: "100%" },
-  };
-
   return (
-    <div style={containerStyle}>
-      {/* Blank Container */}
-      <div></div>
+    <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "flex-start",
+      height: "100vh",
+    }}
+    >
+      <Stack tokens={{ padding: "30px" }}>
+        <h2 style={{ marginBottom: "20px", fontSize: "large" }}>Edit Page</h2>
 
-      {/* Form Container */}
-      <div style={{ flex: 1, marginLeft: "20px" }}>
-      <h2 style={{ marginBottom: "20px", fontSize: "large" }}>Edit Page</h2>
-        <div>
+        <div style={{ width: "400px" }}>
+          {/* {" "} */}
           <TextField
-            label={
-              <span style={{ fontSize: "large", fontFamily: "Calibri" }}>
-                Resource
-              </span>
-            }
+            label="Resource"
             value={editedData.resource}
-            onChange={(e) => handleChange("resource", e.target.value)}
-            style={inputStyle}
-            InputProps={inputProps}
+            onChange={(e, newValue) => handleChange("resource", newValue || "")}
+            styles={{ root: { marginBottom: "12px", width: "100%" } }}
           />
-          <div style={{ display: "flex", gap: "20px" }}>
-            <LocalizationProvider dateAdapter={AdapterDayjs}>
-              {/* Add Datepicker for Start Time */}
-              <TextField
-                label={
-                  <span style={{ fontSize: "large", fontFamily: "Calibri" }}>
-                    Start Time
-                  </span>
-                }
-                type="datetime-local"
-                value={editedData.startTime}
-                onChange={(e) => handleChange("startTime", e.target.value)}
-                // style={inputStyle}
-                style={{ ...inputStyle, flex: 1 }}
-                InputProps={inputProps}
-                InputLabelProps={{
-                  shrink: true,
-                }}
-              />
-            </LocalizationProvider>
-            <LocalizationProvider dateAdapter={AdapterDayjs}>
-              {/* Add Datepicker for End Time */}
-              <TextField
-                label={
-                  <span style={{ fontSize: "large", fontFamily: "Calibri" }}>
-                    End Time
-                  </span>
-                }
-                type="datetime-local"
-                value={editedData.endTime}
-                onChange={(e) => handleChange("endTime", e.target.value)}
-                // style={inputStyle}
-                style={{ ...inputStyle, flex: 1 }}
-                InputProps={inputProps}
-                InputLabelProps={{
-                  shrink: true,
-                }}
-              />
-            </LocalizationProvider>
-          </div>
-          <TextField
-            label={
-              <span style={{ fontSize: "large", fontFamily: "Calibri" }}>
-                Duration
-              </span>
-            }
-            value={editedData.duration}
-            onChange={(e) => handleChange("duration", e.target.value)}
-            style={inputStyle}
-            InputProps={inputProps}
-          />
-          <div style={{ display: "flex", gap: "20px" }}>
-            <TextField
-              label={
-                <span style={{ fontSize: "large", fontFamily: "Calibri" }}>
-                  Booking Time
-                </span>
+          <Stack horizontal tokens={{ childrenGap: "20px" }}>
+            <DatePicker
+              label="Start Time"
+              value={new Date(editedData.starttime)} // Adjusted to use starttime
+              onSelectDate={(date) =>
+                handleChange("starttime", date || "")
               }
-              value={editedData.bookingTime}
-              onChange={(e) => handleChange("bookingTime", e.target.value)}
-              style={{ ...inputStyle, flex: 1 }}
-              InputProps={inputProps}
+              formatDate={formatDate}
+              styles={{ root: { width: "200px", marginBottom: "12px" } }}
             />
-            {/* Add Dropdown for Booking Status */}
-            <Select
-              label={
-                <span style={{ fontSize: "large", fontFamily: "Calibri" }}>
-                  Booking Status
-                </span>
+            <DatePicker
+              label="End Time"
+              value={new Date(editedData.endtime)} // Adjusted to use endtime
+              onSelectDate={(date) =>
+                handleChange("endtime", date || "")
               }
-              value={editedData.bookingStatus}
-              onChange={(e) =>
-                handleChange("bookingStatus", e.target.value as string)
-              }
-              style={{
-                ...inputStyle,
-                flex: 1,
-                fontFamily: "Calibri",
-                fontSize: "large",
-              }}
-            >
-              <MenuItem value="Confirmed" style={{ fontSize: "15px", fontFamily: "Calibri" }}>Confirmed</MenuItem>
-              <MenuItem value="Pending" style={{ fontSize: "15px", fontFamily: "Calibri" }}>Pending</MenuItem>
-              <MenuItem value="Canceled" style={{ fontSize: "15px", fontFamily: "Calibri" }}>Canceled</MenuItem>
-            </Select>
-          </div>
+              formatDate={formatDate}
+              styles={{ root: { width: "200px", marginBottom: "12px" } }}
+            />
+          </Stack>
           <TextField
-            label={
-              <span style={{ fontSize: "large", fontFamily: "Calibri" }}>
-                Created On
-              </span>
-            }
-            value={editedData.createdOn}
-            onChange={(e) => handleChange("createdOn", e.target.value)}
-            style={inputStyle}
-            InputProps={inputProps}
+            label="Duration"
+            value={editedData.duration.toString()} // Adjusted to use duration
+            onChange={(e, newValue) => handleChange("duration", newValue || "")}
+            styles={{ root: { marginBottom: "12px", width: "100%" } }}
           />
+          <Stack horizontal tokens={{ childrenGap: "20px" }}>
+            <TextField
+              label="Booking Time"
+              value={editedData.bookingtypetext} // Adjusted to use bookingtypetext
+              onChange={(e, newValue) =>
+                handleChange("bookingtypetext", newValue || "")
+              }
+              styles={{ root: { marginBottom: "12px", width: "100%" } }}
+            />
+            <ComboBox
+              label="Booking Status"
+              selectedKey={editedData.bookingstatus} // Adjusted to use bookingstatus
+              onChange={(e, option) =>
+                handleChange("bookingstatus", option?.text || "")
+              }
+              options={bookingStatusOptions}
+            />
+          </Stack>
+          <TextField
+            label="Created On"
+            value={editedData.createdon} // Adjusted to use createdon
+            onChange={(e, newValue) =>
+              handleChange("createdon", newValue || "")
+            }
+            styles={{ root: { marginBottom: "12px", width: "100%" } }}
+          />
+          <PrimaryButton
+            onClick={handleSave}
+            styles={{ root: { marginTop: "16px", width: "100%" } }}
+          >
+            Save
+          </PrimaryButton>
         </div>
-        <Button
-          onClick={handleSave}
-          style={{
-            marginTop: "16px",
-            fontSize: "medium",
-            fontFamily: "Calibri",
-            backgroundColor: "transparent",
-            border: "1px solid #003591",
-            color: "#003591",
-            borderRadius: "0",
-            width: "100px",
-            height: "30px",
-          }}
-        >
-          Save
-        </Button>
-      </div>
+      </Stack>
     </div>
   );
 };

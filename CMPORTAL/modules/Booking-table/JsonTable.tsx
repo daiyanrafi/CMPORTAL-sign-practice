@@ -1,122 +1,99 @@
-// JsonTable.tsx
 import React, { useState } from 'react';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Button } from '@mui/material';
+import {
+  DetailsList,
+  DetailsListLayoutMode,
+  SelectionMode,
+  Stack,
+  PrimaryButton,
+} from '@fluentui/react';
 import EditPage from './EditPage';
-import jsonData from './data.json';
+import livedata from './livedata.json';
 
-
+interface BookingData {
+  bookableresourcebookingid: string;
+  resource: string;
+  starttime: string;
+  endtime: string;
+  duration: number;
+  bookingtypetext: string;
+  bookingstatus: string;
+  createdon: string;
+}
 
 const getStatusColor = (status: string): string => {
   const lowercaseStatus = status.toLowerCase();
 
   switch (lowercaseStatus) {
-    case 'confirmed':
+    case 'completed':
       return 'green';
-    case 'pending':
+    case 'scheduled':
       return 'blue';
     case 'canceled':
       return 'red';
     default:
-      return 'black'; // Default color if status is not recognized
+      return 'black';
   }
 };
 
-
-
 const JsonTable: React.FC = () => {
-  const [data, setData] = useState(jsonData);
-  const [editingRow, setEditingRow] = useState<number | null>(null);
+  const [data, setData] = useState<BookingData[]>(livedata);
+  const [editingRow, setEditingRow] = useState<string | null>(null);
 
-  const handleEditClick = (rowId: number) => {
+  const handleEditClick = (rowId: string) => {
     setEditingRow(rowId);
   };
 
-  const handleSave = (updatedData: any) => {
-    setData((prevData) =>
-      prevData.map((row) => (row.id === updatedData.id ? { ...row, ...updatedData } : row))
+  const handleSave = (updatedData: BookingData) => {
+    setData(prevData =>
+      prevData.map(row =>
+        row.bookableresourcebookingid === updatedData.bookableresourcebookingid ? { ...row, ...updatedData } : row
+      )
     );
     setEditingRow(null);
   };
 
-  const handleCloseEditPage = () => {
-    setEditingRow(null);
-  };
+  const renderActionColumn = (item: BookingData): React.ReactElement => (
+    <PrimaryButton onClick={() => handleEditClick(item.bookableresourcebookingid)}>Edit</PrimaryButton>
+  );
 
-  // const calculateDuration = (row: any): string => {
-  //   const startTime = new Date(row.startTime);
-  //   const endTime = row.endTime ? new Date(row.endTime) : new Date();
-  //   const durationInMillis = endTime.getTime() - startTime.getTime();
-
-  //   const hours = Math.floor(durationInMillis / (1000 * 60 * 60));
-  //   const minutes = Math.floor((durationInMillis % (1000 * 60 * 60)) / (1000 * 60));
-
-  //   return `${hours > 0 ? `${hours} hour${hours > 1 ? 's' : ''}` : ''} ${minutes > 0 ? `${minutes} minute${minutes > 1 ? 's' : ''}` : ''}`;
-  // };
+  const columns = [
+    { key: 'resource', name: 'Resource', fieldName: 'resource', minWidth: 100 },
+    { key: 'starttime', name: 'Start Time', fieldName: 'starttime', minWidth: 100 },
+    { key: 'endtime', name: 'End Time', fieldName: 'endtime', minWidth: 100 },
+    { key: 'duration', name: 'Duration', fieldName: 'duration', minWidth: 100 },
+    { key: 'bookingtypetext', name: 'Booking Time', fieldName: 'bookingtypetext', minWidth: 100 },
+    {
+      key: 'bookingstatus',
+      name: 'Booking Status',
+      fieldName: 'bookingstatus',
+      minWidth: 100,
+      onRender: (item: BookingData) => (
+        <div style={{ color: getStatusColor(item.bookingstatus) }}>{item.bookingstatus}</div>
+      ),
+    },
+    { key: 'createdon', name: 'Created On', fieldName: 'createdon', minWidth: 100 },
+    { key: 'action', name: 'Action', fieldName: 'action', minWidth: 100, onRender: renderActionColumn },
+  ];
 
   return (
-    <>
+    <Stack>
       {editingRow === null ? (
-        <TableContainer component={Paper}>
-          <Table>
-            <TableHead>
-              <TableRow>
-                {/* <TableCell style={{ backgroundColor: '#f0f0f0', fontSize: 'medium', fontFamily: 'Calibri' }}>ID</TableCell> */}
-                <TableCell style={{ backgroundColor: '#f0f0f0', fontSize: 'medium', fontFamily: 'Calibri' }}>Resource</TableCell>
-                <TableCell style={{ backgroundColor: '#f0f0f0', fontSize: 'medium', fontFamily: 'Calibri' }}>Start Time</TableCell>
-                <TableCell style={{ backgroundColor: '#f0f0f0', fontSize: 'medium', fontFamily: 'Calibri' }}>Edit Time</TableCell>
-                <TableCell style={{ backgroundColor: '#f0f0f0', fontSize: 'medium', fontFamily: 'Calibri' }}>Duration</TableCell>
-                <TableCell style={{ backgroundColor: '#f0f0f0', fontSize: 'medium', fontFamily: 'Calibri' }}>Booking Time</TableCell>
-                <TableCell style={{ backgroundColor: '#f0f0f0', fontSize: 'medium', fontFamily: 'Calibri' }}>Booking Status</TableCell>
-                <TableCell style={{ backgroundColor: '#f0f0f0', fontSize: 'medium', fontFamily: 'Calibri' }}>Created On</TableCell>
-                <TableCell style={{ backgroundColor: '#f0f0f0', fontSize: 'medium', fontFamily: 'Calibri', paddingLeft: '40px' }}>Action</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {data.map((row) => (
-                <TableRow key={row.id}>
-                  {/* <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{row.id}</TableCell> */}
-                  <TableCell style={{ color: '#003591', fontSize: 'medium', fontFamily: 'Calibri' }}>{row.resource}</TableCell>
-                  <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{row.startTime}</TableCell>
-                  <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{row.endTime}</TableCell>
-                  <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{row.duration}</TableCell>
-                  {/* <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{calculateDuration(row)}</TableCell> */}
-                  <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{row.bookingTime}</TableCell>
-                  {/* <TableCell style={{ color: '#003591', fontSize: 'medium', fontFamily: 'Calibri' }}>{row.bookingStatus}</TableCell> */}
-                  <TableCell
-              style={{
-                color: getStatusColor(row.bookingStatus),
-                fontSize: 'medium',
-                fontFamily: 'Calibri',
-              }}
-            >
-              {row.bookingStatus}
-            </TableCell>
-                  <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>{row.createdOn}</TableCell>
-                  <TableCell style={{ fontSize: 'medium', fontFamily: 'Calibri' }}>
-                  <Button onClick={() => handleEditClick(row.id)}
-                      style={{
-                        fontSize: "medium",
-                        fontFamily: "Calibri",
-                        backgroundColor: "transparent",
-                        border: "1px solid #003591",
-                        color: "#003591",
-                        borderRadius: "0",
-                        width: "100px",
-                        height: "30px", 
-                      }}>Edit</Button>
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
+        <DetailsList
+          items={data}
+          columns={columns}
+          layoutMode={DetailsListLayoutMode.justified}
+          selectionMode={SelectionMode.none}
+        />
       ) : (
-        <EditPage data={data.find((row) => row.id === editingRow)} onSave={handleSave} onClose={handleCloseEditPage} />
-      )}
-    </>
+        <EditPage
+        data={data.find(row => row.bookableresourcebookingid === editingRow) || {} as BookingData}
+        onSave={handleSave}
+        onClose={() => setEditingRow(null)}
+      />
+      
+     )}
+    </Stack>
   );
-  
-  
 };
 
 export default JsonTable;
