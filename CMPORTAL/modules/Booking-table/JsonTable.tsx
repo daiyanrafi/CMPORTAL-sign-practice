@@ -1,3 +1,5 @@
+// jsontable.tsx
+
 import React, { useState } from 'react';
 import {
   DetailsList,
@@ -7,7 +9,7 @@ import {
   PrimaryButton,
 } from '@fluentui/react';
 import EditPage from './EditPage';
-import livedata from './livedata.json';
+import { getBookingData } from './dataService'; // Import data from dataService.ts
 
 interface BookingData {
   bookableresourcebookingid: string;
@@ -36,7 +38,7 @@ const getStatusColor = (status: string): string => {
 };
 
 const JsonTable: React.FC = () => {
-  const [data, setData] = useState<BookingData[]>(livedata);
+  const [data, setData] = useState<BookingData[]>(getBookingData());
   const [editingRow, setEditingRow] = useState<string | null>(null);
 
   const handleEditClick = (rowId: string) => {
