@@ -1,6 +1,6 @@
 // EditPage.tsx
 
-import React = require("react");
+import React from "react";
 import { useState } from 'react';
 import {
   TextField,
@@ -10,7 +10,7 @@ import {
   DatePicker,
 } from "@fluentui/react";
 
-interface BookingData {
+export interface BookingData {
   bookableresourcebookingid: string;
   resource: string;
   starttime: string;
@@ -20,6 +20,7 @@ interface BookingData {
   bookingstatus: string;
   createdon: string;
 }
+
 
 const formatDate = (date?: Date): string => {
   if (!date) return "";
