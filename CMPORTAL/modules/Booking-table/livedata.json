@@ -1,1366 +1,1366 @@
 [
-    {
-      "bookableresourcebookingid": "a11ffef8-46bf-ee11-9079-000d3a9ddee4",
-      "key": "a11ffef8-46bf-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-01-30T19:30:00.000Z",
-      "starttimetext": "31/01/2024 6:30:00 am",
-      "endtime": "2024-01-30T21:00:00.000Z",
-      "endtimetext": "31/01/2024 8:00:00 am",
-      "duration": 90,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Canceled",
-      "bookingstatusname": "Canceled",
-      "bookingstatusvalue": "30c24ef5-bddf-405e-b9c5-0c5f403484cc",
-      "bookingstatusitem": {
-        "key": "30c24ef5-bddf-405e-b9c5-0c5f403484cc",
-        "text": "Canceled"
-      },
-      "sabs_canceledby": 272470000,
-      "sabs_canceledbytext": "Client",
-      "createdon": "2024-01-30T08:10:05.000Z",
-      "createdontext": "30/01/2024 7:10:05 pm"
+  {
+    "bookableresourcebookingid": "a11ffef8-46bf-ee11-9079-000d3a9ddee4",
+    "key": "a11ffef8-46bf-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
     },
-    {
-      "bookableresourcebookingid": "9fecd49d-36c2-ee11-9079-000d3a9ddee4",
-      "key": "9fecd49d-36c2-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-02-03T13:00:00.000Z",
-      "starttimetext": "04/02/2024 12:00:00 am",
-      "endtime": "2024-02-03T13:30:00.000Z",
-      "endtimetext": "04/02/2024 12:30:00 am",
-      "duration": 30,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Canceled",
-      "bookingstatusname": "Canceled",
-      "bookingstatusvalue": "30c24ef5-bddf-405e-b9c5-0c5f403484cc",
-      "bookingstatusitem": {
-        "key": "30c24ef5-bddf-405e-b9c5-0c5f403484cc",
-        "text": "Canceled"
-      },
-      "sabs_canceledby": 272470000,
-      "sabs_canceledbytext": "Client",
-      "createdon": "2024-02-03T01:50:33.000Z",
-      "createdontext": "03/02/2024 12:50:33 pm"
+    "starttime": "2024-01-30T19:30:00.000Z",
+    "starttimetext": "31/01/2024 6:30:00 am",
+    "endtime": "2024-01-30T21:00:00.000Z",
+    "endtimetext": "31/01/2024 8:00:00 am",
+    "duration": 90,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Canceled",
+    "bookingstatusname": "Canceled",
+    "bookingstatusvalue": "30c24ef5-bddf-405e-b9c5-0c5f403484cc",
+    "bookingstatusitem": {
+      "key": "30c24ef5-bddf-405e-b9c5-0c5f403484cc",
+      "text": "Canceled"
     },
-    {
-      "bookableresourcebookingid": "a98d292a-a0c4-ee11-9079-000d3a9ddee4",
-      "key": "a98d292a-a0c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-02-06T07:10:00.000Z",
-      "starttimetext": "06/02/2024 6:10:00 pm",
-      "endtime": "2024-02-06T16:30:00.000Z",
-      "endtimetext": "07/02/2024 3:30:00 am",
-      "duration": 560,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T03:31:09.000Z",
-      "createdontext": "06/02/2024 2:31:09 pm"
+    "sabs_canceledby": 272470000,
+    "sabs_canceledbytext": "Client",
+    "createdon": "2024-01-30T08:10:05.000Z",
+    "createdontext": "30/01/2024 7:10:05 pm"
+  },
+  {
+    "bookableresourcebookingid": "9fecd49d-36c2-ee11-9079-000d3a9ddee4",
+    "key": "9fecd49d-36c2-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
     },
-    {
-      "bookableresourcebookingid": "e0286734-a3c4-ee11-9079-000d3a9ddee4",
-      "key": "e0286734-a3c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-02-05T19:25:00.000Z",
-      "starttimetext": "06/02/2024 6:25:00 am",
-      "endtime": "2024-02-06T04:45:00.000Z",
-      "endtimetext": "06/02/2024 3:45:00 pm",
-      "duration": 560,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Scheduled",
-      "bookingstatusname": "Scheduled",
-      "bookingstatusvalue": "f16d80d1-fd07-4237-8b69-187a11eb75f9",
-      "bookingstatusitem": {
-        "key": "f16d80d1-fd07-4237-8b69-187a11eb75f9",
-        "text": "Scheduled"
-      },
-      "createdon": "2024-02-06T03:52:56.000Z",
-      "createdontext": "06/02/2024 2:52:56 pm"
+    "starttime": "2024-02-03T13:00:00.000Z",
+    "starttimetext": "04/02/2024 12:00:00 am",
+    "endtime": "2024-02-03T13:30:00.000Z",
+    "endtimetext": "04/02/2024 12:30:00 am",
+    "duration": 30,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Canceled",
+    "bookingstatusname": "Canceled",
+    "bookingstatusvalue": "30c24ef5-bddf-405e-b9c5-0c5f403484cc",
+    "bookingstatusitem": {
+      "key": "30c24ef5-bddf-405e-b9c5-0c5f403484cc",
+      "text": "Canceled"
     },
-    {
-      "bookableresourcebookingid": "eb12ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "eb12ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-02-06T00:00:00.000Z",
-      "starttimetext": "06/02/2024 11:00:00 am",
-      "endtime": "2024-02-06T00:02:00.000Z",
-      "endtimetext": "06/02/2024 11:02:00 am",
-      "duration": 2,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "sabs_canceledby": 272470000,
+    "sabs_canceledbytext": "Client",
+    "createdon": "2024-02-03T01:50:33.000Z",
+    "createdontext": "03/02/2024 12:50:33 pm"
+  },
+  {
+    "bookableresourcebookingid": "a98d292a-a0c4-ee11-9079-000d3a9ddee4",
+    "key": "a98d292a-a0c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
     },
-    {
-      "bookableresourcebookingid": "ec12ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "ec12ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-02-07T00:00:00.000Z",
-      "starttimetext": "07/02/2024 11:00:00 am",
-      "endtime": "2024-02-07T00:02:00.000Z",
-      "endtimetext": "07/02/2024 11:02:00 am",
-      "duration": 2,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "starttime": "2024-02-06T07:10:00.000Z",
+    "starttimetext": "06/02/2024 6:10:00 pm",
+    "endtime": "2024-02-06T16:30:00.000Z",
+    "endtimetext": "07/02/2024 3:30:00 am",
+    "duration": 560,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
     },
-    {
-      "bookableresourcebookingid": "ed12ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "ed12ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-02-08T01:00:00.000Z",
-      "starttimetext": "08/02/2024 12:00:00 pm",
-      "endtime": "2024-02-08T01:45:00.000Z",
-      "endtimetext": "08/02/2024 12:45:00 pm",
-      "duration": 45,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "createdon": "2024-02-06T03:31:09.000Z",
+    "createdontext": "06/02/2024 2:31:09 pm"
+  },
+  {
+    "bookableresourcebookingid": "e0286734-a3c4-ee11-9079-000d3a9ddee4",
+    "key": "e0286734-a3c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
     },
-    {
-      "bookableresourcebookingid": "ee12ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "ee12ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-02-09T00:00:00.000Z",
-      "starttimetext": "09/02/2024 11:00:00 am",
-      "endtime": "2024-02-09T00:02:00.000Z",
-      "endtimetext": "09/02/2024 11:02:00 am",
-      "duration": 2,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "starttime": "2024-02-05T19:25:00.000Z",
+    "starttimetext": "06/02/2024 6:25:00 am",
+    "endtime": "2024-02-06T04:45:00.000Z",
+    "endtimetext": "06/02/2024 3:45:00 pm",
+    "duration": 560,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Scheduled",
+    "bookingstatusname": "Scheduled",
+    "bookingstatusvalue": "f16d80d1-fd07-4237-8b69-187a11eb75f9",
+    "bookingstatusitem": {
+      "key": "f16d80d1-fd07-4237-8b69-187a11eb75f9",
+      "text": "Scheduled"
     },
-    {
-      "bookableresourcebookingid": "ef12ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "ef12ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-02-10T00:00:00.000Z",
-      "starttimetext": "10/02/2024 11:00:00 am",
-      "endtime": "2024-02-10T00:02:00.000Z",
-      "endtimetext": "10/02/2024 11:02:00 am",
-      "duration": 2,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "createdon": "2024-02-06T03:52:56.000Z",
+    "createdontext": "06/02/2024 2:52:56 pm"
+  },
+  {
+    "bookableresourcebookingid": "eb12ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "eb12ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
     },
-    {
-      "bookableresourcebookingid": "f012ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "f012ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-02-11T00:00:00.000Z",
-      "starttimetext": "11/02/2024 11:00:00 am",
-      "endtime": "2024-02-11T00:02:00.000Z",
-      "endtimetext": "11/02/2024 11:02:00 am",
-      "duration": 2,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "starttime": "2024-02-06T00:00:00.000Z",
+    "starttimetext": "06/02/2024 11:00:00 am",
+    "endtime": "2024-02-06T00:02:00.000Z",
+    "endtimetext": "06/02/2024 11:02:00 am",
+    "duration": 2,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
     },
-    {
-      "bookableresourcebookingid": "f112ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "f112ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-02-12T00:00:00.000Z",
-      "starttimetext": "12/02/2024 11:00:00 am",
-      "endtime": "2024-02-12T00:02:00.000Z",
-      "endtimetext": "12/02/2024 11:02:00 am",
-      "duration": 2,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "ec12ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "ec12ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
     },
-    {
-      "bookableresourcebookingid": "f212ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "f212ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-02-13T00:00:00.000Z",
-      "starttimetext": "13/02/2024 11:00:00 am",
-      "endtime": "2024-02-13T00:02:00.000Z",
-      "endtimetext": "13/02/2024 11:02:00 am",
-      "duration": 2,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "starttime": "2024-02-07T00:00:00.000Z",
+    "starttimetext": "07/02/2024 11:00:00 am",
+    "endtime": "2024-02-07T00:02:00.000Z",
+    "endtimetext": "07/02/2024 11:02:00 am",
+    "duration": 2,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
     },
-    {
-      "bookableresourcebookingid": "f312ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "f312ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-02-14T00:00:00.000Z",
-      "starttimetext": "14/02/2024 11:00:00 am",
-      "endtime": "2024-02-14T00:02:00.000Z",
-      "endtimetext": "14/02/2024 11:02:00 am",
-      "duration": 2,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "ed12ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "ed12ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
     },
-    {
-      "bookableresourcebookingid": "f412ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "f412ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-02-15T00:00:00.000Z",
-      "starttimetext": "15/02/2024 11:00:00 am",
-      "endtime": "2024-02-15T00:02:00.000Z",
-      "endtimetext": "15/02/2024 11:02:00 am",
-      "duration": 2,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "starttime": "2024-02-08T01:00:00.000Z",
+    "starttimetext": "08/02/2024 12:00:00 pm",
+    "endtime": "2024-02-08T01:45:00.000Z",
+    "endtimetext": "08/02/2024 12:45:00 pm",
+    "duration": 45,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
     },
-    {
-      "bookableresourcebookingid": "f512ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "f512ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-02-16T00:00:00.000Z",
-      "starttimetext": "16/02/2024 11:00:00 am",
-      "endtime": "2024-02-16T00:02:00.000Z",
-      "endtimetext": "16/02/2024 11:02:00 am",
-      "duration": 2,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "ee12ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "ee12ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
     },
-    {
-      "bookableresourcebookingid": "f612ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "f612ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-02-17T00:00:00.000Z",
-      "starttimetext": "17/02/2024 11:00:00 am",
-      "endtime": "2024-02-17T00:02:00.000Z",
-      "endtimetext": "17/02/2024 11:02:00 am",
-      "duration": 2,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "starttime": "2024-02-09T00:00:00.000Z",
+    "starttimetext": "09/02/2024 11:00:00 am",
+    "endtime": "2024-02-09T00:02:00.000Z",
+    "endtimetext": "09/02/2024 11:02:00 am",
+    "duration": 2,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
     },
-    {
-      "bookableresourcebookingid": "f712ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "f712ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-02-18T00:00:00.000Z",
-      "starttimetext": "18/02/2024 11:00:00 am",
-      "endtime": "2024-02-18T00:02:00.000Z",
-      "endtimetext": "18/02/2024 11:02:00 am",
-      "duration": 2,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "ef12ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "ef12ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
     },
-    {
-      "bookableresourcebookingid": "f812ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "f812ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-02-19T00:00:00.000Z",
-      "starttimetext": "19/02/2024 11:00:00 am",
-      "endtime": "2024-02-19T00:02:00.000Z",
-      "endtimetext": "19/02/2024 11:02:00 am",
-      "duration": 2,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "starttime": "2024-02-10T00:00:00.000Z",
+    "starttimetext": "10/02/2024 11:00:00 am",
+    "endtime": "2024-02-10T00:02:00.000Z",
+    "endtimetext": "10/02/2024 11:02:00 am",
+    "duration": 2,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
     },
-    {
-      "bookableresourcebookingid": "f912ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "f912ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-02-20T00:00:00.000Z",
-      "starttimetext": "20/02/2024 11:00:00 am",
-      "endtime": "2024-02-20T00:02:00.000Z",
-      "endtimetext": "20/02/2024 11:02:00 am",
-      "duration": 2,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "f012ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "f012ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
     },
-    {
-      "bookableresourcebookingid": "fa12ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "fa12ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-02-21T00:00:00.000Z",
-      "starttimetext": "21/02/2024 11:00:00 am",
-      "endtime": "2024-02-21T00:02:00.000Z",
-      "endtimetext": "21/02/2024 11:02:00 am",
-      "duration": 2,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "starttime": "2024-02-11T00:00:00.000Z",
+    "starttimetext": "11/02/2024 11:00:00 am",
+    "endtime": "2024-02-11T00:02:00.000Z",
+    "endtimetext": "11/02/2024 11:02:00 am",
+    "duration": 2,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
     },
-    {
-      "bookableresourcebookingid": "fb12ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "fb12ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-02-22T00:00:00.000Z",
-      "starttimetext": "22/02/2024 11:00:00 am",
-      "endtime": "2024-02-22T00:02:00.000Z",
-      "endtimetext": "22/02/2024 11:02:00 am",
-      "duration": 2,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "f112ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "f112ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
     },
-    {
-      "bookableresourcebookingid": "fc12ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "fc12ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-02-23T00:00:00.000Z",
-      "starttimetext": "23/02/2024 11:00:00 am",
-      "endtime": "2024-02-23T00:02:00.000Z",
-      "endtimetext": "23/02/2024 11:02:00 am",
-      "duration": 2,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "starttime": "2024-02-12T00:00:00.000Z",
+    "starttimetext": "12/02/2024 11:00:00 am",
+    "endtime": "2024-02-12T00:02:00.000Z",
+    "endtimetext": "12/02/2024 11:02:00 am",
+    "duration": 2,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
     },
-    {
-      "bookableresourcebookingid": "fd12ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "fd12ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-02-24T00:00:00.000Z",
-      "starttimetext": "24/02/2024 11:00:00 am",
-      "endtime": "2024-02-24T00:02:00.000Z",
-      "endtimetext": "24/02/2024 11:02:00 am",
-      "duration": 2,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "f212ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "f212ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
     },
-    {
-      "bookableresourcebookingid": "fe12ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "fe12ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-02-25T00:00:00.000Z",
-      "starttimetext": "25/02/2024 11:00:00 am",
-      "endtime": "2024-02-25T00:02:00.000Z",
-      "endtimetext": "25/02/2024 11:02:00 am",
-      "duration": 2,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "starttime": "2024-02-13T00:00:00.000Z",
+    "starttimetext": "13/02/2024 11:00:00 am",
+    "endtime": "2024-02-13T00:02:00.000Z",
+    "endtimetext": "13/02/2024 11:02:00 am",
+    "duration": 2,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
     },
-    {
-      "bookableresourcebookingid": "ff12ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "ff12ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-02-26T00:00:00.000Z",
-      "starttimetext": "26/02/2024 11:00:00 am",
-      "endtime": "2024-02-26T00:02:00.000Z",
-      "endtimetext": "26/02/2024 11:02:00 am",
-      "duration": 2,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "f312ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "f312ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
     },
-    {
-      "bookableresourcebookingid": "0013ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "0013ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-02-27T00:00:00.000Z",
-      "starttimetext": "27/02/2024 11:00:00 am",
-      "endtime": "2024-02-27T00:01:00.000Z",
-      "endtimetext": "27/02/2024 11:01:00 am",
-      "duration": 1,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "starttime": "2024-02-14T00:00:00.000Z",
+    "starttimetext": "14/02/2024 11:00:00 am",
+    "endtime": "2024-02-14T00:02:00.000Z",
+    "endtimetext": "14/02/2024 11:02:00 am",
+    "duration": 2,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
     },
-    {
-      "bookableresourcebookingid": "0113ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "0113ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-02-28T00:00:00.000Z",
-      "starttimetext": "28/02/2024 11:00:00 am",
-      "endtime": "2024-02-28T00:01:00.000Z",
-      "endtimetext": "28/02/2024 11:01:00 am",
-      "duration": 1,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "f412ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "f412ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
     },
-    {
-      "bookableresourcebookingid": "0213ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "0213ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-02-29T00:00:00.000Z",
-      "starttimetext": "29/02/2024 11:00:00 am",
-      "endtime": "2024-02-29T00:01:00.000Z",
-      "endtimetext": "29/02/2024 11:01:00 am",
-      "duration": 1,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "starttime": "2024-02-15T00:00:00.000Z",
+    "starttimetext": "15/02/2024 11:00:00 am",
+    "endtime": "2024-02-15T00:02:00.000Z",
+    "endtimetext": "15/02/2024 11:02:00 am",
+    "duration": 2,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
     },
-    {
-      "bookableresourcebookingid": "0313ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "0313ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-03-01T00:00:00.000Z",
-      "starttimetext": "01/03/2024 11:00:00 am",
-      "endtime": "2024-03-01T00:01:00.000Z",
-      "endtimetext": "01/03/2024 11:01:00 am",
-      "duration": 1,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "f512ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "f512ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
     },
-    {
-      "bookableresourcebookingid": "0413ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "0413ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-03-02T00:00:00.000Z",
-      "starttimetext": "02/03/2024 11:00:00 am",
-      "endtime": "2024-03-02T00:01:00.000Z",
-      "endtimetext": "02/03/2024 11:01:00 am",
-      "duration": 1,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "starttime": "2024-02-16T00:00:00.000Z",
+    "starttimetext": "16/02/2024 11:00:00 am",
+    "endtime": "2024-02-16T00:02:00.000Z",
+    "endtimetext": "16/02/2024 11:02:00 am",
+    "duration": 2,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
     },
-    {
-      "bookableresourcebookingid": "0513ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "0513ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-03-03T00:00:00.000Z",
-      "starttimetext": "03/03/2024 11:00:00 am",
-      "endtime": "2024-03-03T00:01:00.000Z",
-      "endtimetext": "03/03/2024 11:01:00 am",
-      "duration": 1,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "f612ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "f612ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
     },
-    {
-      "bookableresourcebookingid": "0613ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "0613ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-03-04T00:00:00.000Z",
-      "starttimetext": "04/03/2024 11:00:00 am",
-      "endtime": "2024-03-04T00:01:00.000Z",
-      "endtimetext": "04/03/2024 11:01:00 am",
-      "duration": 1,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "starttime": "2024-02-17T00:00:00.000Z",
+    "starttimetext": "17/02/2024 11:00:00 am",
+    "endtime": "2024-02-17T00:02:00.000Z",
+    "endtimetext": "17/02/2024 11:02:00 am",
+    "duration": 2,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
     },
-    {
-      "bookableresourcebookingid": "0713ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "0713ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-03-05T00:00:00.000Z",
-      "starttimetext": "05/03/2024 11:00:00 am",
-      "endtime": "2024-03-05T00:01:00.000Z",
-      "endtimetext": "05/03/2024 11:01:00 am",
-      "duration": 1,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "f712ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "f712ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
     },
-    {
-      "bookableresourcebookingid": "0813ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "0813ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-03-06T00:00:00.000Z",
-      "starttimetext": "06/03/2024 11:00:00 am",
-      "endtime": "2024-03-06T00:01:00.000Z",
-      "endtimetext": "06/03/2024 11:01:00 am",
-      "duration": 1,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "starttime": "2024-02-18T00:00:00.000Z",
+    "starttimetext": "18/02/2024 11:00:00 am",
+    "endtime": "2024-02-18T00:02:00.000Z",
+    "endtimetext": "18/02/2024 11:02:00 am",
+    "duration": 2,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
     },
-    {
-      "bookableresourcebookingid": "0913ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "0913ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-03-07T00:00:00.000Z",
-      "starttimetext": "07/03/2024 11:00:00 am",
-      "endtime": "2024-03-07T00:01:00.000Z",
-      "endtimetext": "07/03/2024 11:01:00 am",
-      "duration": 1,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "f812ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "f812ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
     },
-    {
-      "bookableresourcebookingid": "0a13ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "0a13ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-03-08T00:00:00.000Z",
-      "starttimetext": "08/03/2024 11:00:00 am",
-      "endtime": "2024-03-08T00:01:00.000Z",
-      "endtimetext": "08/03/2024 11:01:00 am",
-      "duration": 1,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "starttime": "2024-02-19T00:00:00.000Z",
+    "starttimetext": "19/02/2024 11:00:00 am",
+    "endtime": "2024-02-19T00:02:00.000Z",
+    "endtimetext": "19/02/2024 11:02:00 am",
+    "duration": 2,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
     },
-    {
-      "bookableresourcebookingid": "0b13ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "0b13ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-03-09T00:00:00.000Z",
-      "starttimetext": "09/03/2024 11:00:00 am",
-      "endtime": "2024-03-09T00:01:00.000Z",
-      "endtimetext": "09/03/2024 11:01:00 am",
-      "duration": 1,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "f912ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "f912ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
     },
-    {
-      "bookableresourcebookingid": "0c13ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "0c13ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-03-10T00:00:00.000Z",
-      "starttimetext": "10/03/2024 11:00:00 am",
-      "endtime": "2024-03-10T00:01:00.000Z",
-      "endtimetext": "10/03/2024 11:01:00 am",
-      "duration": 1,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "starttime": "2024-02-20T00:00:00.000Z",
+    "starttimetext": "20/02/2024 11:00:00 am",
+    "endtime": "2024-02-20T00:02:00.000Z",
+    "endtimetext": "20/02/2024 11:02:00 am",
+    "duration": 2,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
     },
-    {
-      "bookableresourcebookingid": "0d13ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "0d13ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-03-11T00:00:00.000Z",
-      "starttimetext": "11/03/2024 11:00:00 am",
-      "endtime": "2024-03-11T00:01:00.000Z",
-      "endtimetext": "11/03/2024 11:01:00 am",
-      "duration": 1,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "fa12ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "fa12ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
     },
-    {
-      "bookableresourcebookingid": "0e13ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "0e13ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-03-12T00:00:00.000Z",
-      "starttimetext": "12/03/2024 11:00:00 am",
-      "endtime": "2024-03-12T00:01:00.000Z",
-      "endtimetext": "12/03/2024 11:01:00 am",
-      "duration": 1,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "starttime": "2024-02-21T00:00:00.000Z",
+    "starttimetext": "21/02/2024 11:00:00 am",
+    "endtime": "2024-02-21T00:02:00.000Z",
+    "endtimetext": "21/02/2024 11:02:00 am",
+    "duration": 2,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
     },
-    {
-      "bookableresourcebookingid": "0f13ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "0f13ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-03-13T00:00:00.000Z",
-      "starttimetext": "13/03/2024 11:00:00 am",
-      "endtime": "2024-03-13T00:01:00.000Z",
-      "endtimetext": "13/03/2024 11:01:00 am",
-      "duration": 1,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "fb12ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "fb12ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
     },
-    {
-      "bookableresourcebookingid": "1013ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "1013ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-03-14T00:00:00.000Z",
-      "starttimetext": "14/03/2024 11:00:00 am",
-      "endtime": "2024-03-14T00:01:00.000Z",
-      "endtimetext": "14/03/2024 11:01:00 am",
-      "duration": 1,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "starttime": "2024-02-22T00:00:00.000Z",
+    "starttimetext": "22/02/2024 11:00:00 am",
+    "endtime": "2024-02-22T00:02:00.000Z",
+    "endtimetext": "22/02/2024 11:02:00 am",
+    "duration": 2,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
     },
-    {
-      "bookableresourcebookingid": "1113ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "key": "1113ebc8-a9c4-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-03-15T00:00:00.000Z",
-      "starttimetext": "15/03/2024 11:00:00 am",
-      "endtime": "2024-03-15T00:01:00.000Z",
-      "endtimetext": "15/03/2024 11:01:00 am",
-      "duration": 1,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-06T04:40:13.000Z",
-      "createdontext": "06/02/2024 3:40:13 pm"
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "fc12ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "fc12ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
     },
-    {
-      "bookableresourcebookingid": "948387f0-5cc5-ee11-9079-000d3a9ddee4",
-      "key": "948387f0-5cc5-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-02-07T02:00:00.000Z",
-      "starttimetext": "07/02/2024 1:00:00 pm",
-      "endtime": "2024-02-07T02:30:00.000Z",
-      "endtimetext": "07/02/2024 1:30:00 pm",
-      "duration": 30,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-07T02:02:27.000Z",
-      "createdontext": "07/02/2024 1:02:27 pm"
+    "starttime": "2024-02-23T00:00:00.000Z",
+    "starttimetext": "23/02/2024 11:00:00 am",
+    "endtime": "2024-02-23T00:02:00.000Z",
+    "endtimetext": "23/02/2024 11:02:00 am",
+    "duration": 2,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
     },
-    {
-      "bookableresourcebookingid": "c8739090-5dc5-ee11-9079-000d3a9ddee4",
-      "key": "c8739090-5dc5-ee11-9079-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-02-07T02:00:00.000Z",
-      "starttimetext": "07/02/2024 1:00:00 pm",
-      "endtime": "2024-02-07T02:30:00.000Z",
-      "endtimetext": "07/02/2024 1:30:00 pm",
-      "duration": 30,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Completed",
-      "bookingstatusname": "Completed",
-      "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-      "bookingstatusitem": {
-        "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
-        "text": "Completed"
-      },
-      "createdon": "2024-02-07T02:06:56.000Z",
-      "createdontext": "07/02/2024 1:06:56 pm"
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "fd12ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "fd12ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
     },
-    {
-      "bookableresourcebookingid": "f407cbd9-ffc5-ee11-9079-000d3a9ddee4",
-      "key": "f407cbd9-ffc5-ee11-9079-000d3a9ddee4",
-      "resource": "Allison Dickson",
-      "resourcename": "Allison Dickson",
-      "resourcevalue": "4d419662-1be7-e611-8102-e0071b69ffe1",
-      "resourceitem": {
-        "key": "4d419662-1be7-e611-8102-e0071b69ffe1",
-        "text": "Allison Dickson"
-      },
-      "starttime": "2025-01-13T09:00:00.000Z",
-      "starttimetext": "13/01/2025 8:00:00 pm",
-      "endtime": "2025-01-13T11:00:00.000Z",
-      "endtimetext": "13/01/2025 10:00:00 pm",
-      "duration": 120,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Scheduled",
-      "bookingstatusname": "Scheduled",
-      "bookingstatusvalue": "f16d80d1-fd07-4237-8b69-187a11eb75f9",
-      "bookingstatusitem": {
-        "key": "f16d80d1-fd07-4237-8b69-187a11eb75f9",
-        "text": "Scheduled"
-      },
-      "sabs_canceledby": 272470003,
-      "sabs_canceledbytext": "Accounts Dept.",
-      "createdon": "2024-02-07T21:28:39.000Z",
-      "createdontext": "08/02/2024 8:28:39 am"
+    "starttime": "2024-02-24T00:00:00.000Z",
+    "starttimetext": "24/02/2024 11:00:00 am",
+    "endtime": "2024-02-24T00:02:00.000Z",
+    "endtimetext": "24/02/2024 11:02:00 am",
+    "duration": 2,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
     },
-    {
-      "bookableresourcebookingid": "e6a07928-72bb-ee11-a569-000d3a9ddee4",
-      "key": "e6a07928-72bb-ee11-a569-000d3a9ddee4",
-      "resource": "Alan Steiner",
-      "resourcename": "Alan Steiner",
-      "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-      "resourceitem": {
-        "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
-        "text": "Alan Steiner"
-      },
-      "starttime": "2024-01-25T21:00:00.000Z",
-      "starttimetext": "26/01/2024 8:00:00 am",
-      "endtime": "2024-01-25T22:00:00.000Z",
-      "endtimetext": "26/01/2024 9:00:00 am",
-      "duration": 60,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Canceled",
-      "bookingstatusname": "Canceled",
-      "bookingstatusvalue": "30c24ef5-bddf-405e-b9c5-0c5f403484cc",
-      "bookingstatusitem": {
-        "key": "30c24ef5-bddf-405e-b9c5-0c5f403484cc",
-        "text": "Canceled"
-      },
-      "sabs_canceledby": 272470002,
-      "sabs_canceledbytext": "Office",
-      "createdon": "2024-01-25T11:09:13.000Z",
-      "createdontext": "25/01/2024 10:09:13 pm"
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "fe12ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "fe12ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
     },
-    {
-      "bookableresourcebookingid": "4d939163-bbaa-ee11-be37-0022482d92cb",
-      "key": "4d939163-bbaa-ee11-be37-0022482d92cb",
-      "resource": "Abraham McCormick",
-      "resourcename": "Abraham McCormick",
-      "resourcevalue": "47419662-1be7-e611-8102-e0071b69ffe1",
-      "resourceitem": {
-        "key": "47419662-1be7-e611-8102-e0071b69ffe1",
-        "text": "Abraham McCormick"
-      },
-      "starttime": "2024-01-03T23:00:00.000Z",
-      "starttimetext": "04/01/2024 10:00:00 am",
-      "endtime": "2024-01-04T01:00:00.000Z",
-      "endtimetext": "04/01/2024 12:00:00 pm",
-      "duration": 120,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Canceled",
-      "bookingstatusname": "Canceled",
-      "bookingstatusvalue": "30c24ef5-bddf-405e-b9c5-0c5f403484cc",
-      "bookingstatusitem": {
-        "key": "30c24ef5-bddf-405e-b9c5-0c5f403484cc",
-        "text": "Canceled"
-      },
-      "sabs_canceledby": 272470001,
-      "sabs_canceledbytext": "Team Member",
-      "createdon": "2024-01-04T04:40:33.000Z",
-      "createdontext": "04/01/2024 3:40:33 pm"
+    "starttime": "2024-02-25T00:00:00.000Z",
+    "starttimetext": "25/02/2024 11:00:00 am",
+    "endtime": "2024-02-25T00:02:00.000Z",
+    "endtimetext": "25/02/2024 11:02:00 am",
+    "duration": 2,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
     },
-    {
-      "bookableresourcebookingid": "22f0da69-bbaa-ee11-be37-0022482d92cb",
-      "key": "22f0da69-bbaa-ee11-be37-0022482d92cb",
-      "resource": "Abraham McCormick",
-      "resourcename": "Abraham McCormick",
-      "resourcevalue": "47419662-1be7-e611-8102-e0071b69ffe1",
-      "resourceitem": {
-        "key": "47419662-1be7-e611-8102-e0071b69ffe1",
-        "text": "Abraham McCormick"
-      },
-      "starttime": "2024-01-31T23:00:00.000Z",
-      "starttimetext": "01/02/2024 10:00:00 am",
-      "endtime": "2024-02-01T10:58:00.000Z",
-      "endtimetext": "01/02/2024 9:58:00 pm",
-      "duration": 718,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Canceled",
-      "bookingstatusname": "Canceled",
-      "bookingstatusvalue": "30c24ef5-bddf-405e-b9c5-0c5f403484cc",
-      "bookingstatusitem": {
-        "key": "30c24ef5-bddf-405e-b9c5-0c5f403484cc",
-        "text": "Canceled"
-      },
-      "sabs_canceledby": 272470000,
-      "sabs_canceledbytext": "Client",
-      "createdon": "2024-01-04T04:40:45.000Z",
-      "createdontext": "04/01/2024 3:40:45 pm"
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "ff12ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "ff12ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
     },
-    {
-      "bookableresourcebookingid": "4adb5664-bbaa-ee11-be37-0022482d9d94",
-      "key": "4adb5664-bbaa-ee11-be37-0022482d9d94",
-      "resource": "Abraham McCormick",
-      "resourcename": "Abraham McCormick",
-      "resourcevalue": "47419662-1be7-e611-8102-e0071b69ffe1",
-      "resourceitem": {
-        "key": "47419662-1be7-e611-8102-e0071b69ffe1",
-        "text": "Abraham McCormick"
-      },
-      "starttime": "2024-02-01T23:00:00.000Z",
-      "starttimetext": "02/02/2024 10:00:00 am",
-      "endtime": "2024-02-02T00:00:00.000Z",
-      "endtimetext": "02/02/2024 11:00:00 am",
-      "duration": 60,
-      "bookingtype": 1,
-      "bookingtypetext": "Solid",
-      "bookingstatus": "Canceled",
-      "bookingstatusname": "Canceled",
-      "bookingstatusvalue": "30c24ef5-bddf-405e-b9c5-0c5f403484cc",
-      "bookingstatusitem": {
-        "key": "30c24ef5-bddf-405e-b9c5-0c5f403484cc",
-        "text": "Canceled"
-      },
-      "sabs_canceledby": 272470000,
-      "sabs_canceledbytext": "Client",
-      "createdon": "2024-01-04T04:40:33.000Z",
-      "createdontext": "04/01/2024 3:40:33 pm"
-    }
-  ]
+    "starttime": "2024-02-26T00:00:00.000Z",
+    "starttimetext": "26/02/2024 11:00:00 am",
+    "endtime": "2024-02-26T00:02:00.000Z",
+    "endtimetext": "26/02/2024 11:02:00 am",
+    "duration": 2,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
+    },
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "0013ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "0013ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
+    },
+    "starttime": "2024-02-27T00:00:00.000Z",
+    "starttimetext": "27/02/2024 11:00:00 am",
+    "endtime": "2024-02-27T00:01:00.000Z",
+    "endtimetext": "27/02/2024 11:01:00 am",
+    "duration": 1,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
+    },
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "0113ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "0113ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
+    },
+    "starttime": "2024-02-28T00:00:00.000Z",
+    "starttimetext": "28/02/2024 11:00:00 am",
+    "endtime": "2024-02-28T00:01:00.000Z",
+    "endtimetext": "28/02/2024 11:01:00 am",
+    "duration": 1,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
+    },
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "0213ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "0213ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
+    },
+    "starttime": "2024-02-29T00:00:00.000Z",
+    "starttimetext": "29/02/2024 11:00:00 am",
+    "endtime": "2024-02-29T00:01:00.000Z",
+    "endtimetext": "29/02/2024 11:01:00 am",
+    "duration": 1,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
+    },
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "0313ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "0313ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
+    },
+    "starttime": "2024-03-01T00:00:00.000Z",
+    "starttimetext": "01/03/2024 11:00:00 am",
+    "endtime": "2024-03-01T00:01:00.000Z",
+    "endtimetext": "01/03/2024 11:01:00 am",
+    "duration": 1,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
+    },
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "0413ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "0413ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
+    },
+    "starttime": "2024-03-02T00:00:00.000Z",
+    "starttimetext": "02/03/2024 11:00:00 am",
+    "endtime": "2024-03-02T00:01:00.000Z",
+    "endtimetext": "02/03/2024 11:01:00 am",
+    "duration": 1,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
+    },
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "0513ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "0513ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
+    },
+    "starttime": "2024-03-03T00:00:00.000Z",
+    "starttimetext": "03/03/2024 11:00:00 am",
+    "endtime": "2024-03-03T00:01:00.000Z",
+    "endtimetext": "03/03/2024 11:01:00 am",
+    "duration": 1,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
+    },
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "0613ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "0613ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
+    },
+    "starttime": "2024-03-04T00:00:00.000Z",
+    "starttimetext": "04/03/2024 11:00:00 am",
+    "endtime": "2024-03-04T00:01:00.000Z",
+    "endtimetext": "04/03/2024 11:01:00 am",
+    "duration": 1,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
+    },
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "0713ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "0713ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
+    },
+    "starttime": "2024-03-05T00:00:00.000Z",
+    "starttimetext": "05/03/2024 11:00:00 am",
+    "endtime": "2024-03-05T00:01:00.000Z",
+    "endtimetext": "05/03/2024 11:01:00 am",
+    "duration": 1,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
+    },
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "0813ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "0813ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
+    },
+    "starttime": "2024-03-06T00:00:00.000Z",
+    "starttimetext": "06/03/2024 11:00:00 am",
+    "endtime": "2024-03-06T00:01:00.000Z",
+    "endtimetext": "06/03/2024 11:01:00 am",
+    "duration": 1,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
+    },
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "0913ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "0913ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
+    },
+    "starttime": "2024-03-07T00:00:00.000Z",
+    "starttimetext": "07/03/2024 11:00:00 am",
+    "endtime": "2024-03-07T00:01:00.000Z",
+    "endtimetext": "07/03/2024 11:01:00 am",
+    "duration": 1,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
+    },
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "0a13ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "0a13ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
+    },
+    "starttime": "2024-03-08T00:00:00.000Z",
+    "starttimetext": "08/03/2024 11:00:00 am",
+    "endtime": "2024-03-08T00:01:00.000Z",
+    "endtimetext": "08/03/2024 11:01:00 am",
+    "duration": 1,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
+    },
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "0b13ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "0b13ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
+    },
+    "starttime": "2024-03-09T00:00:00.000Z",
+    "starttimetext": "09/03/2024 11:00:00 am",
+    "endtime": "2024-03-09T00:01:00.000Z",
+    "endtimetext": "09/03/2024 11:01:00 am",
+    "duration": 1,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
+    },
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "0c13ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "0c13ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
+    },
+    "starttime": "2024-03-10T00:00:00.000Z",
+    "starttimetext": "10/03/2024 11:00:00 am",
+    "endtime": "2024-03-10T00:01:00.000Z",
+    "endtimetext": "10/03/2024 11:01:00 am",
+    "duration": 1,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
+    },
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "0d13ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "0d13ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
+    },
+    "starttime": "2024-03-11T00:00:00.000Z",
+    "starttimetext": "11/03/2024 11:00:00 am",
+    "endtime": "2024-03-11T00:01:00.000Z",
+    "endtimetext": "11/03/2024 11:01:00 am",
+    "duration": 1,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
+    },
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "0e13ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "0e13ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
+    },
+    "starttime": "2024-03-12T00:00:00.000Z",
+    "starttimetext": "12/03/2024 11:00:00 am",
+    "endtime": "2024-03-12T00:01:00.000Z",
+    "endtimetext": "12/03/2024 11:01:00 am",
+    "duration": 1,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
+    },
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "0f13ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "0f13ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
+    },
+    "starttime": "2024-03-13T00:00:00.000Z",
+    "starttimetext": "13/03/2024 11:00:00 am",
+    "endtime": "2024-03-13T00:01:00.000Z",
+    "endtimetext": "13/03/2024 11:01:00 am",
+    "duration": 1,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
+    },
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "1013ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "1013ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
+    },
+    "starttime": "2024-03-14T00:00:00.000Z",
+    "starttimetext": "14/03/2024 11:00:00 am",
+    "endtime": "2024-03-14T00:01:00.000Z",
+    "endtimetext": "14/03/2024 11:01:00 am",
+    "duration": 1,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
+    },
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "1113ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "key": "1113ebc8-a9c4-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
+    },
+    "starttime": "2024-03-15T00:00:00.000Z",
+    "starttimetext": "15/03/2024 11:00:00 am",
+    "endtime": "2024-03-15T00:01:00.000Z",
+    "endtimetext": "15/03/2024 11:01:00 am",
+    "duration": 1,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
+    },
+    "createdon": "2024-02-06T04:40:13.000Z",
+    "createdontext": "06/02/2024 3:40:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "948387f0-5cc5-ee11-9079-000d3a9ddee4",
+    "key": "948387f0-5cc5-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
+    },
+    "starttime": "2024-02-07T02:00:00.000Z",
+    "starttimetext": "07/02/2024 1:00:00 pm",
+    "endtime": "2024-02-07T02:30:00.000Z",
+    "endtimetext": "07/02/2024 1:30:00 pm",
+    "duration": 30,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
+    },
+    "createdon": "2024-02-07T02:02:27.000Z",
+    "createdontext": "07/02/2024 1:02:27 pm"
+  },
+  {
+    "bookableresourcebookingid": "c8739090-5dc5-ee11-9079-000d3a9ddee4",
+    "key": "c8739090-5dc5-ee11-9079-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
+    },
+    "starttime": "2024-02-07T02:00:00.000Z",
+    "starttimetext": "07/02/2024 1:00:00 pm",
+    "endtime": "2024-02-07T02:30:00.000Z",
+    "endtimetext": "07/02/2024 1:30:00 pm",
+    "duration": 30,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Completed",
+    "bookingstatusname": "Completed",
+    "bookingstatusvalue": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+    "bookingstatusitem": {
+      "key": "c33410b9-1abe-4631-b4e9-6e4a1113af34",
+      "text": "Completed"
+    },
+    "createdon": "2024-02-07T02:06:56.000Z",
+    "createdontext": "07/02/2024 1:06:56 pm"
+  },
+  {
+    "bookableresourcebookingid": "f407cbd9-ffc5-ee11-9079-000d3a9ddee4",
+    "key": "f407cbd9-ffc5-ee11-9079-000d3a9ddee4",
+    "resource": "Allison Dickson",
+    "resourcename": "Allison Dickson",
+    "resourcevalue": "4d419662-1be7-e611-8102-e0071b69ffe1",
+    "resourceitem": {
+      "key": "4d419662-1be7-e611-8102-e0071b69ffe1",
+      "text": "Allison Dickson"
+    },
+    "starttime": "2025-01-13T09:00:00.000Z",
+    "starttimetext": "13/01/2025 8:00:00 pm",
+    "endtime": "2025-01-13T11:00:00.000Z",
+    "endtimetext": "13/01/2025 10:00:00 pm",
+    "duration": 120,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Scheduled",
+    "bookingstatusname": "Scheduled",
+    "bookingstatusvalue": "f16d80d1-fd07-4237-8b69-187a11eb75f9",
+    "bookingstatusitem": {
+      "key": "f16d80d1-fd07-4237-8b69-187a11eb75f9",
+      "text": "Scheduled"
+    },
+    "sabs_canceledby": 272470003,
+    "sabs_canceledbytext": "Accounts Dept.",
+    "createdon": "2024-02-07T21:28:39.000Z",
+    "createdontext": "08/02/2024 8:28:39 am"
+  },
+  {
+    "bookableresourcebookingid": "e6a07928-72bb-ee11-a569-000d3a9ddee4",
+    "key": "e6a07928-72bb-ee11-a569-000d3a9ddee4",
+    "resource": "Alan Steiner",
+    "resourcename": "Alan Steiner",
+    "resourcevalue": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+    "resourceitem": {
+      "key": "882b3e52-72bb-ee11-a569-000d3a9ddee4",
+      "text": "Alan Steiner"
+    },
+    "starttime": "2024-01-25T21:00:00.000Z",
+    "starttimetext": "26/01/2024 8:00:00 am",
+    "endtime": "2024-01-25T22:00:00.000Z",
+    "endtimetext": "26/01/2024 9:00:00 am",
+    "duration": 60,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Canceled",
+    "bookingstatusname": "Canceled",
+    "bookingstatusvalue": "30c24ef5-bddf-405e-b9c5-0c5f403484cc",
+    "bookingstatusitem": {
+      "key": "30c24ef5-bddf-405e-b9c5-0c5f403484cc",
+      "text": "Canceled"
+    },
+    "sabs_canceledby": 272470002,
+    "sabs_canceledbytext": "Office",
+    "createdon": "2024-01-25T11:09:13.000Z",
+    "createdontext": "25/01/2024 10:09:13 pm"
+  },
+  {
+    "bookableresourcebookingid": "4d939163-bbaa-ee11-be37-0022482d92cb",
+    "key": "4d939163-bbaa-ee11-be37-0022482d92cb",
+    "resource": "Abraham McCormick",
+    "resourcename": "Abraham McCormick",
+    "resourcevalue": "47419662-1be7-e611-8102-e0071b69ffe1",
+    "resourceitem": {
+      "key": "47419662-1be7-e611-8102-e0071b69ffe1",
+      "text": "Abraham McCormick"
+    },
+    "starttime": "2024-01-03T23:00:00.000Z",
+    "starttimetext": "04/01/2024 10:00:00 am",
+    "endtime": "2024-01-04T01:00:00.000Z",
+    "endtimetext": "04/01/2024 12:00:00 pm",
+    "duration": 120,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Canceled",
+    "bookingstatusname": "Canceled",
+    "bookingstatusvalue": "30c24ef5-bddf-405e-b9c5-0c5f403484cc",
+    "bookingstatusitem": {
+      "key": "30c24ef5-bddf-405e-b9c5-0c5f403484cc",
+      "text": "Canceled"
+    },
+    "sabs_canceledby": 272470001,
+    "sabs_canceledbytext": "Team Member",
+    "createdon": "2024-01-04T04:40:33.000Z",
+    "createdontext": "04/01/2024 3:40:33 pm"
+  },
+  {
+    "bookableresourcebookingid": "22f0da69-bbaa-ee11-be37-0022482d92cb",
+    "key": "22f0da69-bbaa-ee11-be37-0022482d92cb",
+    "resource": "Abraham McCormick",
+    "resourcename": "Abraham McCormick",
+    "resourcevalue": "47419662-1be7-e611-8102-e0071b69ffe1",
+    "resourceitem": {
+      "key": "47419662-1be7-e611-8102-e0071b69ffe1",
+      "text": "Abraham McCormick"
+    },
+    "starttime": "2024-01-31T23:00:00.000Z",
+    "starttimetext": "01/02/2024 10:00:00 am",
+    "endtime": "2024-02-01T10:58:00.000Z",
+    "endtimetext": "01/02/2024 9:58:00 pm",
+    "duration": 718,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Canceled",
+    "bookingstatusname": "Canceled",
+    "bookingstatusvalue": "30c24ef5-bddf-405e-b9c5-0c5f403484cc",
+    "bookingstatusitem": {
+      "key": "30c24ef5-bddf-405e-b9c5-0c5f403484cc",
+      "text": "Canceled"
+    },
+    "sabs_canceledby": 272470000,
+    "sabs_canceledbytext": "Client",
+    "createdon": "2024-01-04T04:40:45.000Z",
+    "createdontext": "04/01/2024 3:40:45 pm"
+  },
+  {
+    "bookableresourcebookingid": "4adb5664-bbaa-ee11-be37-0022482d9d94",
+    "key": "4adb5664-bbaa-ee11-be37-0022482d9d94",
+    "resource": "Abraham McCormick",
+    "resourcename": "Abraham McCormick",
+    "resourcevalue": "47419662-1be7-e611-8102-e0071b69ffe1",
+    "resourceitem": {
+      "key": "47419662-1be7-e611-8102-e0071b69ffe1",
+      "text": "Abraham McCormick"
+    },
+    "starttime": "2024-02-01T23:00:00.000Z",
+    "starttimetext": "02/02/2024 10:00:00 am",
+    "endtime": "2024-02-02T00:00:00.000Z",
+    "endtimetext": "02/02/2024 11:00:00 am",
+    "duration": 60,
+    "bookingtype": 1,
+    "bookingtypetext": "Solid",
+    "bookingstatus": "Canceled",
+    "bookingstatusname": "Canceled",
+    "bookingstatusvalue": "30c24ef5-bddf-405e-b9c5-0c5f403484cc",
+    "bookingstatusitem": {
+      "key": "30c24ef5-bddf-405e-b9c5-0c5f403484cc",
+      "text": "Canceled"
+    },
+    "sabs_canceledby": 272470000,
+    "sabs_canceledbytext": "Client",
+    "createdon": "2024-01-04T04:40:33.000Z",
+    "createdontext": "04/01/2024 3:40:33 pm"
+  }
+]
