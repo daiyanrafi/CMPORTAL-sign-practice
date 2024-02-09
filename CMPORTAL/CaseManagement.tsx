@@ -5,18 +5,12 @@ import axios from "axios";
 import Button from "./modules/csv-button/Button";
 import Dashboard from "./modules/Dash-board/Dashboard";
 import Dropdown from "./modules/Drop-down/Dropdown";
-// import policies from "./modules/Drop-down/Policies";
-// import guidelines from "./modules/Drop-down/Guidelines";
-// import directives from "./modules/Drop-down/Directives";
-// import procedures from "./modules/Drop-down/Procedures";
-// import mappedPoliciesData from "./modules/Drop-down/Policies";
-// import mappedGuidelinesData from "./modules/Drop-down/Guidelines";
-// import mappedDirectiveData from "./modules/Drop-down/Directives";
-// import mappedProceduresData from "./modules/Drop-down/Procedures";
 import { Row } from "./modules/Drop-down/Row";
 import documents from "./modules/Drop-down/data/cdocuments.json";
 import Userdoc from "./modules/User-doc/Userdoc";
 import JsonTable from "./modules/Booking-table/JsonTable";
+import BookingContainer from "./modules/Booking-table/BookingContainer";
+
 export default class HelloWorld extends React.Component<
   ComponentFramework.Context<IInputs>,
   IState
@@ -30,8 +24,7 @@ export default class HelloWorld extends React.Component<
       // policies: [],
       // guidelines: [],
       // directives: [],
-      // procedures: []
-
+      // procedures: [],
       documents: [],
       people: [],
     };
@@ -126,7 +119,15 @@ export default class HelloWorld extends React.Component<
   //     content: item.Title,
   //   }));
 
-  //   this.setState({policies: mappedPoliciesData, guidelines: mappedGuidelinesData, directives: mappedDirectiveData, procedures: mappedProceduresData})
+  //   const people = ["Daiyan Rafi", "Tanbir Hossain", "Mahfuzur Rahman", "Mohammad Hossain", "Md Ismail", "Amana Begum"]
+
+  //   this.setState({
+  //     policies: mappedPoliciesData,
+  //     guidelines: mappedGuidelinesData,
+  //     directives: mappedDirectiveData,
+  //     procedures: mappedProceduresData,
+  //     people
+  //   });
   // }
 
   componentDidMount(): void {
@@ -143,7 +144,7 @@ export default class HelloWorld extends React.Component<
   }
 
   public render() {
-    // let {policies, guidelines, directives, procedures} = this.state;
+    // let { policies, guidelines, directives, procedures, people } = this.state;
     let { documents, people } = this.state;
     return (
       <div>
@@ -151,13 +152,19 @@ export default class HelloWorld extends React.Component<
         {/* <Dashboard/> */}
         {/* <Button/> */}
         {/* <App/> */}
-        <JsonTable/>
+        <BookingContainer />
         {/* <Dropdown data={policies} title="Policies" />
         <Dropdown data={guidelines} title="Guidelines" />
         <Dropdown data={directives} title="Directives" />
         <Dropdown data={procedures} title="Procedures" /> */}
 
         {/* <h1>Test component</h1> */}
+
+        {/* {
+          people.map((person: string) => {
+            return <Dropdown data={policies} title={person} />
+          })
+        } */}
 
         {/* {people.map((person: string) => (
           <div key={person}>
@@ -170,10 +177,11 @@ export default class HelloWorld extends React.Component<
 }
 
 interface IState {
-  documents: Row[];
-  people: string[];
   // policies: any;
   // guidelines: any;
   // directives: any;
   // procedures: any;
+  // people: any;
+  documents: Row[];
+  people: string[];
 }
