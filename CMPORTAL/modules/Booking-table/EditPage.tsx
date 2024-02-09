@@ -46,7 +46,7 @@ const bookingStatusOptions = [
 const EditPage: React.FC<EditPageProps> = ({ data, onSave, onClose }) => {
   const [editedData, setEditedData] = useState<BookingData>(data);
 
-  const handleChange = (field: keyof BookingData, value: string | Date) => {
+  const handleChange = (field: keyof BookingData, value: string | Date | number) => {
     setEditedData((prevData) => ({ ...prevData, [field]: value }));
   };
 
@@ -62,50 +62,39 @@ const EditPage: React.FC<EditPageProps> = ({ data, onSave, onClose }) => {
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "flex-start",
-        height: "100vh",
-      }}
-    >
+    <div className="edit-container">
       <Stack tokens={{ padding: "30px" }}>
-        <h2 style={{ marginBottom: "20px", fontSize: "large" }}>Edit Page</h2>
+        <h2 className="edit-title">Edit Fields</h2>
 
-        <div style={{ width: "400px" }}>
+        <div className="edit-form">
           <TextField
             label="Resource"
             value={editedData.resource}
-            onChange={(e, newValue) => handleChange("resource", newValue || "")}
+            onChange={(e, newValue) =>
+              handleChange("resource", newValue || "")
+            }
             styles={{ root: { marginBottom: "12px", width: "100%" } }}
           />
           <Stack horizontal tokens={{ childrenGap: "20px" }}>
             <DatePicker
               label="Start Time"
               value={new Date(editedData.starttime)}
-              onSelectDate={(date) =>
-                handleChange("starttime", date || "")
-              }
-              formatDate={formatDate}
+              onSelectDate={(date) => handleChange("starttime", date || "")}
               styles={{ root: { width: "200px", marginBottom: "12px" } }}
             />
             <DatePicker
               label="End Time"
               value={new Date(editedData.endtime)}
-              onSelectDate={(date) =>
-                handleChange("endtime", date || "")
-              }
-              formatDate={formatDate}
+              onSelectDate={(date) => handleChange("endtime", date || "")}
               styles={{ root: { width: "200px", marginBottom: "12px" } }}
             />
+            <TextField
+              label="Duration"
+              value={editedData.duration.toString()}
+              onChange={(e, newValue) => handleChange("duration", newValue || "")}
+              styles={{ root: { marginBottom: "12px", width: "20%" } }}
+            />
           </Stack>
-          <TextField
-            label="Duration"
-            value={editedData.duration.toString()}
-            onChange={(e, newValue) => handleChange("duration", newValue || "")}
-            styles={{ root: { marginBottom: "12px", width: "100%" } }}
-          />
           <Stack horizontal tokens={{ childrenGap: "20px" }}>
             <TextField
               label="Booking Time"
@@ -113,7 +102,7 @@ const EditPage: React.FC<EditPageProps> = ({ data, onSave, onClose }) => {
               onChange={(e, newValue) =>
                 handleChange("bookingtypetext", newValue || "")
               }
-              styles={{ root: { marginBottom: "12px", width: "100%" } }}
+              styles={{ root: { marginBottom: "12px", width: "47%" } }}
             />
             <ComboBox
               label="Booking Status"
@@ -123,21 +112,20 @@ const EditPage: React.FC<EditPageProps> = ({ data, onSave, onClose }) => {
               }
               options={bookingStatusOptions}
             />
-          </Stack>
           <TextField
             label="Created On"
             value={editedData.createdon}
             onChange={(e, newValue) =>
-              handleChange("createdon", newValue || "")
+              handleChange("duration", parseInt(newValue || "0"))
             }
-            styles={{ root: { marginBottom: "12px", width: "100%" } }}
+            styles={{ root: { marginBottom: "12px", width: "35%" } }}
           />
-          <PrimaryButton
-            onClick={handleSave}
-            styles={{ root: { marginTop: "16px", width: "100%" } }}
-          >
-            Save
-          </PrimaryButton>
+          </Stack>
+          <div className="button-container">
+            <PrimaryButton onClick={handleSave} style={{ marginTop: '15px', marginRight: '15px' }}>Save</PrimaryButton>
+            <PrimaryButton onClick={onClose} style={{ marginTop: '15px', marginLeft: '15px' }}>Cancel</PrimaryButton>
+          </div>
+
         </div>
       </Stack>
     </div>
