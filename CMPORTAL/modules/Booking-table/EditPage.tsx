@@ -50,19 +50,25 @@ const EditPage: React.FC<EditPageProps> = ({ data, onSave, onClose }) => {
     setEditedData((prevData) => ({ ...prevData, [field]: value }));
   };
 
+  // const handleSave = () => {
+  //   onSave(editedData);
+  //   onClose();
+  // };
+
   const handleSave = () => {
     onSave(editedData);
+    console.log("Updated Data:", editedData); // Add this line to log the updated data
     onClose();
   };
 
   return (
     <div
-    style={{
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "flex-start",
-      height: "100vh",
-    }}
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "flex-start",
+        height: "100vh",
+      }}
     >
       <Stack tokens={{ padding: "30px" }}>
         <h2 style={{ marginBottom: "20px", fontSize: "large" }}>Edit Page</h2>

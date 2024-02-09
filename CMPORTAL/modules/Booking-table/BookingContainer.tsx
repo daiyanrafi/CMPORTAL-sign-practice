@@ -22,27 +22,33 @@ import { BookingData } from './EditPage'; // Import BookingData interface
 
 const BookingContainer: React.FC = () => {
   const [editingRow, setEditingRow] = useState<string | null>(null);
-
-  // const handleEditClick = (rowId: string) => {
-  //   setEditingRow(rowId);
-  // };
+  const [bookings, setBookings] = useState<BookingData[]>(getBookingData()); // Assuming initial data is fetched
 
   const handleEditClick = (rowId: string | null) => {
-    // Handle the edit click with a valid rowId or null
     setEditingRow(rowId);
   };
-  
+
 
   const handleSave = (updatedData: BookingData) => {
-    // Handle save logic here if needed
+    updateBookingData(updatedData); // Update booking data
     setEditingRow(null);
   };
 
+  const updateBookingData = (updatedData: BookingData) => {
+    setBookings(prevBookings => {
+      return prevBookings.map(booking => {
+        if (booking.bookableresourcebookingid === updatedData.bookableresourcebookingid) {
+          // Update the booking with the new data
+          return { ...booking, ...updatedData };
+        }
+        return booking;
+      });
+    });
+  };
+
   return (
-    <JsonTable bookings={getBookingData()} editingRow={editingRow} onEditClick={handleEditClick} onSave={handleSave} />
+    <JsonTable bookings={bookings} editingRow={editingRow} onEditClick={handleEditClick} onSave={handleSave} />
   );
 };
 
 export default BookingContainer;
-
-
