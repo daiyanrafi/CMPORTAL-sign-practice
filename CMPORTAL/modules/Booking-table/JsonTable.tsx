@@ -73,6 +73,7 @@ const JsonTable: React.FC<JsonTableProps> = ({ bookings, onSave }) => {
       ),
     },
     { key: 'createdon', name: 'Created On', fieldName: 'createdon', minWidth: 100 },
+    { key: 'sabs_canceledbytext', name: 'Canceled By', fieldName: 'sabs_canceledbytext', minWidth: 100 },
     { key: 'action', name: 'Action', fieldName: 'action', minWidth: 100, onRender: renderActionColumn },
   ];
 

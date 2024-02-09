@@ -11,25 +11,26 @@ import {
 } from "@fluentui/react";
 
 export interface BookingData {
-  bookableresourcebookingid: string;
-  resource: string;
+  bookableresourcebookingid?: string;
+  resource?: string;
   starttime: string;
   endtime: string;
   duration: number;
-  bookingtypetext: string;
+  bookingtypetext?: string;
   bookingstatus: string;
-  createdon: string;
+  createdon?: string;
+  sabs_canceledbytext?: string;
 }
 
 
-const formatDate = (date?: Date): string => {
-  if (!date) return "";
-  const month = date.getMonth() + 1;
-  const day = date.getDate();
-  const year = date.getFullYear();
+// const formatDate = (date?: Date): string => {
+//   if (!date) return "";
+//   const month = date.getMonth() + 1;
+//   const day = date.getDate();
+//   const year = date.getFullYear();
 
-  return `${day}.${month}.${year}`;
-};
+//   return `${day}.${month}.${year}`;
+// };
 
 interface EditPageProps {
   data: BookingData;
@@ -112,13 +113,23 @@ const EditPage: React.FC<EditPageProps> = ({ data, onSave, onClose }) => {
               }
               options={bookingStatusOptions}
             />
+          </Stack>
+          <Stack horizontal tokens={{ childrenGap: "20px" }}>
           <TextField
             label="Created On"
             value={editedData.createdon}
             onChange={(e, newValue) =>
               handleChange("duration", parseInt(newValue || "0"))
             }
-            styles={{ root: { marginBottom: "12px", width: "35%" } }}
+            styles={{ root: { marginBottom: "12px", width: "50%" } }}
+          />
+          <TextField
+            label="Canceled By"
+            value={editedData.sabs_canceledbytext}
+            onChange={(e, newValue) =>
+              handleChange("sabs_canceledbytext", parseInt(newValue || "0"))
+            }
+            styles={{ root: { marginBottom: "12px", width: "50%" } }}
           />
           </Stack>
           <div className="button-container">
