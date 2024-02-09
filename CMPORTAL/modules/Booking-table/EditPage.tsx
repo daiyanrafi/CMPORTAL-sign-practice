@@ -1,6 +1,7 @@
 // EditPage.tsx
 
-import React, { useState } from "react";
+import React = require("react");
+import { useState } from 'react';
 import {
   TextField,
   PrimaryButton,

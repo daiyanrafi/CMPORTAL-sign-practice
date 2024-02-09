@@ -8,8 +8,9 @@ import {
   Stack,
   PrimaryButton,
 } from '@fluentui/react';
-import EditPage from './EditPage';
-import { getBookingData } from './dataService'; // Import data from dataService.ts
+// Rafi to fix
+//import EditPage from './EditPage';
+
 
 interface BookingData {
   bookableresourcebookingid: string;
@@ -37,22 +38,23 @@ const getStatusColor = (status: string): string => {
   }
 };
 
-const JsonTable: React.FC = () => {
-  const [data, setData] = useState<BookingData[]>(getBookingData());
+const JsonTable: React.FC<{ bookings: BookingData[] }> = ({ bookings }) => {
+  //const [data, setData] = useState<BookingData[]>(bookings);
   const [editingRow, setEditingRow] = useState<string | null>(null);
 
   const handleEditClick = (rowId: string) => {
     setEditingRow(rowId);
   };
 
-  const handleSave = (updatedData: BookingData) => {
-    setData(prevData =>
-      prevData.map(row =>
-        row.bookableresourcebookingid === updatedData.bookableresourcebookingid ? { ...row, ...updatedData } : row
-      )
-    );
-    setEditingRow(null);
-  };
+  // Rafi to fix (Take it out to the parent component)
+  // const handleSave = (updatedData: BookingData) => {
+  //   // setData(prevData =>
+  //   //   prevData.map(row =>
+  //   //     row.bookableresourcebookingid === updatedData.bookableresourcebookingid ? { ...row, ...updatedData } : row
+  //   //   )
+  //   // );
+  //   // setEditingRow(null);
+  // };
 
   const renderActionColumn = (item: BookingData): React.ReactElement => (
     <PrimaryButton onClick={() => handleEditClick(item.bookableresourcebookingid)}>Edit</PrimaryButton>
@@ -81,7 +83,7 @@ const JsonTable: React.FC = () => {
     <Stack>
       {editingRow === null ? (
         <DetailsList
-          items={data}
+          items={bookings}
           columns={columns.map(column => ({
             ...column,
             onRender: (item: BookingData) => {
@@ -96,11 +98,12 @@ const JsonTable: React.FC = () => {
           selectionMode={SelectionMode.none}
         />
       ) : (
-        <EditPage
-          data={data.find(row => row.bookableresourcebookingid === editingRow) || {} as BookingData}
-          onSave={handleSave}
-          onClose={() => setEditingRow(null)}
-        />
+        <h1>Rafi to fix</h1>
+        // <EditPage
+        //   data={bookings.find(row => row.bookableresourcebookingid === editingRow) || {} as BookingData}
+        //   onSave={handleSave}
+        //   onClose={() => setEditingRow(null)}
+        // />
       )}
     </Stack>
   );
