@@ -55,6 +55,13 @@ const JsonTable: React.FC<JsonTableProps> = ({ bookings, onSave }) => {
     closePanel();
   };
 
+  const handleRowDoubleClick = (item: BookingData) => {
+    // Handle row double click
+    console.log('Row double clicked:', item);
+    // Show "Coming soon"
+    alert('Coming soon');
+  };
+
   const renderActionColumn = (item: BookingData): React.ReactElement => (
     <DefaultButton
       iconProps={{ iconName: 'Edit' }}
@@ -184,6 +191,7 @@ const JsonTable: React.FC<JsonTableProps> = ({ bookings, onSave }) => {
           columns={columns}
           layoutMode={DetailsListLayoutMode.justified}
           selectionMode={SelectionMode.none}
+          onItemInvoked={handleRowDoubleClick} // Attach double click handler
         />
       </div>
       <Panel
