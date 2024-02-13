@@ -3,4 +3,5 @@ export interface Row {
   id: number;
   label: string;
   content: string;
+  modified: string;
 }

@@ -1,4 +1,5 @@
 // Userdoc.tsx
+
 import React, { useState } from "react";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -9,19 +10,18 @@ import Container from "@mui/material/Container";
 import { Row } from "./Row";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import { IPeople } from "../../CaseManagement";
 
 interface UserdocProps {
   data: Row[];
-  title: string;
+  poeple: IPeople;
+  activities: any[]; // Define activities prop
 }
 
-interface AcceptedRow {
-  id: number;
-  timestamp: string;
-}
+// Inside Userdoc component
 
 const ColumnTitle: React.FC = () => (
-  <Typography
+  <div
     style={{
       backgroundColor: "#008542",
       padding: "10px",
@@ -29,21 +29,39 @@ const ColumnTitle: React.FC = () => (
       fontFamily: "Calibri",
       borderBottom: "2px solid #ccc",
       display: "flex",
-      justifyContent: "space-between",
+      justifyContent: "space-between", // Aligns items to both ends of the container
       alignItems: "center",
     }}
   >
     <span style={{ color: "white" }}>Name</span>
-    <span style={{ color: "white" }}>Type</span>
-  </Typography>
+    <div style={{ display: "flex", alignItems: "center" }}> {/* Container for Type and Date Modified */}
+      <span style={{ color: "white", marginRight: '60px' }}>Type</span> {/* Margin for separation */}
+      <span style={{ color: "white", marginLeft: "60px" }}>Date Modified</span> {/* Margin for separation */}
+    </div>
+  </div>
 );
 
-const Userdoc: React.FC<UserdocProps> = ({ data, title }) => {
+
+
+const Userdoc: React.FC<UserdocProps> = ({ data, poeple, activities }) => {
   const [isAccordionOpen, setIsAccordionOpen] = useState<boolean>(false);
 
   const handleAccordionToggle = () => {
     setIsAccordionOpen((prev) => !prev);
   };
+
+  // // Filter data based on matching IDs from activities
+  // const filteredData = data.filter(row => activities.some(activity => activity.DocumentID === row.id));
+
+  // Filter data based on IDs not present in activities
+  const filteredData = data.filter(row => !activities.some(activity => activity.DocumentID === row.id));
+
+  // Sort filteredData based on the label (type)
+  const sortedData = filteredData.sort((a, b) => {
+    if (a.label < b.label) return -1;
+    if (a.label > b.label) return 1;
+    return 0;
+  });
 
   return (
     <Container>
@@ -74,11 +92,12 @@ const Userdoc: React.FC<UserdocProps> = ({ data, title }) => {
               marginLeft: '-0.5%',
             }}
           >
-             {title}
+            {poeple.name}
           </Typography>
         </AccordionSummary>
-        <ColumnTitle/>
-        {data.map((row) => (
+        <ColumnTitle /> {/* Render column headers */}
+
+        {sortedData.map((row) => (
           <div
             key={row.id}
             style={{
@@ -90,22 +109,31 @@ const Userdoc: React.FC<UserdocProps> = ({ data, title }) => {
               backgroundColor: row.id % 1 === 0 ? "#f5f5f5" : "#ffffff",
             }}
           >
-            <div>
+            <div style={{ flex: 1, textAlign: "left" }}>
               <Typography
                 style={{ fontSize: "large", fontFamily: "Calibri", color: '#003591' }}
               >
                 {row.content}
               </Typography>
             </div>
-            <div>
+            <div style={{ marginLeft: "auto", textAlign: "right" }}>
               <Typography
                 style={{ fontSize: "large", fontFamily: "Calibri", color: '#003591' }}
               >
                 {row.label}
               </Typography>
             </div>
+            <div style={{ marginLeft: "35px", textAlign: "right" }}> {/* Adjust marginLeft as needed */}
+              <Typography
+                style={{ fontSize: "large", fontFamily: "Calibri", color: '#003591' }}
+              >
+                {row.modified}
+              </Typography>
+            </div>
           </div>
         ))}
+
+
       </Accordion>
     </Container>
   );
