@@ -137,7 +137,7 @@ export default class HelloWorld extends React.Component<
   componentDidMount(): void {
     const people: IPeople[] = [{ name: "Daiyan Rafi", AuthorId: 28 }, { name: "Tanbir Hossain", AuthorId: 27 }, { name: "Mahfuzur Rahman", AuthorId: 26 }, { name: "Md Ismail", AuthorId: 25 }];
     const allDocuments: Row[] = documents
-      .filter((item: any) => item.DocumentType)
+      .filter((item: any) => item.DocumentType) // Filter out items with null or undefined DocumentType
       .map((item: any) => ({
         id: item.ID,
         label: item.DocumentType,
