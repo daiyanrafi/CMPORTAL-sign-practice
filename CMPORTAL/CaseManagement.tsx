@@ -31,6 +31,7 @@ export default class HelloWorld extends React.Component<
       // procedures: [],
       documents: [],
       people: [],
+      activities: [],
     };
     // this.fetchData();
     // this.postData();
@@ -135,7 +136,13 @@ export default class HelloWorld extends React.Component<
   // }
 
   componentDidMount(): void {
-    const people: IPeople[] = [{ name: "Daiyan Rafi", AuthorId: 28 }, { name: "Tanbir Hossain", AuthorId: 27 }, { name: "Mahfuzur Rahman", AuthorId: 26 }, { name: "Md Ismail", AuthorId: 25 }];
+    const people: IPeople[] = [
+      { name: "Daiyan Rafi", AuthorId: 28 },
+      { name: "Tanbir Hossain", AuthorId: 27 },
+      { name: "Mahfuzur Rahman", AuthorId: 26 },
+      { name: "Md Ismail", AuthorId: 25 }
+    ];
+
     const allDocuments: Row[] = documents
       .filter((item: any) => item.DocumentType) // Filter out items with null or undefined DocumentType
       .map((item: any) => ({
@@ -145,12 +152,12 @@ export default class HelloWorld extends React.Component<
         modified: item.Modified
       }));
 
-    this.setState({ documents: allDocuments, people });
+    this.setState({ documents: allDocuments, people, activities });
   }
 
   public render() {
     // let { policies, guidelines, directives, procedures, people } = this.state;
-    let { documents, people } = this.state;
+    const { documents, people, activities } = this.state;
     return (
       <div>
         {/* <h1>Hello world-</h1> */}
@@ -189,9 +196,15 @@ interface IState {
   // people: any;
   documents: Row[];
   people: IPeople[];
+  activities: Activity[];
 }
 
 export interface IPeople {
   name: string;
   AuthorId: number;
+}
+
+interface Activity {
+  DocumentID: number;
+  Created: string;
 }
