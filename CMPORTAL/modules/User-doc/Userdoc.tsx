@@ -45,9 +45,23 @@ const Userdoc: React.FC<UserdocProps> = ({ data, poeple, activities }) => {
     setIsAccordionOpen((prev) => !prev);
   };
 
-  const filteredData = data.filter(row => !activities.some(activity => activity.DocumentID === row.id));
+  // const filteredData = data.filter(row => !activities.some(activity => activity.DocumentID === row.id));
 
-  const sortedData = filteredData.sort((a, b) => {
+  // const sortedData = filteredData.sort((a, b) => {
+  //   if (a.label < b.label) return -1;
+  //   if (a.label > b.label) return 1;
+  //   return 0;
+  // });
+
+  const filterData = (rowData: Row[]) => {
+    return rowData.filter(row => {
+      // Check if the document exists in activities.json for the given author ID
+      const activityExists = activities.some(activity => activity.DocumentID === row.id && activity.AuthorId === poeple.AuthorId);
+      return !activityExists;
+    });
+  };
+
+  const sortedData = filterData(data).sort((a, b) => {
     if (a.label < b.label) return -1;
     if (a.label > b.label) return 1;
     return 0;

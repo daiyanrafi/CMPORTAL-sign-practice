@@ -10,4 +10,5 @@ export interface Row {
   label: string;
   content: string;
   modified: string;
+  AuthorId?: number;
 }

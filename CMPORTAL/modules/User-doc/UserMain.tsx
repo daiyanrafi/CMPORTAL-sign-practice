@@ -21,7 +21,6 @@ const UserMain: React.FC = () => {
     { name: "Daiyan Rafi", AuthorId: 28 },
     { name: "Tanbir Hossain", AuthorId: 27 },
     { name: "Mahfuzur Rahman", AuthorId: 26 },
-    { name: "jabur", AuthorId: 26 },
     { name: "Md Ismail", AuthorId: 25 }
   ];
 
