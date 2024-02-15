@@ -1,5 +1,6 @@
+// UserDoc.tsx
 import React, { useState } from "react";
-import { Row } from "./Row";
+import { IPeople, Row } from "./Row";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
@@ -8,7 +9,6 @@ import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
-import { IPeople } from "../../CaseManagement";
 import Papa from "papaparse";
 
 interface UserdocProps {
@@ -54,30 +54,19 @@ const Userdoc: React.FC<UserdocProps> = ({ data, poeple, activities }) => {
   });
 
   const exportToCSV = () => {
-  // Prepare column titles
-  const columnTitles = ["Author", "Name", "Type", "Date Modified"];
-
-  // Prepare CSV data
-  const csvData = [columnTitles, ...sortedData.map(row => [poeple.name, row.content, row.label, row.modified])];
-
-
-  // Generate CSV content
-  const csv = Papa.unparse(csvData);
-
-  // Create a blob and download the file
-  const blob = new Blob([csv], { type: 'text/csv' });
-  const url = window.URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = `User_Documents_${poeple.name}.csv`;
-  document.body.appendChild(a);
-  a.click();
-
-  // Cleanup
-  window.URL.revokeObjectURL(url);
-  document.body.removeChild(a);
-};
-
+    const columnTitles = ["Author", "Name", "Type", "Date Modified"];
+    const csvData = [columnTitles, ...sortedData.map(row => [poeple.name, row.content, row.label, row.modified])];
+    const csv = Papa.unparse(csvData);
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `User_Documents_${poeple.name}.csv`;
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+  };
 
   return (
     <Container>
@@ -152,14 +141,14 @@ const Userdoc: React.FC<UserdocProps> = ({ data, poeple, activities }) => {
           onClick={exportToCSV}
           style={{
             position: "absolute",
-            top: isAccordionOpen?"18px":"12px",
-            right: "50px", // Adjust the right position
+            top: isAccordionOpen ? "18px" : "12px",
+            right: "50px",
             fontSize: "small",
-            fontFamily: "Calibri", // Set font to Calibri
+            fontFamily: "Calibri",
             backgroundColor: "white",
             color: "black",
             border: "1px solid balck",
-            padding: isAccordionOpen? "5px 5px" : "2px 3px",
+            padding: isAccordionOpen ? "5px 5px" : "2px 3px",
           }}
         >
           Export to CSV

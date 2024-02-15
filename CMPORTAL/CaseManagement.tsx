@@ -14,25 +14,25 @@ import Userdoc from "./modules/User-doc/Userdoc";
 // import JsonTable from "./modules/Booking-table/JsonTable";
 // import BookingContainer from "./BookingContainer";
 import activities from './modules/User-doc/data/cactivities.json';
+import UserMain from "./modules/User-doc/UserMain";
 
 export default class HelloWorld extends React.Component<
-  ComponentFramework.Context<IInputs>,
-  IState
+  ComponentFramework.Context<IInputs>
 > {
   private _props: ComponentFramework.Context<IInputs>;
   constructor(props: ComponentFramework.Context<IInputs>) {
     super(props);
 
     this._props = props;
-    this.state = {
-      // policies: [],
-      // guidelines: [],
-      // directives: [],
-      // procedures: [],
-      documents: [],
-      people: [],
-      activities: [],
-    };
+    // this.state = {
+    //   policies: [],
+    //   guidelines: [],
+    //   directives: [],
+    //   procedures: [],
+    //   documents: [],
+    //   people: [],
+    //   activities: [],
+    // };
     // this.fetchData();
     // this.postData();
   }
@@ -135,29 +135,29 @@ export default class HelloWorld extends React.Component<
   //   });
   // }
 
-  componentDidMount(): void {
-    const people: IPeople[] = [
-      { name: "Daiyan Rafi", AuthorId: 28 },
-      { name: "Tanbir Hossain", AuthorId: 27 },
-      { name: "Mahfuzur Rahman", AuthorId: 26 },
-      { name: "Md Ismail", AuthorId: 25 }
-    ];
+  // componentDidMount(): void {
+  //   const people: IPeople[] = [
+  //     { name: "Daiyan Rafi", AuthorId: 28 },
+  //     { name: "Tanbir Hossain", AuthorId: 27 },
+  //     { name: "Mahfuzur Rahman", AuthorId: 26 },
+  //     { name: "Md Ismail", AuthorId: 25 }
+  //   ];
 
-    const allDocuments: Row[] = documents
-      .filter((item: any) => item.DocumentType) // Filter out items with null or undefined DocumentType
-      .map((item: any) => ({
-        id: item.ID,
-        label: item.DocumentType,
-        content: item.Title,
-        modified: item.Modified
-      }));
+  //   const allDocuments: Row[] = documents
+  //     .filter((item: any) => item.DocumentType) // Filter out items with null or undefined DocumentType
+  //     .map((item: any) => ({
+  //       id: item.ID,
+  //       label: item.DocumentType,
+  //       content: item.Title,
+  //       modified: item.Modified
+  //     }));
 
-    this.setState({ documents: allDocuments, people, activities });
-  }
+  //   this.setState({ documents: allDocuments, people, activities });
+  // }
 
   public render() {
     // let { policies, guidelines, directives, procedures, people } = this.state;
-    const { documents, people, activities } = this.state;
+    // const { documents, people, activities } = this.state;
     return (
       <div>
         {/* <h1>Hello world-</h1> */}
@@ -165,6 +165,8 @@ export default class HelloWorld extends React.Component<
         {/* <Button/> */}
         {/* <App/> */}
         {/* <BookingContainer /> */}
+        <UserMain/>
+        
         {/* <Dropdown data={policies} title="Policies" />
         <Dropdown data={guidelines} title="Guidelines" />
         <Dropdown data={directives} title="Directives" />
@@ -178,33 +180,33 @@ export default class HelloWorld extends React.Component<
           })
         } */}
 
-        {people.map((person: IPeople) => (
+        {/* {people.map((person: IPeople) => (
           <div key={person.name}>
             <Userdoc data={documents} poeple={person} activities={activities} />
           </div>
-        ))}
+        ))} */}
       </div>
     );
   }
 }
 
-interface IState {
-  // policies: any;
-  // guidelines: any;
-  // directives: any;
-  // procedures: any;
-  // people: any;
-  documents: Row[];
-  people: IPeople[];
-  activities: Activity[];
-}
+// interface IState {
+//   policies: any;
+//   guidelines: any;
+//   directives: any;
+//   procedures: any;
+//   people: any;
+//   documents: Row[];
+//   people: IPeople[];
+//   activities: Activity[];
+// }
 
-export interface IPeople {
-  name: string;
-  AuthorId: number;
-}
+// export interface IPeople {
+//   name: string;
+//   AuthorId: number;
+// }
 
-interface Activity {
-  DocumentID: number;
-  Created: string;
-}
+// interface Activity {
+//   DocumentID: number;
+//   Created: string;
+// }
