@@ -565,7 +565,17 @@ const MultiDropDown: React.FC = () => {
                     text: costCode || 'Unknown' // handle null values
                 }));
                 setCostCodeOptions(costCodeOptions);
+            } else {
+                // Reset options for service and cost code dropdowns if no product is selected
+                setServiceOptions([]);
+                setCostCodeOptions([]);
+                setSelectedServiceCategory(undefined); // Reset selected category
             }
+        } else {
+            // Reset options for service and cost code dropdowns if no option is selected
+            setServiceOptions([]);
+            setCostCodeOptions([]);
+            setSelectedServiceCategory(undefined); // Reset selected category
         }
     };
 
