@@ -1,52 +1,3 @@
-// // Dropdowns.tsx
-// import React, { useState } from 'react';
-// import { Stack, Dropdown, IDropdownOption } from '@fluentui/react';
-
-// interface DropdownData {
-//     id: string;
-//     label: string;
-//     options: { key: string; text: string }[];
-// }
-
-// interface Props {
-//     dropdowns: DropdownData[];
-// }
-
-// const Dropdowns: React.FC<Props> = ({ dropdowns }) => {
-//     const [selectedKeys, setSelectedKeys] = useState<{ [key: string]: string | number | undefined }>({});
-
-//     const handleDropdownChange = (id: string, option: IDropdownOption | undefined): void => {
-//         if (option) {
-//             const newSelectedKeys = { ...selectedKeys, [id]: option.key };
-//             setSelectedKeys(newSelectedKeys);
-//             console.log(`Dropdown ${id} selected option:`, option);
-//             // Send selected value to backend
-//             // Example: sendSelectedValueToBackend(id, option.key);
-//         }
-//     };
-
-//     return (
-//         <Stack>
-//             {dropdowns.map(dropdown => (
-//                 <Dropdown
-//                     key={dropdown.id}
-//                     label={dropdown.label}
-//                     options={dropdown.options.map(option => ({
-//                         key: option.key,
-//                         text: option.text
-//                     }))}
-//                     onChange={(ev, option) => handleDropdownChange(dropdown.id, option)}
-//                     selectedKey={selectedKeys[dropdown.id]}
-//                     // selectedKey={null} // Set to null if you don't want any default selection
-//                 />
-//             ))}
-//         </Stack>
-//     );
-// };
-
-// export default Dropdowns;
-
-// Dropdowns.tsx
 // import React from 'react';
 // import { Stack, Dropdown, IDropdownOption } from '@fluentui/react';
 
@@ -58,72 +9,14 @@
 
 // interface Props {
 //     dropdowns: DropdownData[];
+//     handleDropdownChange: (id: string) => (ev: React.FormEvent<HTMLDivElement>, option?: IDropdownOption) => void;
 // }
 
-// const Dropdowns: React.FC<Props> = ({ dropdowns }) => {
-//     const handleDropdownChange = (id: string) => (ev: React.FormEvent<HTMLDivElement>, option?: IDropdownOption): void => {
-//         if (option) {
-//             console.log(`Dropdown ${id} selected option:`, option);
-//             // Send selected value to backend
-//             // Example: sendSelectedValueToBackend(id, option.key);
-//         }
-//     };
-
+// const Dropdowns: React.FC<Props> = ({ dropdowns, handleDropdownChange }) => {
 //     return (
 //         <Stack horizontalAlign="center">
 //             {dropdowns.map(dropdown => (
-//                 <Dropdown
-//                     key={dropdown.id}
-//                     label={dropdown.label}
-//                     options={dropdown.options.map(option => ({
-//                         key: option.key,
-//                         text: option.text
-//                     }))}
-//                     onChange={handleDropdownChange(dropdown.id)}
-//                     style={{ width: '200px' }} // Adjust the width as needed
-//                 />
-//             ))}
-//         </Stack>
-
-//     );
-// };
-
-// export default Dropdowns;
-
-// Dropdowns.tsx
-// import React from 'react';
-// import { Stack, Dropdown, IDropdownStyles, IDropdownOption } from '@fluentui/react';
-
-// interface DropdownData {
-//     id: string;
-//     label: string;
-//     options: { key: string; text: string }[];
-// }
-
-// interface Props {
-//     dropdowns: DropdownData[];
-// }
-
-// const Dropdowns: React.FC<Props> = ({ dropdowns }) => {
-//     const handleDropdownChange = (id: string) => (ev: React.FormEvent<HTMLDivElement>, option?: IDropdownOption): void => {
-//         if (option) {
-//             console.log(`Dropdown ${id} selected option:`, option);
-//             // Send selected value to backend
-//             // Example: sendSelectedValueToBackend(id, option.key);
-//         }
-//     };
-
-//     const dropdownStyles: Partial<IDropdownStyles> = {
-//         dropdown: { width: 200 },
-//         title: { fontWeight: 'bold' },
-//         caretDownWrapper: { top: '25%' },
-//         dropdownItem: { height: 30, lineHeight: '30px' }
-//     };
-
-//     return (
-//         <Stack horizontalAlign="center">
-//             {dropdowns.map(dropdown => (
-//                 <div key={dropdown.id} style={{ margin: '10px', width: '200px' }}>
+//                 <div style={{ textAlign: 'left', width: '200px', margin: '10px' }} key={dropdown.id}>
 //                     <Dropdown
 //                         label={dropdown.label}
 //                         options={dropdown.options.map(option => ({
@@ -131,7 +24,6 @@
 //                             text: option.text
 //                         }))}
 //                         onChange={handleDropdownChange(dropdown.id)}
-//                         styles={dropdownStyles}
 //                     />
 //                 </div>
 //             ))}
@@ -141,38 +33,130 @@
 
 // export default Dropdowns;
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// import React from 'react';
+// import { Stack, Dropdown, IDropdownOption } from '@fluentui/react';
+
+// interface Props {
+//     serviceCategoryOptions: IDropdownOption[];
+//     serviceOptions: IDropdownOption[];
+//     costCodeOptions: IDropdownOption[];
+//     handleServiceCategoryChange: (ev: React.FormEvent<HTMLDivElement>, option?: IDropdownOption) => void;
+// }
+
+// const Dropdowns: React.FC<Props> = ({ serviceCategoryOptions, serviceOptions, costCodeOptions, handleServiceCategoryChange }) => {
+//     return (
+//         <div>
+//             <Stack horizontalAlign="center">
+//                 <div style={{ textAlign: 'left', width: '200px', margin: '10px' }}>
+//                     <Dropdown
+//                         label="Service Category"
+//                         options={serviceCategoryOptions}
+//                         onChange={handleServiceCategoryChange}
+//                     />
+//                 </div>
+//                 <div style={{ textAlign: 'left', width: '200px', margin: '10px' }}>
+//                     <Dropdown
+//                         label="Service"
+//                         options={serviceOptions}
+//                     />
+//                 </div>
+//                 <div style={{ textAlign: 'left', width: '200px', margin: '10px' }}>
+//                     <Dropdown
+//                         label="Cost Code"
+//                         options={costCodeOptions}
+//                     />
+//                 </div>
+//             </Stack>
+//         </div>
+//     );
+// };
+
+// export default Dropdowns;
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Dropdown.tsx
+// import React from 'react';
+// import { Stack, Dropdown, IDropdownOption } from '@fluentui/react';
+
+// interface DropdownProps {
+//     label: string;
+//     options: IDropdownOption[];
+//     onChange?: (ev: React.FormEvent<HTMLDivElement>, option?: IDropdownOption) => void;
+// }
+
+// const CustomDropdown: React.FC<DropdownProps> = ({ label, options, onChange }) => {
+//     return (
+//         <div style={{ textAlign: 'left', width: '200px', margin: '10px' }}>
+//             <Dropdown
+//                 label={label}
+//                 options={options}
+//                 onChange={onChange}
+//             />
+//         </div>
+//     );
+// };
+
+// export default CustomDropdown;
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 import React from 'react';
 import { Stack, Dropdown, IDropdownOption } from '@fluentui/react';
 
-interface DropdownData {
-    id: string;
-    label: string;
-    options: { key: string; text: string }[];
-}
-
 interface Props {
-    dropdowns: DropdownData[];
-    handleDropdownChange: (id: string) => (ev: React.FormEvent<HTMLDivElement>, option?: IDropdownOption) => void;
+    serviceCategoryOptions: IDropdownOption[];
+    serviceOptions: IDropdownOption[];
+    costCodeOptions: IDropdownOption[];
+    handleServiceCategoryChange: (ev: React.FormEvent<HTMLDivElement>, option?: IDropdownOption) => void;
 }
 
-const Dropdowns: React.FC<Props> = ({ dropdowns, handleDropdownChange }) => {
+const Dropdowns: React.FC<Props> = ({ serviceCategoryOptions, serviceOptions, costCodeOptions, handleServiceCategoryChange }) => {
+    const handleDropdownChange = (dropdownId: string, option?: IDropdownOption): void => {
+        console.log(`Dropdown ID: ${dropdownId}`);
+        if (option) {
+            console.log('Selected Option:', option);
+        }
+    };
+
     return (
-        <Stack horizontalAlign="center">
-            {dropdowns.map(dropdown => (
-                <div style={{ textAlign: 'left', width: '200px', margin: '10px' }} key={dropdown.id}> {/* Align dropdown to the left */}
+        <div>
+            <Stack horizontalAlign="center">
+                <div style={{ textAlign: 'left', width: '200px', margin: '10px' }}>
                     <Dropdown
-                        label={dropdown.label}
-                        options={dropdown.options.map(option => ({
-                            key: option.key,
-                            text: option.text
-                        }))}
-                        onChange={handleDropdownChange(dropdown.id)}
+                        label="Service Category"
+                        options={serviceCategoryOptions}
+                        onChange={(ev, option) => {
+                            handleServiceCategoryChange(ev, option);
+                            handleDropdownChange('serviceCategory', option);
+                        }}
                     />
                 </div>
-            ))}
-        </Stack>
+                <div style={{ textAlign: 'left', width: '200px', margin: '10px' }}>
+                    <Dropdown
+                        label="Service"
+                        options={serviceOptions}
+                        onChange={(ev, option) => {
+                            handleDropdownChange('service', option);
+                        }}
+                    />
+                </div>
+                <div style={{ textAlign: 'left', width: '200px', margin: '10px' }}>
+                    <Dropdown
+                        label="Cost Code"
+                        options={costCodeOptions}
+                        onChange={(ev, option) => {
+                            handleDropdownChange('costCode', option);
+                        }}
+                    />
+                </div>
+            </Stack>
+        </div>
     );
 };
 
 export default Dropdowns;
-

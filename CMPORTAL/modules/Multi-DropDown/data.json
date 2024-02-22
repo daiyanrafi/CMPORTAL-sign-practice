@@ -1,0 +1,747 @@
+[
+    {
+        "@odata.etag": "W/\"12145102\"",
+        "productid": "92ae0db1-66c6-ee11-9079-000d3a9ddee4",
+        "name": "OCCUPATIONAL THERAPY",
+        "productnumber": "OCCUPATIONAL_THERAPY",
+        "hierarchypath": null,
+        "sabs_costcode": null,
+        "sabs_servicetype": null
+    },
+    {
+        "@odata.etag": "W/\"12145153\"",
+        "productid": "2dfac8e1-66c6-ee11-9079-000d3a9ddee4",
+        "name": "SPEECH PATHOLOGY",
+        "productnumber": "SPEECH_PATHOLOGY",
+        "hierarchypath": null,
+        "sabs_costcode": null,
+        "sabs_servicetype": null
+    },
+    {
+        "@odata.etag": "W/\"12145058\"",
+        "productid": "9c959308-67c6-ee11-9079-000d3a9ddee4",
+        "name": "ART THERAPY",
+        "productnumber": "ART_THERAPY",
+        "hierarchypath": null,
+        "sabs_costcode": null,
+        "sabs_servicetype": null
+    },
+    {
+        "@odata.etag": "W/\"12145126\"",
+        "productid": "7af11e21-67c6-ee11-9079-000d3a9ddee4",
+        "name": "PSYCHOLOGY",
+        "productnumber": "PSYCHOLOGY",
+        "hierarchypath": null,
+        "sabs_costcode": null,
+        "sabs_servicetype": null
+    },
+    {
+        "@odata.etag": "W/\"12145083\"",
+        "productid": "2a26b841-67c6-ee11-9079-000d3a9ddee4",
+        "name": "BEHAVIOUR SUPPORT",
+        "productnumber": "BEHAVIOUR_SUPPORT",
+        "hierarchypath": null,
+        "sabs_costcode": null,
+        "sabs_servicetype": null
+    },
+    {
+        "@odata.etag": "W/\"12493576\"",
+        "productid": "ee10c5ff-02cb-ee11-9079-000d3a9ddee4",
+        "name": "SESSION",
+        "productnumber": "P-01003-G6J8R6",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "10958",
+        "sabs_servicetype": 272470000,
+        "sabs_servicetypetext": "MEDICARE-OT"
+    },
+    {
+        "@odata.etag": "W/\"12493584\"",
+        "productid": "f110c5ff-02cb-ee11-9079-000d3a9ddee4",
+        "name": "PLANNING",
+        "productnumber": "P-01004-V2G2L0",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "PLAHPOT",
+        "sabs_servicetype": 272470000,
+        "sabs_servicetypetext": "MEDICARE-OT"
+    },
+    {
+        "@odata.etag": "W/\"12493591\"",
+        "productid": "f410c5ff-02cb-ee11-9079-000d3a9ddee4",
+        "name": "REPORT",
+        "productnumber": "P-01005-G5X6C8",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "RPAHPOT",
+        "sabs_servicetype": 272470000,
+        "sabs_servicetypetext": "MEDICARE-OT"
+    },
+    {
+        "@odata.etag": "W/\"12493598\"",
+        "productid": "9fb5bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "SESSION NOTES",
+        "productnumber": "P-01006-K5H8R2",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "SNAHPOT",
+        "sabs_servicetype": 272470000,
+        "sabs_servicetypetext": "MEDICARE-OT"
+    },
+    {
+        "@odata.etag": "W/\"12493605\"",
+        "productid": "a2b5bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "TRAVEL",
+        "productnumber": "P-01007-B7S2V3",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "TRVAHPOT",
+        "sabs_servicetype": 272470000,
+        "sabs_servicetypetext": "MEDICARE-OT"
+    },
+    {
+        "@odata.etag": "W/\"12493612\"",
+        "productid": "a5b5bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "SESSION",
+        "productnumber": "P-01008-Q4X1J7",
+        "hierarchypath": "SPEECH PATHOLOGY",
+        "sabs_costcode": "10970",
+        "sabs_servicetype": 272470001,
+        "sabs_servicetypetext": "MEDICARE-SP"
+    },
+    {
+        "@odata.etag": "W/\"12493619\"",
+        "productid": "a8b5bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "ASSESSMENT RECOMMENDATION THERAPY OR TRAINING SUPPORTS-OCCUPATIONAL THERAPIST",
+        "productnumber": "P-01009-X2C8V2",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "01_661_0128_1_3",
+        "sabs_servicetype": 272470002,
+        "sabs_servicetypetext": "NDIS"
+    },
+    {
+        "@odata.etag": "W/\"12493626\"",
+        "productid": "abb5bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "ASSESSMENT RECOMMENDATION THERAPY OR TRAINING-ART THERAPIST",
+        "productnumber": "P-01010-G1J7X5",
+        "hierarchypath": "ART THERAPY",
+        "sabs_costcode": "15_610_0128_1_3",
+        "sabs_servicetype": 272470002,
+        "sabs_servicetypetext": "NDIS"
+    },
+    {
+        "@odata.etag": "W/\"12493633\"",
+        "productid": "aeb5bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "ASSESSMENT RECOMMENDATION THERAPY OR TRAINING-EC-OCCUPATIONAL THERAPIST",
+        "productnumber": "P-01011-R9B1D6",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "01_650_0118_1_3",
+        "sabs_servicetype": 272470002,
+        "sabs_servicetypetext": "NDIS"
+    },
+    {
+        "@odata.etag": "W/\"12493640\"",
+        "productid": "b1b5bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "ASSESSMENT RECOMMENDATION THERAPY OR TRAINING-EC-PSYCHOLOGIST",
+        "productnumber": "P-01012-G4S5N1",
+        "hierarchypath": "PSYCHOLOGY",
+        "sabs_costcode": "15_001_0118_1_3",
+        "sabs_servicetype": 272470002,
+        "sabs_servicetypetext": "NDIS"
+    },
+    {
+        "@odata.etag": "W/\"12493647\"",
+        "productid": "b4b5bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "ASSESSMENT RECOMMENDATION THERAPY OR TRAINING-EC-SPEECH PATHOLOGIST",
+        "productnumber": "P-01013-X0Z7Z3",
+        "hierarchypath": "SPEECH PATHOLOGY",
+        "sabs_costcode": "01_653_0118_1_3",
+        "sabs_servicetype": 272470002,
+        "sabs_servicetypetext": "NDIS"
+    },
+    {
+        "@odata.etag": "W/\"12493654\"",
+        "productid": "b7b5bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "ASSESSMENT RECOMMENDATION THERAPY OR TRAINING-OCCUPATIONAL THERAPIST",
+        "productnumber": "P-01014-V3V6S5",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "15_617_0128_1_3",
+        "sabs_servicetype": 272470002,
+        "sabs_servicetypetext": "NDIS"
+    },
+    {
+        "@odata.etag": "W/\"12493661\"",
+        "productid": "bab5bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "ASSESSMENT RECOMMENDATION THERAPY OR TRAINING-PSYCHOLOGIST",
+        "productnumber": "P-01015-D3C3L5",
+        "hierarchypath": "PSYCHOLOGY",
+        "sabs_costcode": "15_054_0128_1_3",
+        "sabs_servicetype": 272470002,
+        "sabs_servicetypetext": "NDIS"
+    },
+    {
+        "@odata.etag": "W/\"12493668\"",
+        "productid": "bdb5bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "ASSESSMENT RECOMMENDATION THERAPY OR TRAINING-SPEECH PATHOLOGIST",
+        "productnumber": "P-01016-K2W1Y2",
+        "hierarchypath": "SPEECH PATHOLOGY",
+        "sabs_costcode": "15_622_0128_1_3",
+        "sabs_servicetype": 272470002,
+        "sabs_servicetypetext": "NDIS"
+    },
+    {
+        "@odata.etag": "W/\"12493675\"",
+        "productid": "c0b5bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "BEHAVIOUR MANAGEMENT PLAN INCLUDING TRAINING IN BEHAVIOUR MANAGEMENT STRATEGIES",
+        "productnumber": "P-01017-G6R2V4",
+        "hierarchypath": "BEHAVIOUR SUPPORT",
+        "sabs_costcode": "11_023_0110_7_3",
+        "sabs_servicetype": 272470002,
+        "sabs_servicetypetext": "NDIS"
+    },
+    {
+        "@odata.etag": "W/\"12493682\"",
+        "productid": "c3b5bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "EARLY CHILDHOOD SUPPORTS-OTHER PROFESSIONAL",
+        "productnumber": "P-01018-H6N4N8",
+        "hierarchypath": "BEHAVIOUR SUPPORT",
+        "sabs_costcode": "15_005_0118_1_3",
+        "sabs_servicetype": 272470002,
+        "sabs_servicetypetext": "NDIS"
+    },
+    {
+        "@odata.etag": "W/\"12493689\"",
+        "productid": "c6b5bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "EARLY CHILDHOOD SUPPORTS-OTHER PROFESSIONAL",
+        "productnumber": "P-01019-J5D3Q9",
+        "hierarchypath": "SPEECH PATHOLOGY",
+        "sabs_costcode": "15_005_0118_1_3",
+        "sabs_servicetype": 272470002,
+        "sabs_servicetypetext": "NDIS"
+    },
+    {
+        "@odata.etag": "W/\"12493696\"",
+        "productid": "c9b5bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "EARLY CHILDHOOD SUPPORTS-OTHER PROFESSIONAL",
+        "productnumber": "P-01020-V5J8L0",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "15_005_0118_1_3",
+        "sabs_servicetype": 272470002,
+        "sabs_servicetypetext": "NDIS"
+    },
+    {
+        "@odata.etag": "W/\"12493703\"",
+        "productid": "ccb5bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "EARLY CHILDHOOD SUPPORTS-THERAPY ASSISTANT-L2",
+        "productnumber": "P-01021-H9W0J7",
+        "hierarchypath": "SPEECH PATHOLOGY",
+        "sabs_costcode": "15_008_0118_1_3",
+        "sabs_servicetype": 272470002,
+        "sabs_servicetypetext": "NDIS"
+    },
+    {
+        "@odata.etag": "W/\"12493710\"",
+        "productid": "cfb5bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "EARLY CHILDHOOD SUPPORTS-THERAPY ASSISTANT-L2",
+        "productnumber": "P-01022-G7Q8W0",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "15_008_0118_1_3",
+        "sabs_servicetype": 272470002,
+        "sabs_servicetypetext": "NDIS"
+    },
+    {
+        "@odata.etag": "W/\"12493717\"",
+        "productid": "d2b5bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "EMPLOYMENT RELATED ASSESSMENT AND COUNSELLING",
+        "productnumber": "P-01023-P2F0P1",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "10_011_0128_5_3",
+        "sabs_servicetype": 272470002,
+        "sabs_servicetypetext": "NDIS"
+    },
+    {
+        "@odata.etag": "W/\"12493724\"",
+        "productid": "d5b5bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "SPECIALIST BEHAVIOURAL INTERVENTION SUPPORT",
+        "productnumber": "P-01024-B5N0S2",
+        "hierarchypath": "BEHAVIOUR SUPPORT",
+        "sabs_costcode": "11_022_0110_7_3",
+        "sabs_servicetype": 272470002,
+        "sabs_servicetypetext": "NDIS"
+    },
+    {
+        "@odata.etag": "W/\"12493731\"",
+        "productid": "d8b5bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "THERAPY ASSISTANT - LEVEL 2",
+        "productnumber": "P-01025-Y9V4M8",
+        "hierarchypath": "SPEECH PATHOLOGY",
+        "sabs_costcode": "15_053_0128_1_3",
+        "sabs_servicetype": 272470002,
+        "sabs_servicetypetext": "NDIS"
+    },
+    {
+        "@odata.etag": "W/\"12493738\"",
+        "productid": "dbb5bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "THERAPY ASSISTANT - LEVEL 2",
+        "productnumber": "P-01026-W7Q3W4",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "15_053_0128_1_3",
+        "sabs_servicetype": 272470002,
+        "sabs_servicetypetext": "NDIS"
+    },
+    {
+        "@odata.etag": "W/\"12493745\"",
+        "productid": "deb5bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "PLANNING",
+        "productnumber": "P-01027-F7J3M8",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "PLAHAOT",
+        "sabs_servicetype": 272470003,
+        "sabs_servicetypetext": "OT-AHA"
+    },
+    {
+        "@odata.etag": "W/\"12493752\"",
+        "productid": "e1b5bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "RESOURCE DEVELOPMENT",
+        "productnumber": "P-01028-B5P0H2",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "RDAHAOT",
+        "sabs_servicetype": 272470003,
+        "sabs_servicetypetext": "OT-AHA"
+    },
+    {
+        "@odata.etag": "W/\"12493759\"",
+        "productid": "e4b5bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "SESSION NOTES",
+        "productnumber": "P-01029-K3Q5H2",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "SNAHAOT",
+        "sabs_servicetype": 272470003,
+        "sabs_servicetypetext": "OT-AHA"
+    },
+    {
+        "@odata.etag": "W/\"12493766\"",
+        "productid": "e7b5bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "SESSION-OCCUPATIONAL THERAPY",
+        "productnumber": "P-01030-K0S0T2",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "SESSAHAOT",
+        "sabs_servicetype": 272470003,
+        "sabs_servicetypetext": "OT-AHA"
+    },
+    {
+        "@odata.etag": "W/\"12493773\"",
+        "productid": "eab5bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "TRAVEL",
+        "productnumber": "P-01031-J9H9D2",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "TRVAHAOT",
+        "sabs_servicetype": 272470003,
+        "sabs_servicetypetext": "OT-AHA"
+    },
+    {
+        "@odata.etag": "W/\"12493780\"",
+        "productid": "edb5bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "ACTIVITY OF DAILY LIVING ASSESSMENT",
+        "productnumber": "P-01032-G1T0V7",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "ADLASX",
+        "sabs_servicetype": 272470004,
+        "sabs_servicetypetext": "OT-AHP"
+    },
+    {
+        "@odata.etag": "W/\"12493787\"",
+        "productid": "f0b5bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "ACTIVITY OF DAILY LIVING REPORT",
+        "productnumber": "P-01033-S8J5F5",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "ADLREP",
+        "sabs_servicetype": 272470004,
+        "sabs_servicetypetext": "OT-AHP"
+    },
+    {
+        "@odata.etag": "W/\"12493794\"",
+        "productid": "f3b5bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "ASSISTIVE TECHNOLOGY ASSESSMENT",
+        "productnumber": "P-01034-Z2K6V8",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "ATASX",
+        "sabs_servicetype": 272470004,
+        "sabs_servicetypetext": "OT-AHP"
+    },
+    {
+        "@odata.etag": "W/\"12493801\"",
+        "productid": "f6b5bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "ASSISTIVE TECHNOLOGY REPORT",
+        "productnumber": "P-01035-Q5N4B6",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "ATREP",
+        "sabs_servicetype": 272470004,
+        "sabs_servicetypetext": "OT-AHP"
+    },
+    {
+        "@odata.etag": "W/\"12493808\"",
+        "productid": "f9b5bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "EMAIL",
+        "productnumber": "P-01036-S1D4H1",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "EM",
+        "sabs_servicetype": 272470004,
+        "sabs_servicetypetext": "OT-AHP"
+    },
+    {
+        "@odata.etag": "W/\"12493815\"",
+        "productid": "fcb5bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "ERGONOMIC WORKSTATION ASSESSMENT",
+        "productnumber": "P-01037-S9B3R2",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "EWSASX",
+        "sabs_servicetype": 272470004,
+        "sabs_servicetypetext": "OT-AHP"
+    },
+    {
+        "@odata.etag": "W/\"12493822\"",
+        "productid": "ffb5bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "ERGONOMIC WORKSTATION REPORT",
+        "productnumber": "P-01038-M4G6P2",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "EWSREP",
+        "sabs_servicetype": 272470004,
+        "sabs_servicetypetext": "OT-AHP"
+    },
+    {
+        "@odata.etag": "W/\"12493830\"",
+        "productid": "02b6bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "FUNCTIONAL CAPACITY ASSESSMENT",
+        "productnumber": "P-01039-D2M1F6",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "FCASX",
+        "sabs_servicetype": 272470004,
+        "sabs_servicetypetext": "OT-AHP"
+    },
+    {
+        "@odata.etag": "W/\"12493837\"",
+        "productid": "05b6bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "FUNCTIONAL CAPACITY ASSESSMENT REPORT",
+        "productnumber": "P-01040-N2D3R3",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "FCREP",
+        "sabs_servicetype": 272470004,
+        "sabs_servicetypetext": "OT-AHP"
+    },
+    {
+        "@odata.etag": "W/\"12493845\"",
+        "productid": "08b6bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "INITIAL ASSESSMENT REPORT (BRIEF)",
+        "productnumber": "P-01041-G0R4J9",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "INABREPOT",
+        "sabs_servicetype": 272470004,
+        "sabs_servicetypetext": "OT-AHP"
+    },
+    {
+        "@odata.etag": "W/\"12493852\"",
+        "productid": "0bb6bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "INITIAL ASSESSMENT REPORT (COMPREHENSIVE)",
+        "productnumber": "P-01042-N0N1X4",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "INACREPOT",
+        "sabs_servicetype": 272470004,
+        "sabs_servicetypetext": "OT-AHP"
+    },
+    {
+        "@odata.etag": "W/\"12493859\"",
+        "productid": "0eb6bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "INITIAL ASSESSMENT-OCCUPATIONAL THERAPY",
+        "productnumber": "P-01043-X4Z7B3",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "INAOT",
+        "sabs_servicetype": 272470004,
+        "sabs_servicetypetext": "OT-AHP"
+    },
+    {
+        "@odata.etag": "W/\"12493866\"",
+        "productid": "11b6bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "MANUAL HANDLING ASSESSMENT",
+        "productnumber": "P-01044-J7D4X9",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "MHASXOT",
+        "sabs_servicetype": 272470004,
+        "sabs_servicetypetext": "OT-AHP"
+    },
+    {
+        "@odata.etag": "W/\"12493873\"",
+        "productid": "14b6bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "MANUAL HANDLING ASSESSMENT REPORT",
+        "productnumber": "P-01045-N5M6B3",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "MHREPOT",
+        "sabs_servicetype": 272470004,
+        "sabs_servicetypetext": "OT-AHP"
+    },
+    {
+        "@odata.etag": "W/\"12493880\"",
+        "productid": "17b6bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "PERSONALISED TREATMENT PROGRAM",
+        "productnumber": "P-01046-N2L7R6",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "PTPAHPOT",
+        "sabs_servicetype": 272470004,
+        "sabs_servicetypetext": "OT-AHP"
+    },
+    {
+        "@odata.etag": "W/\"12493887\"",
+        "productid": "1ab6bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "PHONE CALL",
+        "productnumber": "P-01047-Z6K0T1",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "PCAHPOT",
+        "sabs_servicetype": 272470004,
+        "sabs_servicetypetext": "OT-AHP"
+    },
+    {
+        "@odata.etag": "W/\"12493894\"",
+        "productid": "1db6bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "PHONE CALL",
+        "productnumber": "P-01048-K7D3H1",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "AHAPCOT",
+        "sabs_servicetype": 272470004,
+        "sabs_servicetypetext": "OT-AHP"
+    },
+    {
+        "@odata.etag": "W/\"12493901\"",
+        "productid": "20b6bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "PLANNING",
+        "productnumber": "P-01049-R2Z9J2",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "PLAHPOT",
+        "sabs_servicetype": 272470004,
+        "sabs_servicetypetext": "OT-AHP"
+    },
+    {
+        "@odata.etag": "W/\"12493908\"",
+        "productid": "23b6bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "PROGRESS REPORT",
+        "productnumber": "P-01050-N3M5G0",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "PREPOT",
+        "sabs_servicetype": 272470004,
+        "sabs_servicetypetext": "OT-AHP"
+    },
+    {
+        "@odata.etag": "W/\"12493915\"",
+        "productid": "26b6bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "REPORT",
+        "productnumber": "P-01051-Y5X5W8",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "REPOT",
+        "sabs_servicetype": 272470004,
+        "sabs_servicetypetext": "OT-AHP"
+    },
+    {
+        "@odata.etag": "W/\"12493922\"",
+        "productid": "29b6bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "RESOURCE DEVELOPMENT",
+        "productnumber": "P-01052-W3R5G4",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "RDAHPOT",
+        "sabs_servicetype": 272470004,
+        "sabs_servicetypetext": "OT-AHP"
+    },
+    {
+        "@odata.etag": "W/\"12493929\"",
+        "productid": "2cb6bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "SESSION NOTES",
+        "productnumber": "P-01053-R7R4C3",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "SNAHPOT",
+        "sabs_servicetype": 272470004,
+        "sabs_servicetypetext": "OT-AHP"
+    },
+    {
+        "@odata.etag": "W/\"12493936\"",
+        "productid": "2fb6bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "SESSION-OCCUPATIONAL THERAPY",
+        "productnumber": "P-01054-S8V9D6",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "SESSAHPOT",
+        "sabs_servicetype": 272470004,
+        "sabs_servicetypetext": "OT-AHP"
+    },
+    {
+        "@odata.etag": "W/\"12493943\"",
+        "productid": "32b6bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "TRAVEL",
+        "productnumber": "P-01055-Z3H7L3",
+        "hierarchypath": "OCCUPATIONAL THERAPY",
+        "sabs_costcode": "TRVAHPOT",
+        "sabs_servicetype": 272470004,
+        "sabs_servicetypetext": "OT-AHP"
+    },
+    {
+        "@odata.etag": "W/\"12493950\"",
+        "productid": "35b6bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "ADHD ASSESSMENT & REPORT",
+        "productnumber": "P-01056-M7S7V1",
+        "hierarchypath": "PSYCHOLOGY",
+        "sabs_costcode": "ADHDPSY",
+        "sabs_servicetype": 272470005,
+        "sabs_servicetypetext": "PSY-HP"
+    },
+    {
+        "@odata.etag": "W/\"12493957\"",
+        "productid": "38b6bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "PHONE CALL",
+        "productnumber": "P-01057-J4V8Q7",
+        "hierarchypath": "SPEECH PATHOLOGY",
+        "sabs_costcode": "AHAPCSP",
+        "sabs_servicetype": 272470006,
+        "sabs_servicetypetext": "SP-AHA"
+    },
+    {
+        "@odata.etag": "W/\"12493964\"",
+        "productid": "3bb6bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "PLANNING",
+        "productnumber": "P-01058-Y9J5N3",
+        "hierarchypath": "SPEECH PATHOLOGY",
+        "sabs_costcode": "PLAHASP",
+        "sabs_servicetype": 272470006,
+        "sabs_servicetypetext": "SP-AHA"
+    },
+    {
+        "@odata.etag": "W/\"12493971\"",
+        "productid": "3eb6bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "RESOURCE DEVELOPMENT",
+        "productnumber": "P-01059-G8T6B7",
+        "hierarchypath": "SPEECH PATHOLOGY",
+        "sabs_costcode": "RDAHASP",
+        "sabs_servicetype": 272470006,
+        "sabs_servicetypetext": "SP-AHA"
+    },
+    {
+        "@odata.etag": "W/\"12493978\"",
+        "productid": "41b6bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "SESSION NOTES",
+        "productnumber": "P-01060-X1B5Z2",
+        "hierarchypath": "SPEECH PATHOLOGY",
+        "sabs_costcode": "SNAHASP",
+        "sabs_servicetype": 272470006,
+        "sabs_servicetypetext": "SP-AHA"
+    },
+    {
+        "@odata.etag": "W/\"12493985\"",
+        "productid": "44b6bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "SESSION-SPEECH PATHOLOGY",
+        "productnumber": "P-01061-L8M8X8",
+        "hierarchypath": "SPEECH PATHOLOGY",
+        "sabs_costcode": "SESSAHASP",
+        "sabs_servicetype": 272470006,
+        "sabs_servicetypetext": "SP-AHA"
+    },
+    {
+        "@odata.etag": "W/\"12493992\"",
+        "productid": "47b6bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "TRAVEL",
+        "productnumber": "P-01062-R9Y4X6",
+        "hierarchypath": "SPEECH PATHOLOGY",
+        "sabs_costcode": "TRVAHASP",
+        "sabs_servicetype": 272470006,
+        "sabs_servicetypetext": "SP-AHA"
+    },
+    {
+        "@odata.etag": "W/\"12493999\"",
+        "productid": "4ab6bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "INITIAL ASSESSMENT REPORT (BRIEF)",
+        "productnumber": "P-01063-T4G9Y6",
+        "hierarchypath": "SPEECH PATHOLOGY",
+        "sabs_costcode": "INABREPSP",
+        "sabs_servicetype": 272470007,
+        "sabs_servicetypetext": "SP-AHP"
+    },
+    {
+        "@odata.etag": "W/\"12494006\"",
+        "productid": "4db6bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "INITIAL ASSESSMENT REPORT (COMPREHENSIVE)",
+        "productnumber": "P-01064-F0C1S9",
+        "hierarchypath": "SPEECH PATHOLOGY",
+        "sabs_costcode": "INACREPSP",
+        "sabs_servicetype": 272470007,
+        "sabs_servicetypetext": "SP-AHP"
+    },
+    {
+        "@odata.etag": "W/\"12494013\"",
+        "productid": "50b6bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "INITIAL ASSESSMENT-SPEECH PATHOLOGY",
+        "productnumber": "P-01065-J0Q8C6",
+        "hierarchypath": "SPEECH PATHOLOGY",
+        "sabs_costcode": "INASP",
+        "sabs_servicetype": 272470007,
+        "sabs_servicetypetext": "SP-AHP"
+    },
+    {
+        "@odata.etag": "W/\"12494020\"",
+        "productid": "53b6bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "PERSONALISED TREATMENT PROGRAM",
+        "productnumber": "P-01066-D3F0F4",
+        "hierarchypath": "SPEECH PATHOLOGY",
+        "sabs_costcode": "PTPAHPSP",
+        "sabs_servicetype": 272470007,
+        "sabs_servicetypetext": "SP-AHP"
+    },
+    {
+        "@odata.etag": "W/\"12494027\"",
+        "productid": "56b6bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "PHONE CALL",
+        "productnumber": "P-01067-W6B2M6",
+        "hierarchypath": "SPEECH PATHOLOGY",
+        "sabs_costcode": "PCAHPSP",
+        "sabs_servicetype": 272470007,
+        "sabs_servicetypetext": "SP-AHP"
+    },
+    {
+        "@odata.etag": "W/\"12494034\"",
+        "productid": "59b6bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "PLANNING",
+        "productnumber": "P-01068-M3G1H3",
+        "hierarchypath": "SPEECH PATHOLOGY",
+        "sabs_costcode": "PLAHPSP",
+        "sabs_servicetype": 272470007,
+        "sabs_servicetypetext": "SP-AHP"
+    },
+    {
+        "@odata.etag": "W/\"12494041\"",
+        "productid": "5cb6bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "PROGRESS REPORT",
+        "productnumber": "P-01069-X3M9C5",
+        "hierarchypath": "SPEECH PATHOLOGY",
+        "sabs_costcode": "PREPSP",
+        "sabs_servicetype": 272470007,
+        "sabs_servicetypetext": "SP-AHP"
+    },
+    {
+        "@odata.etag": "W/\"12494048\"",
+        "productid": "5fb6bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "REPORT",
+        "productnumber": "P-01070-Q8J5J2",
+        "hierarchypath": "SPEECH PATHOLOGY",
+        "sabs_costcode": "REPSP",
+        "sabs_servicetype": 272470007,
+        "sabs_servicetypetext": "SP-AHP"
+    },
+    {
+        "@odata.etag": "W/\"12494055\"",
+        "productid": "62b6bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "RESOURCE DEVELOPMENT",
+        "productnumber": "P-01071-T1R8C3",
+        "hierarchypath": "SPEECH PATHOLOGY",
+        "sabs_costcode": "RDAHPSP",
+        "sabs_servicetype": 272470007,
+        "sabs_servicetypetext": "SP-AHP"
+    },
+    {
+        "@odata.etag": "W/\"12494062\"",
+        "productid": "65b6bd05-03cb-ee11-9079-000d3a9ddee4",
+        "name": "SESSION NOTES",
+        "productnumber": "P-01072-N4L5F9",
+        "hierarchypath": "SPEECH PATHOLOGY",
+        "sabs_costcode": "SNAHPSP",
+        "sabs_servicetype": 272470007,
+        "sabs_servicetypetext": "SP-AHP"
+    }
+]
