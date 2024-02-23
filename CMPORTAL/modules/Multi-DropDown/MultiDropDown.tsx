@@ -510,6 +510,94 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// import React, { useState, useEffect } from 'react';
+// import { Stack, IDropdownOption } from '@fluentui/react';
+// import Dropdowns from './Dropdowns';
+// import data from './data.json';
+
+// interface Product {
+//     productid: string;
+//     name: string;
+//     productnumber: string;
+//     hierarchypath: string | null;
+//     sabs_costcode: string | null;
+// }
+
+// const MultiDropDown: React.FC = () => {
+//     const [serviceCategoryOptions, setServiceCategoryOptions] = useState<IDropdownOption[]>([]);
+//     const [serviceOptions, setServiceOptions] = useState<IDropdownOption[]>([]);
+//     const [costCodeOptions, setCostCodeOptions] = useState<IDropdownOption[]>([]);
+//     const [selectedServiceCategory, setSelectedServiceCategory] = useState<string | undefined>(undefined);
+
+//     useEffect(() => {
+//         // Filter products where hierarchypath and sabs_costcode are null
+//         const filteredProducts = data.filter((product: Product) => !product.hierarchypath && !product.sabs_costcode);
+
+//         const serviceCategoryOptions: IDropdownOption[] = filteredProducts.map((product: Product) => ({
+//             key: product.name, // preprocess name
+//             text: product.name
+//         }));
+//         setServiceCategoryOptions(serviceCategoryOptions);
+//     }, []);
+
+//     const handleServiceCategoryChange = (ev: React.FormEvent<HTMLDivElement>, option?: IDropdownOption): void => {
+//         if (option) {
+//             const selectedProduct = data.find((product: Product) =>
+//                 product.name === option.key // preprocess name for comparison
+//             );
+//             if (selectedProduct) {
+//                 // Filter products where hierarchypath matches selected name
+//                 const filteredServices = data.filter((product: Product) =>
+//                     product.hierarchypath &&
+//                     product.hierarchypath === option.key // preprocess hierarchypath for comparison
+//                 );
+//                 const serviceOptions: IDropdownOption[] = filteredServices.map((product: Product) => ({
+//                     key: product.productid,
+//                     text: product.name
+//                 }));
+//                 setServiceOptions(serviceOptions);
+//                 setSelectedServiceCategory(option.key as string);
+
+//                 // Extract unique sabs_costcodes from filtered products
+//                 const uniqueCostCodes = Array.from(new Set(filteredServices.map(product => product.sabs_costcode)));
+//                 const costCodeOptions: IDropdownOption[] = uniqueCostCodes.map(costCode => ({
+//                     key: costCode || '', // handle null values
+//                     text: costCode || 'Unknown' // handle null values
+//                 }));
+//                 setCostCodeOptions(costCodeOptions);
+//             } else {
+//                 // Reset options for service and cost code dropdowns if no product is selected
+//                 setServiceOptions([]);
+//                 setCostCodeOptions([]);
+//                 setSelectedServiceCategory(undefined); // Reset selected category
+//             }
+//         } else {
+//             // Reset options for service and cost code dropdowns if no option is selected
+//             setServiceOptions([]);
+//             setCostCodeOptions([]);
+//             setSelectedServiceCategory(undefined); // Reset selected category
+//         }
+//     };
+
+//     return (
+//         <div>
+//             <Stack horizontalAlign="center">
+//                 <Dropdowns
+//                     serviceCategoryOptions={serviceCategoryOptions}
+//                     serviceOptions={serviceOptions}
+//                     costCodeOptions={costCodeOptions}
+//                     handleServiceCategoryChange={handleServiceCategoryChange}
+//                 />
+//             </Stack>
+//         </div>
+//     );
+// };
+
+// export default MultiDropDown;
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 import React, { useState, useEffect } from 'react';
 import { Stack, IDropdownOption } from '@fluentui/react';
 import Dropdowns from './Dropdowns';
@@ -530,11 +618,10 @@ const MultiDropDown: React.FC = () => {
     const [selectedServiceCategory, setSelectedServiceCategory] = useState<string | undefined>(undefined);
 
     useEffect(() => {
-        // Filter products where hierarchypath and sabs_costcode are null
         const filteredProducts = data.filter((product: Product) => !product.hierarchypath && !product.sabs_costcode);
 
         const serviceCategoryOptions: IDropdownOption[] = filteredProducts.map((product: Product) => ({
-            key: product.name, // preprocess name
+            key: product.name,
             text: product.name
         }));
         setServiceCategoryOptions(serviceCategoryOptions);
@@ -542,14 +629,14 @@ const MultiDropDown: React.FC = () => {
 
     const handleServiceCategoryChange = (ev: React.FormEvent<HTMLDivElement>, option?: IDropdownOption): void => {
         if (option) {
+            console.log('Service category dropdown changed:', option);
             const selectedProduct = data.find((product: Product) =>
-                product.name === option.key // preprocess name for comparison
+                product.name === option.key
             );
             if (selectedProduct) {
-                // Filter products where hierarchypath matches selected name
                 const filteredServices = data.filter((product: Product) =>
                     product.hierarchypath &&
-                    product.hierarchypath === option.key // preprocess hierarchypath for comparison
+                    product.hierarchypath === option.key
                 );
                 const serviceOptions: IDropdownOption[] = filteredServices.map((product: Product) => ({
                     key: product.productid,
@@ -558,36 +645,49 @@ const MultiDropDown: React.FC = () => {
                 setServiceOptions(serviceOptions);
                 setSelectedServiceCategory(option.key as string);
 
-                // Extract unique sabs_costcodes from filtered products
                 const uniqueCostCodes = Array.from(new Set(filteredServices.map(product => product.sabs_costcode)));
                 const costCodeOptions: IDropdownOption[] = uniqueCostCodes.map(costCode => ({
-                    key: costCode || '', // handle null values
-                    text: costCode || 'Unknown' // handle null values
+                    key: costCode || '', 
+                    text: costCode || 'Unknown'
                 }));
                 setCostCodeOptions(costCodeOptions);
             } else {
                 // Reset options for service and cost code dropdowns if no product is selected
                 setServiceOptions([]);
                 setCostCodeOptions([]);
-                setSelectedServiceCategory(undefined); // Reset selected category
+                setSelectedServiceCategory(undefined); 
             }
         } else {
             // Reset options for service and cost code dropdowns if no option is selected
             setServiceOptions([]);
             setCostCodeOptions([]);
-            setSelectedServiceCategory(undefined); // Reset selected category
+            setSelectedServiceCategory(undefined);
         }
     };
+
+    const dropdowns = [
+    {
+        label: "Service Category",
+        options: serviceCategoryOptions,
+        onChange: handleServiceCategoryChange
+    },
+    {
+        label: "Service",
+        options: serviceOptions,
+        onChange: (ev: React.FormEvent<HTMLDivElement>, option?: IDropdownOption) => console.log('Service dropdown changed:', option)
+    },
+    {
+        label: "Cost Code",
+        options: costCodeOptions,
+        onChange: (ev: React.FormEvent<HTMLDivElement>, option?: IDropdownOption) => console.log('Cost code dropdown changed:', option)
+    }
+];
+
 
     return (
         <div>
             <Stack horizontalAlign="center">
-                <Dropdowns
-                    serviceCategoryOptions={serviceCategoryOptions}
-                    serviceOptions={serviceOptions}
-                    costCodeOptions={costCodeOptions}
-                    handleServiceCategoryChange={handleServiceCategoryChange}
-                />
+                <Dropdowns dropdowns={dropdowns} />
             </Stack>
         </div>
     );
