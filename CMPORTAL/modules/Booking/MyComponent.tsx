@@ -1,44 +1,34 @@
 import React, { useState, useEffect } from 'react';
 import { Dropdown, IDropdownOption, DatePicker, DayOfWeek } from '@fluentui/react';
 
-interface Booking {
-  name: string;
-  starttime: string;
-  endtime: string;
-}
-
 interface Resource {
   name: string;
   bookableresourceid: string;
 }
 
+interface Booking {
+  name: string;
+  starttime: string;
+  endtime: string;
+  Resource?: Resource;
+}
+
+
+// Import JSON data directly
+import bookingsData from './data.json';
+import resourcesData from './resource.json';
+
 const MyComponent: React.FC = () => {
+  const [selectedResource, setSelectedResource] = useState<string>('');
   const [selectedDay, setSelectedDay] = useState<DayOfWeek | undefined>();
   const [selectedStartDate, setSelectedStartDate] = useState<Date | undefined>();
   const [selectedEndDate, setSelectedEndDate] = useState<Date | undefined>();
-  const [bookings, setBookings] = useState<Booking[]>([]);
-  const [resources, setResources] = useState<Resource[]>([]);
+  const [bookings, setBookings] = useState<Booking[]>([]); // Use imported data
+  const [resources, setResources] = useState<Resource[]>(resourcesData); // Use imported data
   const [filteredBookings, setFilteredBookings] = useState<Booking[]>([]);
 
-  // Function to fetch data from JSON files
-  const fetchData = async () => {
-    try {
-      const dataResponse = await fetch('data.json');
-      const resourceResponse = await fetch('resource.json');
-
-      const data = await dataResponse.json();
-      const resources = await resourceResponse.json();
-
-      setBookings(data);
-      setResources(resources);
-    } catch (error) {
-      console.error('Error fetching data:', error);
-    }
-  };
-
-  // Function to filter bookings based on selected date range and day
   const filterBookings = () => {
-    if (!selectedDay || !selectedStartDate || !selectedEndDate) return;
+    if (!selectedDay || !selectedStartDate || !selectedEndDate || !selectedResource) return;
 
     const filtered = bookings.filter(booking => {
       const bookingDate = new Date(booking.starttime);
@@ -48,40 +38,41 @@ const MyComponent: React.FC = () => {
         day: 'numeric'
       });
 
-      // Check if booking is on the selected day and within the selected date range
-      return bookingDay === selectedDay &&
+      return (
+        bookingDay === selectedDay &&
         bookingDate >= selectedStartDate &&
-        bookingDate <= selectedEndDate;
+        bookingDate <= selectedEndDate &&
+        booking.name === selectedResource
+      );
     });
 
     setFilteredBookings(filtered);
   };
 
-  // Event handler for when day dropdown value changes
+  const onResourceChange = (event: React.FormEvent<HTMLDivElement>, option?: IDropdownOption) => {
+    setSelectedResource(option?.text || '');
+  };
+
   const onDayChange = (event: React.FormEvent<HTMLDivElement>, option?: IDropdownOption) => {
     setSelectedDay(option?.key as DayOfWeek);
   };
 
-  // Event handler for when start date picker value changes
   const onStartDateChange = (date?: Date | null | undefined) => {
     setSelectedStartDate(date || undefined);
   };
 
-  // Event handler for when end date picker value changes
   const onEndDateChange = (date?: Date | null | undefined) => {
     setSelectedEndDate(date || undefined);
   };
 
-  // Function to render table headers based on selected date range
-const renderTableHeaders = () => {
-    if (!selectedDay || !selectedStartDate || !selectedEndDate) return;
-  
+  const renderTableHeaders = (): React.JSX.Element[] => {
+    if (!selectedStartDate || !selectedEndDate) return [];
+
     const headers = [];
     const currentDate = new Date(selectedStartDate);
-  
-    // Loop through the selected date range to generate column headers
+
     while (currentDate <= selectedEndDate) {
-      if (currentDate.getDay() === selectedDay) {
+      if (selectedDay === undefined || currentDate.getDay() === selectedDay) {
         const headerTitle = currentDate.toLocaleDateString('en-US', {
           weekday: 'long',
           day: 'numeric',
@@ -102,23 +93,23 @@ const renderTableHeaders = () => {
       }
       currentDate.setDate(currentDate.getDate() + 1);
     }
-  
+
     return headers;
   };
-  
 
-  // Fetch data when component mounts
-  useEffect(() => {
-    fetchData();
-  }, []);
 
-  // Filter bookings whenever selectedDay, selectedStartDate, or selectedEndDate changes
   useEffect(() => {
     filterBookings();
-  }, [selectedDay, selectedStartDate, selectedEndDate]);
+  }, [selectedDay, selectedStartDate, selectedEndDate, selectedResource]);
 
   return (
     <div>
+      <Dropdown
+        placeholder="Select a resource"
+        options={resources.map(resource => ({ key: resource.name, text: resource.name }))}
+        selectedKey={selectedResource}
+        onChange={onResourceChange}
+      />
       <Dropdown
         placeholder="Select a day"
         options={[
@@ -150,9 +141,64 @@ const renderTableHeaders = () => {
           </tr>
         </thead>
         <tbody>
-          {/* Render table data based on filtered bookings */}
-          {/* Implement this part based on your specific data structure */}
+          {filteredBookings.map((booking, index) => (
+            <tr key={index}>
+              {renderTableHeaders().map(header => {
+                const bookingDate = new Date(booking.starttime);
+                const bookingDateString = bookingDate.toLocaleDateString('en-US', {
+                  weekday: 'long',
+                  day: 'numeric',
+                  month: 'short'
+                });
+
+                if (header.props.children === bookingDateString) {
+                  // Find the corresponding resource based on bookableresourceid directly within the booking object
+                  const matchedResource = resources.find(resource => resource.bookableresourceid === booking.Resource?.bookableresourceid);
+
+                  if (matchedResource) {
+                    return <td key={header.key}>{matchedResource.name}</td>;
+                  } else {
+                    return <td key={header.key}></td>; // Empty cell if resource not found
+                  }
+                } else {
+                  return <td key={header.key}></td>;
+                }
+              })}
+            </tr>
+          ))}
         </tbody>
+
+        {/* <tbody>
+          {resources.map(resource => (
+            <tr key={resource.bookableresourceid}>
+              {renderTableHeaders().map(header => {
+                if (header.key === null) {
+                  return null; // Handle null key
+                }
+
+                const headerDate = new Date(header.key);
+                const matchingBooking = filteredBookings.find(booking => {
+                  const bookingDate = new Date(booking.starttime);
+                  return (
+                    bookingDate.getDate() === headerDate.getDate() &&
+                    bookingDate.getMonth() === headerDate.getMonth() &&
+                    bookingDate.getFullYear() === headerDate.getFullYear() &&
+                    booking.name === selectedResource &&
+                    booking.Resource?.bookableresourceid === resource.bookableresourceid
+                  );
+                });
+
+                return (
+                  <td key={`${header.key}-${resource.bookableresourceid}`}>
+                    {matchingBooking ? matchingBooking.Resource?.bookableresourceid : ""}
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+        </tbody> */}
+
+
       </table>
     </div>
   );
