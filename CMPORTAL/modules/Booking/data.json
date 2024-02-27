@@ -1,0 +1,200 @@
+[
+    {
+        "@odata.etag": "W/\"12968805\"",
+        "name": "test01",
+        "starttime": "2024-02-25T21:00:00Z",
+        "endtime": "2024-02-25T22:00:00Z",
+        "bookableresourcebookingid": "50fb946b-6cd4-ee11-904d-000d3a9ddee4",
+        "Resource": {
+            "name": "Carlos Grilo",
+            "bookableresourceid": "6517cafe-4ac6-ee11-9079-000d3a9ddee4"
+        }
+    },
+    {
+        "@odata.etag": "W/\"12968845\"",
+        "name": "test01",
+        "starttime": "2024-03-03T21:00:00Z",
+        "endtime": "2024-03-03T22:00:00Z",
+        "bookableresourcebookingid": "51fb946b-6cd4-ee11-904d-000d3a9ddee4",
+        "Resource": {
+            "name": "Carlos Grilo",
+            "bookableresourceid": "6517cafe-4ac6-ee11-9079-000d3a9ddee4"
+        }
+    },
+    {
+        "@odata.etag": "W/\"12968920\"",
+        "name": "test01",
+        "starttime": "2024-03-10T21:00:00Z",
+        "endtime": "2024-03-10T22:00:00Z",
+        "bookableresourcebookingid": "52fb946b-6cd4-ee11-904d-000d3a9ddee4",
+        "Resource": {
+            "name": "Carlos Grilo",
+            "bookableresourceid": "6517cafe-4ac6-ee11-9079-000d3a9ddee4"
+        }
+    },
+    {
+        "@odata.etag": "W/\"12522027\"",
+        "name": "00045",
+        "starttime": "2024-02-18T23:00:00Z",
+        "endtime": "2024-02-19T00:00:00Z",
+        "bookableresourcebookingid": "990f7f6a-7acc-ee11-9079-000d3a9ddee4",
+        "Resource": {
+            "name": "Alan Steiner",
+            "bookableresourceid": "882b3e52-72bb-ee11-a569-000d3a9ddee4"
+        }
+    },
+    {
+        "@odata.etag": "W/\"12522029\"",
+        "name": "00045",
+        "starttime": "2024-02-26T02:00:00Z",
+        "endtime": "2024-02-26T03:00:00Z",
+        "bookableresourcebookingid": "d1b6347e-7acc-ee11-9079-000d3a9ddee4",
+        "Resource": {
+            "name": "Alan Steiner",
+            "bookableresourceid": "882b3e52-72bb-ee11-a569-000d3a9ddee4"
+        }
+    },
+    {
+        "@odata.etag": "W/\"12522026\"",
+        "name": "00044",
+        "starttime": "2024-02-16T18:09:00Z",
+        "endtime": "2024-02-17T02:00:00Z",
+        "bookableresourcebookingid": "dfb6347e-7acc-ee11-9079-000d3a9ddee4",
+        "Resource": {
+            "name": "Alicia Thomber",
+            "bookableresourceid": "b3096491-47c6-ee11-9079-000d3a9ddee4"
+        }
+    },
+    {
+        "@odata.etag": "W/\"12522472\"",
+        "name": "00046",
+        "starttime": "2024-02-19T02:00:00Z",
+        "endtime": "2024-02-19T03:00:00Z",
+        "bookableresourcebookingid": "6f96ff9a-7bcc-ee11-9079-000d3a9ddee4",
+        "Resource": {
+            "name": "Alan Steiner",
+            "bookableresourceid": "882b3e52-72bb-ee11-a569-000d3a9ddee4"
+        }
+    },
+    {
+        "@odata.etag": "W/\"12522473\"",
+        "name": "00046",
+        "starttime": "2024-02-26T03:00:00Z",
+        "endtime": "2024-02-26T04:00:00Z",
+        "bookableresourcebookingid": "5d6c26a9-7bcc-ee11-9079-000d3a9ddee4",
+        "Resource": {
+            "name": "Alan Steiner",
+            "bookableresourceid": "882b3e52-72bb-ee11-a569-000d3a9ddee4"
+        }
+    },
+    {
+        "@odata.etag": "W/\"12702981\"",
+        "name": "00052",
+        "starttime": "2024-02-22T09:16:00Z",
+        "endtime": "2024-02-22T22:45:00Z",
+        "bookableresourcebookingid": "dfd6cc24-41d0-ee11-9079-000d3a9ddee4",
+        "Resource": {
+            "name": "Carlos Grilo",
+            "bookableresourceid": "6517cafe-4ac6-ee11-9079-000d3a9ddee4"
+        }
+    },
+    {
+        "@odata.etag": "W/\"12968820\"",
+        "name": "00052",
+        "starttime": "2024-02-28T15:01:00Z",
+        "endtime": "2024-02-29T04:30:00Z",
+        "bookableresourcebookingid": "bedc9a37-41d0-ee11-9079-000d3a9ddee4",
+        "Resource": {
+            "name": "Carlos Grilo",
+            "bookableresourceid": "6517cafe-4ac6-ee11-9079-000d3a9ddee4"
+        }
+    },
+    {
+        "@odata.etag": "W/\"12968886\"",
+        "name": "00052",
+        "starttime": "2024-03-05T11:16:00Z",
+        "endtime": "2024-03-06T00:45:00Z",
+        "bookableresourcebookingid": "8aa58144-41d0-ee11-9079-000d3a9ddee4",
+        "Resource": {
+            "name": "Carlos Grilo",
+            "bookableresourceid": "6517cafe-4ac6-ee11-9079-000d3a9ddee4"
+        }
+    },
+    {
+        "@odata.etag": "W/\"12720094\"",
+        "name": "00041",
+        "starttime": "2024-02-21T08:00:00Z",
+        "endtime": "2024-02-21T09:00:00Z",
+        "bookableresourcebookingid": "0709d6f8-76d0-ee11-9079-000d3a9ddee4",
+        "Resource": {
+            "name": "Alicia Thomber",
+            "bookableresourceid": "b3096491-47c6-ee11-9079-000d3a9ddee4"
+        }
+    },
+    {
+        "@odata.etag": "W/\"12966685\"",
+        "name": "00057",
+        "starttime": "2024-02-26T03:00:00Z",
+        "endtime": "2024-02-26T04:00:00Z",
+        "bookableresourcebookingid": "00a1b5d5-4dd4-ee11-9079-000d3a9ddee4",
+        "Resource": {
+            "name": "Carlos Grilo",
+            "bookableresourceid": "6517cafe-4ac6-ee11-9079-000d3a9ddee4"
+        }
+    },
+    {
+        "@odata.etag": "W/\"12750095\"",
+        "name": "00053",
+        "starttime": "2024-03-03T23:00:00Z",
+        "endtime": "2024-03-03T23:30:00Z",
+        "bookableresourcebookingid": "0d6b2381-d6d1-ee11-907a-0022482d92cb",
+        "Resource": {
+            "name": "Alicia Thomber",
+            "bookableresourceid": "b3096491-47c6-ee11-9079-000d3a9ddee4"
+        }
+    },
+    {
+        "@odata.etag": "W/\"13029470\"",
+        "name": "c",
+        "starttime": "2024-03-24T23:00:00Z",
+        "endtime": "2024-03-24T23:30:00Z",
+        "bookableresourcebookingid": "ea5a86fd-91cb-ee11-907b-0022482d92cb",
+        "Resource": {
+            "name": "Alicia Thomber",
+            "bookableresourceid": "b3096491-47c6-ee11-9079-000d3a9ddee4"
+        }
+    },
+    {
+        "@odata.etag": "W/\"12504323\"",
+        "name": "00039",
+        "starttime": "2024-03-10T23:00:00Z",
+        "endtime": "2024-03-10T23:30:00Z",
+        "bookableresourcebookingid": "7a01282d-92cb-ee11-907b-0022482d92cb",
+        "Resource": {
+            "name": "Alicia Thomber",
+            "bookableresourceid": "b3096491-47c6-ee11-9079-000d3a9ddee4"
+        }
+    },
+    {
+        "@odata.etag": "W/\"12505071\"",
+        "name": "00040",
+        "starttime": "2024-02-18T23:00:00Z",
+        "endtime": "2024-02-18T23:30:00Z",
+        "bookableresourcebookingid": "d75ccd07-9acb-ee11-907b-0022482d92cb",
+        "Resource": {
+            "name": "Alicia Thomber",
+            "bookableresourceid": "b3096491-47c6-ee11-9079-000d3a9ddee4"
+        }
+    },
+    {
+        "@odata.etag": "W/\"12517441\"",
+        "name": "00042",
+        "starttime": "2024-02-25T23:00:00Z",
+        "endtime": "2024-02-25T23:30:00Z",
+        "bookableresourcebookingid": "024ae354-56cc-ee11-907a-0022482d9d94",
+        "Resource": {
+            "name": "Alicia Thomber",
+            "bookableresourceid": "b3096491-47c6-ee11-9079-000d3a9ddee4"
+        }
+    }
+]
