@@ -16,6 +16,7 @@ import Userdoc from "./modules/User-doc/Userdoc";
 import activities from './modules/User-doc/data/cactivities.json';
 import UserMain from "./modules/User-doc/UserMain";
 import MultiDropDown from "./modules/Multi-DropDown/MultiDropDown";
+import MyComponent from "./modules/Booking/MyComponent";
 
 export default class HelloWorld extends React.Component<
   ComponentFramework.Context<IInputs>
@@ -167,7 +168,9 @@ export default class HelloWorld extends React.Component<
         {/* <App/> */}
         {/* <BookingContainer /> */}
         {/* <UserMain/> */}
-        <MultiDropDown/>
+        {/* <MultiDropDown/> */}
+
+        <MyComponent/>
 
         {/* <Dropdown data={policies} title="Policies" />
         <Dropdown data={guidelines} title="Guidelines" />
