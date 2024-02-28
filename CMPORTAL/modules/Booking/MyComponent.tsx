@@ -265,3 +265,131 @@ const MyComponent: React.FC = () => {
 };
 
 export default MyComponent;
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// import React, { useEffect } from 'react';
+// import resources from './data/resource.json';
+// import bookings from './data/bookings.json';
+// import { Button } from '@mui/material';
+
+// const ScheduleDashboard: React.FC = () => {
+//     const startDate = new Date('2024-02-25T23:00:00Z');
+//     const endDate = new Date('2024-04-12T23:00:00Z');
+//     const selectedDay: Number = 3;
+//     const [noofDays, setnoofDays] = React.useState<number>(0);
+//     const [headers, setHeaders] = React.useState<IScheduleColumn[]>([]);
+
+
+//     const getbookingsforaday = (bookings: any, resourceid: string, day: number, month: number, year: number) => {
+//         let bookingtext = '';
+//         bookings.map((booking: any) => {
+//             const bdate = new Date(booking.starttime);
+//             if (booking.Resource.bookableresourceid === resourceid && bdate.getDate() === day && bdate.getMonth() + 1 === month && bdate.getFullYear() === year)
+//             bookingtext += ' ' + bdate.getHours() + ':' + bdate.getMinutes() + ' ' + booking.name + `,`; 
+//         })
+//         return <td>{bookingtext.trim()}</td>;
+//     }
+
+//     const columns = (headers: IScheduleColumn[], resourceid: string) => {
+
+//         return headers.map((header: IScheduleColumn) => {
+//             // return <td>{header.day} {header.month} {header.year}</td>
+//             return getbookingsforaday(bookings, resourceid, header.day, header.month, header.year);
+//         });
+//     }
+
+//     const setHeaderSettings = (startDate: Date, endDate: Date) => {
+        
+
+//         if (!startDate || !endDate) return [];
+
+//         const headersl = [];
+//         let currentDate = new Date(startDate);
+
+//         while (currentDate <= endDate) {
+//             if (selectedDay === undefined || currentDate.getDay() === selectedDay) {
+//                 const header: IScheduleColumn = { month: currentDate.getMonth() + 1, day: currentDate.getDate(), year: currentDate.getFullYear() }
+//                 headersl.push(header);
+//             }
+//             currentDate.setDate(currentDate.getDate() + 1);
+//         }
+
+//         setHeaders(headersl);
+//     }
+
+//     const tableheader = (startDate: Date, endDate: Date) => {
+//         //return <tr>{columnheader('this si sour header')}</tr>
+        
+
+//         if (!startDate || !endDate) return [];
+
+//         const headers = [];
+//         const currentDate = new Date(startDate);
+
+//         while (currentDate <= endDate) {
+//             if (selectedDay === undefined || currentDate.getDay() === selectedDay) {
+//                 const headerTitle = currentDate.toLocaleDateString('en-AU', {
+//                     weekday: 'long',
+//                     day: 'numeric',
+//                     month: 'short'
+//                 });
+//                 headers.push(
+//                     <th
+//                         key={currentDate.toISOString()}
+//                         style={{
+//                             border: '1px solid black',
+//                             padding: '8px',
+//                             textAlign: 'center'
+//                         }}
+//                     >
+//                         {headerTitle}
+//                     </th>
+//                 );
+//             }
+
+//             currentDate.setDate(currentDate.getDate() + 1);
+//         }
+
+//         return headers;
+//     }
+
+//     useEffect(() => {
+//         setHeaderSettings(startDate, endDate);
+
+//     }, []);
+
+//     console.log(resources);
+//     return (
+//         <>
+//             <table>
+//                 <thead>
+//                     <th>Resource</th>
+//                     {tableheader(startDate, endDate)}
+//                     {/* <tr>{columnheader('this is header')}</tr> */}
+//                 </thead>
+//                 <tbody>
+//                     {
+//                         resources.map(resource => {
+//                             return <tr><td>{resource.name}</td>{
+//                                 columns(headers, resource.bookableresourceid)
+//                             }</tr>
+//                         })
+//                     }
+//                 </tbody>
+//             </table>
+//         </>
+//     );
+// };
+
+// export default ScheduleDashboard;
+
+// interface IScheduleColumn {
+//     month: number;
+//     day: number;
+//     year: number;
+// }
