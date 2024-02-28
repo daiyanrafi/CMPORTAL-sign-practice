@@ -97,6 +97,57 @@ const MyComponent: React.FC = () => {
     return headers;
   };
 
+  const renderTableData = (booking: Booking): React.ReactNode[] => {
+    if (!selectedStartDate || !selectedEndDate) return [];
+  
+    const tableData = [];
+    const currentDate = new Date(selectedStartDate);
+  
+    while (currentDate <= selectedEndDate) {
+      if (selectedDay === undefined || currentDate.getDay() === selectedDay) {
+        const bookingDate = new Date(booking.starttime);
+        const bookingDateString = bookingDate.toLocaleDateString('en-US', {
+          weekday: 'long',
+          day: 'numeric',
+          month: 'short'
+        });
+        
+        if (currentDate.toLocaleDateString() === bookingDateString) {
+          const resourceMatch = resources.find(resource => resource.bookableresourceid === booking.Resource?.bookableresourceid);
+          tableData.push(
+            <td
+              key={currentDate.toISOString()}
+              style={{
+                border: '1px solid black',
+                padding: '8px',
+                textAlign: 'center'
+              }}
+            >
+              {resourceMatch ? 'Yes' : ''}
+            </td>
+          );
+        } else {
+          tableData.push(
+            <td
+              key={currentDate.toISOString()}
+              style={{
+                border: '1px solid black',
+                padding: '8px',
+                textAlign: 'center'
+              }}
+            >
+              {/* Empty cell for dates without bookings */}
+            </td>
+          );
+        }
+      }
+      currentDate.setDate(currentDate.getDate() + 1);
+    }
+  
+    return tableData;
+  };
+  
+
 
   useEffect(() => {
     filterBookings();
@@ -140,7 +191,7 @@ const MyComponent: React.FC = () => {
             {renderTableHeaders()}
           </tr>
         </thead>
-        <tbody>
+        {/* <tbody>
           {filteredBookings.map((booking, index) => (
             <tr key={index}>
               {renderTableHeaders().map(header => {
@@ -166,7 +217,16 @@ const MyComponent: React.FC = () => {
               })}
             </tr>
           ))}
-        </tbody>
+        </tbody> */}
+
+<tbody>
+  {filteredBookings.map((booking, index) => (
+    <tr key={index}>
+      {renderTableData(booking)}
+    </tr>
+  ))}
+</tbody>
+
 
         {/* <tbody>
           {resources.map(resource => (
