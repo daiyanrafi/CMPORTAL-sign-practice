@@ -17,6 +17,37 @@ interface UserdocProps {
   activities: any[];
 }
 
+//old one
+// const ColumnTitle: React.FC = () => (
+//   <div
+//     style={{
+//       backgroundColor: "#008542",
+//       padding: "10px",
+//       fontSize: "large",
+//       fontFamily: "Calibri",
+//       borderBottom: "2px solid #ccc",
+//       // display: "flex",
+//       // justifyContent: "space-between",
+//       // alignItems: "center",
+//     }}
+//   >
+//     {/* for type column left side */}
+//     {/* <span style={{ color: "white" }}>Name</span>
+//     <div style={{ display: "flex", alignItems: "center" }}>
+//       <span style={{ color: "white", marginLeft: '10px' }}>Type</span>
+//       <span style={{ color: "white", marginLeft: "60px" }}>Date Modified</span>
+//     </div> */}
+
+//     {/* for type column in center  */}
+//     <span style={{ color: "white" }}>Name</span>
+//     {/* <span style={{ color: "white", flex: 1, textAlign: "center" }}>Type</span> */}
+//     <span style={{ color: "white", flex: "1 0 auto", textAlign: "center" }}>Type</span>
+
+//     <span style={{ color: "white" }}>Date Modified</span>
+//   </div>
+// );
+
+//new one
 const ColumnTitle: React.FC = () => (
   <div
     style={{
@@ -31,10 +62,8 @@ const ColumnTitle: React.FC = () => (
     }}
   >
     <span style={{ color: "white" }}>Name</span>
-    <div style={{ display: "flex", alignItems: "center" }}>
-      <span style={{ color: "white", marginRight: '60px' }}>Type</span>
-      <span style={{ color: "white", marginLeft: "60px" }}>Date Modified</span>
-    </div>
+    <span style={{ color: "white",  marginRight: "auto", marginLeft: "56%" }}>Type</span>
+    <span style={{ color: "white" }}>Date Modified</span>
   </div>
 );
 
@@ -160,13 +189,21 @@ const Userdoc: React.FC<UserdocProps> = ({ data, poeple, activities }) => {
                 {row.content}
               </Typography>
             </div>
-            <div style={{ marginLeft: "auto", textAlign: "right" }}>
+            {/* <div style={{ marginLeft: "auto", textAlign: "right" }}>
               <Typography
                 style={{ fontSize: "large", fontFamily: "Calibri", color: '#003591' }}
               >
                 {row.label}
               </Typography>
-            </div>
+            </div> */}
+
+<div style={{ flex: 1, textAlign: "center" }}>
+    <Typography
+      style={{ fontSize: "large", fontFamily: "Calibri", color: '#003591' }}
+    >
+      {row.label}
+    </Typography>
+  </div>
             <div style={{ marginLeft: "35px", textAlign: "right" }}>
               <Typography
                 style={{ fontSize: "large", fontFamily: "Calibri", color: '#003591' }}
