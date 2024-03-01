@@ -67,17 +67,43 @@ const Userdoc: React.FC<UserdocProps> = ({ data, poeple, activities }) => {
     return 0;
   });
 
+  // const exportToCSV = () => {
+  //   const columnTitles = ["Author", "Name", "Type", "Date Modified"];
+  //   const csvData = [columnTitles, ...sortedData.map(row => [poeple.name, row.content, row.label, row.modified])];
+  //   const csv = Papa.unparse(csvData);
+  //   const blob = new Blob([csv], { type: 'text/csv' });
+  //   const url = window.URL.createObjectURL(blob);
+  //   const a = document.createElement('a');
+  //   a.href = url;
+  //   a.download = `User_Documents_${poeple.name}.csv`;
+  //   document.body.appendChild(a);
+  //   a.click();
+  //   window.URL.revokeObjectURL(url);
+  //   document.body.removeChild(a);
+  // };
+
   const exportToCSV = () => {
     const columnTitles = ["Author", "Name", "Type", "Date Modified"];
-    const csvData = [columnTitles, ...sortedData.map(row => [poeple.name, row.content, row.label, row.modified])];
-    const csv = Papa.unparse(csvData);
-    const blob = new Blob([csv], { type: 'text/csv' });
+    const csvRows = sortedData.map(row => [poeple.name, row.content, row.label, row.modified]);
+    
+    // Construct CSV string
+    let csvContent = columnTitles.join(',') + '\n';
+    csvRows.forEach(row => {
+      csvContent += row.join(',') + '\n';
+    });
+  
+    // Create blob and download link
+    const blob = new Blob([csvContent], { type: 'text/csv' });
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
     a.download = `User_Documents_${poeple.name}.csv`;
+  
+    // Trigger download
     document.body.appendChild(a);
     a.click();
+  
+    // Clean up
     window.URL.revokeObjectURL(url);
     document.body.removeChild(a);
   };
