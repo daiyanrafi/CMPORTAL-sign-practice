@@ -26,12 +26,12 @@ export function ComplaintCont({
   complaint_cont_agree,
   complaint_cont_treeIdentification,
   updateFields,
-  viewMode,//
+  viewMode,
 }: ComplaintContProps) {
 
   const inputProps = {
     style: { fontSize: 'large', fontFamily: 'Calibri' },
-    disabled: viewMode, // Disable input fields in view mode
+    disabled: viewMode,
   };
 
   return (
@@ -59,13 +59,13 @@ export function ComplaintCont({
         </Grid>
 
         <Grid container spacing={1} style={{ marginLeft: '10px' }}>
-          <Grid item xs={15}>
+          <Grid item xs={12}>
             <Typography variant="body1" gutterBottom style={{ color: 'Blue', marginTop: '16px', fontFamily: 'Calibri', fontSize: '14px', marginBottom: '12px' }}>
               Concession Type:
             </Typography>
           </Grid>
-          <Grid item xs={6} justifyContent="center">
-            <FormControlLabel
+          <Grid item xs={6}>
+            {/* <FormControlLabel
               control={
                 <Checkbox
                   checked={complaint_cont_concessionTypes.includes('a')}
@@ -75,7 +75,7 @@ export function ComplaintCont({
                       : [...complaint_cont_concessionTypes, 'a'];
                     updateFields({ complaint_cont_concessionTypes: updatedTypes });
                   }}
-                  disabled={viewMode}  //add this line to desable
+                  disabled={viewMode} //add this line to desable
                 />
               }
               label={<Typography
@@ -88,8 +88,37 @@ export function ComplaintCont({
               >
                 Austudy or Abstudy
               </Typography>}
-            />
-            <FormControlLabel
+            /> */}
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <div style={{ marginLeft: '30px' }}> {/* Adjust the margin as needed */}
+                <Checkbox
+                  checked={complaint_cont_concessionTypes.includes('a')}
+                  onChange={() => {
+                    const updatedTypes = complaint_cont_concessionTypes.includes('a')
+                      ? complaint_cont_concessionTypes.filter((type) => type !== 'a')
+                      : [...complaint_cont_concessionTypes, 'a'];
+                    updateFields({ complaint_cont_concessionTypes: updatedTypes });
+                  }}
+                  disabled={viewMode}
+                />
+              </div>
+              <div>
+                <Typography
+                  variant="body1"
+                  style={{
+                    fontStyle: 'italic',
+                    fontSize: '13px',
+                    fontFamily: 'Calibri'
+                  }}
+                >
+                  Austudy or Abstudy
+                </Typography>
+              </div>
+            </div>
+
+
+
+            {/* <FormControlLabel
               control={
                 <Checkbox
                   checked={complaint_cont_concessionTypes.includes('b')}
@@ -99,7 +128,7 @@ export function ComplaintCont({
                       : [...complaint_cont_concessionTypes, 'b'];
                     updateFields({ complaint_cont_concessionTypes: updatedTypes });
                   }}
-                  disabled={viewMode}  //add this line to desable
+                  disabled={viewMode}
                 />
               }
               label={
@@ -114,8 +143,46 @@ export function ComplaintCont({
                   Centrelink Health Care Card
                 </Typography>
               }
-            />
-            <FormControlLabel
+            /> */}
+
+
+
+
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <div style={{ marginLeft: '40px' }}> {/* Adjust the margin as needed */}
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      checked={complaint_cont_concessionTypes.includes('b')}
+                      onChange={() => {
+                        const updatedTypes = complaint_cont_concessionTypes.includes('b')
+                          ? complaint_cont_concessionTypes.filter((type) => type !== 'b')
+                          : [...complaint_cont_concessionTypes, 'b'];
+                        updateFields({ complaint_cont_concessionTypes: updatedTypes });
+                      }}
+                      disabled={viewMode}
+                    />
+                  }
+                  label={
+                    <Typography
+                      variant="body1"
+                      style={{
+                        fontStyle: 'italic',
+                        fontSize: '13px',
+                        fontFamily: 'Calibri'
+                      }}
+                    >
+                      Centrelink Health Care Card
+                    </Typography>
+                  }
+                />
+              </div>
+            </div>
+
+
+
+
+            {/* <FormControlLabel
               control={
                 <Checkbox
                   checked={complaint_cont_concessionTypes.includes('c')}
@@ -125,7 +192,7 @@ export function ComplaintCont({
                       : [...complaint_cont_concessionTypes, 'c'];
                     updateFields({ complaint_cont_concessionTypes: updatedTypes });
                   }}
-                  disabled={viewMode}  //add this line to desable
+                  disabled={viewMode}
                 />
               }
               label={
@@ -140,8 +207,41 @@ export function ComplaintCont({
                   Commonwealth Seniors Health Card
                 </Typography>
               }
-            />
-            <FormControlLabel
+            /> */}
+
+
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <div style={{ marginLeft: '40px' }}> {/* Adjust the margin as needed */}
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      checked={complaint_cont_concessionTypes.includes('c')}
+                      onChange={() => {
+                        const updatedTypes = complaint_cont_concessionTypes.includes('c')
+                          ? complaint_cont_concessionTypes.filter((type) => type !== 'c')
+                          : [...complaint_cont_concessionTypes, 'c'];
+                        updateFields({ complaint_cont_concessionTypes: updatedTypes });
+                      }}
+                      disabled={viewMode}
+                    />
+                  }
+                  label={
+                    <Typography
+                      variant="body1"
+                      style={{
+                        fontStyle: 'italic',
+                        fontSize: '13px',
+                        fontFamily: 'Calibri'
+                      }}
+                    >
+                      Commonwealth Seniors Health Card
+                    </Typography>
+                  }
+                />
+              </div>
+            </div>
+
+            {/* <FormControlLabel
               control={
                 <Checkbox
                   checked={complaint_cont_concessionTypes.includes('d')}
@@ -151,7 +251,7 @@ export function ComplaintCont({
                       : [...complaint_cont_concessionTypes, 'd'];
                     updateFields({ complaint_cont_concessionTypes: updatedTypes });
                   }}
-                  disabled={viewMode}  //add this line to desable
+                  disabled={viewMode}
                 />
               }
               label={
@@ -166,8 +266,42 @@ export function ComplaintCont({
                   Full-Time Student Card
                 </Typography>
               }
-            />
-            <FormControlLabel
+            /> */}
+
+
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <div style={{ marginLeft: '40px' }}> {/* Adjust the margin as needed */}
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      checked={complaint_cont_concessionTypes.includes('d')}
+                      onChange={() => {
+                        const updatedTypes = complaint_cont_concessionTypes.includes('d')
+                          ? complaint_cont_concessionTypes.filter((type) => type !== 'd')
+                          : [...complaint_cont_concessionTypes, 'd'];
+                        updateFields({ complaint_cont_concessionTypes: updatedTypes });
+                      }}
+                      disabled={viewMode}
+                    />
+                  }
+                  label={
+                    <Typography
+                      variant="body1"
+                      style={{
+                        fontStyle: 'italic',
+                        fontSize: '13px',
+                        fontFamily: 'Calibri'
+                      }}
+                    >
+                      Full-Time Student Card
+                    </Typography>
+                  }
+                />
+              </div>
+            </div>
+
+            <div>
+              {/* <FormControlLabel
               control={
                 <Checkbox
                   checked={complaint_cont_concessionTypes.includes('e')}
@@ -177,7 +311,7 @@ export function ComplaintCont({
                       : [...complaint_cont_concessionTypes, 'e'];
                     updateFields({ complaint_cont_concessionTypes: updatedTypes });
                   }}
-                  disabled={viewMode}  //add this line to desable
+                  disabled={viewMode}
                 />
               }
               label={
@@ -192,9 +326,42 @@ export function ComplaintCont({
                   Low-Income Earner
                 </Typography>
               }
-            />
+            /> */}
+
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <div style={{ marginLeft: '40px' }}> {/* Adjust the margin as needed */}
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        checked={complaint_cont_concessionTypes.includes('e')}
+                        onChange={() => {
+                          const updatedTypes = complaint_cont_concessionTypes.includes('e')
+                            ? complaint_cont_concessionTypes.filter((type) => type !== 'e')
+                            : [...complaint_cont_concessionTypes, 'e'];
+                          updateFields({ complaint_cont_concessionTypes: updatedTypes });
+                        }}
+                        disabled={viewMode}
+                      />
+                    }
+                    label={
+                      <Typography
+                        variant="body1"
+                        style={{
+                          fontStyle: 'italic',
+                          fontSize: '13px',
+                          fontFamily: 'Calibri'
+                        }}
+                      >
+                        Low-Income Earner
+                      </Typography>
+                    }
+                  />
+                </div>
+              </div>
+
+            </div>
             <div>
-              <FormControlLabel
+              {/* <FormControlLabel
                 control={
                   <Checkbox
                     checked={complaint_cont_concessionTypes.includes('k')}
@@ -204,7 +371,7 @@ export function ComplaintCont({
                         : [...complaint_cont_concessionTypes, 'k'];
                       updateFields({ complaint_cont_concessionTypes: updatedTypes });
                     }}
-                    disabled={viewMode}  //add this line to desable
+                    disabled={viewMode}
                   />
                 }
                 label={
@@ -219,11 +386,43 @@ export function ComplaintCont({
                     Others
                   </Typography>
                 }
-              />
+              /> */}
+
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <div style={{ marginLeft: '40px' }}> {/* Adjust the margin as needed */}
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        checked={complaint_cont_concessionTypes.includes('k')}
+                        onChange={() => {
+                          const updatedTypes = complaint_cont_concessionTypes.includes('k')
+                            ? complaint_cont_concessionTypes.filter((type) => type !== 'k')
+                            : [...complaint_cont_concessionTypes, 'k'];
+                          updateFields({ complaint_cont_concessionTypes: updatedTypes });
+                        }}
+                        disabled={viewMode}
+                      />
+                    }
+                    label={
+                      <Typography
+                        variant="body1"
+                        style={{
+                          fontStyle: 'italic',
+                          fontSize: '13px',
+                          fontFamily: 'Calibri'
+                        }}
+                      >
+                        Others
+                      </Typography>
+                    }
+                  />
+                </div>
+              </div>
+
             </div>
           </Grid>
-          <Grid item xs={6} justifyContent="center">
-            <FormControlLabel
+          <Grid item xs={6}>
+            {/* <FormControlLabel
               control={
                 <Checkbox
                   checked={complaint_cont_concessionTypes.includes('g')}
@@ -233,7 +432,7 @@ export function ComplaintCont({
                       : [...complaint_cont_concessionTypes, 'g'];
                     updateFields({ complaint_cont_concessionTypes: updatedTypes });
                   }}
-                  disabled={viewMode}  //add this line to desable
+                  disabled={viewMode}
                 />
               }
               label={
@@ -248,9 +447,42 @@ export function ComplaintCont({
                   Residential Parks Resident
                 </Typography>
               }
-            />
+            /> */}
+
+
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <div style={{ marginLeft: '40px' }}> {/* Adjust the margin as needed */}
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      checked={complaint_cont_concessionTypes.includes('g')}
+                      onChange={() => {
+                        const updatedTypes = complaint_cont_concessionTypes.includes('g')
+                          ? complaint_cont_concessionTypes.filter((type) => type !== 'g')
+                          : [...complaint_cont_concessionTypes, 'g'];
+                        updateFields({ complaint_cont_concessionTypes: updatedTypes });
+                      }}
+                      disabled={viewMode}
+                    />
+                  }
+                  label={
+                    <Typography
+                      variant="body1"
+                      style={{
+                        fontStyle: 'italic',
+                        fontSize: '13px',
+                        fontFamily: 'Calibri'
+                      }}
+                    >
+                      Residential Parks Resident
+                    </Typography>
+                  }
+                />
+              </div>
+            </div>
+
             <div>
-              <FormControlLabel
+              {/* <FormControlLabel
                 control={
                   <Checkbox
                     checked={complaint_cont_concessionTypes.includes('h')}
@@ -260,7 +492,7 @@ export function ComplaintCont({
                         : [...complaint_cont_concessionTypes, 'h'];
                       updateFields({ complaint_cont_concessionTypes: updatedTypes });
                     }}
-                    disabled={viewMode}  //add this line to desable
+                    disabled={viewMode}
                   />
                 }
                 label={
@@ -275,9 +507,43 @@ export function ComplaintCont({
                     Seniors Card
                   </Typography>
                 }
-              />
+              /> */}
+
+
+
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <div style={{ marginLeft: '40px' }}> {/* Adjust the margin as needed */}
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        checked={complaint_cont_concessionTypes.includes('h')}
+                        onChange={() => {
+                          const updatedTypes = complaint_cont_concessionTypes.includes('h')
+                            ? complaint_cont_concessionTypes.filter((type) => type !== 'h')
+                            : [...complaint_cont_concessionTypes, 'h'];
+                          updateFields({ complaint_cont_concessionTypes: updatedTypes });
+                        }}
+                        disabled={viewMode}
+                      />
+                    }
+                    label={
+                      <Typography
+                        variant="body1"
+                        style={{
+                          fontStyle: 'italic',
+                          fontSize: '13px',
+                          fontFamily: 'Calibri'
+                        }}
+                      >
+                        Seniors Card
+                      </Typography>
+                    }
+                  />
+                </div>
+              </div>
+
             </div>
-            <FormControlLabel
+            {/* <FormControlLabel
               control={
                 <Checkbox
                   checked={complaint_cont_concessionTypes.includes('f')}
@@ -287,7 +553,7 @@ export function ComplaintCont({
                       : [...complaint_cont_concessionTypes, 'f'];
                     updateFields({ complaint_cont_concessionTypes: updatedTypes });
                   }}
-                  disabled={viewMode}  //add this line to desable
+                  disabled={viewMode}
                 />
               }
               label={
@@ -302,8 +568,41 @@ export function ComplaintCont({
                   Pensioner Concession Card
                 </Typography>
               }
-            />
-            <FormControlLabel
+            /> */}
+
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <div style={{ marginLeft: '40px' }}> {/* Adjust the margin as needed */}
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      checked={complaint_cont_concessionTypes.includes('f')}
+                      onChange={() => {
+                        const updatedTypes = complaint_cont_concessionTypes.includes('f')
+                          ? complaint_cont_concessionTypes.filter((type) => type !== 'f')
+                          : [...complaint_cont_concessionTypes, 'f'];
+                        updateFields({ complaint_cont_concessionTypes: updatedTypes });
+                      }}
+                      disabled={viewMode}
+                    />
+                  }
+                  label={
+                    <Typography
+                      variant="body1"
+                      style={{
+                        fontStyle: 'italic',
+                        fontSize: '13px',
+                        fontFamily: 'Calibri'
+                      }}
+                    >
+                      Pensioner Concession Card
+                    </Typography>
+                  }
+                />
+              </div>
+            </div>
+
+
+            {/* <FormControlLabel
               control={
                 <Checkbox
                   checked={complaint_cont_concessionTypes.includes('i')}
@@ -313,7 +612,7 @@ export function ComplaintCont({
                       : [...complaint_cont_concessionTypes, 'i'];
                     updateFields({ complaint_cont_concessionTypes: updatedTypes });
                   }}
-                  disabled={viewMode}  //add this line to desable
+                  disabled={viewMode}
                 />
               }
               label={
@@ -328,8 +627,43 @@ export function ComplaintCont({
                   Transport Concession Card
                 </Typography>
               }
-            />
-            <FormControlLabel
+            /> */}
+
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <div style={{ marginLeft: '40px' }}> {/* Adjust the margin as needed */}
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      checked={complaint_cont_concessionTypes.includes('i')}
+                      onChange={() => {
+                        const updatedTypes = complaint_cont_concessionTypes.includes('i')
+                          ? complaint_cont_concessionTypes.filter((type) => type !== 'i')
+                          : [...complaint_cont_concessionTypes, 'i'];
+                        updateFields({ complaint_cont_concessionTypes: updatedTypes });
+                      }}
+                      disabled={viewMode}
+                    />
+                  }
+                  label={
+                    <Typography
+                      variant="body1"
+                      style={{
+                        fontStyle: 'italic',
+                        fontSize: '13px',
+                        fontFamily: 'Calibri'
+                      }}
+                    >
+                      Transport Concession Card
+                    </Typography>
+                  }
+                />
+              </div>
+            </div>
+
+
+
+
+            {/* <FormControlLabel
               control={
                 <Checkbox
                   checked={complaint_cont_concessionTypes.includes('j')}
@@ -339,7 +673,7 @@ export function ComplaintCont({
                       : [...complaint_cont_concessionTypes, 'j'];
                     updateFields({ complaint_cont_concessionTypes: updatedTypes });
                   }}
-                  disabled={viewMode}  //add this line to desable
+                  disabled={viewMode}
                 />
               }
               label={
@@ -354,7 +688,40 @@ export function ComplaintCont({
                   Department of Veterans Affairs Card (DVA Card)
                 </Typography>
               }
-            />
+            /> */}
+
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <div style={{ marginLeft: '40px' }}> {/* Adjust the margin as needed */}
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      checked={complaint_cont_concessionTypes.includes('j')}
+                      onChange={() => {
+                        const updatedTypes = complaint_cont_concessionTypes.includes('j')
+                          ? complaint_cont_concessionTypes.filter((type) => type !== 'j')
+                          : [...complaint_cont_concessionTypes, 'j'];
+                        updateFields({ complaint_cont_concessionTypes: updatedTypes });
+                      }}
+                      disabled={viewMode}
+                    />
+                  }
+                  label={
+                    <Typography
+                      variant="body1"
+                      style={{
+                        fontStyle: 'italic',
+                        fontSize: '13px',
+                        fontFamily: 'Calibri'
+                      }}
+                    >
+                      Department of Veterans Affairs Card (DVA Card)
+                    </Typography>
+                  }
+                />
+              </div>
+            </div>
+
+
           </Grid>
         </Grid>
         <Grid item xs={15}>
