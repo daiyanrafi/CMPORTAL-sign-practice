@@ -1,0 +1,18 @@
+[
+    {
+        "service": "WATER problem",
+        "key": "new guid"
+    },
+    {
+        "service": "FIRE problem",
+        "key": "new guid"
+    },
+    {
+        "service": "GAS problem",
+        "key": "new guid"
+    },
+    {
+        "service": "MUD problem",
+        "key": "new guid"
+    }
+]

@@ -10,6 +10,8 @@ import documents from "./modules/Drop-down/data/cdocuments.json";
 import Userdoc from "./modules/User-doc/Userdoc";
 import JsonTable from "./modules/Booking-table/JsonTable";
 import BookingContainer from "./modules/Booking-table/BookingContainer";
+import Main from "./modules/case-form/main";
+
 
 export default class HelloWorld extends React.Component<
   ComponentFramework.Context<IInputs>,
@@ -152,7 +154,8 @@ export default class HelloWorld extends React.Component<
         {/* <Dashboard/> */}
         {/* <Button/> */}
         {/* <App/> */}
-        <BookingContainer />
+        <Main/>
+        {/* <BookingContainer /> */}
         {/* <Dropdown data={policies} title="Policies" />
         <Dropdown data={guidelines} title="Guidelines" />
         <Dropdown data={directives} title="Directives" />

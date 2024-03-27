@@ -1,0 +1,14 @@
+[
+    {
+        "source": "Google",
+        "key": "G1"
+    },
+    {
+        "source": "Yahoo",
+        "key": "Y1"
+    },
+    {
+        "source": "Newspaper",
+        "key": "NP1"
+    }
+]

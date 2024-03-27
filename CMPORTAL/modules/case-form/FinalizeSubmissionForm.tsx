@@ -23,8 +23,10 @@ export function FinalizeSubmissionForm({
   final_sub_attachFile,
   final_sub_isRobot,
   updateFields,
-  viewMode,//
-}: FinalizeSubmissionFormProps) {
+  viewMode,
+  bestTimeData,
+  knownData,
+}: FinalizeSubmissionFormProps & { bestTimeData: { time: string, key: string }[], knownData: { source: string, key: string }[] }) {
 
   const inputProps = {
     style: { fontSize: 'large', fontFamily: 'Calibri' },
@@ -55,8 +57,13 @@ export function FinalizeSubmissionForm({
             onChange={(e) => updateFields({ final_sub_bestTime: e.target.value })}
             InputProps={inputProps}
           >
-            <MenuItem value="morning" style={{ fontSize: '15px', fontFamily: 'Calibri' }}>Morning</MenuItem>
-            <MenuItem value="evening" style={{ fontSize: '15px', fontFamily: 'Calibri' }}>Evening</MenuItem>
+            {/* <MenuItem value="morning" style={{ fontSize: '15px', fontFamily: 'Calibri' }}>Morning</MenuItem>
+            <MenuItem value="evening" style={{ fontSize: '15px', fontFamily: 'Calibri' }}>Evening</MenuItem> */}
+                {bestTimeData.map((time, index) => (
+          <MenuItem key={index} value={time.time} style={{ fontSize: '15px', fontFamily: 'Calibri' }}>
+            {time.time}
+          </MenuItem>
+        ))}
           </TextField>
         </Grid>
         <Grid item xs={12}>
@@ -72,8 +79,13 @@ export function FinalizeSubmissionForm({
             onChange={(e) => updateFields({ final_sub_howDidYouHear: e.target.value })}
             InputProps={inputProps}
           >
-            <MenuItem value="tv" style={{ fontSize: '15px', fontFamily: 'Calibri' }}>TV</MenuItem>
-            <MenuItem value="radio" style={{ fontSize: '15px', fontFamily: 'Calibri' }}>Radio</MenuItem>
+            {/* <MenuItem value="tv" style={{ fontSize: '15px', fontFamily: 'Calibri' }}>TV</MenuItem>
+            <MenuItem value="radio" style={{ fontSize: '15px', fontFamily: 'Calibri' }}>Radio</MenuItem> */}
+              {knownData.map((source, index) => (
+          <MenuItem key={index} value={source.source} style={{ fontSize: '15px', fontFamily: 'Calibri' }}>
+            {source.source}
+          </MenuItem>
+        ))}
           </TextField>
         </Grid>
         <Grid item xs={12}>

@@ -1,0 +1,18 @@
+[
+    {
+        "time": "Afternoon",
+        "key": "A1"
+    },
+    {
+        "time": "Morning",
+        "key": "M1"
+    },
+    {
+        "time": "After Lunch",
+        "key": "AL1"
+    },
+    {
+        "time": "Before Lunch",
+        "key": "BL1"
+    }
+]

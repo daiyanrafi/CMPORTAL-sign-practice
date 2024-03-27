@@ -17,6 +17,8 @@ type ComplaintFormProps = {
     complaint_resolutionDescription: string;
   }>) => void;
   viewMode: boolean;
+  suppliersData: { supplier: string }[];
+  serviceData: { service: string }[];
 };
 
 export function ComplaintForm({
@@ -26,7 +28,9 @@ export function ComplaintForm({
   complaint_complaintDescription,
   complaint_resolutionDescription,
   updateFields,
-  viewMode,//
+  viewMode,
+  suppliersData,
+  serviceData
 }: ComplaintFormProps) {
 
   const inputProps = {
@@ -55,9 +59,12 @@ export function ComplaintForm({
             onChange={(e) => updateFields({ complaint_supplier: e.target.value })}
             InputProps={inputProps}
           >
-            <MenuItem value="a" style={{ fontSize: '15px', fontFamily: 'Calibri' }}>Option A</MenuItem>
+            {/* <MenuItem value="a" style={{ fontSize: '15px', fontFamily: 'Calibri' }}>Option A</MenuItem>
             <MenuItem value="b" style={{ fontSize: '15px', fontFamily: 'Calibri' }}>Option B</MenuItem>
-            <MenuItem value="c" style={{ fontSize: '15px', fontFamily: 'Calibri' }}>Option C</MenuItem>
+            <MenuItem value="c" style={{ fontSize: '15px', fontFamily: 'Calibri' }}>Option C</MenuItem> */}
+           {suppliersData.map((supplier, index) => (
+            <MenuItem key={index} value={supplier.supplier} style={{ fontSize: '15px', fontFamily: 'Calibri' }}>{supplier.supplier}</MenuItem>
+          ))}
           </TextField>
         </Grid>
         <Grid item xs={12}>
@@ -73,9 +80,12 @@ export function ComplaintForm({
             onChange={(e) => updateFields({ complaint_service: e.target.value })}
             InputProps={inputProps}
           >
-            <MenuItem value="x" style={{ fontSize: '15px', fontFamily: 'Calibri' }}>Option X</MenuItem>
+            {/* <MenuItem value="x" style={{ fontSize: '15px', fontFamily: 'Calibri' }}>Option X</MenuItem>
             <MenuItem value="y" style={{ fontSize: '15px', fontFamily: 'Calibri' }}>Option Y</MenuItem>
-            <MenuItem value="z" style={{ fontSize: '15px', fontFamily: 'Calibri' }}>Option Z</MenuItem>
+            <MenuItem value="z" style={{ fontSize: '15px', fontFamily: 'Calibri' }}>Option Z</MenuItem> */}
+           {serviceData.map((service, index) => (
+            <MenuItem key={index} value={service.service} style={{ fontSize: '15px', fontFamily: 'Calibri' }}>{service.service}</MenuItem>
+          ))}
           </TextField>
         </Grid>
         <Grid item xs={12}>

@@ -65,7 +65,20 @@ const INITIAL_DATA: FormData = {
   final_sub_isRobot: false,
 };
 
-function App() {
+function App({
+  suppliersData,
+  serviceData,
+  titlesData,
+  bestTimeData,
+  knownData,
+  countriesData }: {
+    suppliersData: { supplier: string }[],
+    serviceData: { service: string }[],
+    titlesData: { title: string, key: string }[]
+    bestTimeData: { time: string; key: string }[];
+    knownData: { source: string; key: string }[];
+    countriesData: { name: string; code: string }[];
+  }) {
   const [data, setData] = useState(INITIAL_DATA);
   const [showStartPage, setShowStartPage] = useState(true);
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
@@ -132,12 +145,16 @@ function App() {
 
   const steps = [
     <SelectionPage onNext={handleSelectionPageNext} userDataList={userList} onEdit={handleEdit} />,
-    <UserForm {...data} updateFields={updateFields} viewMode={viewMode} />,
-    <RepresentativeForm {...data} updateFields={updateFields} viewMode={viewMode} />,
+    // <UserForm {...data} updateFields={updateFields} viewMode={viewMode} />,
+    <UserForm {...data} updateFields={updateFields} viewMode={viewMode} titlesData={titlesData} countriesData={countriesData} />,
+    <RepresentativeForm {...data} updateFields={updateFields} viewMode={viewMode} titlesData={titlesData} countriesData={countriesData} />,
     <IncidentAddressForm {...data} updateFields={updateFields} viewMode={viewMode} />,
-    <ComplaintForm {...data} updateFields={updateFields} viewMode={viewMode} />,
+    // <ComplaintForm {...data} updateFields={updateFields} viewMode={viewMode} />,
+    <ComplaintForm {...data} updateFields={updateFields} viewMode={viewMode} suppliersData={suppliersData} serviceData={serviceData} />,
     <ComplaintCont {...data} updateFields={updateFields} viewMode={viewMode} />,
-    <FinalizeSubmissionForm {...data} updateFields={updateFields} viewMode={viewMode} />
+    // <FinalizeSubmissionForm {...data} updateFields={updateFields} viewMode={viewMode} />
+    <FinalizeSubmissionForm {...data} updateFields={updateFields} viewMode={viewMode} bestTimeData={bestTimeData} knownData={knownData} />
+
   ];
 
   const isFirstStep = currentStepIndex === 0;

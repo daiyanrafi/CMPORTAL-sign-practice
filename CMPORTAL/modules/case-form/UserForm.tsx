@@ -17,6 +17,8 @@ type UserFormProps = {
   user_landline: string;
   user_mobile: string;
   user_email: string;
+  titlesData: { title: string, key: string }[];
+  countriesData: { name: string, code: string }[];
   updateFields: (fields: Partial<{
     user_title: string;
     user_firstName: string;
@@ -50,7 +52,9 @@ export function UserForm({
   user_mobile,
   user_email,
   updateFields,
-  viewMode,//
+  viewMode,
+  titlesData,
+  countriesData
 }: UserFormProps) {
 
   const inputProps = {
@@ -77,8 +81,13 @@ export function UserForm({
             onChange={(e) => updateFields({ user_title: e.target.value })}
             InputProps={inputProps} // Added this line
           >
-            <MenuItem value="Mr" style={{ fontSize: '15px', fontFamily: 'Calibri' }}>Mr</MenuItem>
-            <MenuItem value="Mrs" style={{ fontSize: '15px', fontFamily: 'Calibri' }}>Mrs</MenuItem>
+            {/* <MenuItem value="Mr" style={{ fontSize: '15px', fontFamily: 'Calibri' }}>Mr</MenuItem>
+            <MenuItem value="Mrs" style={{ fontSize: '15px', fontFamily: 'Calibri' }}>Mrs</MenuItem> */}
+           {titlesData.map((title, index) => (
+              <MenuItem key={index} value={title.title} style={{ fontSize: '15px', fontFamily: 'Calibri' }}>
+                {title.title}
+              </MenuItem>
+            ))}
           </TextField>
         </Grid>
         <Grid item xs={5}>
@@ -160,7 +169,7 @@ export function UserForm({
             InputProps={inputProps} // Added this line
           />
         </Grid>
-        <Grid item xs={12}>
+        {/* <Grid item xs={12}>
           <TextField
             fullWidth
             label={<span style={{ fontSize: 'large', fontFamily: 'Calibri' }}>Country</span>}
@@ -170,6 +179,23 @@ export function UserForm({
             onChange={(e) => updateFields({ user_country: e.target.value })}
             InputProps={inputProps} // Added this line
           />
+        </Grid> */}
+        <Grid item xs={12}>
+          <TextField
+            fullWidth
+            select
+            required
+            label={<span style={{ fontSize: 'large', fontFamily: 'Calibri' }}>Country</span>}
+            value={user_country}
+            onChange={(e) => updateFields({ user_country: e.target.value })}
+            InputProps={inputProps}
+          >
+            {countriesData.map((country, index) => (
+              <MenuItem key={index} value={country.name} style={{ fontSize: '15px', fontFamily: 'Calibri' }}>
+                {country.name}
+              </MenuItem>
+            ))}
+          </TextField>
         </Grid>
         <Grid item xs={12}>
           <RadioGroup
